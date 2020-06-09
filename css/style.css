@@ -1,0 +1,426 @@
+
+body{
+   
+    background-color: #f0f1f3;
+}
+header{
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+nav{   
+    background-color: rgb(72, 190, 174);
+    height: 105px!important;
+}
+nav div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+nav div ul{
+    flex-grow: 6;
+    display: flex!important;
+    justify-content: flex-end;
+    align-items: center;
+    height: 100%!important;
+}
+nav div ul li{
+    height: 100%;
+    display: flex;
+    align-items: center;
+
+}
+.actived{
+    background-color: #fc4813 !important;
+}
+nav div ul li a{
+    font-size: 1.1rem;
+    display: inline-block;
+    text-transform: uppercase;
+}
+nav div ul li a:hover{
+    text-decoration: none;
+    background-color: #fcfaf900;
+}
+.logo {   
+    flex-grow: 2;
+    height: 100%;    
+}
+.logo img{
+    width: 200px;
+    margin-left: 30px;
+    margin-top: 10px;
+}
+.logo .imagem-2{
+    display:none;
+}
+.pesquisar{
+    display: flex;
+    margin-right: 30px;
+}
+.pequisar a i{
+    display: flex;
+    font-size: 24px;
+    height: 100%;
+    line-height: 56px;
+    align-items: center;
+}
+.pesquisar p{
+    margin-top: 0;
+    display: flex;
+    font-size: 24px;
+    height: 100%;
+    line-height: 56px;
+    align-items: center;
+    margin-bottom: 0em;
+}
+
+main{
+    margin-bottom: auto;
+    display:flex;
+    justify-content: space-around;
+}
+.row{
+    margin-bottom: 0!important;
+}
+/* PERFIL  === Início ===*/
+.perfil{
+    position: fixed;
+    top: 105px;
+    left:0;
+    height: 100%;
+    width:20%;
+    background-color: #f7b930;
+    z-index: 10;
+}
+.foto-perfil{
+   position: relative;
+   text-align: center;   
+}
+.foto-perfil img{
+    margin-top: 15px;
+    margin-bottom: auto;
+    margin-left: 25px;
+    width: 11vw;
+    height: 11vw;   
+}
+.perfil .foto-perfil a{
+    position: relative;
+    bottom: 15px;
+    right: 35px;
+    background-color: #FC4A1A;
+}
+.sobre .nomeusuario{
+    font-weight: 600;
+    font-size: 1.5vw;
+    margin: 5px;
+}
+.perfil .sobre .descricaousuario{
+    font-size: 0.95vw;
+    margin-bottom: 20px;
+    padding: 10px;
+}
+.perfil .sobre .linksperfil{
+    width: 100%;
+    margin: 0;
+    font-weight: 600;
+    text-align: center;
+    font-size: 0.95vw;
+}
+.sobre .blocohashtags{
+    margin-top: 30px;
+}
+.sobre .hashtags a{
+    background-color: #F7B733;
+    font-size: 0.95vw;
+}
+.botaoanuncio{
+    background-color: #F7B733;
+    position: relative;    
+    left: 50%;
+    margin: 20px 0;
+}
+/* PERFIL  === Fim ===*/
+/* PERFIL-mobile  === inicio ===*/
+.perfil-mobile{
+    left:0;
+    height: 100%;
+    width:30%;
+    background-color: #f7b930;
+    z-index: 10;
+}
+.perfil-mobile .foto-perfil{
+    position: relative;
+    text-align: center;   
+ }
+ .perfil-mobile .foto-perfil img{
+     margin-top: 15px;
+     margin-bottom: auto;
+     margin-left: 25px;
+     width: 11vw;
+     height: 11vw;   
+ }
+ .perfil-mobile .foto-perfil a{
+     position: relative;
+     bottom: 15px;
+     right: 35px;
+     background-color: #FC4A1A;
+ }
+ .perfil-mobile .sobre .nomeusuario{
+     font-weight: 600;
+     font-size: 1.5vw;
+     margin: 5px;
+ }
+ .perfil-mobile .sobre .descricaousuario{
+     font-size: 0.95vw;
+     margin-bottom: 30px;
+     padding: 10px;
+ }
+ .perfil-mobile .sobre .linksperfil{
+     width: 100%;
+     margin: 0;
+     font-weight: 600;
+     text-align: center;
+     font-size: 0.95vw;
+ }
+ .perfil-mobile .sobre .blocohashtags{
+     margin-top: 30px;
+ }
+ .perfil-mobile .sobre .hashtags a{
+     background-color: #F7B733;
+     font-size: 0.95vw;
+ }
+ 
+/* PERFIL-mobile  === Fim ===*/
+/* ASSUNTOS  === Início ===*/
+.assuntos{
+    width: 80%;
+    position: sticky;
+    left: 20%;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-content: flex-end;
+}
+.assuntos .card{
+    border-radius: 20px;
+    padding: 10px 20px;
+}
+.assuntos .circle{
+    width: 10%;
+    margin-right: 20px;
+}
+.assuntos h6{
+    font-weight: 600;
+}
+.assuntos h5{
+    font-size: 16px;
+    font-weight: 600;
+}
+.assuntos .botaoresponder{
+    background-color: #FC4A1A;
+    float: right;
+    position: relative;
+    bottom: 30px;
+}
+/* ASSUNTOS  === Fim ===*/
+/* FOOTER  === Início ===*/
+#footer .page-footer{
+    z-index: 20;
+    height: 90px;
+    padding: 20px 40px;
+    margin: 0;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    position: sticky;
+    bottom: 0px;
+    background-color: #4ABDAC;
+    justify-content: space-between;
+}
+#footer .logofooter{
+    width: 200px;
+}
+/* FOOTER  === Fim ===*/
+@media only screen and (max-width: 992px) {
+    main{
+        margin-bottom: 50px;
+    }
+    nav{   
+        background-color: rgb(72, 190, 174);
+        height: 56px!important;
+    }
+    .logo {
+        align-items: center;
+        justify-content: flex-start;
+        flex-grow: 2;
+        display: none;
+        height: 100%;
+        
+    }
+    .logo .imagem-1{
+        display: none;
+        height: 100%;
+        
+    }
+    .row{
+        margin-bottom: 100px;
+    }
+    .assuntos {
+        width: 100%; 
+        position: sticky;
+        left: 20%;
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        align-content: flex-end;
+    }
+    .botaoanuncio{
+        font-size: 0.9rem;
+        background-color: #F7B733;
+        position: fixed;
+        bottom: 100px;
+        right: 10px;
+        left:auto
+    }
+    
+    nav div ul{
+        flex-grow: 6;
+        display: flex!important;
+        justify-content: space-between;
+        align-items: center;
+        height: 100%!important;
+    }
+    
+    nav div ul li a{
+        font-size: 1.1rem;
+        display: inline-block;
+        text-transform: uppercase;
+        margin: 0!important;
+    }
+    #footer{
+        position:sticky;
+        bottom: 0;
+        z-index: 1000;
+
+    }
+    #footer .page-footer{
+        
+        height: 90px;
+        padding: 20px 40px;
+        margin: 0;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        bottom: 0px;
+        background-color: #4ABDAC;
+        justify-content: space-between;
+        width: 100%;
+    }
+    #footer .page-footer p{
+        visibility: hidden;
+        align-self: center;
+    }
+    #footer .page-footer a i{
+        width: 50px;
+    }
+    .perfil-mobile{
+        left:0;
+        height: 100%;
+        width:40%;
+        background-color: #f7b930;
+        z-index: 10;
+    }
+}
+
+  @media only screen and (max-width: 600px) {
+    nav{
+        width: 100%;
+    }
+    #footer .page-footer{
+        height: 50px;
+        position: fixed;
+    }
+    #footer .page-footer img{
+        width: 100px;
+        align-self: center;
+    }
+    #footer .page-footer a{
+        visibility: hidden;
+    }
+    .perfil-mobile{
+        left:0;
+        height: 100%;
+        width:80%;
+        background-color: #f7b930;
+        z-index: 10;
+    }
+    .perfil-mobile .foto-perfil img{
+        margin-top: 15px;
+        margin-bottom: auto;
+        margin-left: 30px;
+        width: 16vh;
+        height: 16vh;   
+    }
+    #slide-out .foto-perfil .btn-floating.btn-large {
+        width: 46px;
+        height: 46px;
+        position: relative;
+        bottom: 15px;
+        right: 35px;
+        background-color: #FC4A1A;
+    }
+    #slide-out .foto-perfil .btn-large i {
+        font-size: 1.5rem;
+        position: relative;
+        bottom: 5px;
+    }
+    .perfil-mobile .sobre .nomeusuario{
+        font-weight: 600;
+        font-size: 2.2vh;
+    }
+    .perfil-mobile .sobre .descricaousuario{
+        font-size: 1.8vh;
+        margin-bottom: 10px;
+        padding: 10px;
+    }
+    .perfil-mobile .sobre .linksperfil{
+        width: 100%;
+        margin: 0;
+        font-weight: 600;
+        text-align: center;
+        font-size: 1.8vh;
+    }
+    #slide-out .sobre .abas ul li a{
+        line-height: 6px;
+    }
+    .perfil-mobile .sobre .blocohashtags{
+        visibility: hidden;
+    }
+    .perfil-mobile .input-field input[type=search]{
+       padding-left: 0!important;
+       width: 100%!important;
+    }
+    .perfil-mobile ::placeholder {
+       color:black;
+       text-align: center;
+    }
+    .assuntos .botaoresponder{
+        background-color: #FC4A1A;
+        float: right;
+        position: relative;
+        bottom: 10px;
+    }
+    .assuntos{
+        margin-bottom: 35px;
+    }
+    #reservas .container-fluid{
+        margin-bottom: 55px;
+    }
+    #solidariedade .card{
+        height: auto;
+    }
+    }
+  
