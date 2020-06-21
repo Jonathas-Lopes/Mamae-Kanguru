@@ -1,0 +1,11 @@
+[33mcommit ed0a73f66e4cda0a8bb36637c487b5b2cf7ebe33[m[33m ([m[1;36mHEAD -> [m[1;32mmaster[m[33m, [m[1;31morigin/master[m[33m)[m
+Author: Jonathas <jonathas.Lopes@silicon-meadow.com.br>
+Date:   Sun Jun 21 11:59:07 2020 -0300
+
+    Adequando projeto para o padrao laravel, estruturando migrations and models
+
+[33mcommit 7e5d490f397add5971ec88c7a29e3a97c1a8b237[m
+Author: Jonathas <jonathas.Lopes@silicon-meadow.com.br>
+Date:   Mon Jun 8 22:17:22 2020 -0300
+
+    reestruturaçao do projeto
