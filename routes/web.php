@@ -16,5 +16,10 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('Login');
 });
+
+Route::get('/cadastro', function () {
+    return view('Cadastro');
+});
+
 Route::get('/{id}', ['uses'=>'Rotas@get'] );
 Route::post('/login', ['uses'=>'Login@post'] );
