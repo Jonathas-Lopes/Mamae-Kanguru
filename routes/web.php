@@ -14,7 +14,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('Login');
+    return view('login');
 });
 Route::get('/{id}', ['uses'=>'Rotas@get'] );
 Route::post('/login', ['uses'=>'Login@post'] );
