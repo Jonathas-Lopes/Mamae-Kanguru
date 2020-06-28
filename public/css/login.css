@@ -2,23 +2,21 @@
     height: 100vh;
 }
 
-
-.container {
-    width: 100%;
+#cadastro-conteiner{
+    padding-top: 10%;
 }
 
-.row {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-}
 
 .row .col {
     padding: 0px;
 }
 
-.imagem-login img {
-    width: 100%;
+.imagem-login{
+    background-image: url('../img/login1.jpg');
+    background-size: cover;
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-position: center ;
 }
 
 .imagem-login img:last-child {
@@ -48,12 +46,7 @@
     margin-bottom: 0px;
 }
 
-form {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    width: 100%;
-}
+
 
 form div {
     margin-left: 0px;
@@ -65,11 +58,15 @@ form div {
 
 .botaoform {
     margin-top: 20px;
+    margin-left: 33%;
 }
 
 @media (max-width: 992px){
-    .imagem-login img:first-child {
+    .imagem-login{
         display: none;
+    }
+    #cadastro-conteiner{
+        padding-top: 30%;
     }
 
     .imagem-login img:last-child {

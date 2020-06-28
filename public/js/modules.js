@@ -1,5 +1,5 @@
 const getPage = function (pageName, localDestino) {
-    $.get("/" + pageName, "campo1=Home", function (data) {
+    $.get("/" + pageName,"", function (data) {
         $(localDestino).empty();
         $(localDestino).append(data);
 
