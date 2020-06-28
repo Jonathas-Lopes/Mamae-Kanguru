@@ -22,4 +22,5 @@ Route::get('/cadastro', function () {
 });
 
 Route::get('/{id}', ['uses'=>'Rotas@get'] );
+//Route::get('/Painel', ['uses'=>'PainelController@show'] );
 Route::post('/login', ['uses'=>'Login@post'] );
