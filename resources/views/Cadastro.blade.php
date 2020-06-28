@@ -13,7 +13,7 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link type="text/css" rel="stylesheet" href="{{ asset('css/materialize.css') }}" />
     {{-- <link type="text/css" rel="stylesheet" href="{{ asset('css/cadastro.css') }}" /> --}}
-    <link type="text/css" rel="stylesheet" href="{{ asset('css/login.css') }}" />
+    <link type="text/css" rel="stylesheet" href="{{ asset('css/cadastro.css') }}" />
 
 </head>
 
