@@ -29,7 +29,8 @@ class CreateUsuarioTable extends Migration
             $table->string('foto', 70)->nullable();
             $table->enum('genero', ['M','F','OUTRO']);
             $table->tinyInteger('admin');
-            $table->timestamp('email_verified_at');
+            $table->timestamp('email_verified_at')->nullable();;
+            $table->rememberToken();
             $table->timestamps();
             $table->foreignId('condominio_id')
                 ->references('id')->on('condominio')
