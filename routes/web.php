@@ -16,5 +16,11 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('login');
 });
+
+Route::get('/cadastro', function () {
+    return view('Cadastro');
+});
+
 Route::get('/{id}', ['uses'=>'Rotas@get'] );
+//Route::get('/Painel', ['uses'=>'PainelController@show'] );
 Route::post('/login', ['uses'=>'Login@post'] );

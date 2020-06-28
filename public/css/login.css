@@ -1,38 +1,75 @@
-body{
-    background-color: aqua;
-}
-.container{
+.mainform {
     height: 100vh;
 }
-.row{
-    
-    
-    height: 100vh;
-}
-.logo{
-    margin-top: 50px;
-    margin-bottom: 50px;
-    margin-left: auto;
-    margin-right: auto;
-    height: 150px;
-    width: 150px;
-    border-radius: 100px;
-    border: 2px solid rgba(15, 87, 87, 0.808);
-    background-color:  rgba(15, 87, 87, 0.808);
-    
-}
-.logo img{
-    width: 100%;
-    height: 100%;
-}
-.login{
-    margin-top: 15%;
-    margin-bottom: auto;
-    height: 70%;
-    background-color: rgba(29, 161, 161, 0.808);
-    border-radius: 40px;
 
+#cadastro-conteiner{
+    padding-top: 10%;
 }
-form div{
-    margin-bottom: 50px;
+
+
+.row .col {
+    padding: 0px;
+}
+
+.imagem-login{
+    background-image: url('../img/login1.jpg');
+    background-size: cover;
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-position: center ;
+}
+
+.imagem-login img:last-child {
+    display: none;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.form img {
+    width: 25%;
+    margin-bottom: 30px;
+}
+
+#links {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#links a p{
+    color: rgb(72, 190, 174);
+    margin-bottom: 0px;
+}
+
+
+
+form div {
+    margin-left: 0px;
+}
+
+.center, .center-align {
+    text-align: start;
+}
+
+.botaoform {
+    margin-top: 20px;
+    margin-left: 33%;
+}
+
+@media (max-width: 992px){
+    .imagem-login{
+        display: none;
+    }
+    #cadastro-conteiner{
+        padding-top: 30%;
+    }
+
+    .imagem-login img:last-child {
+        display: block;
+    }
 }

@@ -13,6 +13,7 @@ class Login extends Controller
     {
         if (request('email') == 'jonathaslopes20@gmail.com') {
             $request->session()->put('Logado', ['email' => 'funcionou!']);
+            return view('index');
         }
         
     }
