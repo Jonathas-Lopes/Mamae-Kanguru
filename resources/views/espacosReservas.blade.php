@@ -32,9 +32,18 @@
             <p class="card-content">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Facilis beatae vitae sapiente totam nobis, inventore at quaerat vero eveniet quam delectus hic fugiat veritatis quibusdam aut numquam ipsum tempora labore.</p>
         </div>
         <div class="card white col l3 center-align">
-            {{-- Tag PADRÃO  DE TODOS OS ESPAÇOS - Regras de utilização --}}
-            <h5 class="card-title">Regras de utilização</h5>
-            <p class="card-content">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Facilis beatae vitae sapiente totam nobis, inventore at quaerat vero eveniet quam delectus hic fugiat veritatis quibusdam aut numquam ipsum tempora labore. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aliquid nostrum ad qui, beatae sequi deleniti omnis sapiente possimus natus illum eos accusamus enim libero totam eum dolores culpa minima aperiam!</p>
+            {{-- Tag PADRÃO  DE TODOS OS ESPAÇOS - Regras de Utilização --}}
+            <h5 class="card-title">Regras de Utilização</h5>
+            <p class="card-content">As Regras de Utilização vêm para auxiliar no bom funcionamento e manutenção do espaço e no bom relacionamento com os demais condôminos.</p>
+            <p class="card-content">Por favor, antes de reservar, fique ciente e certifique-se de que você poderá cumprir as Regras de Utilização durante todo o período da sua reserva.</p>
+            <ol class="card-content">
+                <li>Os espaços só poderão ser reservados pelos moradores, que se responsabilizarão pelo bom uso, manutenção do local e eventuais danos a propriedade.</li>
+                <li>Enviar lista de convidados com nomes completos até 24 horas antes do evento. Informe aos seus convidados que eles deverão apresentar o documento de  identidade na portaria antes de ingressar no condomínio.</li>
+                <li>O  mesmo vale para prestadores de serviço que trabalharão na montagem/desmontagem ou durante o evento: uma lista deve ser enviada com os nomes completos e os mesmos deverão se identificar na portaria com um documento de  identidade.</li>
+                <li>Durante o evento, os convidados não podem  utilizar outros espaços de lazer do condomínio que não façam  parte da área locada, como quadra, sauna, academia, entre outros.</li>
+                <li>De acordo com as  normas vigentes do condomínio e lei municipal, não é permitida qualquer atividade que produza barulho excessivo ou que perturbe o sossego dos moradores antes das 8h00 e após às 22h00 (ou 23h55 aos sábados). Sendo assim, é vetado o uso de aparelhos de som fora do horário permitido.</li>
+                <li>Em caso de perturbação do silêncio e da ordem, o evento deve ser encerrado imediatamente e as devidas providências serão tomadas com base em votação extraordinária em assembléia.</li>
+            </ol> 
         </div>
         <div class="card white col l3 center-align">
             {{-- Tag PADRÃO  DE TODOS OS ESPAÇOS - Manual de boas prática --}}
