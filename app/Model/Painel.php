@@ -4,7 +4,7 @@ namespace App\Model;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Paineis extends Model
+class Painel extends Model
 {
     protected $table = 'painel';
 
