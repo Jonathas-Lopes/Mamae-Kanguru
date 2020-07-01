@@ -25,7 +25,7 @@ class CreateUsuarioTable extends Migration
             $table->id();
             $table->string('nome', 45);
             $table->string('email', 45);
-            $table->string('senha', 45);
+            $table->string('senha', 256);
             $table->string('foto', 70)->nullable();
             $table->enum('genero', ['M','F','OUTRO']);
             $table->tinyInteger('admin');
