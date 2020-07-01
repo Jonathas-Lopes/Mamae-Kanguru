@@ -17,11 +17,11 @@
     <main class="mainlogin">
         <div class="container-fluid" id="cadastro">
             <div class="row">
-                <div class="col s12 m6 l8 imagem-login">
+                <div class="col s12 m12 l8 imagem-login">
                     
                 </div>
                 <div id="cadastro-conteiner" class="col s10 m10 l4 offset-s1 offset-m1 form">
-                    <img src="../img/LogoVerde.png" alt="Logo Uniu">
+                    <img id="img-login" src="../img/LogoVerde.png" alt="Logo Uniu">
                     <form action="/login" method="POST">
                         @csrf
                         <div id="email" >
