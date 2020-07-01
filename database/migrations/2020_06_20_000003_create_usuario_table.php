@@ -24,7 +24,7 @@ class CreateUsuarioTable extends Migration
             $table->engine = 'InnoDB';
             $table->id();
             $table->string('nome', 45);
-            $table->string('email', 45)->unique();;
+            $table->string('email', 45)->unique();
             $table->string('senha', 256);
             $table->string('foto', 70)->nullable();
             $table->enum('genero', ['M','F','OUTRO']);
