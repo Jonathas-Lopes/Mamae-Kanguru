@@ -9,7 +9,7 @@ use Illuminate\Http\Request;
 
 class PainelController extends Controller
 {
-    public function panelrouter(Request $request)
+    public function painelrouter(Request $request)
     {
         if ($request->session()->get('Logado') != null) {
 
@@ -26,7 +26,7 @@ class PainelController extends Controller
                     $painel->foto = "/file/$upload";
                     $painel->usuario_id=1;
                     $painel->save();
-                    
+                    head('/Painel');
                    
 
                 }
@@ -35,7 +35,7 @@ class PainelController extends Controller
 
             }
         }
-        return view('Login');
+        //return view('Login');
     }
 
     

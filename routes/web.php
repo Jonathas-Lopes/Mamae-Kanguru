@@ -22,6 +22,7 @@ Route::get('/cadastro', function () {
 });
 
 //Route::get('/{id}', ['uses'=>'Rotas@get'] );
-Route::any('/Painel', ['uses'=>'PainelController@panelrouter'] );
+Route::any('/Painel', ['uses'=>'PainelController@painelrouter'] );
 Route::post('/login', ['uses'=>'Login@post'] );
 Route::get('/file/img/{id}', ['uses'=>'FileController@sendfile'] );
+Route::any('/Avisos', ['uses'=>'AvisoController@avisorouter'] );
