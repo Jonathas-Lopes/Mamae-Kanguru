@@ -17,8 +17,16 @@ Route::get('/', function () {
     return view('Login');
 });
 
+Route::get('/avisos', function () {
+    return view('Avisos');
+});
+
 Route::get('/cadastro', function () {
     return view('Cadastro');
+});
+
+Route::get('/espacosReservas', function () {
+    return view('espacosReservas');
 });
 
 Route::get('/eventos', function () {
@@ -27,10 +35,6 @@ Route::get('/eventos', function () {
 
 Route::get('/home', function () {
     return view('Home');
-});
-
-Route::get('/espacosReservas', function () {
-    return view('espacosReservas');
 });
 
 Route::get('/painel', function () {
@@ -44,11 +48,6 @@ Route::get('/reservas', function () {
 Route::get('/solidariedade', function () {
     return view('Solidariedade');
 });
-
-
-
-
-
 //Route::get('/{id}', ['uses'=>'Rotas@get'] );
 Route::any('/Painel', ['uses'=>'PainelController@painelrouter'] );
 Route::post('/login', ['uses'=>'Login@post'] );

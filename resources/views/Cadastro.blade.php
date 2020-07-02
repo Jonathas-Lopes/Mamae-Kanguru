@@ -1,23 +1,10 @@
-<?php
+@extends('template.blade.php')
 
-?>
+@section('titulo') Cadastro @endsection
 
-<!DOCTYPE html>
-<html lang="en">
+@section('conteudo')
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cadastro</title>
-    <!-- <script type="text/javascript" src="js/index.js"></script>-->
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <link type="text/css" rel="stylesheet" href="{{ asset('css/materialize.css') }}" />
-    {{-- <link type="text/css" rel="stylesheet" href="{{ asset('css/cadastro.css') }}" /> --}}
-    <link type="text/css" rel="stylesheet" href="{{ asset('css/cadastro.css') }}" />
-
-</head>
-
-<body>
+    <link type="text/css" rel="stylesheet" href="./css/cadastro.css" />
 
     <main class="mainform">
         <div class="container" id="cadastro">
@@ -60,20 +47,6 @@
                 </div>
             </div>
         </div>
-
     </main>
 
-
-
-    <script src="../js/jQuery341.js"></script>
-    <script src="../js/materialize.min.js"></script>
-    <script src="../js/Cadastro.js"></script>
-    <script src="../js/modules.js"></script>
-    <script src="../js/index.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
-        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous">
-    </script>
-
-</body>
-
-</html>
+@endsection

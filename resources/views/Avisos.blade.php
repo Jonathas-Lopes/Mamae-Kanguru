@@ -1,6 +1,9 @@
-@include('template.blade.php')
+@extends('template.blade.php')
 
-<section id="avisos">
+@section('titulo') Avisos @endsection
+
+@section('conteudo')
+
     <link type="text/css" rel="stylesheet" href="./css/avisos.css" />
 
     <!-- Área de cards com as ações -->
@@ -122,7 +125,5 @@
             </div>
         </div>
     </div>
-</section>
-<script src="./js/jQuery341.js"></script>
-<script src="./js/materialize.min.js"></script>
-<script src="./js/Avisos.js"></script>
+
+@endsection

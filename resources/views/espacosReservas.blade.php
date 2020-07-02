@@ -1,8 +1,12 @@
+@extends('template.blade.php')
+
+@section('titulo') Reservas @endsection
+
+@section('conteudo')
 
     <link type="text/css" rel="stylesheet" href="css/styleespacos.css"/>
 
-    
-    <section class="row">
+    <div class="row">
 
         <div class="col l5 m12 s12">
             <img class="imagemespaco" width="100%" src="../UNIU/img/condominio_espaco_gourmet.jpg" alt="Foto Espaço Gourmet">
@@ -16,11 +20,10 @@
             <input type="text" class="datepicker center">
             {{-- Botão de reservar --}}
             <a class="waves-effect waves-teal btn-flat amber accent-4 black-text center">reservar</a>
-            </div>
         </div>
+    </div>
 
-</section>
-    <section class="detalhesespaco section">
+    <div class="detalhesespaco section">
         <div class="card white col l2 center-align">
             <h5 class="card-title">Sobre o espaço</h5>
             {{-- Tag para BREVE descrição e localização do espaço --}}
@@ -61,9 +64,6 @@
                 <li>Depois das 22 horas (23 aos sábados), peça para os seus convidados para permanecerem nas áreas fechadas do espaço. Assim não incomodará os vizinhos que querem descansar e evitará situações desconfortáveis ou até a interrupção do seu evento.</li>
                 <li>Não incentive seus convidados a trazerem os seus bichinhos de estimação para o evento. Tendo em vista que eles podem se assustar com a quantidade de pessoas, ter atitudes agressivas pelo excesso de barulho ou danificar os móveis do salão.</li>
             </ul>
-            
-    </section>
-
-    
-    
-
+        </div>
+    </div>
+@endsection
