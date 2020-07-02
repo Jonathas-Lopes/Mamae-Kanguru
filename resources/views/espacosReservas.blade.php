@@ -1,4 +1,4 @@
-@extends('template.blade.php')
+@extends('layouts.template')
 
 @section('titulo') Reservas @endsection
 
