@@ -1,3 +1,5 @@
+@include('template.blade.php')
+
 <section id="avisos">
     <link type="text/css" rel="stylesheet" href="./css/avisos.css" />
 
