@@ -1,6 +1,9 @@
-<section id="solidariedade">
-    <link type="text/css" rel="stylesheet" href="./css/solidariedade.css">
 
+@extends('layouts.template')
+
+@section('titulo') Solidariedade @endsection
+
+@section('conteudo')
     <!-- Área de cards com as ações -->
     <div class="areadecards container-fluid row">
 
@@ -130,6 +133,5 @@
         </div>
     </div>
 </section>
-<script src="./js/jQuery341.js"></script>
-<script src="./js/materialize.min.js"></script>
-<script src="./js/Solidariedade.js"></script>
+
+@endsection

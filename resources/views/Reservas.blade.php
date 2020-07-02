@@ -1,3 +1,10 @@
+
+@extends('layouts.template')
+
+@section('titulo') Reservas @endsection
+
+@section('conteudo')
+
 <section id="reservas">
 <link type="text/css" rel="stylesheet" href="./css/reservas.css" />
     <div class="container">
@@ -92,8 +99,5 @@
             </div>
         </div>
     </div>
-
-
 </section>
-
-<script src="./js/Reservas.js"></script>
+@endsection
