@@ -21,6 +21,34 @@ Route::get('/cadastro', function () {
     return view('Cadastro');
 });
 
+Route::get('/eventos', function () {
+    return view('Eventos');
+});
+
+Route::get('/home', function () {
+    return view('Home');
+});
+
+Route::get('/espacosReservas', function () {
+    return view('espacosReservas');
+});
+
+Route::get('/painel', function () {
+    return view('Painel');
+});
+
+Route::get('/reservas', function () {
+    return view('Reservas');
+});
+
+Route::get('/solidariedade', function () {
+    return view('Solidariedade');
+});
+
+
+
+
+
 //Route::get('/{id}', ['uses'=>'Rotas@get'] );
 Route::any('/Painel', ['uses'=>'PainelController@painelrouter'] );
 Route::post('/login', ['uses'=>'Login@post'] );

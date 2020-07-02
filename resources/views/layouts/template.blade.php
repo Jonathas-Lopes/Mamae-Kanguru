@@ -18,17 +18,17 @@
             <div class="">
                 <a class="logo"><img class="imagem-1" src="{{ asset('/img/2NomeBrancoCortado.png') }}" alt="Logo"></a>
                 <ul class="abas hide-on-med-and-down">
-                    <li class=""><a href="#">Reservas</a></li>
-                    <li class=""><a href="#">Solidariedade</a></li>
-                    <li class=""><a href="#">Painel</a></li>
-                    <li class=""><a href="#">Eventos</a></li>
-                    <li class=""><a href="#">Avisos</a></li>
+                    <li class=""><a href="/reservas">Reservas</a></li>
+                    <li class=""><a href="/solidariedade">Solidariedade</a></li>
+                    <li class=""><a href="/painel">Painel</a></li>
+                    <li class=""><a href="/eventos">Eventos</a></li>
+                    <li class=""><a href="/avisos">Avisos</a></li>
                     <li class=""><a class="pesquisar" href="#"><i class="material-icons">search</i></a>
                     </li>
                 </ul>
                 <ul class="abas mobile-menu hide-on-large-only">
                     <li class="menus"><a data-target="slide-out" class="sidenav-trigger triger-index" href="#"><i class=" material-icons">menu</i></a></li>
-                    <li class=""><a href="#"><i class="material-icons">home</i></a></li>
+                    <li class=""><a href="/home"><i class="material-icons">home</i></a></li>
                     <li class=""><a href="#"><i class="material-icons">message</i></a></li>
                     <li class=""><a href="#"><i class="material-icons">notifications</i></a></li>
                     <li class=""><a><i class="material-icons pesquisa-close">search</i></a></li>
@@ -55,11 +55,11 @@
                 </div>
                 <div>
                     <ul class="abas center-align">
-                        <li class=""><a href="#">Reservas</a></li>
-                        <li class=""><a href="#">Solidariedade</a></li>
-                        <li class=""><a href="#">Painel</a></li>
-                        <li class=""><a href="#">Eventos</a></li>
-                        <li class=""><a href="#">Avisos</a></li>
+                        <li class=""><a href="/reservas">Reservas</a></li>
+                        <li class=""><a href="/solidariedade">Solidariedade</a></li>
+                        <li class=""><a href="/painel">Painel</a></li>
+                        <li class=""><a href="/eventos">Eventos</a></li>
+                        <li class=""><a href="/avisos">Avisos</a></li>
                     </ul>
 
                 </div>
@@ -86,7 +86,7 @@
 
     <script src="{{ asset('/js/jQuery341.js') }}"></script>
     <script src="{{ asset('/js/materialize.min.js') }}"></script>
-    <script src="{{ asset('/js/modules.js') }}"></script>
+    {{-- <script src="{{ asset('/js/modules.js') }}"></script> --}}
     <script src="{{ asset('/js/index.js') }}"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous">
     </script>
