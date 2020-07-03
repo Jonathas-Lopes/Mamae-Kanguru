@@ -10,6 +10,11 @@
 <section id="solidariedade">
     <link type="text/css" rel="stylesheet" href="./css/solidariedade.css">
 
+@extends('layouts.template')
+
+@section('titulo') Solidariedade @endsection
+
+@section('conteudo')
     <!-- Área de cards com as ações -->
     <div class="areadecards container-fluid row">
 

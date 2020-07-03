@@ -1,9 +1,16 @@
+<<<<<<< HEAD
 @extends('layouts/template')
 
 @section('titulo')
     Reservas
 @endsection
 
+=======
+
+@extends('layouts.template')
+
+@section('titulo') Reservas @endsection
+>>>>>>> 5bcc89be4886982988bf181c530061a65b828a1b
 
 @section('conteudo')
 
@@ -101,12 +108,14 @@
             </div>
         </div>
     </div>
-
-
 </section>
+<<<<<<< HEAD
 <script src="./js/jQuery341.js"></script>
 <script src="./js/materialize.min.js"></script>
 <script src="./js/Reservas.js"></script>
 
 
 @endsection
+=======
+@endsection
+>>>>>>> 5bcc89be4886982988bf181c530061a65b828a1b

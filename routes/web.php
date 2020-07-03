@@ -17,8 +17,16 @@ Route::get('/', function () {
     return view('Login');
 });
 
+Route::get('/avisos', function () {
+    return view('Avisos');
+});
+
 Route::get('/cadastro', function () {
     return view('Cadastro');
+});
+
+Route::get('/espacosReservas', function () {
+    return view('espacosReservas');
 });
 
 Route::get('/eventos', function () {

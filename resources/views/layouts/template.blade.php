@@ -31,6 +31,7 @@
                     <li class=""><a href="/home"><i class="material-icons">home</i></a></li>
                     <li class=""><a href="#"><i class="material-icons">message</i></a></li>
                     <li class=""><a href="#"><i class="material-icons">notifications</i></a></li>
+
                     <li class=""><a><i class="material-icons pesquisa-close">search</i></a></li>
                 </ul>
             </div>
