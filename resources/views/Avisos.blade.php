@@ -1,5 +1,4 @@
 @extends('layouts.template')
-<<<<<<< HEAD
 
 @section('titulo')
     Avisos
@@ -7,13 +6,6 @@
 
 @section('conteudo')
 <section id="avisos">
-=======
-
-@section('titulo') Avisos @endsection
-
-@section('conteudo')
-
->>>>>>> 5bcc89be4886982988bf181c530061a65b828a1b
     <link type="text/css" rel="stylesheet" href="./css/avisos.css" />
 
     <!-- Área de cards com as ações -->
@@ -135,12 +127,9 @@
             </div>
         </div>
     </div>
-<<<<<<< HEAD
 </section>
 <script src="./js/jQuery341.js"></script>
 <script src="./js/materialize.min.js"></script>
 <script src="./js/Avisos.js"></script>
-=======
->>>>>>> 5bcc89be4886982988bf181c530061a65b828a1b
 
 @endsection

@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 @extends('layouts/template')
 
 @section('titulo')
@@ -10,14 +10,13 @@
     <section id="painel">
     <link type="text/css" rel="stylesheet" href="./css/painel.css">
         <div class="row container-fluid">
-=======
+
 
 @extends('layouts.template')
 
 @section('titulo') Solidariedade @endsection
 
 @section('conteudo')
->>>>>>> 5bcc89be4886982988bf181c530061a65b828a1b
     
             <!-- cards dos anúncios -->
             @foreach ($paineis as $item)
@@ -94,10 +93,7 @@
     
     </section>
     
-<<<<<<< HEAD
     <script src="./js/jQuery341.js"></script>
     
     <script src="./js/Painel.js"></script>
-=======
->>>>>>> 5bcc89be4886982988bf181c530061a65b828a1b
     @endsection
