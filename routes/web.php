@@ -33,9 +33,9 @@ Route::get('/espacosReservas', function () {
     return view('espacosReservas');
 });
 
-Route::get('/painel', function () {
-    return view('Painel');
-});
+Route::get('/painel', ['uses'=>'PainelController@getcards'] );
+
+Route::post('/painel', ['uses'=>'PainelController@writecard'] );
 
 Route::get('/reservas', function () {
     return view('Reservas');
@@ -44,13 +44,15 @@ Route::get('/reservas', function () {
 Route::get('/solidariedade', function () {
     return view('Solidariedade');
 });
+Route::get('/avisos', function () {
+    return view('Avisos');
+});
 
-
-
+Route::get('/file/img/{id}', ['uses'=>'FileController@sendfile'] );
 
 
 //Route::get('/{id}', ['uses'=>'Rotas@get'] );
-Route::any('/Painel', ['uses'=>'PainelController@painelrouter'] );
-Route::post('/login', ['uses'=>'Login@post'] );
-Route::get('/file/img/{id}', ['uses'=>'FileController@sendfile'] );
-Route::any('/Avisos', ['uses'=>'AvisoController@avisorouter'] );
+//Route::any('/Painel', ['uses'=>'PainelController@painelrouter'] );
+//Route::post('/login', ['uses'=>'Login@post'] );
+
+//Route::any('/Avisos', ['uses'=>'AvisoController@avisorouter'] );

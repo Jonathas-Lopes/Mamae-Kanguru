@@ -1,4 +1,12 @@
-<section id="painel">
+@extends('layouts/template')
+
+@section('titulo')
+    Painel
+@endsection
+
+
+@section('conteudo')
+    <section id="painel">
     <link type="text/css" rel="stylesheet" href="./css/painel.css">
         <div class="row container-fluid">
     
@@ -78,5 +86,6 @@
     </section>
     
     <script src="./js/jQuery341.js"></script>
-    <script src="./js/materialize.min.js"></script>
+    
     <script src="./js/Painel.js"></script>
+    @endsection

@@ -8,7 +8,7 @@ $(document).ready(function () {
     getPage("home", ".main");
   });
 
-  openNewTab();
+  
   getPage("home", ".main");
 
   $('.sidenav').sidenav();
@@ -18,6 +18,7 @@ $(document).ready(function () {
 
   /** código de inicialização do dropdown */
   $('.dropdown-trigger').dropdown();
+  $('.modal').modal();
 
 
 

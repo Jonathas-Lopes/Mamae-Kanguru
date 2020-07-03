@@ -1,3 +1,12 @@
+@extends('layouts/template')
+
+@section('titulo')
+    Solidariedade
+@endsection
+
+
+@section('conteudo')
+
 <section id="solidariedade">
     <link type="text/css" rel="stylesheet" href="./css/solidariedade.css">
 
@@ -133,3 +142,4 @@
 <script src="./js/jQuery341.js"></script>
 <script src="./js/materialize.min.js"></script>
 <script src="./js/Solidariedade.js"></script>
+@endsection

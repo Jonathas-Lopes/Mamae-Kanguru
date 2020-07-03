@@ -1,3 +1,12 @@
+@extends('layouts/template')
+
+@section('titulo')
+    Reservas
+@endsection
+
+
+@section('conteudo')
+
 <section id="reservas">
 <link type="text/css" rel="stylesheet" href="./css/reservas.css" />
     <div class="container">
@@ -5,7 +14,7 @@
         <div class="reservasmiolo row center-align">
 
             <!-- card ESPAÇO GOURMET -->
-            <div id="espaco-gourmet" class="espaco card hoverable col l12 m12 s12">
+            <div href="/espacos" id="espaco-gourmet" class="espaco card hoverable col l12 m12 s12">
                 <div class="card-image">
                     <img src="./img/condominio_espaco_gourmet.jpg" alt="Foto Espaço Gourmet">
                     <span class="card-title">Espaço Gourmet</span>
@@ -34,7 +43,7 @@
             </div>
 
             <!-- card CHURRASQUEIRA -->
-            <div id="churrasqueira" class="espaco card hoverable col l12 m12 s12">
+            <div href="/espacos" id="churrasqueira" class="espaco card hoverable col l12 m12 s12">
                 <div class="card-image">
                     <img src="./img/condominio_churrasqueira.jpg" alt="Foto Churrasqueira">
                     <span class="card-title">Churrasqueira</span>
@@ -63,7 +72,7 @@
             </div>
 
             <!-- card SALÃO DE FESTAS -->
-            <div id="salao-festa" class="espaco card hoverable col l12 m12 s12">
+            <div href="/espacos" id="salao-festa" class="espaco card hoverable col l12 m12 s12">
                 <div class="card-image">
                     <img src="./img/condominio_salao_festas.jpg" alt="Foto Salão de Festas">
                     <span class="card-title">Salão de Festas</span>
@@ -95,5 +104,9 @@
 
 
 </section>
-
+<script src="./js/jQuery341.js"></script>
+<script src="./js/materialize.min.js"></script>
 <script src="./js/Reservas.js"></script>
+
+
+@endsection

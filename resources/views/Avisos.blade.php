@@ -1,5 +1,10 @@
-@include('template.blade.php')
+@extends('layouts.template')
 
+@section('titulo')
+    Avisos
+@endsection
+
+@section('conteudo')
 <section id="avisos">
     <link type="text/css" rel="stylesheet" href="./css/avisos.css" />
 
@@ -126,3 +131,5 @@
 <script src="./js/jQuery341.js"></script>
 <script src="./js/materialize.min.js"></script>
 <script src="./js/Avisos.js"></script>
+
+@endsection
