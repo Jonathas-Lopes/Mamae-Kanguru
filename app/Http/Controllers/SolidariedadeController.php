@@ -12,7 +12,7 @@ class SolidariedadeController extends Controller
     public function getcards(Request $request)
     {
         $solidariedade = Solidariedade::all();
-        return view('solidariedades', compact('solidariedade'));
+        return view('Solidariedade', compact('solidariedade'));
     }
     
     public function writecards(Request $request)
@@ -25,7 +25,7 @@ class SolidariedadeController extends Controller
             $solidariedade->foto = "/file/$upload";
             $solidariedade->usuario_id = 1;
             $solidariedade->save();
-            return redirect()->route('/solidariedade');
+            return redirect()->route('/Solidariedade');
         }
     }
 }

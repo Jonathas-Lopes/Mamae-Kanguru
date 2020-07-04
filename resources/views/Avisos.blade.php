@@ -128,8 +128,8 @@
         </div>
     </div>
 </section>
-<script src="./js/jQuery341.js"></script>
+ <!-- <script src="./js/jQuery341.js"></script>
 <script src="./js/materialize.min.js"></script>
-<script src="./js/Avisos.js"></script>
+<script src="./js/Avisos.js"></script> -->
 
 @endsection

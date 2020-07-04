@@ -7,7 +7,7 @@ use Illuminate\Http\Request;
 
 
 
-class reservaController extends Controller
+class ReservasController extends Controller
 {
     public function getcards(Request $request)
     {
@@ -24,7 +24,7 @@ class reservaController extends Controller
             $reserva->usuario_id = 1;
             $reserva->area_reservavel_id = 1;
             $reserva->save();
-            return redirect()->route('/reserva');
+            return redirect()->route('/reservas');
         }
     }
 }
