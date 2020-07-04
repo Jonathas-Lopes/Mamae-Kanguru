@@ -12,7 +12,7 @@ class AvisoController extends Controller
     public function getcards(Request $request)
     {
         $avisos = Aviso::all();
-        return view('avisos', compact('avisos'));
+        return view('Avisos', compact('avisos'));
     }
     
     public function writecards(Request $request)

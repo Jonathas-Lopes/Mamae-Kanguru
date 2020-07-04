@@ -12,7 +12,7 @@ class EventoController extends Controller
     public function getcards(Request $request)
     {
         $evento = Evento::all();
-        return view('eventos', compact('evento'));
+        return view('Eventos', compact('evento'));
     }
     
     public function createevent(Request $request)

@@ -1,5 +1,5 @@
 
-@extends('layouts/template')
+@extends('layouts.template')
 
 @section('titulo')
     Painel
@@ -7,6 +7,7 @@
 
 
 @section('conteudo')
+    <section id="painel">
             <link type="text/css" rel="stylesheet" href="./css/painel.css" />
         <div class="container-fluid row">
             <!-- cards dos anúncios -->
@@ -83,5 +84,7 @@
         </div>
     
     </section>
+    <script src="./js/jQuery341.js"></script>
+    <script src="./js/Painel.js"></script>
         
 @endsection

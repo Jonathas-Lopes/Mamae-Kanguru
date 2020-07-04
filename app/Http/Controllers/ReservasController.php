@@ -12,7 +12,7 @@ class ReservasController extends Controller
     public function getcards(Request $request)
     {
         $reservas = Reserva::all();
-        return view('reservas', compact('reservas'));
+        return view('Reservas', compact('reservas'));
     }
     
     public function writecards(Request $request)
