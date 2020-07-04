@@ -12,7 +12,7 @@ class AvisoController extends Controller
     public function getcards(Request $request)
     {
         $avisos = Aviso::all();
-        return view('Avisos', compact('avisos'));
+        return view('avisos', compact('avisos'));
     }
     
     public function writecards(Request $request)
@@ -25,7 +25,7 @@ class AvisoController extends Controller
             $aviso->foto = "/file/$upload";
             $aviso->usuario_id = 1;
             $aviso->save();
-            return redirect()->route('/aviso');
+            return redirect()->route('/avisos');
         }
     }
 }

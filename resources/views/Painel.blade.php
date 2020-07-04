@@ -83,8 +83,5 @@
         </div>
     
     </section>
-    
-    <script src="./js/jQuery341.js"></script>
-    
-    <script src="./js/Painel.js"></script>
+        
 @endsection

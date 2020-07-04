@@ -9,10 +9,10 @@ use Illuminate\Http\Request;
 
 class EventoController extends Controller
 {
-    public function getevents(Request $request)
+    public function getcards(Request $request)
     {
         $evento = Evento::all();
-        return view('Eventos', compact('evento'));
+        return view('eventos', compact('evento'));
     }
     
     public function createevent(Request $request)
@@ -27,7 +27,7 @@ class EventoController extends Controller
             $evento->foto = "/file/$upload";
             $evento->condominio_id = 1;
             $evento->save();
-            return redirect()->route('/evento');
+            return redirect()->route('/eventos');
         }
     }
 }
