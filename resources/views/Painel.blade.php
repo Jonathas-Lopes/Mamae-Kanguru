@@ -7,7 +7,8 @@
 
 
 @section('conteudo')
-     
+            <link type="text/css" rel="stylesheet" href="./css/painel.css" />
+        <div class="container-fluid row">
             <!-- cards dos anúncios -->
             @foreach ($paineis as $item)
                 <div class="col s12 m4 l4">
@@ -86,4 +87,4 @@
     <script src="./js/jQuery341.js"></script>
     
     <script src="./js/Painel.js"></script>
-    @endsection
+@endsection

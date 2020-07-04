@@ -7,37 +7,26 @@ use Illuminate\Http\Request;
 
 
 
-class ReservaController extends Controller
+class AvisoController extends Controller
 {
-    public function avisorouter(Request $request)
+    public function getcards(Request $request)
     {
-        if ($request->session()->get('Logado') != null) {
-
-            if ($request->isMethod('get')) {
-                $Avisos = Aviso::all();
-                return view('Avisos', compact('avisos'));
-            }
-            elseif($request->isMethod('post')){
-                if(($request->titulo)and($request->descricao)){
-                    $upload = $request->foto->store('img');
-                    $aviso = new Aviso;
-                    $aviso->titulo = $request->titulo;
-                    $aviso->descricao = $request->descricao;
-                    $aviso->foto = "/file/$upload";
-                    $aviso->usuario_id=1;
-                    $aviso->save();
-                    
-                   
-
-                }
-                
-                
-
-            }
-        }
-        return view('Login');
+        $avisos = Aviso::all();
+        return view('Avisos', compact('avisos'));
     }
-
     
-
+    public function writecards(Request $request)
+    {
+        if (($request->titulo) and ($request->descricao)) {
+            $upload = $request->foto->store('img');
+            $aviso = new Aviso;
+            $aviso->titulo = $request->titulo;
+            $aviso->descricao = $request->descricao;
+            $aviso->foto = "/file/$upload";
+            $aviso->usuario_id = 1;
+            $aviso->save();
+            return redirect()->route('/aviso');
+        }
+    }
 }
+

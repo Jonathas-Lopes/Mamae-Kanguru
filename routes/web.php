@@ -17,50 +17,32 @@ Route::get('/', function () {
     return view('Login');
 });
 
-Route::get('/avisos', function () {
-    return view('Avisos');
+Route::get('/home', function () {
+    return view('Home');
 });
+
+Route::get('/reservas', ['uses'=>'ReservasController@getcards'] );
+Route::post('/reservas', ['uses'=>'ReservasController@writecards'] );
+
+Route::get('/espacosReservas', ['uses'=>'AvisoController@getcards'] );
+Route::post('/espacosReservas', ['uses'=>'AvisoController@writecards'] );
+
+Route::get('/solidariedade', ['uses'=>'SolidariedadeController@getcards'] );
+Route::post('/solidariedade', ['uses'=>'SolidariedadeController@writecards'] );
+
+Route::get('/painel', ['uses'=>'PainelController@getcards'] );
+Route::post('/painel', ['uses'=>'PainelController@writecards'] );
+
+Route::get('/eventos', ['uses'=>'EventoController@getcards'] );
+Route::post('/eventos', ['uses'=>'EventoController@writecards'] );
+
+Route::get('/avisos', ['uses'=>'AvisoController@getcards'] );
+Route::post('/avisos', ['uses'=>'AvisoController@writecards'] );
 
 Route::get('/cadastro', function () {
     return view('Cadastro');
 });
 
-Route::get('/espacosReservas', function () {
-    return view('espacosReservas');
-});
-
-Route::get('/eventos', function () {
-    return view('Eventos');
-});
-
-Route::get('/home', function () {
-    return view('Home');
-});
-
-Route::get('/espacosReservas', function () {
-    return view('espacosReservas');
-});
-
-Route::get('/painel', ['uses'=>'PainelController@getcards'] );
-
-Route::post('/painel', ['uses'=>'PainelController@writecard'] );
-
-Route::get('/reservas', function () {
-    return view('Reservas');
-});
-
-Route::get('/solidariedade', function () {
-    return view('Solidariedade');
-});
-Route::get('/avisos', function () {
-    return view('Avisos');
-});
-
 Route::get('/file/img/{id}', ['uses'=>'FileController@sendfile'] );
 
 
-//Route::get('/{id}', ['uses'=>'Rotas@get'] );
-//Route::any('/Painel', ['uses'=>'PainelController@painelrouter'] );
-//Route::post('/login', ['uses'=>'Login@post'] );
-
-//Route::any('/Avisos', ['uses'=>'AvisoController@avisorouter'] );
