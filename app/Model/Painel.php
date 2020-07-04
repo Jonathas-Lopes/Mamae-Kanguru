@@ -8,6 +8,5 @@ class Painel extends Model
 {
     protected $table = 'painel';
 
-    protected $fillable = ['titulo','foto','descricao', 'usuario_id'
-    ];
+    protected $fillable = ['titulo','foto','descricao', 'usuario_id'];
 }
