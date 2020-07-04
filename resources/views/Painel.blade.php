@@ -7,17 +7,7 @@
 
 
 @section('conteudo')
-    <section id="painel">
-    <link type="text/css" rel="stylesheet" href="./css/painel.css">
-        <div class="row container-fluid">
-
-
-@extends('layouts.template')
-
-@section('titulo') Solidariedade @endsection
-
-@section('conteudo')
-    
+     
             <!-- cards dos anúncios -->
             @foreach ($paineis as $item)
                 <div class="col s12 m4 l4">
