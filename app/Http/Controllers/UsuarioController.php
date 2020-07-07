@@ -7,6 +7,7 @@ use App\Model;
 use App\Model\Usuarios;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\DB;
 
 class UsuarioController extends Controller
 {
@@ -28,8 +29,18 @@ class UsuarioController extends Controller
 
     function login(Request $request)
     {
+        /*$usuario = DB::table('usuario')
+            ->where('nome', 'Manu Guedes')
+            ->first();*/
+
         $email = $request->email;
         $senha = $request->senha;
+
+        /*if (password_verify($senha, $usuario->senha)) {
+            echo 'Password is valid!';
+        } else {
+            echo 'Invalid password.';
+        }*/
 
         if(Auth::attempt(['email'=>$email,'password'=>$senha]))
         {
