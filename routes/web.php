@@ -13,13 +13,13 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('Login');
-});
+Route::get('/', function () {return view('Login');});
+Route::post('/login', ['uses'=>'UsuarioController@login']);
 
-Route::get('/home', function () {
-    return view('Home');
-});
+Route::get('/cadastro', function () {return view('Cadastro');});
+Route::post('/cadastro', ['uses'=>'UsuarioController@store']);
+
+Route::get('/home', function () {return view('Home');});
 
 Route::get('/reservas', ['uses'=>'ReservasController@getcards'] );
 Route::post('/reservas', ['uses'=>'ReservasController@writecards'] );
@@ -38,10 +38,6 @@ Route::post('/eventos', ['uses'=>'EventoController@writecards'] );
 
 Route::get('/avisos', ['uses'=>'AvisoController@getcards'] );
 Route::post('/avisos', ['uses'=>'AvisoController@writecards'] );
-
-Route::get('/cadastro', function () {
-    return view('Cadastro');
-});
 
 Route::get('/file/img/{id}', ['uses'=>'FileController@sendfile'] );
 

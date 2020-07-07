@@ -4,7 +4,7 @@
 
 @section('conteudo')
 
-    <link type="text/css" rel="stylesheet" href="./css/cadastro.css" />
+    <link type="text/css" rel="stylesheet" href="./css/cadastro.css"/>
 
     <main class="mainform">
         <div class="container" id="cadastro">
@@ -16,11 +16,28 @@
 
                 <div class="col s12 m6 l4 form">
                     <img src="../img/LogoVerde.png" alt="Logo Uniu">
-                    <form class="center-align" action="Cadastro.php" method="POST">
+                    <form class="center-align" action="" method="POST">
+                            @csrf
                         <div id="nome" class="col s12 m6 l6 offset-m2 offset-l3">
                             <label for="nome">Nome Completo</label>
                             <input type="text" name="nome" id="nome" value="" placeholder="Maria da Silva" required>
                         </div>
+
+                        <div id="genero" class="col s12 m6 l6 offset-m2 offset-l3">
+                            <label for="genero">Gênero</label>
+                            <input type="text" name="genero" id="genero" value="" placeholder="escreva o seu gênero" required>
+                        </div>
+                        
+                        {{-- Tentativa de usar o select --}}
+                        {{-- <div class="input-field col s12 m6 l6 offset-m2 offset-l3">
+                            <select name="genero" id="genero">
+                              <option value="feminino">feminino</option>
+                              <option value="masculino">masculino</option>
+                              <option value="outro">outro</option>
+                            </select>
+                            <label for="genero">Gênero</label>
+                        </div> --}}
+
                         <div id="email" class="col s12 m6 l6 offset-m2 offset-l3">
                             <label for="email">E-mail</label><br>
                             <input type="email" name="email" id="email" value="" placeholder="mariadasilva@email.com"
@@ -47,6 +64,8 @@
                 </div>
             </div>
         </div>
+
+        <script src="./js/Cadastro.js"></script>
     </main>
 
 @endsection
