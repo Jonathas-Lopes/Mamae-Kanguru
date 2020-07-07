@@ -22,7 +22,7 @@
                 </div>
                 <div id="cadastro-conteiner" class="col s10 m10 l4 offset-s1 offset-m1 form">
                     <img src="../img/LogoVerde.png" alt="Logo Uniu">
-                    <form action="" method="POST">
+                    <form action="/login" method="POST">
                         @csrf
                         <div id="email" >
                             <label for="email">E-mail</label><br>
