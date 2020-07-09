@@ -18,24 +18,24 @@
 
             <div class="input-field col s12">
                 <input placeholder="Celebração do condimínio" id="first_name" type="text" class="validate">
-                <label for="first_name">Nome do evento</label>
+                <label for="first_name">Editar nome</label>
             </div>
 
             <div class="col s12">
-                <label placeholder="Clique aqui para escolher o dia do evento" id="dataevento">Data do evento</label>
+                <label placeholder="Clique aqui para editar a data" id="dataevento">Data do evento</label>
                 <input type="text" class="datepicker">
             </div>
 
             <div class="input-field col s12">
                 <input placeholder="13h55" id="first_name" type="text" class="validate">
-                <label for="first_name">Horário do evento</label>
+                <label for="first_name">Editar horário</label>
             </div>
 
             <div class="input-field col s12">
                 <label for="textarea1">Descrição</label>
-                <textarea placeholder="Parágrafo" id="textarea1" class="materialize-textarea" data-length="300"></textarea>
-                <textarea placeholder="Novo parágrafo" id="textarea1" class="materialize-textarea" data-length="300"></textarea>
-                <textarea placeholder="Novo parágrafo" id="textarea1" class="materialize-textarea" data-length="300"></textarea>
+                <textarea placeholder="Alterar parágrafo" id="textarea1" class="materialize-textarea" data-length="300"></textarea>
+                <textarea placeholder="Alterar parágrafo" id="textarea1" class="materialize-textarea" data-length="300"></textarea>
+                <textarea placeholder="Alterar parágrafo" id="textarea1" class="materialize-textarea" data-length="300"></textarea>
             </div>
 
             <div class="file-field input-field">
@@ -44,7 +44,7 @@
                   <input type="file" multiple>
                 </div>
                 <div class="file-path-wrapper">
-                  <input class="file-path validate" type="text" placeholder="Adicione uma imagem interessante para seu evento">
+                  <input class="file-path validate" type="text" placeholder="Alterar imagem">
                 </div>
             </div>
 

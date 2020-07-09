@@ -46,3 +46,7 @@ Route::post('/editarUsuario', ['uses'=>'UsuarioController@store']);
 
 Route::get('/addEvento', function () {return view('addEvento');});
 Route::post('/addEvento', ['uses'=>'EventoController@createevent']);
+
+Route::get('/editEvento', function () {return view('editEvento');});
+Route::post('/editEvento', ['uses'=>'EventoController@createevent']); // rota para salvar as alterações
+//precisa de uma rota para pegar o evento que se quer editar
