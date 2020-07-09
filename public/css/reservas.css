@@ -1,12 +1,17 @@
-/* RESERVAS ===Inicio===*/
-
-#reservas .material-icons{
-    background-color: #F7B733;
+#reservas{
+    width: 100%;
+    padding: 8vh 2vw;
 }
-
 #reservas .card{
-
-    border-radius: 20PX;
+    border-radius: 0  0 5rem 5rem;
+    margin-left: 1vw;
+    margin-right: 1vw;
+}
+#reservas .card:last-child{
+    margin-right: 0;
+}
+#reservas .espaco{
+    padding: 0;
 }
 #reservas .card-title{
     font-size: 1.5rem;
@@ -17,6 +22,10 @@
     padding: 10px;
     height: auto;
     font-size: 0.95rem;
+}
+#reservas .card-image{
+    padding: 0;
+    margin: 0;
 }
 #reservas .card-content a{
     background-color: #F7B733;
@@ -29,6 +38,3 @@
 .invisivel{
     opacity: 0!important;
 }
-
-
-/* RESERVAS ===Fim===*/

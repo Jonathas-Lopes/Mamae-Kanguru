@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Database\Seeder;
+use Illuminate\Support\Facades\DB;
 
 class CondominioSeeder extends Seeder
 {
@@ -12,7 +13,7 @@ class CondominioSeeder extends Seeder
     public function run()
     {
         DB::table('condominio')->insert([
-            "id"=>1;
+            "id"=>1,
             "nome"=>"Condomínio Eva Pericó Rachid",
             "endereco"=>"R. José Otoní, 284"
         ]);
