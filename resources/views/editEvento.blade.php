@@ -1,19 +1,19 @@
 @extends('layouts.template')
 
 @section('titulo')
-    Novo evento
+    Editar evento
 @endsection
 
 @section('conteudo')
 
-    <link type="text/css" rel="stylesheet" href="./css/addEvento.css" />
+    <main id="editEvento">
 
-    <main id="addEvento">
+        <link type="text/css" rel="stylesheet" href="./css/addEvento.css" />
 
         <form id="addEvento" class="col s12">
 
             <div class="col s12 center">
-                <h3>Criar novo evento</h3>
+                <h3>Editar evento</h3>
             </div>
 
             <div class="input-field col s12">
@@ -56,5 +56,5 @@
     </main>
 
     <script src="{{ asset('/js/addEvento.js') }}"></script>
-
+    
 @endsection
