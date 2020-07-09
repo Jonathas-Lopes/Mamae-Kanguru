@@ -12,7 +12,7 @@ class CondominioSeeder extends Seeder
     public function run()
     {
         DB::table('condominio')->insert([
-            "id"=>1;
+            "id"=>1,
             "nome"=>"Condomínio Eva Pericó Rachid",
             "endereco"=>"R. José Otoní, 284"
         ]);
