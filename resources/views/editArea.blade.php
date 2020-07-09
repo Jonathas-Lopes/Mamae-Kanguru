@@ -38,6 +38,10 @@
                 <i class="material-icons right">edit</i>
             </button>
 
+            <button id="deletebtn" class="btn waves-effect waves-light" type="submit" name="action">Deletar área
+                <i class="material-icons right">delete</i>
+            </button>
+
         </form>
     </main>
 

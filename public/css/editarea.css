@@ -8,3 +8,6 @@
 #editArea .file-field{
     margin-bottom: 4vh;
 }
+#editArea #deletebtn{
+    background-color: #FC4A1A;
+}
