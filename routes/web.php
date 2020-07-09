@@ -54,3 +54,6 @@ Route::post('/editevento', ['uses'=>'EventoController@createevent']); // rota pa
 Route::get('/editarea', function () {return view('editArea');});
 Route::post('/editarea', ['uses'=>'ReservasController@writecards']); // rota para salvar as alterações
 //precisa de uma rota para pegar o evento que se quer editar
+
+Route::get('/addarea', function () {return view('addArea');});
+Route::post('/addarea', ['uses'=>'ReservasController@writecards']);
