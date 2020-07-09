@@ -16,13 +16,13 @@
                     <div class="card-panel hoverable">
                         <div class="card-image">
                             <img src='{{$item->foto}}' alt="Foto da costureira de     máscaras caseiras">
-                        <span class="card-title">{{$item->titulo}}</span>
+                      <span class="card-title">{{$item->titulo}}</span>
                         </div>
                         <div class="card-content">
                             <p>{{$item->descricao}}</p>
                         </div>
                         <div class="card-action">
-                            <p><a href="#">neusaandrade</a></p>
+                            <p><a href="#">{{ Auth::user()->nome }}</a></p>
                             <a class="botaoresponder btn-floating btn waves-effect waves-light"><i
                                     class="tiny material-icons">send</i></a>
                         </div>
@@ -42,7 +42,7 @@
         <div id="modal1" class="modal modal-fixed-footer">
             <div class="modal-content">
     
-                <form class="formpainel col s12" action="/Painel" method="post" enctype="multipart/form-data">
+                <form class="formpainel col s12" action="" method="post" enctype="multipart/form-data">
                     @csrf
                     <div class="col">
     
