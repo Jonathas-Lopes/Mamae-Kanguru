@@ -14,8 +14,7 @@
         </div>
         <div class="sobre">
             <article>
-                <h6 class="nomeusuario center-align">Anna Souza</h6>
-                <p class="descricaousuario center-align">Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati illum suscipit harum laborum dolorem sapiente non dolor.</p>
+                <h6 class="nomeusuario center-align">{{ Auth::user()->nome }}</h6>
             </article>
             <div>
                 <a class="linksperfil waves-effect waves btn-flat">Mensagens privadas</a>

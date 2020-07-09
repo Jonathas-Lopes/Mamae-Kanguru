@@ -6,7 +6,7 @@ use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
 
-class Usuarios extends Authenticatable implements MustVerifyEmail
+class Usuarios extends Authenticatable
 {
     use Notifiable;
     protected $table = 'usuario';
@@ -20,7 +20,8 @@ class Usuarios extends Authenticatable implements MustVerifyEmail
      */
     
    protected $hidden = [
-       'senha', 'remember_token',
+       'senha', 
+       //'remember_token',
    ];
 
    /**

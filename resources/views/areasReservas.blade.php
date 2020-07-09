@@ -13,7 +13,7 @@
         </div>
         <div class="detalhelocacao space-title col l7 m12 s12">
             {{-- Tag de título do espaço --}}
-            <h3 class="space-title center-align">Título do Espaço</h3>
+            <h3 class="space-title center-align">Nome do Espaço</h3>
             {{-- Date picker/Agenda do espaço --}}
             <p class="content center-align">selecione uma data</p>
             <div class="selecaodata">
