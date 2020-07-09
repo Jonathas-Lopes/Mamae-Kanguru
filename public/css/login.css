@@ -2,11 +2,6 @@
     height: 100vh;
 }
 
-#cadastro-conteiner{
-    padding-top: 10%;
-}
-
-
 .row .col {
     padding: 0px;
 }
@@ -19,10 +14,6 @@
     background-position: center ;
 }
 
-.imagem-login img:last-child {
-    display: none;
-}
-
 .form {
     display: flex;
     flex-direction: column;
@@ -33,6 +24,11 @@
 .form img {
     width: 25%;
     margin-bottom: 30px;
+    margin-top: 20px;
+}
+
+#img-login {
+    margin-top: 20%;
 }
 
 #links {
@@ -45,8 +41,6 @@
     color: rgb(72, 190, 174);
     margin-bottom: 0px;
 }
-
-
 
 form div {
     margin-left: 0px;
@@ -61,15 +55,34 @@ form div {
     margin-left: 33%;
 }
 
+.select-dropdown {
+    color: #d1d1d1;
+}
+
 @media (max-width: 992px){
     .imagem-login{
-        display: none;
+        height: 300px;
+        background-position: bottom;
     }
     #cadastro-conteiner{
-        padding-top: 30%;
+        padding-top: 50px;
     }
 
     .imagem-login img:last-child {
         display: block;
+    }
+
+    .form img {
+        width: 100px;
+    }
+
+    #img-login {
+        margin-top: 0;
+    }
+}
+
+@media (max-width: 480px){
+    .imagem-login{
+        height: 120px;
     }
 }
