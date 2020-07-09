@@ -41,12 +41,16 @@ Route::post('/avisos', ['uses'=>'AvisoController@writecards'] );
 
 Route::get('/file/img/{id}', ['uses'=>'FileController@sendfile'] );
 
-Route::get('/editarUsuario', function () {return view('editarUsuario');});
-Route::post('/editarUsuario', ['uses'=>'UsuarioController@store']);
+Route::get('/editarusuario', function () {return view('editarUsuario');});
+Route::post('/editarusuario', ['uses'=>'UsuarioController@store']);
 
-Route::get('/addEvento', function () {return view('addEvento');});
-Route::post('/addEvento', ['uses'=>'EventoController@createevent']);
+Route::get('/addevento', function () {return view('addEvento');});
+Route::post('/addevento', ['uses'=>'EventoController@createevent']);
 
-Route::get('/editEvento', function () {return view('editEvento');});
-Route::post('/editEvento', ['uses'=>'EventoController@createevent']); // rota para salvar as alterações
+Route::get('/editevento', function () {return view('editEvento');});
+Route::post('/editevento', ['uses'=>'EventoController@createevent']); // rota para salvar as alterações
+//precisa de uma rota para pegar o evento que se quer editar
+
+Route::get('/editarea', function () {return view('editArea');});
+Route::post('/editarea', ['uses'=>'ReservasController@writecards']); // rota para salvar as alterações
 //precisa de uma rota para pegar o evento que se quer editar
