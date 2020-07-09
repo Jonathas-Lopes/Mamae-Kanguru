@@ -1,0 +1,16 @@
+#addEvento{
+    width: 100%;
+    margin: 2vh 4vw;
+}
+#addEvento h3{
+    font-size: 1.5rem;
+}
+#addEvento label #dataevento{
+    font-size: 0.75rem;
+}
+#addEvento form div input::placeholder{
+    color: rgb(160, 160, 160);
+}
+#addEvento form div textarea::placeholder{
+    color: rgb(160, 160, 160);
+}
