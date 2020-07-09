@@ -41,4 +41,5 @@ Route::post('/avisos', ['uses'=>'AvisoController@writecards'] );
 
 Route::get('/file/img/{id}', ['uses'=>'FileController@sendfile'] );
 
-
+Route::get('/editarUsuario', function () {return view('editarUsuario');});
+Route::post('/editarUsuario', ['uses'=>'UsuarioController@store']);
