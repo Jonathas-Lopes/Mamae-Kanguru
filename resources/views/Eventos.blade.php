@@ -26,7 +26,7 @@
                 <a class="confirmarbtn waves-effect waves-light btn">confirmar presença</a>
                 {{-- Botões do administrador --}}
                 <a class="editarbtn btn-floating btn-large waves-effect"><i class="material-icons">edit</i></a>
-                <a class="deletarbtn btn-floating btn-large waves-effect red"><i class="material-icons">remove</i></a>
+                <a class="deletarbtn btn-floating btn-large waves-effect"><i class="material-icons">remove</i></a>
             </div>
 
             <div class="carousel-item green darken-4 white-text">
@@ -44,7 +44,7 @@
                 <a class="confirmarbtn waves-effect waves-light btn">confirmar presença</a>
                 {{-- Botões do administrador --}}
                 <a class="editarbtn btn-floating btn-large waves-effect"><i class="material-icons">edit</i></a>
-                <a class="deletarbtn btn-floating btn-large waves-effect red"><i class="material-icons">remove</i></a>
+                <a class="deletarbtn btn-floating btn-large waves-effect"><i class="material-icons">remove</i></a>
             </div>
             
             <div class="carousel-item orange darken-4 white-text">
@@ -62,7 +62,7 @@
                 <a class="confirmarbtn waves-effect waves-light btn">confirmar presença</a>
                 {{-- Botões do administrador --}}
                 <a class="editarbtn btn-floating btn-large waves-effect"><i class="material-icons">edit</i></a>
-                <a class="deletarbtn btn-floating btn-large waves-effect red"><i class="material-icons">remove</i></a>
+                <a class="deletarbtn btn-floating btn-large waves-effect"><i class="material-icons">remove</i></a>
             </div>
 
             <div class="carousel-item red darken-4 white-text">
@@ -80,24 +80,29 @@
                 <a class="confirmarbtn waves-effect waves-light btn">confirmar presença</a>
                 {{-- Botões do administrador --}}
                 <a class="editarbtn btn-floating btn-large waves-effect"><i class="material-icons">edit</i></a>
-                <a class="deletarbtn btn-floating btn-large waves-effect red"><i class="material-icons">remove</i></a>
+                <a class="deletarbtn btn-floating btn-large waves-effect"><i class="material-icons">remove</i></a>
             </div>
         </div>
 
-
-        <div class="galeriaeventos center container col s12 m7">
+        <div class="galeriaeventos center container col s12">
+            
             <h4 class="header">Galeria de fotos dos eventos</h4>
+
             <!-- Dropdown Trigger -->
             <a class='dropdown-trigger btn' href='#' data-target='dropdown1'>Escolha o evento</a>
 
             <!-- Dropdown Structure -->
             <ul id='dropdown1' class='dropdown-content'>
-            <li><a href="#!">Festa de Volta às Aulas 2020</a></li>
-            <li><a href="#!">Festa de Natal 2019</a></li>
-            <li><a href="#!">Halloween 2019</a></li>
+                <li><a href="#!">Festa de Volta às Aulas 2020</a></li>
+                <li><a href="#!">Festa de Natal 2019</a></li>
+                <li><a href="#!">Churrasco Dia das Mães 2020</a></li>
             </ul>
-        </div>
 
+            {{-- BOTÃO ADMINISTRADOR - ADICIONAR GALERIA DE FOTOS --}}
+            <div>
+                <a class="btnaddgaleria waves-effect waves-light btn">adicionar nova galeria</a>
+            </div>
+        </div>
 
         </main>
         <script src="./js/jQuery341.js"></script>

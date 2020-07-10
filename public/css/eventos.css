@@ -19,11 +19,23 @@
 #eventos .carousel-item a{
     margin: 3vh;
 }
+#eventos .galeriaeventos .header{
+    margin-bottom: 3vh;
+}
+#eventos .galeriaeventos .btnaddgaleria{
+    margin-bottom: 3vh;
+}
 #eventos .carousel-item .confirmarbtn{
     background-color: #F7B733;
 }
 #eventos .carousel-item .editarbtn{
     background-color: #F7B733;
+}
+#eventos .deletarbtn{
+    background-color: #FC4A1A;
+}
+#eventos .galeriaeventos .btnaddgaleria{
+    background-color: #FC4A1A;
 }
 #eventos .dropdown-trigger{
     background-color: #F7B733;
