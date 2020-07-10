@@ -22,7 +22,7 @@
                             <p>{{$item->descricao}}</p>
                         </div>
                         <div class="card-action">
-                            <p><a href="#">{{ Auth::user()->nome }}</a></p>
+                            <p><a href="#">{{$item->nome}}</a></p>
                             <a class="botaoresponder btn-floating btn waves-effect waves-light"><i
                                     class="tiny material-icons">send</i></a>
                         </div>
