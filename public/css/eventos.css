@@ -1,31 +1,29 @@
-/* EVENTOS === Início ===*/
-#eventos {
-    height: fit-content;
+#eventos{
     width: 100%;
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    min-height: 100vh;
 }
-#eventos h2{
-    font-size: 1.6rem;
-    font-weight: 600;
-    text-align: center;
-    margin-bottom: 20px;
+#eventos .carousel-item{
+    height: auto;
 }
-#eventos .card-content{
-    padding: 5px 15px;
+#eventos h4{
+    font-size: 2vw;  
 }
-#eventos .card-content .card-title{
-    font-weight: 500;
-    font-size: 1.2rem;
+#eventos h5{
+    font-size: 1.5vw;  
 }
-#eventos .card-content h6{
-    font-size: 1rem;
+#eventos .carousel-item p{
+    margin-top: 2vh;
+    font-size: 1;
 }
-#eventos .card-content p{
-    margin: 20px 0;
-    font-size: 0.9rem;
+#eventos .carousel-item a{
+    margin: 3vh;
+}
+#eventos .carousel-item .confirmarbtn{
+    background-color: #F7B733;
+}
+#eventos .carousel-item .editarbtn{
+    background-color: #F7B733;
 }
 #eventos .dropdown-trigger{
     background-color: #F7B733;
@@ -38,7 +36,6 @@
     color: black !important;
     background-color: #F7B733;
 }
-/* EVENTOS === Fim ===*/
 
 @media only screen and (max-width: 600px) {
 
