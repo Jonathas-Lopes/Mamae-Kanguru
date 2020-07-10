@@ -11,8 +11,8 @@ class PainelController extends Controller
 {
     public function getcards(Request $request)
     {
-        $paineis = Painel::all();
-        return view('Painel', compact('paineis'));
+        $painel = Painel::painelPost();
+        return view('Painel', compact('painel'));
     }
     
     public function writecards(Request $request)
