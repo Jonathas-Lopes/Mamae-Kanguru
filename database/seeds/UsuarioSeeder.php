@@ -15,7 +15,7 @@ class UsuarioSeeder extends Seeder
             'nome' => Str::random(10),
             'email' => Str::random(10).'@gmail.com',
             'senha' => Hash::make('password'),
-            'genero'=>'F',
+            'genero'=>'feminino',
             'admin'=>'1',
             'condominio_id'=> '1'
         ]);

@@ -16,7 +16,7 @@
     <header>
         <nav class="#48beae">
             <div class="">
-                <a class="logo"><img class="imagem-1" src="{{ asset('/img/2NomeBrancoCortado.png') }}" alt="Logo"></a>
+                <a href="/home" class="logo"><img class="imagem-1" src="{{ asset('/img/2NomeBrancoCortado.png') }}" alt="Logo"></a>
                 <ul class="abas hide-on-med-and-down">
                     <li class=""><a href="/reservas">Reservas</a></li>
                     <li class=""><a href="/solidariedade">Solidariedade</a></li>
