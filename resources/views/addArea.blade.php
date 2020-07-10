@@ -25,17 +25,17 @@
             </div>
 
             <div class="input-field col s12">
-                <input placeholder="Salão de Festas Adulto" id="first_name" type="text" class="validate">
-                <label for="first_name">Nome da área</label>
+                <input name="nome" placeholder="Salão de Festas Adulto" id="nome_area" type="text" class="validate">
+                <label for="nome_area">Nome da área</label>
             </div>
 
             <div class="input-field col s12">
                 <label for="textarea1">Descrição</label>
-                <textarea placeholder="Adicionar parágrafo" id="textarea1" class="materialize-textarea" data-length="300"></textarea>
-                <textarea placeholder="Adicionar novo parágrafo" id="textarea1" class="materialize-textarea" data-length="300"></textarea>
-                <textarea placeholder="Adicionar novo parágrafo" id="textarea1" class="materialize-textarea" data-length="300"></textarea>
-            </div>
-
+                <textarea name="descricao_1" placeholder="Adicionar parágrafo" id="textarea1" class="materialize-textarea" data-length="300"></textarea>
+                <textarea name="descricao_2" placeholder="Adicionar novo parágrafo" id="textarea2" class="materialize-textarea" data-length="300"></textarea>
+                <textarea name="descricao_3" placeholder="Adicionar novo parágrafo" id="textarea3" class="materialize-textarea" data-length="300"></textarea>
+2            </div>3
+3
             <button class="btn waves-effect waves-light" type="submit" name="action">Criar
                 <i class="material-icons right">create</i>
             </button>
