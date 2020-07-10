@@ -1,0 +1,37 @@
+#areasReservas{
+    display: flex;
+    flex-direction: column;
+}
+#areasReservas .carousel .carousel-item{
+    width: 50vw;
+    height: 60vh;
+}
+#areasReservas .space-title{
+    font-size: 2vw;
+}
+#areasReservas .datepicker{
+    width: 30vw;
+}
+#areasReservas .datepicker::placeholder{
+    color: grey;
+}
+#areasReservas .reservarbtn{
+    margin-top: 2vh;
+    margin-bottom: 4vh !important;
+}
+#areasReservas .card-title{
+    font-size: 1.5vw;
+    margin: 0 1vw;
+    padding: 2vh 1vw;
+}
+#areasReservas .card-content{
+    text-align: left;
+    margin: 0 1vw;
+    padding: 1vh 1vw;
+}
+#areasReservas .regras ol li{
+    margin: 1.5vh 1vw;
+}
+#areasReservas .manual ol li{
+    margin: 1.5vh 1vw;
+}

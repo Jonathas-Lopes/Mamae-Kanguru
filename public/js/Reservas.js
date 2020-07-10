@@ -11,6 +11,10 @@ $(document).ready(function () {
         setTimeout(function(){ getPage(pagename, ".main");}, 3000);
         console.log('hello');
     
-      });
+    });
+
+    $('.carousel').carousel();
 
 });
+
+$('.carousel.carousel-slider').carousel({fullWidth: true});
