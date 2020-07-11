@@ -7,8 +7,10 @@ use Illuminate\Http\Request;
 
 
 
-class areaController extends Controller
+class AreaController extends Controller
 {
+    protected $filable = ['nome', 'descricao_1', 'descricao_2', 'descricao_3', 'foto', 'condominio_id'];
+
     public function getarea(Request $request)
     {
         $areas = Areas_Reservaveis::all();
@@ -21,14 +23,24 @@ class areaController extends Controller
             $upload = $request->foto->store('img');
             $areas = new Areas_Reservaveis();
             $areas->nome = $request->nome;
+            $areas->data = now();
             $areas->descricao_1 = $request->descricao_1;
             $areas->descricao_2 = $request->descricao_2;
             $areas->descricao_3 = $request->descricao_3;
             $areas->foto = "/file/$upload";
             $areas->condominio_id = Auth::user()->condominio_id;
             $areas->save();
+
             return redirect('/espacosReservas');
         }
+    }
+
+    public function viewEditar($id){
+        $data['id'] = $id;
+
+        $area = Areas_Reservaveis::find($id);
+
+        return view('editArea', ['area'=>$area]);
     }
 }
 

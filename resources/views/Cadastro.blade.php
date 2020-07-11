@@ -40,11 +40,11 @@
                         </div>
                         <div id="genero">
                             <label for="genero">Gênero</label>
-                            <select id="genero">
+                            <select name="genero" id="genero">
                                 <option value="" disabled selected>Selecione o seu gênero</option>
-                                <option value="F">Feminino</option>
-                                <option value="M">Masculino</option>
-                                <option value="OUTRO">Outro</option>
+                                <option value="feminino">Feminino</option>
+                                <option value="masculino">Masculino</option>
+                                <option value="outro">Outro</option>
                             </select>
                         </div>
                         <div id="senha">
