@@ -57,3 +57,7 @@ Route::post('/editarea', ['uses'=>'ReservasController@writecards']); // rota par
 
 Route::get('/addarea', function () {return view('addArea');});
 Route::post('/addarea', ['uses'=>'AreaController@createarea']);
+
+Route::get('/editaviso', function () {return view('editAviso');});
+Route::post('/editaviso', ['uses'=>'AvisoController@writecards']); // rota para salvar as alterações
+//precisa de uma rota para pegar o aviso que se quer editar
