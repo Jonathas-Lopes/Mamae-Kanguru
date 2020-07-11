@@ -9,8 +9,6 @@ use Illuminate\Http\Request;
 
 class AreaController extends Controller
 {
-
-
     protected $filable = ['nome', 'descricao_1', 'descricao_2', 'descricao_3', 'foto', 'condominio_id'];
 
     public function getarea(Request $request)
@@ -35,6 +33,14 @@ class AreaController extends Controller
 
             return redirect('/espacosReservas');
         }
+    }
+
+    public function viewEditar($id){
+        $data['id'] = $id;
+
+        $area = Areas_Reservaveis::find($id);
+
+        return view('editArea', ['area'=>$area]);
     }
 }
 
