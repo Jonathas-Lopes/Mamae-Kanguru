@@ -1,6 +1,6 @@
 @extends('layouts.template')
 
-@section('titulo') Editar área @endsection
+@section('titulo') Editar {{ $area->nome }} @endsection
 
 @section('conteudo')
 

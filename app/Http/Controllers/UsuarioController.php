@@ -24,7 +24,16 @@ class UsuarioController extends Controller
 
         $user->save();
 
-        return redirect('/home');
+        $email = $request->email;
+        $senha = $request->senha;
+
+        if(Auth::attempt(['email'=>$email,'password'=>$senha]))
+        {
+            return redirect('/home');
+        } else
+        {
+            return redirect('/');
+        }
     }
 
     function login(Request $request)
