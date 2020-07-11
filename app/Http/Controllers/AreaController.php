@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 use Illuminate\Support\Facades\Auth;
 use App\Model\Areas_Reservaveis;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 
 
@@ -35,13 +36,17 @@ class AreaController extends Controller
         }
     }
 
-    public function editarea(Request $request, $nome)
+    public function editarea(Request $request, $id)
     {   //verificar se está logado como admin.
         if (($request->nome) and ($request->descricao_1)) {
+            $data['id'] = $id;
 
-            $data['nome'] = $nome;
+            if($request->foto){
+                $upload = $request->foto->store('img');
+                Areas_Reservaveis::where('id', $id)->update(['foto'=> "/file/$upload"]);
+            }
 
-            Areas_Reservaveis::where('nome', $nome)
+            Areas_Reservaveis::where('id', $id)
                             ->update([
                                 'nome'=> $request->nome,
                                 'data'=> now(),

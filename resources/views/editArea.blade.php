@@ -8,7 +8,7 @@
 
     <main id="editArea">
 
-        <form action="/editarea/{{ $area->nome }}" id="editArea" method="POST" enctype="multipart/form-data">
+        <form action="/espacos/editarea/{{ $area->nome }}" id="editArea" method="POST" enctype="multipart/form-data">
             @csrf
             <div class="col s12 center">
                 <h3>Editar {{ $area->nome }}</h3>

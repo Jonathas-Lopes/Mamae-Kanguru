@@ -51,12 +51,12 @@ Route::get('/editevento', function () {return view('editEvento');});
 Route::post('/editevento', ['uses'=>'EventoController@createevent']); // rota para salvar as alterações
 //precisa de uma rota para pegar o evento que se quer editar
 
-Route::get('/editarea/{id}', ['uses'=>'AreaController@viewEditar']);
-Route::post('/editarea/{id}', ['uses'=>'AreaController@editarea']); // rota para salvar as alterações
+Route::get('/espacos/editarea/{id}', ['uses'=>'AreaController@viewEditar']);
+Route::post('/espacos/editarea/{id}', ['uses'=>'AreaController@editarea']); // rota para salvar as alterações
 //precisa de uma rota para pegar o evento que se quer editar
 
-Route::get('/addarea', function () {return view('addArea');});
-Route::post('/addarea', ['uses'=>'AreaController@createarea']);
+Route::get('/espacos/addarea', function () {return view('addArea');});
+Route::post('/espacos/addarea', ['uses'=>'AreaController@createarea']);
 
 Route::get('/editaviso', function () {return view('editAviso');});
 Route::post('/editaviso', ['uses'=>'AvisoController@writecards']); // rota para salvar as alterações
