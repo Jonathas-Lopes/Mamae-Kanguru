@@ -21,10 +21,10 @@ Route::post('/cadastro', ['uses'=>'UsuarioController@store']);
 
 Route::get('/home', function () {return view('Home');});
 
-Route::get('/reservas', ['uses'=>'ReservasController@getcards'] );
+Route::get('/reservas', ['uses'=>'AreaController@getReservas'] );
 Route::post('/reservas', ['uses'=>'ReservasController@writecards'] );
 
-Route::get('/espacosReservas', function () {return view('areasReservas');} );
+Route::get('/espacosReservas', ['uses'=>'AreaController@getAreas'] );
 Route::post('/espacosReservas', ['uses'=>'AvisoController@writecards'] );
 
 Route::get('/solidariedade', ['uses'=>'SolidariedadeController@getcards'] );
@@ -52,7 +52,7 @@ Route::post('/editevento', ['uses'=>'EventoController@createevent']); // rota pa
 //precisa de uma rota para pegar o evento que se quer editar
 
 Route::get('/editarea/{id}', ['uses'=>'AreaController@viewEditar']);
-Route::post('/editarea', ['uses'=>'AreaController@editar']); // rota para salvar as alterações
+Route::post('/editarea/{id}', ['uses'=>'AreaController@editarea']); // rota para salvar as alterações
 //precisa de uma rota para pegar o evento que se quer editar
 
 Route::get('/addarea', function () {return view('addArea');});
