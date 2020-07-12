@@ -1,11 +1,10 @@
 #reservas{
-    width: 100%;
-    padding: 8vh 2vw;
-}
+    height: 100%;
+    padding: 8vh 0vw;
+} 
 #reservas .card{
     border-radius: 0  0 5rem 5rem;
-    margin-left: 1vw;
-    margin-right: 1vw;
+    
 }
 #reservas .card:last-child{
     margin-right: 0;

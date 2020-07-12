@@ -21,11 +21,13 @@ Route::post('/cadastro', ['uses'=>'UsuarioController@store']);
 
 Route::get('/home', function () {return view('Home');});
 
-Route::get('/reservas', ['uses'=>'AreaController@getReservas'] );
-Route::post('/reservas', ['uses'=>'ReservasController@writecards'] );
+Route::get('/reservas', ['uses'=>'AreaController@getreservacards'] );
 
-Route::get('/espacosReservas', ['uses'=>'AreaController@getAreas'] );
-Route::post('/espacosReservas', ['uses'=>'AvisoController@writecards'] );
+Route::post('/espacos', ['uses'=>'AreaController@writearea'] );
+Route::get('/espacos/area/{area}', ['uses'=>'AreaController@getarea'] );
+Route::get('/espacos/agenda/{area}', ['uses'=>'AreaController@schedule'] );
+Route::post('/espacos/agenda', ['uses'=>'AreaController@writeschedule'] );
+// Route::get('/espacos', function () {return view('areasReservas');} );
 
 Route::get('/solidariedade', ['uses'=>'SolidariedadeController@getcards'] );
 Route::post('/solidariedade', ['uses'=>'SolidariedadeController@writecards'] );
