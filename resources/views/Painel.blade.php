@@ -7,8 +7,11 @@
 
 
 @section('conteudo')
+
+    <link type="text/css" rel="stylesheet" href="./css/painel.css" />
+
     <section id="painel">
-            <link type="text/css" rel="stylesheet" href="./css/painel.css" />
+            
         <div class="container-fluid row">
             <!-- cards dos anúncios -->
             @foreach ($paineis as $item)
@@ -16,7 +19,7 @@
                     <div class="card-panel hoverable">
                         <div class="card-image">
                             <img src='{{$item->foto}}' alt="Foto da costureira de     máscaras caseiras">
-                      <span class="card-title">{{$item->titulo}}</span>
+                            <h6 class="card-title">{{$item->titulo}}</h6>
                         </div>
                         <div class="card-content">
                             <p>{{$item->descricao}}</p>
@@ -24,7 +27,11 @@
                         <div class="card-action">
                             <p><a href="#">{{$item->nome}}</a></p>
                             <a class="botaoresponder btn-floating btn waves-effect waves-light"><i
-                                    class="tiny material-icons">send</i></a>
+                                    class="tiny material-icons">send</i>
+                            </a>
+                            <a name="save" value="1" class="botaoedit btn-floating btn waves-effect waves-light"><i
+                                class="tiny material-icons">edit</i>
+                            </a>
                         </div>
                     </div>
                 </div>
@@ -34,7 +41,7 @@
     
         <!-- botão para inserção de um anúncio -->
         <!-- Modal Trigger -->
-        <a class="botaoanuncio modal-trigger btn-floating btn-large waves-effect waves-light" href="#modal1"><i
+        <a class="botaoanuncio modal-trigger btn-floating btn-large waves-effect" href="#modal1"><i
                     class="material-icons">add</i>
             </a>
     
@@ -47,13 +54,13 @@
                     <div class="col">
     
                         <div>
-                            <p>Coloque um título para o seu produto ou serviço, descreva-o com detalhes e capriche na foto.
-                            </p>
+                            <h6>Coloque um título para o seu produto ou serviço, descreva-o com detalhes e capriche na foto.
+                            </h6>
                         </div>
     
                         <!-- Título -->
                         <div class="input-field">
-                            <input id="tituloanuncio" name="titulo" value="titulo" type="text" class="validate">
+                            <input id="tituloanuncio" name="titulo" type="text" class="validate">
                             <label id="tituloanuncio" class="active"  for="tituloanuncio">Título do anúncio</label>
                         </div>
     
@@ -65,9 +72,13 @@
     
                         <!-- Upload da imagem -->
                         <div class="file-field input-field center-align">
-                            <div id="botaoanuncio" class="waves-effect waves-light btn">
-                                <span id="botaoanuncio">Imagem</span>
-                                <input type="file" name="foto">
+                            <div class="btn">
+                              <span><i class="material-icons">
+                                add_photo_alternate</i></span>
+                              <input type="file" multiple name="foto">
+                            </div>
+                            <div class="file-path-wrapper">
+                              <input class="file-path validate" type="text" placeholder="adicione uma imagem para o seu anúncio">
                             </div>
                         </div>
     
@@ -75,15 +86,12 @@
                         <div class="modal-footer">
                             <button href="#" type="submit" class="modal-close btn-flat">Criar anúncio</button>
                         </div>
-    
                     </div>
-    
                 </form>
             </div>
-    
         </div>
-    
     </section>
+
     <script src="./js/jQuery341.js"></script>
     <script src="./js/Painel.js"></script>
         
