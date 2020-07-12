@@ -17,8 +17,13 @@
                         <div class="card-image">
                             <img src="../img/doacao-de-sangue.jpg">
                             <span class="card-title">Doação de Sangue</span>
+                            {{-- BOTÃO LINK USUÁRIO --}}
                             <a class="btn-floating halfway-fab waves-effect waves-light red">
                                 <i class="material-icons">favorite_border</i>
+                            </a>
+                            {{-- BOTÃO DELETAR ADMIN --}}
+                            <a class="btnedit btn-floating halfway-fab waves-effect waves-light red">
+                                <i class="material-icons">delete</i>
                             </a>
                         </div>
                         <div class="card-content">
@@ -37,8 +42,13 @@
                         <div class="card-image">
                             <img src="../img/campanha_alimentos.jpg">
                             <span class="card-title">Campanha de alimentos</span>
+                            {{-- BOTÃO LINK USUÁRIO --}}
                             <a class="btn-floating halfway-fab waves-effect waves-light red">
                                 <i class="material-icons">favorite_border</i>
+                            </a>
+                            {{-- BOTÃO DELETAR ADMIN --}}
+                            <a class="btnedit btn-floating halfway-fab waves-effect waves-light red">
+                                <i class="material-icons">delete</i>
                             </a>
                         </div>
                         <div class="card-content">
@@ -57,8 +67,13 @@
                         <div class="card-image">
                             <img src="../img/doacao_casacos.jpeg">
                             <span class="card-title">Campanha do agasalho</span>
+                            {{-- BOTÃO LINK USUÁRIO --}}
                             <a class="btn-floating halfway-fab waves-effect waves-light red">
                                 <i class="material-icons">favorite_border</i>
+                            </a>
+                            {{-- BOTÃO DELETAR ADMIN --}}
+                            <a class="btnedit btn-floating halfway-fab waves-effect waves-light red">
+                                <i class="material-icons">delete</i>
                             </a>
                         </div>
                         <div class="card-content">
@@ -77,8 +92,13 @@
                         <div class="card-image">
                             <img src="../img/voluntarios.jpg">
                             <span class="card-title">Casa de Repouso</span>
+                            {{-- BOTÃO LINK USUÁRIO --}}
                             <a class="btn-floating halfway-fab waves-effect waves-light red">
                                 <i class="material-icons">favorite_border</i>
+                            </a>
+                            {{-- BOTÃO DELETAR ADMIN --}}
+                            <a class="btnedit btn-floating halfway-fab waves-effect waves-light red">
+                                <i class="material-icons">delete</i>
                             </a>
                         </div>
                         <div class="card-content">
@@ -97,8 +117,13 @@
                         <div class="card-image">
                             <img src="../img/bazar-beneficente.jpg">
                             <span class="card-title">Bazar beneficente</span>
+                            {{-- BOTÃO LINK USUÁRIO --}}
                             <a class="btn-floating halfway-fab waves-effect waves-light red">
                                 <i class="material-icons">favorite_border</i>
+                            </a>
+                            {{-- BOTÃO DELETAR ADMIN --}}
+                            <a class="btnedit btn-floating halfway-fab waves-effect waves-light red">
+                                <i class="material-icons">delete</i>
                             </a>
                         </div>
                         <div class="card-content">
@@ -168,6 +193,5 @@
     </main>
 
     <script src="../js/jQuery341.js"></script>
-    <script src="../js/materialize.min.js"></script>
     <script src="../js/Solidariedade.js"></script>
 @endsection

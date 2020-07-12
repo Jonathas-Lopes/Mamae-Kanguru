@@ -19,6 +19,11 @@
 #solidariedade .btn-floating{
     background-color: #FC4A1A;
 }
+#solidariedade .btnedit{
+    background-color: red;
+    position: relative;
+    left: 10vw;
+}
 #solidariedade #botaoanuncio{
     background-color: #F7B733;
 }
