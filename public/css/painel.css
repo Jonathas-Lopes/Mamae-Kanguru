@@ -4,6 +4,16 @@
    
     margin-top: 20px;
 }
+.card-panel{
+    position:relative;
+}
+
+.card-action{
+    position: absolute!important;
+    bottom: 10px;
+    width:85%
+}
+
 #painel div{
     text-align: center;
 }
