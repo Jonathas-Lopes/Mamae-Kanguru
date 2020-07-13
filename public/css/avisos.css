@@ -38,16 +38,8 @@
 #avisos .avisoComImg .card-content{
     padding: 10px;
 }
-
 #avisos .modal-content{
-    overflow-x: hidden;
-    overflow-y: hidden;
-}
-#avisos .modal-content p{
-    width: 100%;
-}
-#avisos .modal-content .radious-buttons{
-    margin-left: 40px;
+    padding: 3vh 3vw;
 }
 #avisos .modal-content .input-field input[type=text]:focus + label {
     color: #F7B733;
