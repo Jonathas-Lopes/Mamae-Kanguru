@@ -34,6 +34,8 @@ Route::post('/solidariedade', ['uses'=>'SolidariedadeController@writecards'] );
 
 Route::get('/painel', ['uses'=>'PainelController@getcards'] );
 Route::post('/painel', ['uses'=>'PainelController@writecards'] );
+Route::post('/painel/edit', ['uses'=>'PainelController@editcards'] );
+Route::post('/painel/delete', ['uses'=>'PainelController@deletecards'] );
 
 Route::get('/eventos', ['uses'=>'EventoController@getcards'] );
 Route::post('/eventos', ['uses'=>'EventoController@writecards'] );

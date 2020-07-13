@@ -1,6 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
+
 use Illuminate\Support\Facades\Auth;
 use App\Model\Painel;
 use Illuminate\Http\Request;
@@ -14,7 +15,7 @@ class PainelController extends Controller
         $paineis = Painel::painelPost();
         return view('Painel', compact('paineis'));
     }
-    
+
     public function writecards(Request $request)
     {
         if (($request->titulo) and ($request->descricao)) {
@@ -27,5 +28,15 @@ class PainelController extends Controller
             $painel->save();
             return redirect('/painel');
         }
+    }
+    public function editcards(Request $request)
+    {
+        $painel = Painel::find($request->id);
+
+        $painel->titulo = $request->titulo;
+        $painel->descricao = $request->descricao;
+
+        $painel->save();
+        return redirect('/painel');
     }
 }

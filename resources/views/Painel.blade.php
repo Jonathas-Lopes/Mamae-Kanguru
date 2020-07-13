@@ -14,17 +14,21 @@
             @foreach ($paineis as $item)
                 <div class="col s12 m4 l4">
                     <div class="card-panel hoverable">
-                        <div class="card-image">
+                        <div  class="card-image">
                             <img src='{{$item->foto}}' alt="Foto da costureira de     máscaras caseiras">
-                      <span class="card-title">{{$item->titulo}}</span>
+                      <span  name="{{$item->id}}titulo" contenteditable="true" class="card-title editavel">{{$item->titulo}}</span>
                         </div>
                         <div class="card-content">
-                            <p>{{$item->descricao}}</p>
+                            <p name="{{$item->id}}descricao" contenteditable="true">{{$item->descricao}}</p>
                         </div>
                         <div class="card-action">
                             <p><a href="#">{{$item->nome}}</a></p>
                             <a class="botaoresponder btn-floating btn waves-effect waves-light"><i
                                     class="tiny material-icons">send</i></a>
+                            <a class="botaoresponder btn-floating btn waves-effect waves-light"><i
+                                    class="tiny material-icons">delete</i></a>
+                            <a name="{{$item->id}}" class="edit botaoresponder btn-floating btn waves-effect waves-light"><i
+                                    class="tiny material-icons">edit</i></a>
                         </div>
                     </div>
                 </div>

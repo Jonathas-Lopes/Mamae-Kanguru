@@ -1,10 +1,18 @@
-$(document).ready(function () {
-    
-    /** código de inicialização do dropdown */
+$(document).ready(function(){
   $('.dropdown-trigger').dropdown();
-
-
-
+  $('.carousel').carousel(
+  {
+    dist: 0,
+    padding: 0,
+    fullWidth: true,
+    indicators: true,
+    duration: 100,
+  }
+  );
 });
 
-$('.carousel.carousel-slider').carousel({fullWidth: true});
+autoplay()   
+function autoplay() {
+    $('.carousel').carousel('next');
+    setTimeout(autoplay, 4500);
+}
