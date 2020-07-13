@@ -19,7 +19,7 @@
                     <div class="card-panel hoverable">
                         <div  class="card-image">
                             <img src='{{$item->foto}}' alt="Foto da costureira de     máscaras caseiras">
-                      <span  name="{{$item->id}}titulo" @if (Auth::user()->nome == $item->nome) contenteditable="true" @endif class="card-title editavel">{{$item->titulo}}</span>
+                      <h5  name="{{$item->id}}titulo" @if (Auth::user()->nome == $item->nome) contenteditable="true" @endif class="card-title editavel">{{$item->titulo}}</h5>
                         </div>
                         <div class="card-content">
                             <p name="{{$item->id}}descricao" @if (Auth::user()->nome == $item->nome)contenteditable="true" @endif>{{$item->descricao}}</p>
