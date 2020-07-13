@@ -26,13 +26,20 @@
                         </div>
                         <div class="card-action">
                             <p><a href="#">{{ $item->nome }}</a></p>
-                            @if (Auth::user()->nome == $item->nome)
+                            @if (Auth::user()->admin == 0)
+                                @if (Auth::user()->nome == $item->nome)
                                 <a name="save" value="1" class="botaoedit btn-floating btn waves-effect waves-light"><i
                                     class="tiny material-icons">edit</i>
                                 </a>
-                            @else
-                                <a class="botaoresponder btn-floating btn waves-effect waves-light"><i
-                                    class="tiny material-icons">send</i>
+                                @else
+                                    <a class="botaoresponder btn-floating btn waves-effect waves-light"><i
+                                        class="tiny material-icons">send</i>
+                                    </a>
+                                @endif
+                            @endif
+                            @if (Auth::user()->admin == 1)
+                                <a name="save" value="1" class="botaoedit btn-floating btn waves-effect waves-light"><i
+                                    class="tiny material-icons">remove</i>
                                 </a>
                             @endif
                         </div>
