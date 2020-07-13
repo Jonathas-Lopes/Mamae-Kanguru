@@ -44,4 +44,12 @@ class PainelController extends Controller
         $painel->save();
         return redirect('/painel');
     }
+
+    public function deletecards(Request $request)
+    {
+        $painel = Painel::find($request->id);
+
+         $painel->delete();
+        
+    }
 }
