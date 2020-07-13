@@ -25,6 +25,7 @@ $(document).ready(function () {
 
     $.post("/painel/edit", { id: id, descricao: descricao, titulo: titulo},function( data ) {
       console.log(data);
+      location.reload();
     })
     
 

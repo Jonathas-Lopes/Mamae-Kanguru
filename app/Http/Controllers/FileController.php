@@ -9,6 +9,11 @@ use Illuminate\Http\Request;
 
 class FileController extends Controller
 {
+    public function __construct()
+    {
+    $this->middleware('auth');
+    }
+    
     public function sendfile(Request $request, $id)
     {
         $file = '../storage/app/public/img/' . $id;
