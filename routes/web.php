@@ -22,16 +22,16 @@ Route::post('/cadastro', ['uses'=>'UsuarioController@store']);
 
 Route::get('/home', function () {return view('Home');});
 
-Route::get('/reservas', ['uses'=>'AreaController@getreservacards'] );
+Route::get('/reservas', ['uses'=>'AreaController@getreservacards']);
 
-Route::post('/espacos', ['uses'=>'AreaController@writearea'] );
-Route::get('/espacos/area/{area}', ['uses'=>'AreaController@getarea'] );
-Route::get('/espacos/agenda/{area}', ['uses'=>'AreaController@schedule'] );
-Route::post('/espacos/agenda', ['uses'=>'AreaController@writeschedule'] );
-// Route::get('/espacos', function () {return view('areasReservas');} );
+Route::post('/espacos', ['uses'=>'AreaController@writearea']);
+Route::get('/espacos/area/{area}', ['uses'=>'AreaController@getarea']);
+Route::get('/espacos/agenda/{area}', ['uses'=>'AreaController@schedule']);
+Route::post('/espacos/agenda', ['uses'=>'AreaController@writeschedule']);
+// Route::get('/espacos', function () {return view('areasReservas');});
 
-Route::get('/solidariedade', ['uses'=>'SolidariedadeController@getcards'] );
-Route::post('/solidariedade', ['uses'=>'SolidariedadeController@writecards'] );
+Route::get('/solidariedade', ['uses'=>'SolidariedadeController@getcards']);
+Route::post('/solidariedade', ['uses'=>'SolidariedadeController@writecards']);
 
 Route::get('/painel', ['uses'=>'PainelController@getcards'] );
 Route::post('/painel', ['uses'=>'PainelController@writecards'] );
