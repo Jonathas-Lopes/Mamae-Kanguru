@@ -1,17 +1,85 @@
 @extends('layouts.template')
 
-@section('titulo')
-    Home
-@endsection
+@section('titulo') Home @endsection
 
 @section('conteudo')
     <section class="perfil hide-on-med-and-down">
         <div class="foto-perfil">
             <img class="circle" src="./img/foto_perfil.jpg" alt="Foto perfil">
-            <a class="btn-floating btn-large waves-effect waves-light">
+
+            <!-- Modal Trigger -->
+            <a class="btn-floating btn-large waves-effect modal-trigger" data-target="modal1" href="#modal1">
                 <i class="material-icons">edit</i>
             </a>
         </div>
+
+        <!-- Modal Structure -->
+        <div id="modal1" class="modal">
+            <div class="modal-content">
+                <h5 class="center-align">Editar usuário</h5>
+                <form class="col s12">
+                    {{-- foto usuário --}}
+                    <div class="file-field input-field">
+                        <div class="btn">
+                            <span><i class="material-icons">add_a_photo</i></span>
+                            <input type="file">
+                        </div>
+                        <div class="file-path-wrapper">
+                            <input class="file-path validate" type="text" placeholder="Troque a sua foto">
+                        </div>
+                    </div>
+                    {{-- nome --}}
+                    <div class="input-field col s12">
+                    <input placeholder="Nome completo" id="first_name" type="text" class="validate">
+                    </div>
+                    {{-- gênero --}}
+                    <p class="genero">
+                        <label class="radious-buttons">
+                            <input class="with-gap" name="group1" type="radio" value="feminino"/>
+                            <span>feminino</span>
+                        </label>
+                        <label class="radious-buttons">
+                            <input class="with-gap" name="group1" type="radio" value="masculino"/>
+                            <span>masculino</span>
+                        </label>
+                        <label class="radious-buttons">
+                            <input class="with-gap" name="group1" type="radio" value="outro"/>
+                            <span>outros</span>
+                        </label>
+                    </p>
+                    {{-- e-mail --}}
+                    <div class="row">
+                        <div class="input-field col s12">
+                        <input placeholder="E-mail" id="email" type="email" class="validate">
+                        </div>
+                    </div>
+                    {{-- telefone --}}
+                    <div class="row">
+                        <div class="input-field col s12">
+                        <input placeholder="(99) 99999-9999" id="email" type="email" class="validate">
+                        </div>
+                    </div>
+                    {{-- senha --}}
+                    <div class="row">
+                        <div class="input-field col s12">
+                        <input placeholder="Senha" id="password" type="password" class="validate">
+                        </div>
+                    </div>
+                    {{-- confirmação senha --}}
+                    <div class="row">
+                        <div class="input-field col s12">
+                        <input placeholder="Confirme a sua senha" id="password" type="password" class="validate">
+                        </div>
+                    </div>
+                </form>
+            
+            </div>
+            <div class="modal-footer">
+            <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat">Editar</a>
+            </div>
+        </div>
+
+        {{-- Links side bar --}}
         <div class="sobre">
             <article>
                 <h6 class="nomeusuario center-align">{{ Auth::user()->nome }}</h6>
@@ -27,7 +95,17 @@
             </div>
         </div>
     </section>
+
+    {{-- Mensagens instantâneas --}}
     <section class="assuntos">
+        {{-- textarea --}}
+        <div class="textarea row">
+            <div class="input-field col s12">
+                <textarea value="" id="textarea1" class="materialize-textarea"></textarea>
+                <label for="textarea1">Escreva aqui a sua mensagem</label>
+            </div>
+        </div>
+
         <article class="card">
             <h6><img class="circle" src="./img/foto_moradora2.jpg" alt="Foto perfil">Valéria Costa</h6>
             <p>No último sábado desse mês vou levar doações para a casa de repouso. Quem tiver doações para entregar, pode aproveitar que tem espaço no carro.</p>

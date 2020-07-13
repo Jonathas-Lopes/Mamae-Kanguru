@@ -22,11 +22,14 @@
                 <p class="white-text">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Cupiditate asperiores exercitationem nihil facilis! Assumenda suscipit veritatis aspernatur distinctio, voluptatem ullam molestiae tempora voluptatum dignissimos consequatur debitis rerum asperiores consequuntur possimus!</p>
                 <p class="white-text">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Cupiditate asperiores exercitationem nihil facilis! Assumenda suscipit veritatis aspernatur distinctio, voluptatem ullam molestiae tempora voluptatum dignissimos consequatur debitis rerum asperiores consequuntur possimus!</p>
                 <p class="white-text">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Cupiditate asperiores exercitationem nihil facilis! Assumenda suscipit veritatis aspernatur distinctio, voluptatem ullam molestiae tempora voluptatum dignissimos consequatur debitis rerum asperiores consequuntur possimus!</p>
-                {{-- Botão do usuário --}}
-                <a class="confirmarbtn waves-effect waves-light btn">confirmar presença</a>
-                {{-- Botões do administrador --}}
-                <a class="editarbtn btn-floating btn-large waves-effect"><i class="material-icons">edit</i></a>
-                <a class="deletarbtn btn-floating btn-large waves-effect"><i class="material-icons">remove</i></a>
+                @if (Auth::user()->admin == 1)
+                    {{-- Botões do administrador --}}
+                    <a class="editarbtn btn-floating btn-large waves-effect"><i class="material-icons">edit</i></a>
+                    <a class="deletarbtn btn-floating btn-large waves-effect"><i class="material-icons">remove</i></a>
+                @else
+                    {{-- Botão do usuário --}}
+                    <a class="confirmarbtn waves-effect waves-light btn">confirmar presença</a>
+                @endif
             </div>
 
             <div class="carousel-item green darken-4 white-text">
@@ -40,11 +43,14 @@
                 <p class="white-text">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Cupiditate asperiores exercitationem nihil facilis! Assumenda suscipit veritatis aspernatur distinctio, voluptatem ullam molestiae tempora voluptatum dignissimos consequatur debitis rerum asperiores consequuntur possimus!</p>
                 <p class="white-text">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Cupiditate asperiores exercitationem nihil facilis! Assumenda suscipit veritatis aspernatur distinctio, voluptatem ullam molestiae tempora voluptatum dignissimos consequatur debitis rerum asperiores consequuntur possimus!</p>
                 <p class="white-text">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Cupiditate asperiores exercitationem nihil facilis! Assumenda suscipit veritatis aspernatur distinctio, voluptatem ullam molestiae tempora voluptatum dignissimos consequatur debitis rerum asperiores consequuntur possimus!</p>
-                {{-- Botão do usuário --}}
-                <a class="confirmarbtn waves-effect waves-light btn">confirmar presença</a>
-                {{-- Botões do administrador --}}
-                <a class="editarbtn btn-floating btn-large waves-effect"><i class="material-icons">edit</i></a>
-                <a class="deletarbtn btn-floating btn-large waves-effect"><i class="material-icons">remove</i></a>
+                @if (Auth::user()->admin == 1)
+                    {{-- Botões do administrador --}}
+                    <a class="editarbtn btn-floating btn-large waves-effect"><i class="material-icons">edit</i></a>
+                    <a class="deletarbtn btn-floating btn-large waves-effect"><i class="material-icons">remove</i></a>
+                @else
+                    {{-- Botão do usuário --}}
+                    <a class="confirmarbtn waves-effect waves-light btn">confirmar presença</a>
+                @endif
             </div>
             
             <div class="carousel-item orange darken-4 white-text">
@@ -58,11 +64,14 @@
                 <p class="white-text">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Cupiditate asperiores exercitationem nihil facilis! Assumenda suscipit veritatis aspernatur distinctio, voluptatem ullam molestiae tempora voluptatum dignissimos consequatur debitis rerum asperiores consequuntur possimus!</p>
                 <p class="white-text">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Cupiditate asperiores exercitationem nihil facilis! Assumenda suscipit veritatis aspernatur distinctio, voluptatem ullam molestiae tempora voluptatum dignissimos consequatur debitis rerum asperiores consequuntur possimus!</p>
                 <p class="white-text">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Cupiditate asperiores exercitationem nihil facilis! Assumenda suscipit veritatis aspernatur distinctio, voluptatem ullam molestiae tempora voluptatum dignissimos consequatur debitis rerum asperiores consequuntur possimus!</p>
-                {{-- Botão do usuário --}}
-                <a class="confirmarbtn waves-effect waves-light btn">confirmar presença</a>
-                {{-- Botões do administrador --}}
-                <a class="editarbtn btn-floating btn-large waves-effect"><i class="material-icons">edit</i></a>
-                <a class="deletarbtn btn-floating btn-large waves-effect"><i class="material-icons">remove</i></a>
+                @if (Auth::user()->admin == 1)
+                    {{-- Botões do administrador --}}
+                    <a class="editarbtn btn-floating btn-large waves-effect"><i class="material-icons">edit</i></a>
+                    <a class="deletarbtn btn-floating btn-large waves-effect"><i class="material-icons">remove</i></a>
+                @else
+                    {{-- Botão do usuário --}}
+                    <a class="confirmarbtn waves-effect waves-light btn">confirmar presença</a>
+                @endif
             </div>
 
             <div class="carousel-item red darken-4 white-text">
@@ -76,11 +85,14 @@
                 <p class="white-text">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Cupiditate asperiores exercitationem nihil facilis! Assumenda suscipit veritatis aspernatur distinctio, voluptatem ullam molestiae tempora voluptatum dignissimos consequatur debitis rerum asperiores consequuntur possimus!</p>
                 <p class="white-text">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Cupiditate asperiores exercitationem nihil facilis! Assumenda suscipit veritatis aspernatur distinctio, voluptatem ullam molestiae tempora voluptatum dignissimos consequatur debitis rerum asperiores consequuntur possimus!</p>
                 <p class="white-text">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Cupiditate asperiores exercitationem nihil facilis! Assumenda suscipit veritatis aspernatur distinctio, voluptatem ullam molestiae tempora voluptatum dignissimos consequatur debitis rerum asperiores consequuntur possimus!</p>
-                {{-- Botão do usuário --}}
-                <a class="confirmarbtn waves-effect waves-light btn">confirmar presença</a>
-                {{-- Botões do administrador --}}
-                <a class="editarbtn btn-floating btn-large waves-effect"><i class="material-icons">edit</i></a>
-                <a class="deletarbtn btn-floating btn-large waves-effect"><i class="material-icons">remove</i></a>
+                @if (Auth::user()->admin == 1)
+                    {{-- Botões do administrador --}}
+                    <a class="editarbtn btn-floating btn-large waves-effect"><i class="material-icons">edit</i></a>
+                    <a class="deletarbtn btn-floating btn-large waves-effect"><i class="material-icons">remove</i></a>
+                @else
+                    {{-- Botão do usuário --}}
+                    <a class="confirmarbtn waves-effect waves-light btn">confirmar presença</a>
+                @endif
             </div>
         </div>
 

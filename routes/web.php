@@ -15,6 +15,7 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {return view('Login');});
 Route::post('/login', ['uses'=>'UsuarioController@login']);
+Route::get('/login/logout', ['uses'=>'UsuarioController@logout']);
 
 Route::get('/cadastro', function () {return view('Cadastro');});
 Route::post('/cadastro', ['uses'=>'UsuarioController@store']);

@@ -18,20 +18,23 @@
                 <div class="col s12 m4 l4">
                     <div class="card-panel hoverable">
                         <div class="card-image">
-                            <img src='{{$item->foto}}' alt="Foto da costureira de     máscaras caseiras">
+                            <img src='{{$item->foto}}' alt=>
                             <h6 class="card-title">{{$item->titulo}}</h6>
                         </div>
                         <div class="card-content">
                             <p>{{$item->descricao}}</p>
                         </div>
                         <div class="card-action">
-                            <p><a href="#">{{$item->nome}}</a></p>
-                            <a class="botaoresponder btn-floating btn waves-effect waves-light"><i
+                            <p><a href="#">{{ $item->nome }}</a></p>
+                            @if (Auth::user()->nome == $item->nome)
+                                <a name="save" value="1" class="botaoedit btn-floating btn waves-effect waves-light"><i
+                                    class="tiny material-icons">edit</i>
+                                </a>
+                            @else
+                                <a class="botaoresponder btn-floating btn waves-effect waves-light"><i
                                     class="tiny material-icons">send</i>
-                            </a>
-                            <a name="save" value="1" class="botaoedit btn-floating btn waves-effect waves-light"><i
-                                class="tiny material-icons">edit</i>
-                            </a>
+                                </a>
+                            @endif
                         </div>
                     </div>
                 </div>

@@ -1,4 +1,3 @@
-
 body{
    
     background-color: #f0f1f3;
@@ -30,7 +29,6 @@ nav div ul li{
     height: 100%;
     display: flex;
     align-items: center;
-
 }
 .actived{
     background-color: #fc4813 !important;
@@ -76,8 +74,6 @@ nav div ul li a:hover{
     align-items: center;
     margin-bottom: 0em;
 }
-
-
 main{
     margin-bottom: auto;
     display:flex;
@@ -86,6 +82,7 @@ main{
 .row{
     margin-bottom: 0!important;
 }
+
 /* PERFIL  === Início ===*/
 .perfil{
     position: fixed;
@@ -143,7 +140,7 @@ main{
     left: 50%;
     margin: 20px 0;
 }
-/* PERFIL  === Fim ===*/
+
 /* PERFIL-mobile  === inicio ===*/
 .perfil-mobile{
     left:0;
@@ -155,47 +152,64 @@ main{
 .perfil-mobile .foto-perfil{
     position: relative;
     text-align: center;   
- }
- .perfil-mobile .foto-perfil img{
-     margin-top: 15px;
-     margin-bottom: auto;
-     margin-left: 25px;
-     width: 11vw;
-     height: 11vw;   
- }
- .perfil-mobile .foto-perfil a{
-     position: relative;
-     bottom: 15px;
-     right: 35px;
-     background-color: #FC4A1A;
- }
- .perfil-mobile .sobre .nomeusuario{
-     font-weight: 600;
-     font-size: 1.5vw;
-     margin: 5px;
- }
- .perfil-mobile .sobre .descricaousuario{
-     font-size: 0.95vw;
-     margin-bottom: 30px;
-     padding: 10px;
- }
- .perfil-mobile .sobre .linksperfil{
-     width: 100%;
-     margin: 0;
-     font-weight: 600;
-     text-align: center;
-     font-size: 0.95vw;
- }
- .perfil-mobile .sobre .blocohashtags{
-     margin-top: 30px;
- }
- .perfil-mobile .sobre .hashtags a{
-     background-color: #F7B733;
-     font-size: 0.95vw;
- }
- 
-/* PERFIL-mobile  === Fim ===*/
+}
+.perfil-mobile .foto-perfil img{
+    margin-top: 15px;
+    margin-bottom: auto;
+    margin-left: 25px;
+    width: 11vw;
+    height: 11vw;   
+}
+.perfil-mobile .foto-perfil a{
+    position: relative;
+    bottom: 15px;
+    right: 35px;
+    background-color: #FC4A1A;
+}
+.perfil-mobile .sobre .nomeusuario{
+    font-weight: 600;
+    font-size: 1.5vw;
+    margin: 5px;
+}
+.perfil-mobile .sobre .descricaousuario{
+    font-size: 0.95vw;
+    margin-bottom: 30px;
+    padding: 10px;
+}
+.perfil-mobile .sobre .linksperfil{
+    width: 100%;
+    margin: 0;
+    font-weight: 600;
+    text-align: center;
+    font-size: 0.95vw;
+}
+.perfil-mobile .sobre .blocohashtags{
+    margin-top: 30px;
+}
+.perfil-mobile .sobre .hashtags a{
+    background-color: #F7B733;
+    font-size: 0.95vw;
+}
+
+/* EDITAR USUÁRIO  === Início ===*/
+#modal1{
+    position: fixed;
+    bottom: 10vh;
+}
+#modal1 H5{
+    font-size: 1.5vw;
+}
+#modal1 .btn{
+    background-color: #F7B733;
+}
+#modal1 .genero .radious-buttons{
+    margin-right: 5vw;
+}
+
 /* ASSUNTOS  === Início ===*/
+.assuntos .textarea{
+    width: 100%;
+}
 .assuntos{
     width: 80%;
     position: sticky;
@@ -226,7 +240,7 @@ main{
     position: relative;
     bottom: 30px;
 }
-/* ASSUNTOS  === Fim ===*/
+
 /* FOOTER  === Início ===*/
 #footer .page-footer{
     z-index: 20;
@@ -244,7 +258,8 @@ main{
 #footer .logofooter{
     width: 200px;
 }
-/* FOOTER  === Fim ===*/
+
+
 @media only screen and (max-width: 992px) {
     main{
         margin-bottom: 50px;

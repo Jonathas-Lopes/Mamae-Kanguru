@@ -23,7 +23,7 @@
                     <li class=""><a href="/painel">Painel</a></li>
                     <li class=""><a href="/eventos">Eventos</a></li>
                     <li class=""><a href="/avisos">Avisos</a></li>
-                    <li class=""><a class="pesquisar" href="#"><i class="material-icons">search</i></a>
+                    <li class=""><a href="/login/logout">Logout</a></li>
                     </li>
                 </ul>
                 <ul class="abas mobile-menu hide-on-large-only">

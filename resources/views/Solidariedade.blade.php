@@ -17,14 +17,17 @@
                         <div class="card-image">
                             <img src="../img/doacao-de-sangue.jpg">
                             <span class="card-title">Doação de Sangue</span>
-                            {{-- BOTÃO LINK USUÁRIO --}}
-                            <a class="btn-floating halfway-fab waves-effect waves-light red">
-                                <i class="material-icons">favorite_border</i>
-                            </a>
-                            {{-- BOTÃO DELETAR ADMIN --}}
-                            <a class="btnedit btn-floating halfway-fab waves-effect waves-light red">
-                                <i class="material-icons">delete</i>
-                            </a>
+                            @if (Auth::user()->admin == 1)
+                                {{-- BOTÃO DELETAR ADMIN --}}
+                                <a class="btnedit btn-floating halfway-fab waves-effect waves-light red">
+                                    <i class="material-icons">delete</i>
+                                </a>
+                            @else
+                                {{-- BOTÃO LINK USUÁRIO --}}
+                                <a class="btn-floating halfway-fab waves-effect waves-light red">
+                                    <i class="material-icons">favorite_border</i>
+                                </a> 
+                            @endif
                         </div>
                         <div class="card-content">
                             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
@@ -42,14 +45,17 @@
                         <div class="card-image">
                             <img src="../img/campanha_alimentos.jpg">
                             <span class="card-title">Campanha de alimentos</span>
-                            {{-- BOTÃO LINK USUÁRIO --}}
-                            <a class="btn-floating halfway-fab waves-effect waves-light red">
-                                <i class="material-icons">favorite_border</i>
-                            </a>
-                            {{-- BOTÃO DELETAR ADMIN --}}
-                            <a class="btnedit btn-floating halfway-fab waves-effect waves-light red">
-                                <i class="material-icons">delete</i>
-                            </a>
+                            @if (Auth::user()->admin == 1)
+                                {{-- BOTÃO DELETAR ADMIN --}}
+                                <a class="btnedit btn-floating halfway-fab waves-effect waves-light red">
+                                    <i class="material-icons">delete</i>
+                                </a>
+                            @else
+                                {{-- BOTÃO LINK USUÁRIO --}}
+                                <a class="btn-floating halfway-fab waves-effect waves-light red">
+                                    <i class="material-icons">favorite_border</i>
+                                </a> 
+                            @endif
                         </div>
                         <div class="card-content">
                             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
@@ -67,14 +73,17 @@
                         <div class="card-image">
                             <img src="../img/doacao_casacos.jpeg">
                             <span class="card-title">Campanha do agasalho</span>
-                            {{-- BOTÃO LINK USUÁRIO --}}
-                            <a class="btn-floating halfway-fab waves-effect waves-light red">
-                                <i class="material-icons">favorite_border</i>
-                            </a>
-                            {{-- BOTÃO DELETAR ADMIN --}}
-                            <a class="btnedit btn-floating halfway-fab waves-effect waves-light red">
-                                <i class="material-icons">delete</i>
-                            </a>
+                            @if (Auth::user()->admin == 1)
+                                {{-- BOTÃO DELETAR ADMIN --}}
+                                <a class="btnedit btn-floating halfway-fab waves-effect waves-light red">
+                                    <i class="material-icons">delete</i>
+                                </a>
+                            @else
+                                {{-- BOTÃO LINK USUÁRIO --}}
+                                <a class="btn-floating halfway-fab waves-effect waves-light red">
+                                    <i class="material-icons">favorite_border</i>
+                                </a> 
+                            @endif
                         </div>
                         <div class="card-content">
                             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
@@ -92,14 +101,17 @@
                         <div class="card-image">
                             <img src="../img/voluntarios.jpg">
                             <span class="card-title">Casa de Repouso</span>
-                            {{-- BOTÃO LINK USUÁRIO --}}
-                            <a class="btn-floating halfway-fab waves-effect waves-light red">
-                                <i class="material-icons">favorite_border</i>
-                            </a>
-                            {{-- BOTÃO DELETAR ADMIN --}}
-                            <a class="btnedit btn-floating halfway-fab waves-effect waves-light red">
-                                <i class="material-icons">delete</i>
-                            </a>
+                            @if (Auth::user()->admin == 1)
+                                {{-- BOTÃO DELETAR ADMIN --}}
+                                <a class="btnedit btn-floating halfway-fab waves-effect waves-light red">
+                                    <i class="material-icons">delete</i>
+                                </a>
+                            @else
+                                {{-- BOTÃO LINK USUÁRIO --}}
+                                <a class="btn-floating halfway-fab waves-effect waves-light red">
+                                    <i class="material-icons">favorite_border</i>
+                                </a> 
+                            @endif
                         </div>
                         <div class="card-content">
                             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
@@ -117,14 +129,17 @@
                         <div class="card-image">
                             <img src="../img/bazar-beneficente.jpg">
                             <span class="card-title">Bazar beneficente</span>
-                            {{-- BOTÃO LINK USUÁRIO --}}
-                            <a class="btn-floating halfway-fab waves-effect waves-light red">
-                                <i class="material-icons">favorite_border</i>
-                            </a>
-                            {{-- BOTÃO DELETAR ADMIN --}}
-                            <a class="btnedit btn-floating halfway-fab waves-effect waves-light red">
-                                <i class="material-icons">delete</i>
-                            </a>
+                            @if (Auth::user()->admin == 1)
+                                {{-- BOTÃO DELETAR ADMIN --}}
+                                <a class="btnedit btn-floating halfway-fab waves-effect waves-light red">
+                                    <i class="material-icons">delete</i>
+                                </a>
+                            @else
+                                {{-- BOTÃO LINK USUÁRIO --}}
+                                <a class="btn-floating halfway-fab waves-effect waves-light red">
+                                    <i class="material-icons">favorite_border</i>
+                                </a> 
+                            @endif
                         </div>
                         <div class="card-content">
                             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
