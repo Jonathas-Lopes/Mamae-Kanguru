@@ -19,12 +19,13 @@
                             <span class="card-title">Doação de Sangue</span>
                             @if (Auth::user()->admin == 1)
                                 {{-- BOTÃO DELETAR ADMIN --}}
-                                <a class="btnedit btn-floating halfway-fab waves-effect waves-light red">
+                                <a class="btnedit btn-floating halfway-fab waves-effect red">
                                     <i class="material-icons">delete</i>
                                 </a>
                             @else
                                 {{-- BOTÃO LINK USUÁRIO --}}
-                                <a class="btn-floating halfway-fab waves-effect waves-light red">
+                                <a class="btn-floating halfway-fab waves-effect tooltipped"
+                                    data-position="bottom" data-delay="50" data-tooltip="saiba mais">
                                     <i class="material-icons">favorite_border</i>
                                 </a> 
                             @endif

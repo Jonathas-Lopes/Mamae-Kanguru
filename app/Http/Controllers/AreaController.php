@@ -10,6 +10,11 @@ use Illuminate\Support\Facades\DB;
 
 class AreaController extends Controller
 {
+    public function __construct()
+    {
+    $this->middleware('auth');
+    }
+    
     protected $filable = ['nome', 'descricao_1', 'descricao_2', 'descricao_3', 'foto', 'condominio_id'];
 
     public function getarea(Request $request)

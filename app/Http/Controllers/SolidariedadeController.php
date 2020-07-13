@@ -9,6 +9,11 @@ use Illuminate\Http\Request;
 
 class SolidariedadeController extends Controller
 {
+    public function __construct()
+    {
+    $this->middleware('auth');
+    }
+    
     public function getcards(Request $request)
     {
         $solidariedade = Solidariedade::all();

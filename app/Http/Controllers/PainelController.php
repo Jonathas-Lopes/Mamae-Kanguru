@@ -9,6 +9,11 @@ use Illuminate\Http\Request;
 
 class PainelController extends Controller
 {
+    public function __construct()
+    {
+    $this->middleware('auth');
+    }
+    
     public function getcards(Request $request)
     {
         $paineis = Painel::painelPost();
