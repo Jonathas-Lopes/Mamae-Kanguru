@@ -155,11 +155,13 @@
                     </div>
                 </div>
             </div>
-    
-            <!-- Modal para inserção de CARDS -->
-            <a id="botaoanuncio" class="modal-trigger btn-floating btn-large waves-effect" 
-                href="#modal1"><i class="material-icons">add</i>
-            </a>
+
+            @if (Auth::user()->admin == 0)
+                <!-- Modal para inserção de CARDS -->
+                <a id="botaoanuncio" class="modal-trigger btn-floating btn-large waves-effect" 
+                    href="#modal1"><i class="material-icons">add</i>
+                </a>
+            @endif
 
         </div>
 

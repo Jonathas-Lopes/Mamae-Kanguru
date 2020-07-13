@@ -42,11 +42,12 @@
     
         </div>
     
-        <!-- botão para inserção de um anúncio -->
-        <!-- Modal Trigger -->
+        @if (Auth::user()->admin == 0)
+        <!-- Modal para inserção de cards -->
         <a class="botaoanuncio modal-trigger btn-floating btn-large waves-effect" href="#modal1"><i
-                    class="material-icons">add</i>
-            </a>
+            class="material-icons">add</i>
+        </a>
+        @endif
     
         <!-- Modal Structure -->
         <div id="modal1" class="modal modal-fixed-footer">
