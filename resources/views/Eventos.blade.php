@@ -100,25 +100,25 @@
             
             <h4 class="header">Galeria de fotos dos eventos</h4>
 
-            <!-- Dropdown Trigger -->
-            <a class='dropdown-trigger btn' href='#' data-target='dropdown1'>Escolha o evento</a>
-
-            <!-- Dropdown Structure -->
-            <ul id='dropdown1' class='dropdown-content'>
-                <li><a href="#!">Festa de Volta às Aulas 2020</a></li>
-                <li><a href="#!">Festa de Natal 2019</a></li>
-                <li><a href="#!">Churrasco Dia das Mães 2020</a></li>
-            </ul>
-
-            {{-- BOTÃO ADMINISTRADOR - ADICIONAR GALERIA DE FOTOS --}}
-            <div>
-                <a class="btnaddgaleria waves-effect waves-light btn">adicionar nova galeria</a>
-            </div>
+            @if (Auth::user()->admin == 1)
+                {{-- BOTÃO ADMINISTRADOR - ADICIONAR GALERIA DE FOTOS --}}
+                <div>
+                    <a class="btnaddgaleria waves-effect waves-light btn">adicionar nova galeria</a>
+                </div>
+            @else
+                <!-- Dropdown Trigger -->
+                <a class='dropdown-trigger btn' href='#' data-target='dropdown1'>Escolha o evento</a>
+                <!-- Dropdown Structure -->
+                <ul id='dropdown1' class='dropdown-content'>
+                    <li><a href="#!">Festa de Volta às Aulas 2020</a></li>
+                    <li><a href="#!">Festa de Natal 2019</a></li>
+                    <li><a href="#!">Churrasco Dia das Mães 2020</a></li>
+                </ul>
+            @endif
         </div>
 
         </main>
         <script src="./js/jQuery341.js"></script>
-        <script src="./js/materialize.min.js"></script>
         <script src="./js/Eventos.js"></script>
         
 @endsection
