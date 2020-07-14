@@ -5,7 +5,11 @@
 @section('conteudo')
     <section class="perfil hide-on-med-and-down">
         <div class="foto-perfil">
-            <img class="circle" src="./img/foto_perfil.jpg" alt="Foto perfil">
+            @if(Auth::user()->foto != null)
+                <img class="circle" src="{{$perfil->foto}}" alt="Foto perfil">
+            @else
+                <img class="circle" src="./img/foto_perfil.jpg" alt="Foto perfil">
+            @endif
 
             <!-- Modal Trigger -->
             <a class="btn-floating btn-large waves-effect modal-trigger" data-target="modal1" href="#modal1">
@@ -17,12 +21,13 @@
         <div id="modal1" class="modal">
             <div class="modal-content">
                 <h5 class="center-align">Editar usuário</h5>
-                <form class="col s12">
+                <form class="col s12" action="/editarUsuario" method="POST" enctype="multipart/form-data">
+                    @csrf
                     {{-- foto usuário --}}
                     <div class="file-field input-field">
                         <div class="btn">
                             <span><i class="material-icons">add_a_photo</i></span>
-                            <input type="file">
+                            <input type="file" name="foto">
                         </div>
                         <div class="file-path-wrapper">
                             <input class="file-path validate" type="text" placeholder="Troque a sua foto">
@@ -30,39 +35,39 @@
                     </div>
                     {{-- nome --}}
                     <div class="input-field col s12">
-                    <input placeholder="Nome completo" id="first_name" type="text" class="validate">
+                    <input placeholder="{{ Auth::user()->nome }}" name="nome" value="{{ Auth::user()->nome }}" id="first_name" type="text" class="validate">
                     </div>
                     {{-- gênero --}}
                     <p class="genero">
                         <label class="radious-buttons">
-                            <input class="with-gap" name="group1" type="radio" value="feminino"/>
+                            <input class="with-gap" name="genero" type="radio" value="feminino"/>
                             <span>feminino</span>
                         </label>
                         <label class="radious-buttons">
-                            <input class="with-gap" name="group1" type="radio" value="masculino"/>
+                            <input class="with-gap" name="genero" type="radio" value="masculino"/>
                             <span>masculino</span>
                         </label>
                         <label class="radious-buttons">
-                            <input class="with-gap" name="group1" type="radio" value="outro"/>
+                            <input class="with-gap" name="genero" type="radio" value="outro"/>
                             <span>outros</span>
                         </label>
                     </p>
                     {{-- e-mail --}}
                     <div class="row">
                         <div class="input-field col s12">
-                        <input placeholder="E-mail" id="email" type="email" class="validate">
+                        <input placeholder="E-mail" name="email" value="{{ Auth::user()->email }}" id="email" type="email" class="validate">
                         </div>
                     </div>
                     {{-- telefone --}}
                     <div class="row">
                         <div class="input-field col s12">
-                        <input placeholder="(99) 99999-9999" id="email" type="email" class="validate">
+                        <input name="telefone" value="{{ Auth::user()->telefone }}" placeholder="(99) 99999-9999" id="email" type="text" class="validate">
                         </div>
                     </div>
                     {{-- senha --}}
                     <div class="row">
                         <div class="input-field col s12">
-                        <input placeholder="Senha" id="password" type="password" class="validate">
+                        <input name="senha" placeholder="Senha" id="password" type="password" class="validate">
                         </div>
                     </div>
                     {{-- confirmação senha --}}
@@ -71,12 +76,14 @@
                         <input placeholder="Confirme a sua senha" id="password" type="password" class="validate">
                         </div>
                     </div>
+
+                    <div class="modal-footer">
+                        <button type="submit">Editar</button>
+                    </div>
+
                 </form>
+            </div>
             
-            </div>
-            <div class="modal-footer">
-            <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat">Editar</a>
-            </div>
         </div>
 
         {{-- Links side bar --}}

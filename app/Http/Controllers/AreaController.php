@@ -60,21 +60,6 @@ class AreaController extends Controller
                                 'descricao_3'=> $request->descricao_3,
                             ]);
 
-
-            // $areas = Areas_Reservaveis::find($id);
-            
-            // $areas->nome = $request->nome;
-            // $areas->data = now();
-            // $areas->descricao_1 = $request->descricao_1;
-            // $areas->descricao_2 = $request->descricao_2;
-            // $areas->descricao_3 = $request->descricao_3;
-            // $areas->condominio_id = Auth::user()->condominio_id;
-            // if($request->foto){
-            //    $upload = $request->foto->store('img');
-            //    $areas->foto = "/file/$upload"; 
-            // }
-            // $areas->save();
-
             return redirect('/espacosReservas');
         }
     }

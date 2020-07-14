@@ -20,7 +20,7 @@ Route::get('/login/logout', ['uses'=>'UsuarioController@logout']);
 Route::get('/cadastro', function () {return view('Cadastro');});
 Route::post('/cadastro', ['uses'=>'UsuarioController@store']);
 
-Route::get('/home', function () {return view('Home');});
+Route::get('/home', ['uses'=>'UsuarioController@getPerfil']);
 
 Route::get('/reservas', ['uses'=>'AreaController@getreservacards']);
 
@@ -47,7 +47,7 @@ Route::post('/avisos', ['uses'=>'AvisoController@writecards'] );
 Route::get('/file/img/{id}', ['uses'=>'FileController@sendfile'] );
 
 Route::get('/editarusuario', function () {return view('editarUsuario');});
-Route::post('/editarusuario', ['uses'=>'UsuarioController@store']);
+Route::post('/editarUsuario', ['uses'=>'UsuarioController@editarUsuario']);
 
 Route::get('/eventos/addevento', function () {return view('addEvento');});
 Route::post('/eventos/addevento', ['uses'=>'EventoController@createevent']);
