@@ -9,7 +9,7 @@ use Illuminate\Http\Request;
 
 class PainelController extends Controller
 {
-    public function getcards(Request $request)
+    public function getcards()
     {
         $paineis = Painel::painelPost();
         return view('Painel', compact('paineis'));

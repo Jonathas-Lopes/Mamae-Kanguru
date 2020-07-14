@@ -18,7 +18,7 @@ class UsuarioController extends Controller
         $user->nome = $request->nome;
         $user->email = $request->email;
         $user->senha = Hash::make($request->senha);
-        $user->genero = $request->genero;
+        $user->genero = 'Masculino';
         $user->admin = 0;
         $user->condominio_id = 1;
 
@@ -56,6 +56,7 @@ class UsuarioController extends Controller
             return redirect('/home');
         } else
         {
+            dd($request->all());
             return redirect('/');
         }
     }
