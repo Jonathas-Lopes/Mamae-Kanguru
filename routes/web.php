@@ -32,6 +32,8 @@ Route::post('/espacos/agenda', ['uses'=>'AreaController@writeschedule']);
 
 Route::get('/solidariedade', ['uses'=>'SolidariedadeController@getcards']);
 Route::post('/solidariedade', ['uses'=>'SolidariedadeController@writecards']);
+Route::post('/solidariedade/edit', ['uses'=>'SolidariedadeController@editcards'] );
+Route::post('/solidariedade/delete', ['uses'=>'SolidariedadeController@deletecards'] );
 
 Route::get('/painel', ['uses'=>'PainelController@getcards'] );
 Route::post('/painel', ['uses'=>'PainelController@writecards'] );

@@ -1,7 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
-
+use Illuminate\Support\Facades\Auth;
 use App\Model\Aviso;
 use Illuminate\Http\Request;
 
@@ -28,7 +28,7 @@ class AvisoController extends Controller
             $aviso->titulo = $request->titulo;
             $aviso->descricao = $request->descricao;
             $aviso->foto = "/file/$upload";
-            $aviso->usuario_id = 1;
+            $aviso->usuario_id = Auth::user()->id;
             $aviso->save();
             return redirect()->route('/avisos');
         }
