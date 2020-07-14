@@ -9,6 +9,11 @@ use Illuminate\Http\Request;
 
 class AvisoController extends Controller
 {
+    public function __construct()
+    {
+    $this->middleware('auth');
+    }
+    
     public function getcards(Request $request)
     {
         $avisos = Aviso::all();

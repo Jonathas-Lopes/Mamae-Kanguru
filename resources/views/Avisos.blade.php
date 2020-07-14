@@ -78,46 +78,41 @@
         <div id="modal1" class="modal modal-fixed-footer">
             <div class="modal-content">
 
-                <form class="container center col s12" action="" method="post" enctype="multipart/form-data">
+                <form class="center col s12" action="" method="post" enctype="multipart/form-data">
 
-                    <!-- Escolha do tipo de aviso -->
-                    <p>
-                        <label class="radious-buttons">
-                            <input class="with-gap" name="group1" type="radio" />
-                            <span>Aviso comum</span>
-                        </label>
-                        <label class="radious-buttons">
-                            <input class="with-gap" name="group1" type="radio" />
-                            <span>Em destaque</span>
-                        </label>
-                        <label class="radious-buttons">
-                            <input class="with-gap" name="group1" type="radio" />
-                            <span>Com imagem</span>
-                        </label>
-                    </p>
-
-                    <!-- Título -->
-                    <div class="input-field row">
-                        <input id="tituloaviso" type="text" class="validate">
-                        <label id="tituloaviso" class="active" for="tituloaviso">Título</label>
+                    <div class="row">
+                        <h5>Inserir aviso</h5>
                     </div>
 
-                    <!-- Descrição -->
-                    <div class="input-field row">
-                        <textarea id="descricaoaviso" class="materialize-textarea"></textarea>
-                        <label id="descricaoaviso" class="active" for="descricaoaviso">Conteúdo do aviso</label>
-                    </div>
-
-                    <!-- Botão para upload da imagem -->
-                    <div class="file-field input-field row">
-                        <div class="btn">
-                            <span><i class="material-icons">attach_file</i></span>
-                            <input type="file">
-                        </div>
-                        <div class="file-path-wrapper">
-                            <input class="file-path validate" type="text">
+                    <div class="row">
+                        <!-- Título -->
+                        <div class="input-field row">
+                            <input id="tituloaviso" type="text" class="validate">
+                            <label id="tituloaviso" class="active" for="tituloaviso">Título</label>
                         </div>
                     </div>
+                    
+                    <div class="row">
+                        <!-- Descrição -->
+                        <div class="input-field row">
+                            <textarea id="descricaoaviso" class="materialize-textarea"></textarea>
+                            <label id="descricaoaviso" class="active" for="descricaoaviso">Conteúdo do aviso</label>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <!-- Botão para upload da imagem -->
+                        <div class="file-field input-field row">
+                            <div class="btn">
+                                <span><i class="material-icons">attach_file</i></span>
+                                <input type="file">
+                            </div>
+                            <div class="file-path-wrapper">
+                                <input class="file-path validate" type="text">
+                            </div>
+                        </div>
+                    </div>
+                    
                 </form>
             </div>
 
@@ -128,8 +123,8 @@
         </div>
     </div>
 </section>
- <!-- <script src="./js/jQuery341.js"></script>
+ <script src="./js/jQuery341.js"></script>
 <script src="./js/materialize.min.js"></script>
-<script src="./js/Avisos.js"></script> -->
+<script src="./js/Avisos.js"></script>
 
 @endsection

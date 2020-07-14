@@ -9,6 +9,11 @@ use Illuminate\Http\Request;
 
 class ReservasController extends Controller
 {
+    public function __construct()
+    {
+    $this->middleware('auth');
+    }
+    
     public function getcards(Request $request)
     {
         $reservas = Reserva::all();

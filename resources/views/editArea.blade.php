@@ -8,38 +8,36 @@
 
     <main id="editArea">
 
-        <form action="" id="editArea">
-
+        <form action="/espacos/editarea/{{ $area->nome }}" id="editArea" method="POST" enctype="multipart/form-data">
+            @csrf
             <div class="col s12 center">
-                <h3>Editar área reservável</h3>
+                <h3>Editar {{ $area->nome }}</h3>
             </div>
     
             <div class="file-field input-field">
                 <div class="btn">
                   <span><i class="material-icons">add_photo_alternate</i></span>
-                  <input type="file" multiple>
+                  <input name="foto" type="file" multiple>
                 </div>
                 <div class="file-path-wrapper">
-                  <input class="file-path validate" type="text" placeholder="Alterar foto da área reservável">
+                  <input class="file-path validate" type="text" placeholder="{{ $area->foto }}">
                 </div>
             </div>
 
             <div class="input-field col s12">
-                <input placeholder="Salão de Festas Adulto" id="first_name" type="text" class="validate">
-                <label for="first_name">Nome da área</label>
+                <input name="nome" value="{{ $area->nome }}" placeholder="{{ $area->nome }}" id="nome_area" type="text" class="validate">
+                <label for="nome_area">Nome da área</label>
             </div>
 
             <div class="input-field col s12">
                 <label for="textarea1">Descrição</label>
-                <textarea placeholder="Alterar descrição" id="textarea1" class="materialize-textarea" data-length="300"></textarea>
+                <textarea name="descricao_1" placeholder="{{ $area->descricao_1 }}" value="{{ $area->descricao_1 }}" id="textarea1" class="materialize-textarea" data-length="300"></textarea>
+                <textarea name="descricao_2" placeholder="{{ $area->descricao_2 }}" value="{{ $area->descricao_2 }}" id="textarea2" class="materialize-textarea" data-length="300"></textarea>
+                <textarea name="descricao_3" placeholder="{{ $area->descricao_3 }}" value="{{ $area->descricao_3 }}" id="textarea3" class="materialize-textarea" data-length="300"></textarea>
             </div>
 
             <button class="btn waves-effect waves-light" type="submit" name="action">Editar
-                <i class="material-icons right">edit</i>
-            </button>
-
-            <button id="deletebtn" class="btn waves-effect waves-light" type="submit" name="action">Deletar área
-                <i class="material-icons right">delete</i>
+                <i class="material-icons right">create</i>
             </button>
 
         </form>

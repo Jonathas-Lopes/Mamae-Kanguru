@@ -18,13 +18,14 @@
             <div class="">
                 <a href="/home" class="logo"><img class="imagem-1" src="{{ asset('/img/2NomeBrancoCortado.png') }}" alt="Logo"></a>
                 <ul class="abas hide-on-med-and-down">
-                    <li class=""><a href="/reservas">Reservas</a></li>
-                    <li class=""><a href="/solidariedade">Solidariedade</a></li>
-                    <li class=""><a href="/painel">Painel</a></li>
-                    <li class=""><a href="/eventos">Eventos</a></li>
-                    <li class=""><a href="/avisos">Avisos</a></li>
-                    <li class=""><a class="pesquisar" href="#"><i class="material-icons">search</i></a>
-                    </li>
+                    @auth
+                    <li class=""><a href="/reservas">reservar</a></li>
+                    <li class=""><a href="/solidariedade">doar</a></li>
+                    <li class=""><a href="/painel">vender</a></li>
+                    <li class=""><a href="/eventos">integrar</a></li>
+                    <li class=""><a href="/avisos">avisar</a></li>
+                    <li class=""><a href="/login/logout">sair</a></li>
+                    @endauth
                 </ul>
                 <ul class="abas mobile-menu hide-on-large-only">
                     <li class="menus"><a data-target="slide-out" class="sidenav-trigger triger-index" href="#"><i class=" material-icons">menu</i></a></li>

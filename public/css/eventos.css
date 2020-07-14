@@ -5,6 +5,7 @@
 }
 #eventos .carousel-item{
     height: auto;
+    padding-bottom: 5vh;
 }
 #eventos h4{
     font-size: 2vw;  

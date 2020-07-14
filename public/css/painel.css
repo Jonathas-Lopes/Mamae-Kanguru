@@ -1,19 +1,26 @@
-/* PAINEL  ===Início===*/
 #painel{
    width: 100vw;
-   
     margin-top: 20px;
+}
+.card-panel{
+    position:relative;
+}
+.card-action{
+    position: absolute!important;
+    bottom: 10px;
+    width:85%
 }
 #painel div{
     text-align: center;
 }
 .card-panel{
     height: fit-content;
-    border-radius: 20px;
 }
 #painel div img{
     width: 100%;
-    border: 5px solid white;
+}
+#painel .card-image h6{
+    font-weight: 600;
 }
 #painel div p{
     font-size: 0.9rem;
@@ -22,35 +29,23 @@
 }
 #painel div p a{
     font-size: 0.95rem;
-    color: black;
+    color: gray;
     font-style: italic;
 }
 #painel .botaoresponder{
     background-color: #F7B733;
-    align-self: center;
-    padding: 0;
-    margin: 0;
-    
 }
-
-#painel .modal{
-    font-size: 1rem;
-    overflow-x:hidden;
-    overflow-y:hidden;
+#painel .edit{
+    background-color: #FC4A1A;
 }
-#painel form .formpainel{
-    padding: 20px;
-    font-size: 1rem;
+#painel .delete{
+    background-color: #FC4A1A;
 }
-#painel .formpainel p{
-    font-size: 1.1rem;
+#painel .file-field .btn{
+    background-color: #F7B733;
 }
-#painel .formpainel #tituloanuncio{
-    margin-top: 20px;
-}
-#painel .modal .modal-content{
-    overflow-x:hidden;
-    overflow-y:hidden;
+#painel .file-path::placeholder{
+    color: grey;
 }
 #painel .formpainel .input-field input[type=text]:focus + label {
     color: #DFDCE3;
@@ -73,15 +68,10 @@
     border-bottom: 1px solid #FC4A1A;
     box-shadow: 0 1px 0 0 rgb(209, 207, 207);
 }
-
 #painel .modal-footer{
     width: 95%;
     border: none;
-    margin: 20px 0 0 0;
-    padding: 0;
 }
-/* PAINEL ===Fim===*/
-
 
 @media only screen and (max-width: 600px) {
     #painel #modal1{
@@ -107,5 +97,4 @@
         align-self: center;
         margin-top: 15px;
     }
-
 }
