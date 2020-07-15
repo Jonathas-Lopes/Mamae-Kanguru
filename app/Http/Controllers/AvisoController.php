@@ -33,5 +33,25 @@ class AvisoController extends Controller
             return redirect()->route('/avisos');
         }
     }
+
+    public function editcards(Request $request)
+    {
+        $aviso = Aviso::find($request->id);
+
+        $aviso->titulo = $request->titulo;
+        $aviso->descricao = $request->descricao;
+
+        $aviso->save();
+        return redirect('/avisos');
+    }
+
+    public function deletecards(Request $request)
+    {
+        $aviso = Aviso::find($request->id);
+
+        $aviso->delete();
+        
+    }
+
 }
 

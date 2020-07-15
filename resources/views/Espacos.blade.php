@@ -4,51 +4,43 @@
 
 @section('conteudo')
 
-    <link type="text/css" rel="stylesheet" href="css/areasReservas.css"/>
+    <link type="text/css" rel="stylesheet" href="css/espacos.css"/>
 
     <main id="areasReservas">
 
-        {{-- Imagens do espaço --}}
-        {{-- <div class="carousel carousel-slider">
-            <a class="carousel-item"><img src="../img/condominio_espaco_gourmet.jpg"></a>
-            <a class="carousel-item"><img src="../img/condominio_espaco_gourmet2.jpg"></a>
-            <a class="carousel-item"><img src="../img/condominio_espaco_gourmet3.jpg"></a>
-        </div> --}}
-
-        
         <div class="carousel">
             <a class="carousel-item"><img src="../img/condominio_espaco_gourmet.jpg"></a>
             <a class="carousel-item"><img src="../img/condominio_espaco_gourmet2.jpg"></a>
             <a class="carousel-item"><img src="../img/condominio_espaco_gourmet3.jpg"></a>
         </div>
-      
-        
 
-        {{-- Tag de título do espaço --}}
-        <div class="row">
-            <h3 class="space-title center-align">Nome do Espaço</h3>
-        </div>
+        @foreach ($areas ?? '' as $item)
 
-        {{-- Date picker/Agenda do espaço --}}
-        <div class="row">
-            <input placeholder="clique aqui para verificar a disponibilidade" type="text" class="datepicker center">
-        </div>
+            {{-- nome da área --}}
+            <div class="row">
+                <h3 class="space-title center-align">{{$item->nome}}</h3>
+            </div>
 
-        {{-- Botão de reservar --}}
+            {{-- agenda / date picker --}}
+            <div class="row">
+                <input placeholder="clique aqui para verificar a disponibilidade" type="text" class="datepicker center">
+            </div>
+
+        @endforeach
+
+        {{-- botão reservar --}}
         <div class="reservarbtn row">
             <a class="waves-effect waves-teal btn-flat amber accent-4 black-text center">reservar</a>
         </div>
 
-        {{-- Tag para BREVE descrição e localização do espaço --}}
+        {{-- descrição --}}
         <div class="card white row center-align">
             <h5 class="card-title">Sobre o espaço</h5>
-            <p class="card-content">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Facilis beatae vitae sapiente totam nobis, inventore at quaerat vero eveniet quam delectus hic fugiat veritatis quibusdam aut numquam ipsum tempora labore.</p>
-        </div>
-
-        {{-- Tag inclusão de itens que o espaço inclui --}}
-        <div class="card white row center-align">
-            <h5 class="card-title">O espaço inclui:</h5>
-            <p class="card-content">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Facilis beatae vitae sapiente totam nobis, inventore at quaerat vero eveniet quam delectus hic fugiat veritatis quibusdam aut numquam ipsum tempora labore.</p>
+            @foreach ($areas ?? '' as $item)
+                <p>{{$item->descricao_1}}</p>
+                <p>{{$item->descricao_2}}</p>
+                <p>{{$item->descricao_3}}</p>
+            @endforeach
         </div>
 
         {{-- Tag PADRÃO  DE TODOS OS ESPAÇOS - Regras de Utilização --}}
@@ -85,7 +77,6 @@
         </div>
 
         <script src="./js/jQuery341.js"></script>
-        <script src="./js/materialize.min.js"></script>
         <script src="../js/Reservas.js"></script>
 
     </main>

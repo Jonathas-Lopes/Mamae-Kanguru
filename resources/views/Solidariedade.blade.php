@@ -36,13 +36,6 @@
                         </div>
                     </div>
                 @endforeach
-    
-               
-    
-               
-              
-    
-                
             </div>
 
             @if (Auth::user()->admin == 0)

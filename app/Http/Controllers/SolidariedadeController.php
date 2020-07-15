@@ -21,7 +21,7 @@ class SolidariedadeController extends Controller
     }
     
     public function writecards(Request $request)
-    { echo('hello');
+    { 
         if (($request->titulo) and ($request->descricao)) {
             $upload = $request->foto->store('img');
             $solidariedade = new Solidariedade;
