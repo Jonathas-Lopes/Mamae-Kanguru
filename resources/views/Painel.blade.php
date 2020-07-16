@@ -8,44 +8,48 @@
 
     <section id="painel">
             
-        <div class="container-fluid row">
-            <!-- cards dos anúncios -->
-            @foreach ($paineis as $item)
-                <div class="col s12 m4 l4">
-                    <div class="card-panel hoverable">
-                        <div  class="card-image">
-                            <img src='{{$item->foto}}' alt="Foto da costureira de     máscaras caseiras">
-                      <h5  name="{{$item->id}}titulo" @if (Auth::user()->nome == $item->nome) contenteditable="true" @endif class="card-title editavel">{{$item->titulo}}</h5>
-                        </div>
-                        <div class="card-content">
-                            <p name="{{$item->id}}descricao" @if (Auth::user()->nome == $item->nome)contenteditable="true" @endif>{{$item->descricao}}</p>
-                        </div>
-                        <div class="card-action">
-                            <p><a href="#">{{ $item->nome }}</a></p>
-                            @if (Auth::user()->admin == 0)
-                                @if (Auth::user()->nome == $item->nome)
-                                <a name={{$item->id}} class="edit btn-floating btn waves-effect waves-light"><i
-                                    class="tiny material-icons">edit</i>
-                                </a>
-                                <a name={{$item->id}} class="delete btn-floating btn waves-effect waves-light"><i
-                                    class="tiny material-icons">delete</i>
-                                </a>
-                                @else
-                                    <a class="botaoresponder btn-floating btn waves-effect waves-light"><i
-                                        class="tiny material-icons">send</i>
+        <div class="container-fluid">
+
+            <div class="row">
+                @foreach ($paineis as $item)
+                    <div class="col s12 m12 l4">
+                        <div class="card-panel hoverable">
+                            <div  class="card-image">
+                                <img src='{{$item->foto}}'>
+                                <h5 name="{{$item->id}}titulo" @if (Auth::user()->nome == $item->nome) contenteditable="true" @endif class="card-title editavel">{{$item->titulo}}</h5>
+                            </div>
+                            <div class="card-content">
+                                <p name="{{$item->id}}descricao" @if (Auth::user()->nome == $item->nome)contenteditable="true" @endif>{{$item->descricao}}</p>
+                            </div>
+                            <div class="card-action">
+                                <p><a href="#">{{ $item->nome }}</a></p>
+                                
+                                @if (Auth::user()->admin == 0)
+                                    @if (Auth::user()->nome == $item->nome)
+                                    <a name={{$item->id}} class="edit btn-floating btn waves-effect waves-light"><i
+                                        class="tiny material-icons">edit</i>
+                                    </a>
+                                    <a name={{$item->id}} class="delete btn-floating btn waves-effect waves-light"><i
+                                        class="tiny material-icons">delete</i>
+                                    </a>
+                                    @else
+                                        <a class="botaoresponder btn-floating btn waves-effect waves-light"><i
+                                            class="tiny material-icons">send</i>
+                                        </a>
+                                    @endif
+                                @endif
+
+                                @if (Auth::user()->admin == 1)
+                                    <a name={{$item->id}} class="delete btn-floating btn waves-effect waves-light"><i
+                                        class="tiny material-icons">delete</i>
                                     </a>
                                 @endif
-                            @endif
-                            @if (Auth::user()->admin == 1)
-                                <a name={{$item->id}} class="delete btn-floating btn waves-effect waves-light"><i
-                                    class="tiny material-icons">delete</i>
-                                </a>
-                            @endif
+
+                            </div>
                         </div>
                     </div>
-                </div>
-            @endforeach
-    
+                @endforeach
+            </div>
         </div>
     
         @if (Auth::user()->admin == 0)

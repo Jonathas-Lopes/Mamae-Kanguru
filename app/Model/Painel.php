@@ -17,7 +17,5 @@ class Painel extends Model
         ->select('painel.*', 'usuario.nome')
         ->get();
         return $painel;
-        
     }
-    
 }

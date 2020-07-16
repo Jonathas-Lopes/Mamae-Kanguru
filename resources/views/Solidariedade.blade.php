@@ -4,11 +4,11 @@
 
 @section('conteudo')
 
-    <link type="text/css" rel="stylesheet" href="../css/solidariedade.css">
+    <link type="text/css" rel="stylesheet" href="./css/solidariedade.css">
 
     <main id="solidariedade">
 
-        <div class="container-fluid center">
+        <div class="container-fluid">
 
             <div class="row">
                 @foreach ($solidariedade as $item)
@@ -16,34 +16,50 @@
                         <div class="card">
                             <div class="card-image">
                                 <img src="{{$item->foto}}">
-                                <span class="card-title">{{$item->titulo}}</span>
+                                <h5 name="{{$item->id}}titulo" @if (Auth::user()->nome == $item->usuario_id) contenteditable="true" @endif class="card-title">{{$item->titulo}}</h5>
+                                        
+                                @if (Auth::user()->admin == 0)
+                                    @if (Auth::user()->id == $item->usuario_id)
+                                            <a name={{$item->id}} class="btnedit halfway-fab btn-floating btn waves-effect waves-light">
+                                                <i class="tiny material-icons">edit</i>
+                                            </a>
+                                            <a name={{$item->id}} class="delete halfway-fab btn-floating btn waves-effect waves-light">
+                                                <i class="tiny material-icons">delete</i>
+                                            </a>                                        
+                                    @else
+                                        <a class="btn-floating halfway-fab waves-effect tooltipped"
+                                            data-position="bottom" data-delay="50" data-tooltip="saiba mais">
+                                            <i class="material-icons">link</i>
+                                        </a>
+                                    @endif
+                                @endif
+
                                 @if (Auth::user()->admin == 1)
                                     {{-- BOTÃO DELETAR ADMIN --}}
-                                    <a class="deletar btn-floating halfway-fab waves-effect red">
+                                    <a name={{$item->id}} class="deletar btn-floating halfway-fab waves-effect red">
                                         <i class="material-icons">delete</i>
                                     </a>
-                                @else
-                                    {{-- BOTÃO LINK USUÁRIO --}}
-                                    <a class="btn-floating halfway-fab waves-effect tooltipped"
-                                        data-position="bottom" data-delay="50" data-tooltip="saiba mais">
-                                        <i class="material-icons">favorite_border</i>
-                                    </a> 
                                 @endif
+
                             </div>
                             <div class="card-content">
-                                <p>{{$item->descricao}}</p>
+                                <p name="{{$item->id}}descricao" @if (Auth::user()->nome == $item->usuario_id)contenteditable="true" 
+                                    @endif>{{$item->descricao}}
+                                </p>
                             </div>
                         </div>
                     </div>
                 @endforeach
             </div>
 
-            @if (Auth::user()->admin == 0)
-                <!-- Modal para inserção de CARDS -->
-                <a id="botaoanuncio" class="modal-trigger btn-floating btn-large waves-effect" 
-                    href="#modal1"><i class="material-icons">add</i>
-                </a>
-            @endif
+            <div class="row center">
+                @if (Auth::user()->admin == 0)
+                    <!-- Modal para inserção de CARDS -->
+                    <a id="botaoanuncio" class="modal-trigger btn-floating btn-large waves-effect" 
+                        href="#modal1"><i class="material-icons">add</i>
+                    </a>
+                @endif
+            </div>
 
         </div>
 
@@ -93,9 +109,7 @@
                 </form>
             </div>
         </div>
-
     </main>
-
     <script src="../js/jQuery341.js"></script>
     <script src="../js/Solidariedade.js"></script>
 @endsection
