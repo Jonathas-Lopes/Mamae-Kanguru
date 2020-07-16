@@ -21,8 +21,10 @@
 }
 #solidariedade .btnedit{
     background-color: red;
-    position: relative;
-    left: 10vw;
+    right: 4.5vw;
+}
+#solidariedade .delete{
+    background-color: red;
 }
 #solidariedade #botaoanuncio{
     background-color: #F7B733;

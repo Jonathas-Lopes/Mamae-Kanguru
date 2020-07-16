@@ -35,7 +35,7 @@ class PainelController extends Controller
         }
     }
     public function editcards(Request $request)
-    {
+    {   
         $painel = Painel::find($request->id);
 
         $painel->titulo = $request->titulo;

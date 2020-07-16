@@ -4,164 +4,62 @@
 
 @section('conteudo')
 
-    <link type="text/css" rel="stylesheet" href="../css/solidariedade.css">
+    <link type="text/css" rel="stylesheet" href="./css/solidariedade.css">
 
     <main id="solidariedade">
 
-        <div class="container-fluid center">
+        <div class="container-fluid">
 
             <div class="row">
+                @foreach ($solidariedade as $item)
+                    <div class="col l4 m12 s12">
+                        <div class="card">
+                            <div class="card-image">
+                                <img src="{{$item->foto}}">
+                                <h5 name="{{$item->id}}titulo" @if (Auth::user()->nome == $item->usuario_id) contenteditable="true" @endif class="card-title">{{$item->titulo}}</h5>
+                                        
+                                @if (Auth::user()->admin == 0)
+                                    @if (Auth::user()->id == $item->usuario_id)
+                                            <a name={{$item->id}} class="btnedit halfway-fab btn-floating btn waves-effect waves-light">
+                                                <i class="tiny material-icons">edit</i>
+                                            </a>
+                                            <a name={{$item->id}} class="delete halfway-fab btn-floating btn waves-effect waves-light">
+                                                <i class="tiny material-icons">delete</i>
+                                            </a>                                        
+                                    @else
+                                        <a class="btn-floating halfway-fab waves-effect tooltipped"
+                                            data-position="bottom" data-delay="50" data-tooltip="saiba mais">
+                                            <i class="material-icons">link</i>
+                                        </a>
+                                    @endif
+                                @endif
 
-                <div class="col l4 m12 s12">
-                    <div class="card">
-                        <div class="card-image">
-                            <img src="../img/doacao-de-sangue.jpg">
-                            <span class="card-title">Doação de Sangue</span>
-                            @if (Auth::user()->admin == 1)
-                                {{-- BOTÃO DELETAR ADMIN --}}
-                                <a class="deletar btn-floating halfway-fab waves-effect red">
-                                    <i class="material-icons">delete</i>
-                                </a>
-                            @else
-                                {{-- BOTÃO LINK USUÁRIO --}}
-                                <a class="btn-floating halfway-fab waves-effect tooltipped"
-                                    data-position="bottom" data-delay="50" data-tooltip="saiba mais">
-                                    <i class="material-icons">favorite_border</i>
-                                </a> 
-                            @endif
-                        </div>
-                        <div class="card-content">
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-                                Quis vel magnam quasi molestias, atque
-                                eum porro. Veniam vitae illo odit pariatur, 
-                                adipisci omnis natus quidem eos, 
-                                repudiandae assumenda recusandae commodi?
-                            </p>
+                                @if (Auth::user()->admin == 1)
+                                    {{-- BOTÃO DELETAR ADMIN --}}
+                                    <a name={{$item->id}} class="deletar btn-floating halfway-fab waves-effect red">
+                                        <i class="material-icons">delete</i>
+                                    </a>
+                                @endif
+
+                            </div>
+                            <div class="card-content">
+                                <p name="{{$item->id}}descricao" @if (Auth::user()->nome == $item->usuario_id)contenteditable="true" 
+                                    @endif>{{$item->descricao}}
+                                </p>
+                            </div>
                         </div>
                     </div>
-                </div>
-    
-                <div class="col l4 m12 s12">
-                    <div class="card">
-                        <div class="card-image">
-                            <img src="../img/campanha_alimentos.jpg">
-                            <span class="card-title">Campanha de alimentos</span>
-                            @if (Auth::user()->admin == 1)
-                                {{-- BOTÃO DELETAR ADMIN --}}
-                                <a class="deletar btn-floating halfway-fab waves-effect waves-light red">
-                                    <i class="material-icons">delete</i>
-                                </a>
-                            @else
-                                {{-- BOTÃO LINK USUÁRIO --}}
-                                <a class="btn-floating halfway-fab waves-effect tooltipped"
-                                    data-position="bottom" data-delay="50" data-tooltip="saiba mais">
-                                    <i class="material-icons">favorite_border</i>
-                                </a> 
-                            @endif
-                        </div>
-                        <div class="card-content">
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-                                Quis vel magnam quasi molestias, atque
-                                eum porro. Veniam vitae illo odit pariatur, 
-                                adipisci omnis natus quidem eos, 
-                                repudiandae assumenda recusandae commodi?
-                            </p>
-                        </div>
-                    </div>
-                </div>
-    
-                <div class="col l4 m12 s12">
-                    <div class="card">
-                        <div class="card-image">
-                            <img src="../img/doacao_casacos.jpeg">
-                            <span class="card-title">Campanha do agasalho</span>
-                            @if (Auth::user()->admin == 1)
-                                {{-- BOTÃO DELETAR ADMIN --}}
-                                <a class="deletar btn-floating halfway-fab waves-effect waves-light red">
-                                    <i class="material-icons">delete</i>
-                                </a>
-                            @else
-                                {{-- BOTÃO LINK USUÁRIO --}}
-                                <a class="btn-floating halfway-fab waves-effect tooltipped"
-                                    data-position="bottom" data-delay="50" data-tooltip="saiba mais">
-                                    <i class="material-icons">favorite_border</i>
-                                </a> 
-                            @endif
-                        </div>
-                        <div class="card-content">
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-                                Quis vel magnam quasi molestias, atque
-                                eum porro. Veniam vitae illo odit pariatur, 
-                                adipisci omnis natus quidem eos, 
-                                repudiandae assumenda recusandae commodi?
-                            </p>
-                        </div>
-                    </div>
-                </div>
-    
-                <div class="col l4 m12 s12">
-                    <div class="card">
-                        <div class="card-image">
-                            <img src="../img/voluntarios.jpg">
-                            <span class="card-title">Casa de Repouso</span>
-                            @if (Auth::user()->admin == 1)
-                                {{-- BOTÃO DELETAR ADMIN --}}
-                                <a class="deletar btn-floating halfway-fab waves-effect waves-light red">
-                                    <i class="material-icons">delete</i>
-                                </a>
-                            @else
-                                {{-- BOTÃO LINK USUÁRIO --}}
-                                <a class="btn-floating halfway-fab waves-effect tooltipped"
-                                    data-position="bottom" data-delay="50" data-tooltip="saiba mais">
-                                    <i class="material-icons">favorite_border</i>
-                                </a> 
-                            @endif
-                        </div>
-                        <div class="card-content">
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-                                Quis vel magnam quasi molestias, atque
-                                eum porro. Veniam vitae illo odit pariatur, 
-                                adipisci omnis natus quidem eos, 
-                                repudiandae assumenda recusandae commodi?
-                            </p>
-                        </div>
-                    </div>
-                </div>
-    
-                <div class="col l4 m12 s12">
-                    <div class="card">
-                        <div class="card-image">
-                            <img src="../img/bazar-beneficente.jpg">
-                            <span class="card-title">Bazar beneficente</span>
-                            @if (Auth::user()->admin == 1)
-                                {{-- BOTÃO DELETAR ADMIN --}}
-                                <a class="deletar btn-floating halfway-fab waves-effect waves-light red">
-                                    <i class="material-icons">delete</i>
-                                </a>
-                            @else
-                                {{-- BOTÃO LINK USUÁRIO --}}
-                                <a class="btn-floating halfway-fab waves-effect tooltipped"
-                                    data-position="bottom" data-delay="50" data-tooltip="saiba mais">
-                                    <i class="material-icons">favorite_border</i>
-                                </a> 
-                            @endif
-                        </div>
-                        <div class="card-content">
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-                                Quis vel magnam quasi molestias, atque
-                                eum porro.
-                            </p>
-                        </div>
-                    </div>
-                </div>
+                @endforeach
             </div>
 
-            @if (Auth::user()->admin == 0)
-                <!-- Modal para inserção de CARDS -->
-                <a id="botaoanuncio" class="modal-trigger btn-floating btn-large waves-effect" 
-                    href="#modal1"><i class="material-icons">add</i>
-                </a>
-            @endif
+            <div class="row center">
+                @if (Auth::user()->admin == 0)
+                    <!-- Modal para inserção de CARDS -->
+                    <a id="botaoanuncio" class="modal-trigger btn-floating btn-large waves-effect" 
+                        href="#modal1"><i class="material-icons">add</i>
+                    </a>
+                @endif
+            </div>
 
         </div>
 
@@ -170,32 +68,32 @@
             <div class="modal-content">
 
                 <form action="" method="post" enctype="multipart/form-data">
-
+                    @csrf
                     <p class="center">Divulgue uma nova ação voluntária</p>
                     <!-- Título -->
                     <div class="input-field">
-                        <input id="tituloanuncio" type="text" class="validate">
-                        <label id="tituloanuncio" class="active" for="tituloanuncio">Título</label>
+                        <input name="titulo" id="tituloanuncio" type="text" class="validate">
+                        <label for="tituloanuncio" class="active" for="tituloanuncio">Título</label>
                     </div>
                     <!-- Descrição -->
                     <div class="input-field">
-                        <textarea id="descricaoanuncio" class="materialize-textarea"></textarea>
+                        <textarea name="descricao" id="descricaoanuncio" class="materialize-textarea"></textarea>
                         <label id="descricaoanuncio" class="active" for="descricaoanuncio">
                             Sobre a ação
                         </label>
                     </div>
                     <!-- Link -->
-                    <div class="input-field">
-                        <input id="tituloanuncio" type="text" class="validate">
-                        <label id="tituloanuncio" class="active" for="tituloanuncio">
+                    {{-- <div class="input-field">
+                        <input name="" id="tituloanuncio" type="text" class="validate">
+                        <label for="tituloanuncio" class="active" for="tituloanuncio">
                             Link para maiores informações
                         </label>
-                    </div>
+                    </div> --}}
                     <!-- Botão para upload da imagem -->
                     <div class="file-field input-field">
                         <div class="btn">
                             <span><i class="material-icons">attach_file</i></span>
-                            <input type="file">
+                            <input type="file" multiple name="foto">
                         </div>
                         <div class="file-path-wrapper">
                             <input class="file-path validate" type="text">
@@ -204,16 +102,14 @@
 
                     <!-- Botão para criar o anúncio -->
                     <div class="modal-footer">
-                        <a href="#" class="modal-close waves-effect btn-flat" type="submit" 
+                        <button href="#" class="modal-close waves-effect btn-flat" type="submit" 
                             name="action">Divulgar ação
-                        </a>
+                        </button>
                     </div>
                 </form>
             </div>
         </div>
-
     </main>
-
     <script src="../js/jQuery341.js"></script>
     <script src="../js/Solidariedade.js"></script>
 @endsection

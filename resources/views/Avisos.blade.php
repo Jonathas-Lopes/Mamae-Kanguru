@@ -1,78 +1,38 @@
 @extends('layouts.template')
 
-@section('titulo')
-    Avisos
-@endsection
+@section('titulo') Avisos @endsection
 
 @section('conteudo')
 <section id="avisos">
-    <link type="text/css" rel="stylesheet" href="./css/avisos.css" />
 
-    <!-- Área de cards com as ações -->
+    <link type="text/css" rel="stylesheet" href="./css/avisos.css"/>
+
     <div class="container-fluid ">
-        <div class="row cardsavisos">
-            <div class="col l4 m12 s12">
-
-                <div class="card z-depth-2 hoverable">
-                    <span class="card-title">Reposição álcool gel</span>
-                    <p class="card-content">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam quam
-                        eveniet
-                        rem corrupti officia accusamus similique aspernatur repudiandae, perferendis assumenda incidunt
-                        accusantium, consequatur nisi minima nulla, praesentium hic ea blanditiis.</p>
-                </div>
-            </div>
-            <div class="col l4 m12 s12">
-                <div class="card z-depth-2 hoverable">
-                    <span class="card-title">Vagas de garagem</span>
-                    <p class="card-content">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam quam
-                        eveniet
-                        rem corrupti officia accusamus similique aspernatur repudiandae, perferendis assumenda incidunt
-                        accusantium, consequatur nisi minima nulla, praesentium hic ea blanditiis.</p>
-                </div>
-
-            </div>
-
-            <div class="col l4 m12 s12">
-                <div class="card z-depth-2 hoverable">
-                    <span class="card-title">Horários para reformas e mudanças</span>
-                    <p class="card-content">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam quam
-                        eveniet
-                        rem corrupti officia accusamus similique aspernatur repudiandae, perferendis assumenda incidunt
-                        accusantium, consequatur nisi minima nulla, praesentium hic ea blanditiis.</p>
-                </div>
-            </div>
-            <div class="col l4 m12 s12">
-                <div class="card z-depth-2 hoverable">
-                    <div class="card-image">
-                        <img src="./img/leiturabiometrica.jpeg" alt="Foto leitura biométrica">
-                        <span class="card-title">Biometria na portaria</span>
-                    </div>
-                    <div class="card-content">
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum, incidunt fugiat asperiores
-                            laborum voluptatibus natus hic ullam dolor! Hic cupiditate doloremque inventore est cum ea
-                            beatae fugit eos modi earum.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col l4 m12 s12">
-                <div class="card z-depth-2 hoverable">
-                    <div class="card-image">
-                        <img src="./img/novafuncionaria.jpg" alt="Foto nova funcionária">
-                        <span class="card-title">Nova funcionária</span>
-                    </div>
-                    <div class="card-content">
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum, incidunt fugiat asperiores
-                            laborum voluptatibus natus hic ullam dolor! Hic cupiditate doloremque inventore est cum ea
-                            beatae fugit eos modi earum.</p>
-                    </div>
-                </div>
-            </div>
-
-        </div>
         
-        <!-- Modal Trigger -->
-        <a class="botaoanuncio modal-trigger btn-floating btn-large waves-effect waves-light" href="#modal1"><i class="material-icons">add</i>
-        </a>
+        {{-- CARDS DE AVISO --}}
+        @foreach ($avisos as $item)
+
+            <div class="col l4 m12 s12">
+                <div class="card z-depth-2 hoverable">
+                    <div class="card-image">
+                        <img src="{{$item->foto}}">
+                        <span class="card-title">{{$item->titulo}}</span>
+                    </div>
+                    <div class="card-content">
+                        <p>{{$item->descricao}}</p>
+                    </div>
+                </div>
+            </div>
+            
+        @endforeach
+        
+        @if (Auth::user()->admin == 1)
+            <!-- Modal Trigger -->
+            <a class="botaoanuncio modal-trigger btn-floating btn-large 
+                waves-effect waves-light" href="#modal1">
+                <i class="material-icons">add</i>
+            </a>
+        @endif
 
         <!-- Modal Structure -->
         <div id="modal1" class="modal modal-fixed-footer">
@@ -87,7 +47,7 @@
                     <div class="row">
                         <!-- Título -->
                         <div class="input-field row">
-                            <input id="tituloaviso" type="text" class="validate">
+                            <input id="tituloaviso" type="text" class="validate" name="titulo">
                             <label id="tituloaviso" class="active" for="tituloaviso">Título</label>
                         </div>
                     </div>
@@ -95,7 +55,7 @@
                     <div class="row">
                         <!-- Descrição -->
                         <div class="input-field row">
-                            <textarea id="descricaoaviso" class="materialize-textarea"></textarea>
+                            <textarea id="descricaoaviso" class="materialize-textarea" name="descricao"></textarea>
                             <label id="descricaoaviso" class="active" for="descricaoaviso">Conteúdo do aviso</label>
                         </div>
                     </div>
@@ -108,7 +68,7 @@
                                 <input type="file">
                             </div>
                             <div class="file-path-wrapper">
-                                <input class="file-path validate" type="text">
+                                <input class="file-path validate" type="text" name="foto">
                             </div>
                         </div>
                     </div>
@@ -118,13 +78,14 @@
 
             <!-- Botão para criar o anúncio -->
             <div class="modal-footer  col s12">
-                <a href="#" class="modal-close waves-effect btn-flat" type="submit" name="action">Divulgar ação</a>
+                <button href="#" class="modal-close waves-effect btn-flat" 
+                    type="submit" name="action">Divulgar ação
+                </button>
             </div>
         </div>
     </div>
 </section>
- <script src="./js/jQuery341.js"></script>
-<script src="./js/materialize.min.js"></script>
+<script src="./js/jQuery341.js"></script>
 <script src="./js/Avisos.js"></script>
 
 @endsection

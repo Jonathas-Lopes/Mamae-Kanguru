@@ -18,7 +18,7 @@ $(document).ready(function () {
   $(".edit").click(function () {
     var tituloName = $(this).attr('name') + "titulo"
     var descricaoName = $(this).attr('name') + "descricao"
-    var titulo = $('span[name="' + tituloName + '"]').text()
+    var titulo = $('h5[name="' + tituloName + '"]').text()
     var descricao = $('p[name="' + descricaoName + '"]').text()
     var id = $(this).attr('name')
 
