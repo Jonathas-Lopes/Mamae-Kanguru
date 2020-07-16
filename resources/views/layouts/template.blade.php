@@ -15,16 +15,27 @@
 <body>
     <header>
         <nav class="#48beae">
-            <div class="">
+            <div class="navbar">
                 <a href="/home" class="logo"><img class="imagem-1" src="{{ asset('/img/2NomeBrancoCortado.png') }}" alt="Logo"></a>
                 <ul class="abas hide-on-med-and-down">
                     @auth
-                    <li class=""><a href="/reservas">reservar</a></li>
-                    <li class=""><a href="/solidariedade">doar</a></li>
-                    <li class=""><a href="/painel">vender</a></li>
-                    <li class=""><a href="/eventos">integrar</a></li>
-                    <li class=""><a href="/avisos">avisar</a></li>
-                    <li class=""><a href="/login/logout">sair</a></li>
+                    <li class="iconesnav tooltipped" data-position="bottom" data-tooltip="reservar">
+                        <a href="/reservas"><i class="material-icons">date_range</i></a>
+                    </li>
+                    <li class="iconesnav tooltipped" data-position="bottom" data-tooltip="doar">
+                        <a href="/solidariedade"><i class="material-icons">emoji_people</i></a></li>
+                    <li class="iconesnav tooltipped" data-position="bottom" data-tooltip="vender">
+                        <a href="/painel"><i class="material-icons">point_of_sale</i></a>
+                    </li>
+                    <li class="iconesnav tooltipped" data-position="bottom" data-tooltip="eventos">
+                        <a href="/eventos"><i class="material-icons">cake</i></a>
+                    </li>
+                    <li class="iconesnav tooltipped" data-position="bottom" data-tooltip="avisos">
+                        <a href="/avisos"><i class="material-icons">announcement</i></a>
+                    </li>
+                    <li class="iconesnav tooltipped" data-position="bottom" data-tooltip="logout">
+                        <a href="/login/logout"><i class="material-icons">login</i></a>
+                    </li>
                     @endauth
                 </ul>
                 <ul class="abas mobile-menu hide-on-large-only">
@@ -88,7 +99,6 @@
 
     <script src="{{ asset('/js/jQuery341.js') }}"></script>
     <script src="{{ asset('/js/materialize.min.js') }}"></script>
-    {{-- <script src="{{ asset('/js/modules.js') }}"></script> --}}
     <script src="{{ asset('/js/index.js') }}"></script>
    
     

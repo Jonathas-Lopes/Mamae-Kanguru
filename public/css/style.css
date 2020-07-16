@@ -30,17 +30,15 @@ nav div ul li{
     display: flex;
     align-items: center;
 }
-.actived{
-    background-color: #fc4813 !important;
+.navbar ul .iconesnav i{
+    font-size: 2.5vw;
+    margin: 0 1.5vw;
 }
-nav div ul li a{
-    font-size: 1.1rem;
-    display: inline-block;
-    text-transform: uppercase;
+.navbar ul li a:hover{
+    background-color: transparent !important;
 }
-nav div ul li a:hover{
-    text-decoration: none;
-    background-color: #fcfaf900;
+.navbar ul .iconesnav i:hover{
+    color: #fc4813 !important;
 }
 .logo {   
     flex-grow: 2;
@@ -53,26 +51,6 @@ nav div ul li a:hover{
 }
 .logo .imagem-2{
     display:none;
-}
-.pesquisar{
-    display: flex;
-    margin-right: 30px;
-}
-.pequisar a i{
-    display: flex;
-    font-size: 24px;
-    height: 100%;
-    line-height: 56px;
-    align-items: center;
-}
-.pesquisar p{
-    margin-top: 0;
-    display: flex;
-    font-size: 24px;
-    height: 100%;
-    line-height: 56px;
-    align-items: center;
-    margin-bottom: 0em;
 }
 main{
     margin-bottom: auto;
@@ -133,12 +111,6 @@ main{
 .sobre .hashtags a{
     background-color: #F7B733;
     font-size: 0.95vw;
-}
-.botaoanuncio{
-    background-color: #F7B733;
-    position: relative;    
-    left: 50%;
-    margin: 20px 0;
 }
 
 /* PERFIL-mobile  === inicio ===*/
@@ -239,6 +211,10 @@ main{
     float: right;
     position: relative;
     bottom: 30px;
+}
+.assuntos .enviar{
+    background-color: #4ABDAC;
+    float: right;
 }
 
 /* FOOTER  === Início ===*/
