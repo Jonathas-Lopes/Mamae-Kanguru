@@ -21,6 +21,7 @@ Route::get('/cadastro', function () {return view('Cadastro');});
 Route::post('/cadastro', ['uses'=>'UsuarioController@store']);
 
 Route::get('/home', ['uses'=>'UsuarioController@getPerfil']);
+Route::post('/home/mensagem', ['uses'=>'HomeController@enviarMensagem']);
 
 Route::get('/reservas', ['uses'=>'AreaController@getreservacards']);
 

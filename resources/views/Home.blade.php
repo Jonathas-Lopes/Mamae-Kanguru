@@ -111,16 +111,17 @@
         <article class="card">
             {{-- textarea --}}
             <div class="textarea">
-                <div class="input-field">
-                    <textarea value="" id="textarea1" class="materialize-textarea"></textarea>
-                    <label for="textarea1">Escreva aqui a sua mensagem</label>
+                <form method="POST" action="/home/mensagem" class="input-field">
+                    @csrf
+                    <textarea name="mensagem" value="" id="textarea1" class="materialize-textarea"></textarea>
+                    <label for="textarea1">Escreva aqui a sua mensagem</label> 
                 </div>
-            </div>
-            <div>
-                <a class="enviar btn-floating btn waves-effect waves-light">
-                    <i class="material-icons">send</i>
-                </a>
-            </div>
+                <div>
+                    <button type="submit" class="enviar btn-floating btn waves-effect waves-light">
+                        <i class="material-icons">send</i>
+                    </button>
+                </div>
+            </form>
         </article>
 
         

@@ -37,4 +37,9 @@ class Usuarios extends Authenticatable
     {
         return $this->senha;
     }
+
+    public function mensagens()
+    {
+        return $this->hasMany('App\Model\Mensagens');
+    }
 }
