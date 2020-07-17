@@ -17,7 +17,7 @@ class AvisoController extends Controller
     public function getcards(Request $request)
     {
         //aqui eu puxei a funcao avisosPost do Model gilvan
-        $avisos = Aviso::avisosPost();
+        $avisos = Aviso::all();
         return view('Avisos', compact('avisos'));
     }
     
@@ -31,7 +31,7 @@ class AvisoController extends Controller
             $aviso->foto = "/file/$upload";
             $aviso->condominio_id = Auth::user()->condominio_id;
             $aviso->save();
-            return redirect()->route('/avisos');
+            return redirect('/avisos');
         }
     }
 

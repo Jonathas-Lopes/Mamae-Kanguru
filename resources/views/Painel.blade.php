@@ -63,7 +63,7 @@
         <div id="modal1" class="modal modal-fixed-footer">
             <div class="modal-content">
     
-                <form class="formpainel col s12" action="" method="post" enctype="multipart/form-data">
+                <form class="col s12" action="" method="post" enctype="multipart/form-data">
                     @csrf
                     <div class="col">
     
@@ -75,7 +75,7 @@
                         <!-- Título -->
                         <div class="input-field">
                             <input id="tituloanuncio" name="titulo" type="text" class="validate">
-                            <label id="tituloanuncio" class="active"  for="tituloanuncio">Título do anúncio</label>
+                            <label class="active"  for="tituloanuncio">Título do anúncio</label>
                         </div>
     
                         <!-- Descrição -->
