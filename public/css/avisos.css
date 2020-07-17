@@ -1,52 +1,36 @@
-/* AVISOS ===Início===*/
-#avisos{
-    margin: 30px 0;
+#avisos .container-fluid{
+    width: 100%;
 }
-#avisos .card{
-    padding: 15px;
-    margin: 0;
-    margin-bottom: 20px;
-}
-#avisos .card .card-title{
-    display: inline-block;
-    text-align: center;
-    font-weight: 500;
-}
-#avisos .card .card-content{
-    padding: 0;
-}
-#avisos .avisodestaque .card-title{
+#avisos .card h5{
     color: white;
     font-weight: 500;
-}
-#avisos .avisodestaque .card-content{
-    color: white;
-    padding: 0;
-}
-#avisos .avisoComImg .card-title{
-    text-align: left;
-    text-shadow: 1px 1px 1px grey;
-    padding: 5px;
-    font-weight: 500;
-}
-#avisos .avisoComImg .card-content{
-    padding: 10px;
 }
 #avisos .botaoanuncio{
     background-color: #F7B733;
 }
-#avisos .modal-content{
-    padding: 3vh 3vw;
+#avisos .delete{
+    background-color: #F7B733;
 }
+#avisos .file-field .btn{
+    background-color: #F7B733;
+}
+#avisos .modal-footer{
+    border: none;
+    width: 90%;
+}
+
+/* inputs */
 #avisos .modal-content .input-field input[type=text]:focus + label {
     color: #F7B733;
-}#avisos .modal-content .input-field textarea:focus + label {
+}
+#avisos .modal-content .input-field textarea:focus + label {
     color: #F7B733;
 }
 #avisos .modal-content .input-field input[type=text]:focus {
     border-bottom: 1px solid #F7B733;
     box-shadow: 0 1px 0 0 rgb(230, 222, 222);
-}#avisos .modal-content .input-field textarea:focus {
+}
+#avisos .modal-content .input-field textarea:focus {
     border-bottom: 1px solid #F7B733;
     box-shadow: 0 1px 0 0 rgb(230, 222, 222);
 }
@@ -58,14 +42,6 @@
     border-bottom: 1px solid #FC4A1A;
     box-shadow: 0 1px 0 0 rgb(209, 207, 207);
 }
-#avisos .file-field .btn{
-    background-color: #F7B733;
-}
-#avisos .modal-footer{
-    border: none;
-}
-/* AVISOS ===Fim===*/
-
 
 @media only screen and (max-width: 600px) {
 

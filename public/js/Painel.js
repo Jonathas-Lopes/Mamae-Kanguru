@@ -28,18 +28,15 @@ $(document).ready(function () {
       location.reload();
     })
 
-
   })
 
   $(".delete").click(function () {
     var id = $(this).attr('name')
 
-
     $.post("/painel/delete", { id: id }, function (data) {
       console.log(data);
       location.reload();
     })
-
 
   })
 
