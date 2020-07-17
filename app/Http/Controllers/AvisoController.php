@@ -16,7 +16,8 @@ class AvisoController extends Controller
     
     public function getcards(Request $request)
     {
-        $avisos = Aviso::all();
+        //aqui eu puxei a funcao avisosPost do Model gilvan
+        $avisos = Aviso::avisosPost();
         return view('Avisos', compact('avisos'));
     }
     
