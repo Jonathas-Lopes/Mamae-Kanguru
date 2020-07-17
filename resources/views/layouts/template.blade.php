@@ -19,21 +19,21 @@
                 <a href="/home" class="logo"><img class="imagem-1" src="{{ asset('/img/2NomeBrancoCortado.png') }}" alt="Logo"></a>
                 <ul class="abas hide-on-med-and-down">
                     @auth
-                    <li class="iconesnav tooltipped" data-position="bottom" data-tooltip="reservar">
+                    <li class="tooltipped" data-position="bottom" data-tooltip="reservar">
                         <a href="/reservas"><i class="material-icons">date_range</i></a>
                     </li>
-                    <li class="iconesnav tooltipped" data-position="bottom" data-tooltip="doar">
+                    <li class="tooltipped" data-position="bottom" data-tooltip="doar">
                         <a href="/solidariedade"><i class="material-icons">emoji_people</i></a></li>
-                    <li class="iconesnav tooltipped" data-position="bottom" data-tooltip="vender">
+                    <li class="tooltipped" data-position="bottom" data-tooltip="vender">
                         <a href="/painel"><i class="material-icons">point_of_sale</i></a>
                     </li>
-                    <li class="iconesnav tooltipped" data-position="bottom" data-tooltip="eventos">
+                    <li class="tooltipped" data-position="bottom" data-tooltip="eventos">
                         <a href="/eventos"><i class="material-icons">cake</i></a>
                     </li>
-                    <li class="iconesnav tooltipped" data-position="bottom" data-tooltip="avisos">
+                    <li class="tooltipped" data-position="bottom" data-tooltip="avisos">
                         <a href="/avisos"><i class="material-icons">announcement</i></a>
                     </li>
-                    <li class="iconesnav tooltipped" data-position="bottom" data-tooltip="logout">
+                    <li class="tooltipped" data-position="bottom" data-tooltip="logout">
                         <a href="/login/logout"><i class="material-icons">login</i></a>
                     </li>
                     @endauth

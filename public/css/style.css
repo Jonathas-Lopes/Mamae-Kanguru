@@ -30,14 +30,15 @@ nav div ul li{
     display: flex;
     align-items: center;
 }
-.navbar ul .iconesnav i{
+.navbar ul li i{
     font-size: 2.5vw;
     margin: 0 1.5vw;
 }
 .navbar ul li a:hover{
     background-color: transparent !important;
+    color: #fc4813
 }
-.navbar ul .iconesnav i:hover{
+.navbar ul li i:hover{
     color: #fc4813 !important;
 }
 .logo {   

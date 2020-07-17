@@ -28,7 +28,7 @@ class AvisoController extends Controller
             $aviso->titulo = $request->titulo;
             $aviso->descricao = $request->descricao;
             $aviso->foto = "/file/$upload";
-            $aviso->usuario_id = Auth::user()->id;
+            $aviso->condominio_id = Auth::user()->condominio_id;
             $aviso->save();
             return redirect()->route('/avisos');
         }

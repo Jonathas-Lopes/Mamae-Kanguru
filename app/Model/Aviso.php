@@ -8,5 +8,5 @@ class Aviso extends Model
 {
     protected $table = 'avisos';
 
-    protected $fillable = ['titulo','foto','descricao', 'condominio_id'];
+    protected $fillable = ['titulo','foto','descricao','condominio_id'];
 }

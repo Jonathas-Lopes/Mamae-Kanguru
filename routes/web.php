@@ -43,8 +43,8 @@ Route::post('/painel/delete', ['uses'=>'PainelController@deletecards']);
 Route::get('/eventos', ['uses'=>'EventoController@getcards'] );
 Route::post('/eventos', ['uses'=>'EventoController@writecards'] );
 
-Route::get('/avisos', ['uses'=>'AvisoController@getcards'] );
-Route::post('/avisos', ['uses'=>'AvisoController@writecards'] );
+Route::get('/avisos', ['uses'=>'AvisoController@getcards']);
+Route::post('/avisos', ['uses'=>'AvisoController@writecards']);
 Route::post('/avisos/edit', ['uses'=>'AvisoController@editcards']);
 Route::post('/avisos/delete', ['uses'=>'AvisoController@deletecards']);
 

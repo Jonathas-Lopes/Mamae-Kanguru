@@ -19,10 +19,10 @@
                                 <h5 name="{{$item->id}}titulo" @if (Auth::user()->nome == $item->nome) contenteditable="true" @endif class="card-title editavel">{{$item->titulo}}</h5>
                             </div>
                             <div class="card-content">
-                                <p name="{{$item->id}}descricao" @if (Auth::user()->nome == $item->nome)contenteditable="true" @endif>{{$item->descricao}}</p>
+                                <p name="{{$item->id}}descricao" @if (Auth::user()->nome == $item->nome) contenteditable="true" @endif>{{$item->descricao}}</p>
                             </div>
                             <div class="card-action">
-                                <p><a href="#">{{ $item->nome }}</a></p>
+                                <p>{{ $item->nome }}</p>
                                 
                                 @if (Auth::user()->admin == 0)
                                     @if (Auth::user()->nome == $item->nome)
