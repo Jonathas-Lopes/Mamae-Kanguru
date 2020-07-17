@@ -17,7 +17,7 @@ class SolidariedadeController extends Controller
     
     public function getcards(Request $request)
     {
-        $solidariedade = Solidariedade::all();
+        $solidariedade = Solidariedade::solidariedadePost();
         return view('Solidariedade', compact('solidariedade'));
     }
     
