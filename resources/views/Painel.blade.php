@@ -81,7 +81,7 @@
                         <!-- Descrição -->
                         <div class="input-field">
                             <textarea id="descricaoanuncio" name="descricao"  class="materialize-textarea"></textarea>
-                            <label id="descricaoanuncio" class="active" for="descricaoanuncio">Descrição do anúncio</label>
+                            <label class="active" for="descricaoanuncio">Descrição do anúncio</label>
                         </div>
     
                         <!-- Upload da imagem -->
