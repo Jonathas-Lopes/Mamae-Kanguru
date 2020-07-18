@@ -4,17 +4,17 @@
 
 @section('conteudo')
 
-    <link type="text/css" rel="stylesheet" href="css/espacos.css"/>
+    <link type="text/css" rel="stylesheet" href="/css/espacos.css"/>
 
     <main id="areasReservas">
 
         <div class="carousel">
-            <a class="carousel-item"><img src="../img/condominio_espaco_gourmet.jpg"></a>
-            <a class="carousel-item"><img src="../img/condominio_espaco_gourmet2.jpg"></a>
-            <a class="carousel-item"><img src="../img/condominio_espaco_gourmet3.jpg"></a>
+            <a class="carousel-item"><img src="/img/condominio_espaco_gourmet.jpg"></a>
+            <a class="carousel-item"><img src="/img/condominio_espaco_gourmet2.jpg"></a>
+            <a class="carousel-item"><img src="/img/condominio_espaco_gourmet3.jpg"></a>
         </div>
 
-        @foreach ($areas ?? '' as $item)
+        @foreach ($espaco as $item)
 
             {{-- nome da área --}}
             <div class="row">
@@ -25,10 +25,7 @@
             <div class="row">
                 <input placeholder="clique aqui para verificar a disponibilidade" type="text" class="datepicker center">
             </div>
-
-        @endforeach
-
-        {{-- botão reservar --}}
+            {{-- botão reservar --}}
         <div class="reservarbtn row">
             <a class="waves-effect waves-teal btn-flat amber accent-4 black-text center">reservar</a>
         </div>
@@ -36,13 +33,16 @@
         {{-- descrição --}}
         <div class="card white row center-align">
             <h5 class="card-title">Sobre o espaço</h5>
-            @foreach ($areas ?? '' as $item)
+            
                 <p>{{$item->descricao_1}}</p>
                 <p>{{$item->descricao_2}}</p>
                 <p>{{$item->descricao_3}}</p>
-            @endforeach
+        
         </div>
 
+        @endforeach
+
+        
         {{-- Tag PADRÃO  DE TODOS OS ESPAÇOS - Regras de Utilização --}}
         <div class="regras card white row center-align">
             <h5 class="card-title">Regras de Utilização</h5>
@@ -76,8 +76,8 @@
             </ol>
         </div>
 
-        <script src="./js/jQuery341.js"></script>
-        <script src="../js/Reservas.js"></script>
+        <script src="/js/jQuery341.js"></script>
+        <script src="/js/Reservas.js"></script>
 
     </main>
 

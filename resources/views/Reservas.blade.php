@@ -7,7 +7,7 @@
 @section('conteudo')
 
     <section id="reservas" >
-            <link type="text/css" rel="stylesheet" href="./css/reservas.css" />
+            <link type="text/css" rel="stylesheet" href="/css/reservas.css" />
         
         <div class=" row center  center-align ">
 

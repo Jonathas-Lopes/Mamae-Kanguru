@@ -35,9 +35,9 @@ class AvisoController extends Controller
         }
     }
 
-    public function editcards(Request $request)
+    public function editcards(Request $request, $id)
     {
-        $aviso = Aviso::find($request->id);
+        $aviso = Aviso::find($id);
 
         $aviso->titulo = $request->titulo;
         $aviso->descricao = $request->descricao;

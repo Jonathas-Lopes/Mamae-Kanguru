@@ -1,6 +1,7 @@
 #reservas{
     height: 100%;
     padding: 8vh 0vw;
+    width: 100%;
 } 
 #reservas .card{
     border-radius: 0  0 5rem 5rem;

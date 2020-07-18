@@ -92,7 +92,7 @@
     <footer id="footer" class="row">
         <div class="page-footer">
             <p>&copy; 2020 Copyright Mamãe-Kanguru</p>
-            <img class="logofooter center" src="./img/2NomeBranco.png" alt="Logo UNIU">
+            <img class="logofooter center" src="/img/2NomeBranco.png" alt="Logo UNIU">
             <a class="botaosuporte waves-effect waves-teal btn-flat white-text"><i class="large material-icons right">contact_support</i>Suporte</a>
         </div>
     </footer>

@@ -3,7 +3,6 @@
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\DB;
-
 class UsuarioSeeder extends Seeder
 {
     /**
@@ -51,7 +50,7 @@ class UsuarioSeeder extends Seeder
 
         DB::table('usuario')->insert([
             'nome' => 'Jonathas Lopes',
-            'email' => 'jonathas@gmail.com',
+            'email' => 'jonathaslopes20@gmail.com',
             'senha' => Hash::make('1234'),
             'genero'=>'masculino',
             'admin'=>'0',
