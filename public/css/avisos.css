@@ -1,15 +1,9 @@
-#avisos .container-fluid{
-    width: 100%;
-}
-#avisos .card h5{
-    color: white;
-    font-weight: 500;
-}
 #avisos .botaoanuncio{
     background-color: #F7B733;
 }
 #avisos .delete{
     background-color: #F7B733;
+    float: right;
 }
 #avisos .file-field .btn{
     background-color: #F7B733;

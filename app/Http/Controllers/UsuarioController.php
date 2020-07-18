@@ -18,7 +18,7 @@ class UsuarioController extends Controller
         $user->nome = $request->nome;
         $user->email = $request->email;
         $user->senha = Hash::make($request->senha);
-        $user->genero = 'Masculino';
+        $user->genero = 'outro';
         $user->admin = 0;
         $user->condominio_id = 1;
 
@@ -68,25 +68,14 @@ class UsuarioController extends Controller
 
     function login(Request $request)
     {
-        /*$usuario = DB::table('usuario')
-            ->where('nome', 'Manu Guedes')
-            ->first();*/
-
         $email = $request->email;
         $senha = $request->senha;
-
-        /*if (password_verify($senha, $usuario->senha)) {
-            echo 'Password is valid!';
-        } else {
-            echo 'Invalid password.';
-        }*/
 
         if(Auth::attempt(['email'=>$email,'password'=>$senha]))
         {
             return redirect('/home');
         } else
         {
-            dd($request->all());
             return redirect('/');
         }
     }
