@@ -85,7 +85,7 @@
         </section>
     </header>
 
-    <main class="main">
+    <main>
         @yield('conteudo')
     </main>
 
