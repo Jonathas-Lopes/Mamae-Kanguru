@@ -25,20 +25,20 @@
             <div class="row">
                 <input placeholder="clique aqui para verificar a disponibilidade" type="text" class="datepicker center">
             </div>
-            {{-- botão reservar --}}
-        <div class="reservarbtn row">
-            <a class="waves-effect waves-teal btn-flat amber accent-4 black-text center">reservar</a>
-        </div>
+                {{-- botão reservar --}}
+            <div class="reservarbtn row">
+                <a class="waves-effect waves-teal btn-flat amber accent-4 black-text center">reservar</a>
+            </div>
 
-        {{-- descrição --}}
-        <div class="card white row center-align">
-            <h5 class="card-title">Sobre o espaço</h5>
-            
+            {{-- descrição --}}
+            <div class="card white row center-align">
+                <h5 class="card-title">Sobre o espaço</h5>
+                
                 <p>{{$item->descricao_1}}</p>
                 <p>{{$item->descricao_2}}</p>
                 <p>{{$item->descricao_3}}</p>
-        
-        </div>
+            
+            </div>
 
         @endforeach
 
