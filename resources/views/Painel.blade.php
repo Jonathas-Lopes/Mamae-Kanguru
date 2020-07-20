@@ -4,7 +4,7 @@
 
 @section('conteudo')
 
-    <link type="text/css" rel="stylesheet" href="./css/painel.css" />
+    <link type="text/css" rel="stylesheet" href="/css/painel.css" />
 
     <section id="painel">
             

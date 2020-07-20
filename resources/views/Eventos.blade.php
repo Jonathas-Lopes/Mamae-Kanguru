@@ -1,98 +1,109 @@
 @extends('layouts.template')
 
-@section('titulo')
-    Eventos
-@endsection
+@section('titulo') Eventos @endsection
 
 @section('conteudo')
     <main id="eventos">
 
-        <link type="text/css" rel="stylesheet" href="./css/eventos.css" />
+        <link type="text/css" rel="stylesheet" href="/css/eventos.css" />
 
         <div class="carousel carousel-slider center" data-indicators="true">
+            @foreach ($evento as $item)
+                <div class="carousel-item white-text">
+                
+                    {{-- Título evento --}}
+                    <h5 class="editavel white-text" name="{{$item->id}}nome" 
+                        @if (Auth::user()->admin == 1) contenteditable="true" @endif>
+                        {{$item->nome}}
+                    </h5>
 
-            <div class="carousel-item indigo darken-4 white-text">
-                {{-- Título evento --}}
-                <h4 class="white-text">Churrasco de Dia dos Pais</h4>
-                {{-- Data do evento --}}
-                <h5>08/08/2020 - sábado</h5>
-                {{-- Horário do evento --}}
-                <h5>A partir das 11h00</h5>
-                {{-- Descrição do evento --}}
-                <p class="white-text">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Cupiditate asperiores exercitationem nihil facilis! Assumenda suscipit veritatis aspernatur distinctio, voluptatem ullam molestiae tempora voluptatum dignissimos consequatur debitis rerum asperiores consequuntur possimus!</p>
-                <p class="white-text">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Cupiditate asperiores exercitationem nihil facilis! Assumenda suscipit veritatis aspernatur distinctio, voluptatem ullam molestiae tempora voluptatum dignissimos consequatur debitis rerum asperiores consequuntur possimus!</p>
-                <p class="white-text">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Cupiditate asperiores exercitationem nihil facilis! Assumenda suscipit veritatis aspernatur distinctio, voluptatem ullam molestiae tempora voluptatum dignissimos consequatur debitis rerum asperiores consequuntur possimus!</p>
-                @if (Auth::user()->admin == 1)
-                    {{-- Botões do administrador --}}
-                    <a class="editarbtn btn-floating btn-large waves-effect"><i class="material-icons">edit</i></a>
-                    <a class="deletarbtn btn-floating btn-large waves-effect"><i class="material-icons">remove</i></a>
-                @else
-                    {{-- Botão do usuário --}}
-                    <a class="confirmarbtn waves-effect waves-light btn">confirmar presença</a>
-                @endif
-            </div>
+                    {{-- Data do evento --}}
+                    <h6 class="editavel white-text"
+                        @if (Auth::user()->admin == 1) contenteditable="true" @endif>
+                        {{$item->data}}
+                    </h6>
 
-            <div class="carousel-item green darken-4 white-text">
-                {{-- Título evento --}}
-                <h4 class="white-text">Dias das Crianças</h4>
-                {{-- Data do evento --}}
-                <h5>11/10/2020 - domingo</h5>
-                {{-- Horário do evento --}}
-                <h5>A partir das 10h00</h5>
-                {{-- Descrição do evento --}}
-                <p class="white-text">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Cupiditate asperiores exercitationem nihil facilis! Assumenda suscipit veritatis aspernatur distinctio, voluptatem ullam molestiae tempora voluptatum dignissimos consequatur debitis rerum asperiores consequuntur possimus!</p>
-                <p class="white-text">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Cupiditate asperiores exercitationem nihil facilis! Assumenda suscipit veritatis aspernatur distinctio, voluptatem ullam molestiae tempora voluptatum dignissimos consequatur debitis rerum asperiores consequuntur possimus!</p>
-                <p class="white-text">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Cupiditate asperiores exercitationem nihil facilis! Assumenda suscipit veritatis aspernatur distinctio, voluptatem ullam molestiae tempora voluptatum dignissimos consequatur debitis rerum asperiores consequuntur possimus!</p>
-                @if (Auth::user()->admin == 1)
-                    {{-- Botões do administrador --}}
-                    <a class="editarbtn btn-floating btn-large waves-effect"><i class="material-icons">edit</i></a>
-                    <a class="deletarbtn btn-floating btn-large waves-effect"><i class="material-icons">remove</i></a>
-                @else
-                    {{-- Botão do usuário --}}
-                    <a class="confirmarbtn waves-effect waves-light btn">confirmar presença</a>
-                @endif
-            </div>
-            
-            <div class="carousel-item orange darken-4 white-text">
-                {{-- Título evento --}}
-                <h4 class="white-text">Dias das Bruxas</h4>
-                {{-- Data do evento --}}
-                <h5>31/10/2020 - sábado</h5>
-                {{-- Horário do evento --}}
-                <h5>A partir das 18h00</h5>
-                {{-- Descrição do evento --}}
-                <p class="white-text">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Cupiditate asperiores exercitationem nihil facilis! Assumenda suscipit veritatis aspernatur distinctio, voluptatem ullam molestiae tempora voluptatum dignissimos consequatur debitis rerum asperiores consequuntur possimus!</p>
-                <p class="white-text">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Cupiditate asperiores exercitationem nihil facilis! Assumenda suscipit veritatis aspernatur distinctio, voluptatem ullam molestiae tempora voluptatum dignissimos consequatur debitis rerum asperiores consequuntur possimus!</p>
-                <p class="white-text">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Cupiditate asperiores exercitationem nihil facilis! Assumenda suscipit veritatis aspernatur distinctio, voluptatem ullam molestiae tempora voluptatum dignissimos consequatur debitis rerum asperiores consequuntur possimus!</p>
-                @if (Auth::user()->admin == 1)
-                    {{-- Botões do administrador --}}
-                    <a class="editarbtn btn-floating btn-large waves-effect"><i class="material-icons">edit</i></a>
-                    <a class="deletarbtn btn-floating btn-large waves-effect"><i class="material-icons">remove</i></a>
-                @else
-                    {{-- Botão do usuário --}}
-                    <a class="confirmarbtn waves-effect waves-light btn">confirmar presença</a>
-                @endif
-            </div>
+                    {{-- Descrição --}}
+                    <p name="{{$item->id}}descricao_1" id="descricao_1"
+                        @if (Auth::user()->admin == 1) contenteditable="true" @endif>
+                        {{$item->descricao_1}}
+                    </p>
 
-            <div class="carousel-item red darken-4 white-text">
-                {{-- Título evento --}}
-                <h4 class="white-text">Sorteio do Salão (Natal e Ano Novo)</h4>
-                {{-- Data do evento --}}
-                <h5>01/11/2020 - domingo</h5>
-                {{-- Horário do evento --}}
-                <h5>A partir das 20h00</h5>
-                {{-- Descrição do evento --}}
-                <p class="white-text">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Cupiditate asperiores exercitationem nihil facilis! Assumenda suscipit veritatis aspernatur distinctio, voluptatem ullam molestiae tempora voluptatum dignissimos consequatur debitis rerum asperiores consequuntur possimus!</p>
-                <p class="white-text">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Cupiditate asperiores exercitationem nihil facilis! Assumenda suscipit veritatis aspernatur distinctio, voluptatem ullam molestiae tempora voluptatum dignissimos consequatur debitis rerum asperiores consequuntur possimus!</p>
-                <p class="white-text">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Cupiditate asperiores exercitationem nihil facilis! Assumenda suscipit veritatis aspernatur distinctio, voluptatem ullam molestiae tempora voluptatum dignissimos consequatur debitis rerum asperiores consequuntur possimus!</p>
-                @if (Auth::user()->admin == 1)
-                    {{-- Botões do administrador --}}
-                    <a class="editarbtn btn-floating btn-large waves-effect"><i class="material-icons">edit</i></a>
-                    <a class="deletarbtn btn-floating btn-large waves-effect"><i class="material-icons">remove</i></a>
-                @else
-                    {{-- Botão do usuário --}}
-                    <a class="confirmarbtn waves-effect waves-light btn">confirmar presença</a>
-                @endif
+                    {{-- Descrição --}}
+                    <p name="{{$item->id}}descricao_2" id="descricao_2"
+                        @if (Auth::user()->admin == 1) contenteditable="true" @endif>
+                        {{$item->descricao_2}}
+                    </p>
+
+                    {{-- Descrição --}}
+                    <p name="{{$item->id}}descricao_3" id="descricao_3"
+                        @if (Auth::user()->admin == 1) contenteditable="true" @endif>
+                        {{$item->descricao_3}}
+                    </p>
+
+                    @if (Auth::user()->admin == 1)
+                        {{-- Botões do administrador --}}
+                        <a name="{{$item->id}}" class="edit btn-large waves-effect"><i class="material-icons">edit</i></a>
+                        <a name="{{$item->id}}" class="delete btn-large waves-effect"><i class="material-icons">remove</i></a>
+                    @else
+                        {{-- Botão do usuário --}}
+                        <a class="confirmarbtn waves-effect waves-light btn">confirmar presença</a>
+                    @endif
+                    
+                </div>
+            @endforeach
+        </div>
+
+        <!-- Modal Trigger -->
+        <a class="modal-trigger waves-effect waves-light btn row" href="#modal1"><i class="material-icons">add</i></a>
+
+        <!-- Modal Structure -->
+        <div id="modal1" class="modal">
+            <div class="modal-content">
+                <form method="post" class="col s12">
+                    @csrf
+                    <div class="row">
+                        <div class="col s12">
+                            <h5>Adicionar próximo evento</h5>
+                        </div>
+                        {{-- nome do evento --}}
+                        <div class="input-field col s12">
+                            <input id="nome" name="nome" type="text" class="validate">
+                            <label for="nome">Nome do evento</label>
+                        </div>
+                        {{-- data do evento --}}
+                        <div class="input-field col s12">
+                            <input name="data" type="text" class="datepicker" 
+                            placeholder="escolha a data do evento">
+                        </div>
+                        <div class="col s12">
+                            <p>
+                                Utilize os campos abaixo para inserir os detalhes do evento: 
+                                o que é necessário para participar, local, atrações, comidas, bebidas etc.
+                            </p>
+                        </div>
+                        {{-- descrição 1 --}}
+                        <div class="input-field col s12">
+                            <textarea id="descricao_1" name="descricao_1" class="materialize-textarea"></textarea>
+                            <label for="descricao_1"></label>
+                        </div>
+                        {{-- descrição 2 --}}
+                        <div class="input-field col s12">
+                            <textarea id="descricao_2" name="descricao_2" class="materialize-textarea"></textarea>
+                            <label for="descricao_2"></label>
+                        </div>
+                        {{-- descrição 3 --}}
+                        <div class="input-field col s12">
+                            <textarea id="descricao_3" name="descricao_3" class="materialize-textarea"></textarea>
+                            <label for="descricao_3"></label>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <a href="#!" class="modal-action modal-close 
+                    waves-effect waves-green btn-flat">criar
+                </a>
             </div>
         </div>
 

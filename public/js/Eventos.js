@@ -7,12 +7,54 @@ $(document).ready(function(){
     fullWidth: true,
     indicators: true,
     duration: 100,
-  }
-  );
+  })
+  // autoplay()
+  // function autoplay() {
+  //     $('.carousel').carousel('next');
+  //     setTimeout(autoplay, 9000);
+  // }
+
+  $.ajaxSetup({
+    headers: {
+      'X-CSRF-TOKEN': $('input[name="_token"]').attr('value')
+    }
+  });
+
+  $(".edit").click(function () {
+    var nomeName = $(this).attr('name') + "nome"
+    var date = $('h6').text()
+    var descricaoName1 = $(this).attr('name') + "descricao_1"
+    var descricaoName2 = $(this).attr('name') + "descricao_2"
+    var descricaoName3 = $(this).attr('name') + "descricao_3"
+    var nome = $('h5[name="' + nomeName + '"]').text()
+    var descricao_1 = $('p[name="' + descricaoName1 + '"]').text() //#descricao_1
+    var descricao_2 = $('p[name="' + descricaoName2 + '"]').text() //#descricao_2
+    var descricao_3 = $('p[name="' + descricaoName3 + '"]').text() //#descricao_3
+    var id = $(this).attr('name')
+
+    $.post("/eventos/edit", { 
+      id: id, 
+      nome: nome, 
+      data: date,
+      descricao_1: descricao_1, 
+      descricao_2: descricao_2, 
+      descricao_3: descricao_3
+    }, function (data) {
+      console.log(data);
+      location.reload();
+    });
+
+  });
+
 });
 
-autoplay()
-function autoplay() {
-    $('.carousel').carousel('next');
-    setTimeout(autoplay, 4500);
-}
+$('.datepicker').pickadate(
+  {
+  selectMonths: true, // Creates a dropdown to control month
+  selectYears: 15, // Creates a dropdown of 15 years to control year,
+  today: 'Today',
+  clear: 'Clear',
+  close: 'Ok',
+  closeOnSelect: false, // Close upon selecting a date,
+  container: undefined, // ex. 'body' will append picker to body
+});

@@ -7,6 +7,10 @@
 #eventos .carousel-item{
     height: auto;
     padding-bottom: 5vh;
+    background-color: gray;
+}
+#eventos .modal-trigger{
+    background-color: #FC4A1A;
 }
 #eventos h4{
     font-size: 2vw;  
@@ -30,10 +34,10 @@
 #eventos .carousel-item .confirmarbtn{
     background-color: #F7B733;
 }
-#eventos .carousel-item .editarbtn{
+#eventos .carousel-item .edit{
     background-color: #F7B733;
 }
-#eventos .deletarbtn{
+#eventos .delete{
     background-color: #FC4A1A;
 }
 #eventos .galeriaeventos .btnaddgaleria{

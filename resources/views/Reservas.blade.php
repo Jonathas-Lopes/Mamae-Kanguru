@@ -43,43 +43,47 @@
 
         <div id="modal1" class="modal">
             <div class="modal-content">
+                <form action="" method="post">
+                    @csrf
 
-                <div class="input-field col s12">
-                    <input placeholder="Salão de festas" id="area" type="text" class="validate">
-                    <label for="area">Nome da área (obrigatório)</label>
-                </div>
-
-                <div class="file-field input-field col s12">
-                    <div class="btn">
-                      <span><i class="material-icons">add_photo_alternate</i></span>
-                      <input type="file" multiple name="uploads[]">
+                    <div class="input-field col s12">
+                        <input placeholder="Salão de festas" id="area" type="text" class="validate">
+                        <label for="area">Nome da área (obrigatório)</label>
                     </div>
-                    <div class="file-path-wrapper">
-                      <input class="file-path validate" type="text" 
-                      placeholder="adicione aqui fotos do espaço">
+    
+                    <div class="file-field input-field col s12">
+                        <div class="btn">
+                          <span><i class="material-icons">add_photo_alternate</i></span>
+                          <input type="file" multiple name="uploads[]">
+                        </div>
+                        <div class="file-path-wrapper">
+                          <input class="file-path validate" type="text" 
+                          placeholder="adicione aqui fotos do espaço">
+                        </div>
                     </div>
-                </div>
+    
+                    <div class="input-field col s12">
+                        <textarea id="descricao_1" class="materialize-textarea"></textarea>
+                        <label for="descricao_1">Descrição (obrigatório)</label>
+                    </div>
+    
+                    <div class="input-field col s12">
+                        <textarea id="descricao_2" class="materialize-textarea"></textarea>
+                        <label for="descricao_2">Descrição</label>
+                    </div>
+    
+                    <div class="input-field col s12">
+                        <textarea id="descricao_3" class="materialize-textarea"></textarea>
+                        <label for="descricao_3">Descrição</label>
+                    </div>
+    
+                    <div class="modal-footer col s12">
+                        <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat">
+                            Criar
+                        </a>
+                    </div>
 
-                <div class="input-field col s12">
-                    <textarea id="descricao_1" class="materialize-textarea"></textarea>
-                    <label for="descricao_1">Descrição (obrigatório)</label>
-                </div>
-
-                <div class="input-field col s12">
-                    <textarea id="descricao_2" class="materialize-textarea"></textarea>
-                    <label for="descricao_2">Descrição</label>
-                </div>
-
-                <div class="input-field col s12">
-                    <textarea id="descricao_3" class="materialize-textarea"></textarea>
-                    <label for="descricao_3">Descrição</label>
-                </div>
-
-                <div class="modal-footer col s12">
-                    <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat">
-                        Criar
-                    </a>
-                </div>
+                </form>
 
             </div>
         </div>
