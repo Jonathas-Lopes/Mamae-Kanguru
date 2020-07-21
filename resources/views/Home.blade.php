@@ -114,7 +114,21 @@
                 <form method="POST" action="/home/mensagem" class="input-field">
                     @csrf
                     <textarea name="mensagem" value="" id="textarea1" class="materialize-textarea"></textarea>
-                    <label for="textarea1">Escreva aqui a sua mensagem</label> 
+                    <label for="textarea1">Escreva aqui a sua mensagem</label>
+                </div>
+                <div>
+                    <label class="radious-buttons">
+                        <input name="hashtag" type="radio" value="procuro"/>
+                        <span>#procuro</span>
+                    </label>
+                    <label class="radious-buttons">
+                        <input name="hashtag" type="radio" value="ofereco"/>
+                        <span>#ofereço</span>
+                    </label>
+                    <label class="radious-buttons">
+                        <input name="hashtag" type="radio" value="aviso"/>
+                        <span>#aviso</span>
+                    </label>
                 </div>
                 <div>
                     <button type="submit" class="enviar btn-floating btn waves-effect waves-light">

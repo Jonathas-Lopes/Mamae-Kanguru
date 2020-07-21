@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Model;
 use App\Model\Usuarios;
+use App\Model\Mensagens;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
@@ -60,10 +61,29 @@ class UsuarioController extends Controller
 
     }
 
+    public function exibirMensagens()
+    {
+        $condominioId = Auth::user()->condominio_id;
+        $mensagens = DB::table('mensagem')
+                    ->join('usuario', 'usuario.id', '=', 'mensagem.usuario_id')
+                    ->select('mensagem.id', 'mensagem.mensagem', 'mensagem.hora_envio', 'mensagem.hashtag',
+                            'usuario.id', 'usuario.nome', 'usuario.foto')
+                    ->where('condominio_id', $condominioId)
+                    ->paginate(20)
+                    ->sortByDesc();
+
+        return $mensagens;
+    }
+
     public function getPerfil(Request $request)
     {
         $perfil = Usuarios::find(Auth::user()->id);
-        return view('Home', compact('perfil'));
+
+        $mensagens = $this->exibirMensagens();
+
+        dd($mensagens);
+
+        return view('Home', ['perfil'=>$perfil, 'mensagens'=>$mensagens]);
     }
 
     function login(Request $request)

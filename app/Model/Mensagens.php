@@ -9,7 +9,7 @@ class Mensagens extends Model
 {
     protected $table = "mensagem";
 
-    protected $fillable = ['mensagem', 'hora_envio', 'usuario_id'];
+    protected $fillable = ['mensagem', 'hora_envio', 'usuario_id', 'hashtag'];
 
     public function usuario()
     {

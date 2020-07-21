@@ -36,10 +36,10 @@ class HomeController extends Controller
         $mensagem->hora_envio = now();
         $mensagem->usuario_id = Auth::user()->id;
         $mensagem->condominio_id = Auth::user()->condominio_id;
+        $mensagem->hashtag = $request->hashtag;
         $mensagem->save();
 
         return redirect('/home');
     }
-
 
 }
