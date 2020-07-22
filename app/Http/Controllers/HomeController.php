@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Model\Mensagens;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\DB;
 
 class HomeController extends Controller
 {
@@ -40,6 +41,23 @@ class HomeController extends Controller
         $mensagem->save();
 
         return redirect('/home');
+    }
+
+    public function exibirMensagens()
+    {
+        $condominioId = Auth::user()->condominio_id;
+        $mensagens = DB::table('mensagem')
+                    ->join('usuario', 'usuario.id', '=', 'mensagem.usuario_id')
+                    ->select('mensagem.id', 'mensagem.mensagem', 'mensagem.hora_envio', 'mensagem.hashtag',
+                            'mensagem.usuario_id', 'usuario.nome', 'usuario.foto')
+                            
+                    ->where('mensagem.condominio_id', $condominioId)
+                    ->paginate(20)
+                    ->sortBy('mensagem.id');
+
+        dd($mensagens);
+
+        return $mensagens;
     }
 
 }

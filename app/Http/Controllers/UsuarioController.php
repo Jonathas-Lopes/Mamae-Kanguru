@@ -61,29 +61,10 @@ class UsuarioController extends Controller
 
     }
 
-    public function exibirMensagens()
-    {
-        $condominioId = Auth::user()->condominio_id;
-        $mensagens = DB::table('mensagem')
-                    ->join('usuario', 'usuario.id', '=', 'mensagem.usuario_id')
-                    ->select('mensagem.id', 'mensagem.mensagem', 'mensagem.hora_envio', 'mensagem.hashtag',
-                            'usuario.id', 'usuario.nome', 'usuario.foto')
-                    ->where('condominio_id', $condominioId)
-                    ->paginate(20)
-                    ->sortByDesc();
-
-        return $mensagens;
-    }
-
     public function getPerfil(Request $request)
     {
         $perfil = Usuarios::find(Auth::user()->id);
-
-        $mensagens = $this->exibirMensagens();
-
-        dd($mensagens);
-
-        return view('Home', ['perfil'=>$perfil, 'mensagens'=>$mensagens]);
+        return view('Home', compact('perfil'));
     }
 
     function login(Request $request)
