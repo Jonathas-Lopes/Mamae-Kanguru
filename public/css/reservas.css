@@ -5,7 +5,6 @@
 } 
 #reservas .card{
     border-radius: 0  0 5rem 5rem;
-    
 }
 #reservas .card:last-child{
     margin-right: 0;
@@ -37,4 +36,7 @@
 }
 .invisivel{
     opacity: 0!important;
+}
+#reservas .btn-small{
+    background-color: #F7B733;
 }

@@ -1,5 +1,6 @@
-#avisos .botaoanuncio{
+#avisos .modal-trigger{
     background-color: #F7B733;
+    margin-bottom: 5vh;
 }
 #avisos .delete{
     background-color: #F7B733;
@@ -11,6 +12,9 @@
 #avisos .modal-footer{
     border: none;
     width: 90%;
+}
+#avisos .card-action{
+    border: none;
 }
 
 /* inputs */
