@@ -135,7 +135,7 @@
         </div>
 
         </main>
-        <script src="./js/jQuery341.js"></script>
+
         <script src="./js/Eventos.js"></script>
         
 @endsection

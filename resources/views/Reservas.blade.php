@@ -87,6 +87,7 @@
         @endif
        
     </section>
-    <script src="./js/jQuery341.js"></script>
+
     <script src="./js/Reservas.js"></script>
+    
 @endsection

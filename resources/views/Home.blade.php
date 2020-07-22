@@ -159,12 +159,12 @@
         @endif
 
         <div id="mensagens">
-
+            
         </div>
             
     </section>
     
-    <script src="./js/jQuery341.js"></script>
     <script src="js/mensagens.js"></script>
+
 @endsection
 

@@ -110,6 +110,7 @@
             </div>
         </div>
     </main>
-    <script src="../js/jQuery341.js"></script>
+    
     <script src="../js/Solidariedade.js"></script>
+    
 @endsection

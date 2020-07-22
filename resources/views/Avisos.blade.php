@@ -88,7 +88,6 @@
         @endif
     </main>
 
-    <script src="./js/jQuery341.js"></script>
     <script src="./js/Avisos.js"></script>
 
 @endsection
