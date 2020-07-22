@@ -20,14 +20,14 @@
                                         
                                 @if (Auth::user()->admin == 0)
                                     @if (Auth::user()->nome == $item->nome)
-                                            <a name={{$item->id}} class="edit halfway-fab btn-floating btn waves-effect waves-light">
-                                                <i class="tiny material-icons">edit</i>
-                                            </a>
-                                            <a name={{$item->id}} class="delete halfway-fab btn-floating btn waves-effect waves-light">
-                                                <i class="tiny material-icons">delete</i>
-                                            </a>                                        
+                                        <a name={{$item->id}} class="edit halfway-fab btn-floating btn waves-effect waves-light">
+                                            <i class="tiny material-icons">edit</i>
+                                        </a>
+                                        <a name={{$item->id}} class="delete halfway-fab btn-floating btn waves-effect waves-light">
+                                            <i class="tiny material-icons">delete</i>
+                                        </a>                                        
                                     @else
-                                        <a class="btn-floating halfway-fab waves-effect tooltipped"
+                                        <a name={{$item->link}} class="btn-floating halfway-fab waves-effect tooltipped"
                                             data-position="bottom" data-delay="50" data-tooltip="saiba mais">
                                             <i class="material-icons">link</i>
                                         </a>
@@ -83,12 +83,12 @@
                         </label>
                     </div>
                     <!-- Link -->
-                    {{-- <div class="input-field">
-                        <input name="" id="tituloanuncio" type="text" class="validate">
-                        <label for="tituloanuncio" class="active" for="tituloanuncio">
+                    <div class="input-field">
+                        <input name="link" id="link" type="text" class="validate">
+                        <label for="link" class="active">
                             Link para maiores informações
                         </label>
-                    </div> --}}
+                    </div>
                     <!-- Botão para upload da imagem -->
                     <div class="file-field input-field">
                         <div class="btn">

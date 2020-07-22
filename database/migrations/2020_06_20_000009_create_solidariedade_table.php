@@ -26,6 +26,7 @@ class CreateSolidariedadeTable extends Migration
             $table->string('titulo', 45);
             $table->string('foto', 75)->nullable()->default(null);
             $table->text('descricao')->nullable()->default(null);
+            $table->text('link')->nullable()->default(null);
             $table->timestamps();
 
 

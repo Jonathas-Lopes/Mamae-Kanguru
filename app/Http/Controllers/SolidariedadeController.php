@@ -28,6 +28,7 @@ class SolidariedadeController extends Controller
             $solidariedade = new Solidariedade;
             $solidariedade->titulo = $request->titulo;
             $solidariedade->descricao = $request->descricao;
+            $solidariedade->link = $request->link;
             $solidariedade->foto = "/file/$upload";
             $solidariedade->usuario_id = Auth::user()->id;
             $solidariedade->save();
