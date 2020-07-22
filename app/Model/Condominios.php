@@ -11,4 +11,9 @@ class Condominios extends Model
 
     protected $fillable = ['nome','endereco',
     ];
+
+    public function mensagem()
+    {
+        return $this->hasMany('App\Model\Mensagens');
+    }
 }

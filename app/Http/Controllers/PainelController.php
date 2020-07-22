@@ -37,10 +37,8 @@ class PainelController extends Controller
     public function editcards(Request $request)
     {   
         $painel = Painel::find($request->id);
-
         $painel->titulo = $request->titulo;
         $painel->descricao = $request->descricao;
-
         $painel->save();
         return redirect('/painel');
     }
@@ -48,8 +46,6 @@ class PainelController extends Controller
     public function deletecards(Request $request)
     {
         $painel = Painel::find($request->id);
-
          $painel->delete();
-        
     }
 }

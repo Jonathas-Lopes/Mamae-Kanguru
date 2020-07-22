@@ -4,7 +4,7 @@
 
 @section('conteudo')
 
-    <link type="text/css" rel="stylesheet" href="./css/painel.css" />
+    <link type="text/css" rel="stylesheet" href="/css/painel.css" />
 
     <section id="painel">
             
@@ -19,10 +19,10 @@
                                 <h5 name="{{$item->id}}titulo" @if (Auth::user()->nome == $item->nome) contenteditable="true" @endif class="card-title editavel">{{$item->titulo}}</h5>
                             </div>
                             <div class="card-content">
-                                <p name="{{$item->id}}descricao" @if (Auth::user()->nome == $item->nome)contenteditable="true" @endif>{{$item->descricao}}</p>
+                                <p name="{{$item->id}}descricao" @if (Auth::user()->nome == $item->nome) contenteditable="true" @endif>{{$item->descricao}}</p>
                             </div>
                             <div class="card-action">
-                                <p><a href="#">{{ $item->nome }}</a></p>
+                                <p>{{ $item->nome }}</p>
                                 
                                 @if (Auth::user()->admin == 0)
                                     @if (Auth::user()->nome == $item->nome)
@@ -63,7 +63,7 @@
         <div id="modal1" class="modal modal-fixed-footer">
             <div class="modal-content">
     
-                <form class="formpainel col s12" action="" method="post" enctype="multipart/form-data">
+                <form class="col s12" action="" method="post" enctype="multipart/form-data">
                     @csrf
                     <div class="col">
     
@@ -75,13 +75,13 @@
                         <!-- Título -->
                         <div class="input-field">
                             <input id="tituloanuncio" name="titulo" type="text" class="validate">
-                            <label id="tituloanuncio" class="active"  for="tituloanuncio">Título do anúncio</label>
+                            <label class="active"  for="tituloanuncio">Título do anúncio</label>
                         </div>
     
                         <!-- Descrição -->
                         <div class="input-field">
                             <textarea id="descricaoanuncio" name="descricao"  class="materialize-textarea"></textarea>
-                            <label id="descricaoanuncio" class="active" for="descricaoanuncio">Descrição do anúncio</label>
+                            <label class="active" for="descricaoanuncio">Descrição do anúncio</label>
                         </div>
     
                         <!-- Upload da imagem -->

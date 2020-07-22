@@ -3,89 +3,92 @@
 @section('titulo') Avisos @endsection
 
 @section('conteudo')
-<section id="avisos">
+    <link rel="stylesheet" href="./css/avisos.css">
 
-    <link type="text/css" rel="stylesheet" href="./css/avisos.css"/>
+    <main id="avisos">
 
-    <div class="container-fluid ">
-        
-        {{-- CARDS DE AVISO --}}
-        @foreach ($avisos as $item)
+        <div class="container-fluid center">
 
-            <div class="col l4 m12 s12">
-                <div class="card z-depth-2 hoverable">
-                    <div class="card-image">
-                        <img src="{{$item->foto}}">
-                        <span class="card-title">{{$item->titulo}}</span>
+            <div class="row">
+                @foreach ($avisos as $item)
+                    <div class="col l4 m12 s12">
+                        <div class="card">
+                            <div class="card-image">
+                                <img src="{{$item->foto}}">
+                                <h5 class="card-title"name="{{$item->id}}titulo" @if (Auth::user()->admin == 1)
+                                    contenteditable="true" @endif>{{$item->titulo}}
+                                </h5>
+                            </div>
+                            <div class="card-content">
+                                <p name="{{$item->id}}descricao" @if (Auth::user()->admin == 1) 
+                                    contenteditable="true" @endif>{{$item->descricao}}
+                                </p>
+                            </div>
+                            @if (Auth::user()->admin == 1)
+                                <div class="card-action">
+                                    <a name="{{$item->id}}" class="delete btn waves-effect waves-light ">
+                                        <i class="tiny material-icons">delete</i>
+                                    </a>
+                                </div>
+                            @endif
+                        </div>
                     </div>
-                    <div class="card-content">
-                        <p>{{$item->descricao}}</p>
-                    </div>
+                @endforeach
+            </div>
+
+            {{-- MODAL: FORM ADICIONAR AVISO --}}
+            @if (Auth::user()->admin == 1)
+                <a class="modal-trigger btn waves-effect waves-light" href="#modal1">
+                    <i class="material-icons">add</i>
+                </a>
+            @endif
+        </div>
+
+        @if (Auth::user()->admin == 1)
+
+            <div id="modal1" class="modal">
+                <div class="modal-content">
+                    <form class="row" action="" method="post" enctype="multipart/form-data">
+                        @csrf
+                        <div class="col s12">
+                            <h5>Adicionar um aviso na página</h5>
+                        </div>
+
+                        <div class="input-field col s12">
+                            <input id="titulo" name="titulo" type="text" class="validate">
+                            <label for="titulo" class="active">Título (obrigatório)</label>
+                        </div>
+
+                        <div class="input-field col s12">
+                            <textarea name="descricao" id="descricao" class="materialize-textarea"></textarea>
+                            <label for="descricao" class="active">Conteúdo do aviso (obrigatório)</label>
+                        </div>
+
+                        <div class="file-field input-field col s12">
+                            <div class="btn">
+                                <span>
+                                    <i class="material-icons">add_photo_alternate</i>
+                                </span>
+                                <input type="file" multiple name="foto">
+                            </div>
+
+                            <div class="file-path-wrapper">
+                                <input type="text" class="file-path validate"
+                                placeholder="imagem (opcional)">
+                            </div>
+
+                            <div class="modal-footer col s12">
+                                <button href="#" type="submit" 
+                                class="modal-close btn-flat">Criar aviso</button>
+                            </div>
+                        </div>
+                    </form>
                 </div>
             </div>
-            
-        @endforeach
-        
-        @if (Auth::user()->admin == 1)
-            <!-- Modal Trigger -->
-            <a class="botaoanuncio modal-trigger btn-floating btn-large 
-                waves-effect waves-light" href="#modal1">
-                <i class="material-icons">add</i>
-            </a>
         @endif
+    </main>
 
-        <!-- Modal Structure -->
-        <div id="modal1" class="modal modal-fixed-footer">
-            <div class="modal-content">
-
-                <form class="center col s12" action="" method="post" enctype="multipart/form-data">
-
-                    <div class="row">
-                        <h5>Inserir aviso</h5>
-                    </div>
-
-                    <div class="row">
-                        <!-- Título -->
-                        <div class="input-field row">
-                            <input id="tituloaviso" type="text" class="validate" name="titulo">
-                            <label id="tituloaviso" class="active" for="tituloaviso">Título</label>
-                        </div>
-                    </div>
-                    
-                    <div class="row">
-                        <!-- Descrição -->
-                        <div class="input-field row">
-                            <textarea id="descricaoaviso" class="materialize-textarea" name="descricao"></textarea>
-                            <label id="descricaoaviso" class="active" for="descricaoaviso">Conteúdo do aviso</label>
-                        </div>
-                    </div>
-
-                    <div class="row">
-                        <!-- Botão para upload da imagem -->
-                        <div class="file-field input-field row">
-                            <div class="btn">
-                                <span><i class="material-icons">attach_file</i></span>
-                                <input type="file">
-                            </div>
-                            <div class="file-path-wrapper">
-                                <input class="file-path validate" type="text" name="foto">
-                            </div>
-                        </div>
-                    </div>
-                    
-                </form>
-            </div>
-
-            <!-- Botão para criar o anúncio -->
-            <div class="modal-footer  col s12">
-                <button href="#" class="modal-close waves-effect btn-flat" 
-                    type="submit" name="action">Divulgar ação
-                </button>
-            </div>
-        </div>
-    </div>
-</section>
-<script src="./js/jQuery341.js"></script>
-<script src="./js/Avisos.js"></script>
+    <script src="./js/jQuery341.js"></script>
+    <script src="./js/Avisos.js"></script>
 
 @endsection

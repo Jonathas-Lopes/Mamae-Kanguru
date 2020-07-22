@@ -1,4 +1,5 @@
 #solidariedade{
+    height: 100vh;
     width: 100%;
     margin: 2vh 4vw;
 }
@@ -19,7 +20,7 @@
 #solidariedade .btn-floating{
     background-color: #FC4A1A;
 }
-#solidariedade .btnedit{
+#solidariedade .edit{
     background-color: red;
     right: 4.5vw;
 }

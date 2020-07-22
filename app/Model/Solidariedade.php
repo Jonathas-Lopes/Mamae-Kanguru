@@ -11,11 +11,11 @@ class Solidariedade extends Model
 
     protected $fillable = ['nome','foto','descricao', 'usuario_id'];
 
-    /*static function solidariedadePost(){
+    static function solidariedadePost(){
         $solidariedade = DB::table('solidariedade')
         ->join('usuario', 'usuario.id', '=', 'usuario_id')
         ->select('solidariedade.*', 'usuario.nome')
         ->get();
         return $solidariedade;
-    }*/
+    }
 }

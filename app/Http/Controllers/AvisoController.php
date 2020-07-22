@@ -17,7 +17,7 @@ class AvisoController extends Controller
     public function getcards(Request $request)
     {
         //aqui eu puxei a funcao avisosPost do Model gilvan
-        $avisos = Aviso::avisosPost();
+        $avisos = Aviso::all();
         return view('Avisos', compact('avisos'));
     }
     
@@ -27,21 +27,17 @@ class AvisoController extends Controller
             $upload = $request->foto->store('img');
             $aviso = new Aviso;
             $aviso->titulo = $request->titulo;
-            $aviso->foto = "/file/$upload";
-<<<<<<< HEAD
             $aviso->descricao = $request->descricao;
-            $aviso->usuario_id = 1;
-=======
-            $aviso->usuario_id = Auth::user()->id;
->>>>>>> 1000f62d1b6722a8806c13fa9c0f061ff917ee96
+            $aviso->foto = "/file/$upload";
+            $aviso->condominio_id = Auth::user()->condominio_id;
             $aviso->save();
-            return redirect()->route('/avisos');
+            return redirect('/avisos');
         }
     }
 
-    public function editcards(Request $request)
+    public function editcards(Request $request, $id)
     {
-        $aviso = Aviso::find($request->id);
+        $aviso = Aviso::find($id);
 
         $aviso->titulo = $request->titulo;
         $aviso->descricao = $request->descricao;

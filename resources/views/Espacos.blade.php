@@ -4,17 +4,30 @@
 
 @section('conteudo')
 
-    <link type="text/css" rel="stylesheet" href="css/espacos.css"/>
+    <link type="text/css" rel="stylesheet" href="/css/espacos.css"/>
 
     <main id="areasReservas">
 
-        <div class="carousel">
-            <a class="carousel-item"><img src="../img/condominio_espaco_gourmet.jpg"></a>
-            <a class="carousel-item"><img src="../img/condominio_espaco_gourmet2.jpg"></a>
-            <a class="carousel-item"><img src="../img/condominio_espaco_gourmet3.jpg"></a>
+        <div class="carousel carousel-slider" data-indicators="true">
+            
+            <a class="carousel-item"><img src="/file/img/condominio_churrasqueira.jpg"></a>
+            <a class="carousel-item"><img src="/file/img/condominio_churrasqueira1.jpg"></a>
+            <a class="carousel-item"><img src="/file/img/condominio_churrasqueira2.jpg"></a>
+            
         </div>
 
-        @foreach ($areas ?? '' as $item)
+        @if (Auth::user()->admin == 1)
+           {{-- BOTÃO PARA ADICIONAR FOTOS NA AREA --}}
+            <div class="file-field input-field row center">
+                <a class="btn waves-effect white grey-text darken-text-2 tooltipped"
+                    data-position="top" data-tooltip="adicionar foto">
+                    <i class="material-icons">add_photo_alternate</i>
+                    <input type="file" multiple name="uploads[]">
+                </a>
+            </div> 
+        @endif
+
+        @foreach ($espaco as $item)
 
             {{-- nome da área --}}
             <div class="row">
@@ -25,24 +38,24 @@
             <div class="row">
                 <input placeholder="clique aqui para verificar a disponibilidade" type="text" class="datepicker center">
             </div>
+                {{-- botão reservar --}}
+            <div class="reservarbtn row">
+                <a class="waves-effect waves-teal btn-flat amber accent-4 black-text center">reservar</a>
+            </div>
 
-        @endforeach
-
-        {{-- botão reservar --}}
-        <div class="reservarbtn row">
-            <a class="waves-effect waves-teal btn-flat amber accent-4 black-text center">reservar</a>
-        </div>
-
-        {{-- descrição --}}
-        <div class="card white row center-align">
-            <h5 class="card-title">Sobre o espaço</h5>
-            @foreach ($areas ?? '' as $item)
+            {{-- descrição --}}
+            <div class="card white row center-align">
+                <h5 class="card-title">Sobre o espaço</h5>
+                
                 <p>{{$item->descricao_1}}</p>
                 <p>{{$item->descricao_2}}</p>
                 <p>{{$item->descricao_3}}</p>
-            @endforeach
-        </div>
+            
+            </div>
 
+        @endforeach
+
+        
         {{-- Tag PADRÃO  DE TODOS OS ESPAÇOS - Regras de Utilização --}}
         <div class="regras card white row center-align">
             <h5 class="card-title">Regras de Utilização</h5>
@@ -76,8 +89,8 @@
             </ol>
         </div>
 
-        <script src="./js/jQuery341.js"></script>
-        <script src="../js/Reservas.js"></script>
+        <script src="/js/jQuery341.js"></script>
+        <script src="/js/Reservas.js"></script>
 
     </main>
 

@@ -24,7 +24,7 @@ class CreateEventosTable extends Migration
             $table->engine = 'InnoDB';
             $table->id();
             $table->string('nome', 45);
-            $table->dateTime('data');
+            $table->date('data');
             $table->text('descricao_1')->nullable()->default(null);
             $table->text('descricao_2')->nullable()->default(null);
             $table->text('descricao_3')->nullable()->default(null);

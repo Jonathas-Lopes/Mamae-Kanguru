@@ -16,11 +16,11 @@
                         <div class="card">
                             <div class="card-image">
                                 <img src="{{$item->foto}}">
-                                <h5 name="{{$item->id}}titulo" @if (Auth::user()->nome == $item->usuario_id) contenteditable="true" @endif class="card-title">{{$item->titulo}}</h5>
+                                <h5 name="{{$item->id}}titulo" @if (Auth::user()->nome == $item->nome) contenteditable="true" @endif class="card-title">{{$item->titulo}}</h5>
                                         
                                 @if (Auth::user()->admin == 0)
-                                    @if (Auth::user()->id == $item->usuario_id)
-                                            <a name={{$item->id}} class="btnedit halfway-fab btn-floating btn waves-effect waves-light">
+                                    @if (Auth::user()->nome == $item->nome)
+                                            <a name={{$item->id}} class="edit halfway-fab btn-floating btn waves-effect waves-light">
                                                 <i class="tiny material-icons">edit</i>
                                             </a>
                                             <a name={{$item->id}} class="delete halfway-fab btn-floating btn waves-effect waves-light">
@@ -43,7 +43,7 @@
 
                             </div>
                             <div class="card-content">
-                                <p name="{{$item->id}}descricao" @if (Auth::user()->nome == $item->usuario_id)contenteditable="true" 
+                                <p name="{{$item->id}}descricao" @if (Auth::user()->nome == $item->nome)contenteditable="true" 
                                     @endif>{{$item->descricao}}
                                 </p>
                             </div>

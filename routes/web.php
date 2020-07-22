@@ -21,14 +21,16 @@ Route::get('/cadastro', function () {return view('Cadastro');});
 Route::post('/cadastro', ['uses'=>'UsuarioController@store']);
 
 Route::get('/home', ['uses'=>'UsuarioController@getPerfil']);
+Route::post('/home/mensagem', ['uses'=>'HomeController@enviarMensagem']);
+Route::get('/home/mensagens', ['uses'=>'HomeController@exibirMensagens']);
 
-Route::get('/reservas', ['uses'=>'AreaController@getreservacards']);
+Route::get('/reservas', ['uses'=>'ReservasController@getcards']);
 
 Route::post('/espacos', ['uses'=>'AreaController@writearea']);
 Route::get('/espacos/area/{area}', ['uses'=>'AreaController@getarea']);
 Route::get('/espacos/agenda/{area}', ['uses'=>'AreaController@schedule']);
 Route::post('/espacos/agenda', ['uses'=>'AreaController@writeschedule']);
-Route::get('/espacos', function () {return view('Espacos');});
+Route::get('/espacos', ['uses'=>'AreaController@getarea']);
 
 Route::get('/solidariedade', ['uses'=>'SolidariedadeController@getcards']);
 Route::post('/solidariedade', ['uses'=>'SolidariedadeController@writecards']);
@@ -41,10 +43,12 @@ Route::post('/painel/edit', ['uses'=>'PainelController@editcards']);
 Route::post('/painel/delete', ['uses'=>'PainelController@deletecards']);
 
 Route::get('/eventos', ['uses'=>'EventoController@getcards'] );
-Route::post('/eventos', ['uses'=>'EventoController@writecards'] );
+Route::post('/eventos', ['uses'=>'EventoController@createevent'] );
+Route::post('/eventos/edit', ['uses'=>'EventoController@editevent']);
+Route::post('/eventos/delete', ['uses'=>'EventoController@deleteevent']);
 
-Route::get('/avisos', ['uses'=>'AvisoController@getcards'] );
-Route::post('/avisos', ['uses'=>'AvisoController@writecards'] );
+Route::get('/avisos', ['uses'=>'AvisoController@getcards']);
+Route::post('/avisos', ['uses'=>'AvisoController@writecards']);
 Route::post('/avisos/edit', ['uses'=>'AvisoController@editcards']);
 Route::post('/avisos/delete', ['uses'=>'AvisoController@deletecards']);
 
