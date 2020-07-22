@@ -54,58 +54,64 @@
             @endforeach
         </div>
 
-        <!-- Modal Trigger -->
-        <a class="modal-trigger waves-effect waves-light btn row" href="#modal1"><i class="material-icons">add</i></a>
+        @if (Auth::user()->admin == 1)
+            <!-- Modal Trigger -->
+            <a class="modal-trigger waves-effect waves-light btn row" href="#modal1">
+                <i class="material-icons">add</i>
+            </a>
+        @endif
 
-        <!-- Modal Structure -->
-        <div id="modal1" class="modal">
-            <div class="modal-content">
-                <form method="post" class="col s12">
-                    @csrf
-                    <div class="row">
-                        <div class="col s12">
-                            <h5>Adicionar próximo evento</h5>
+        @if (Auth::user()->admin == 1)
+            <!-- Modal Structure -->
+            <div id="modal1" class="modal">
+                <div class="modal-content">
+                    <form method="post" class="col s12">
+                        @csrf
+                        <div class="row">
+                            <div class="col s12">
+                                <h5>Adicionar próximo evento</h5>
+                            </div>
+                            {{-- nome do evento --}}
+                            <div class="input-field col s12">
+                                <input id="nome" name="nome" type="text" class="validate">
+                                <label for="nome">Nome do evento</label>
+                            </div>
+                            {{-- data do evento --}}
+                            <div class="input-field col s12">
+                                <input name="data" type="text" class="datepicker" 
+                                placeholder="escolha a data do evento">
+                            </div>
+                            <div class="col s12">
+                                <p>
+                                    Utilize os campos abaixo para inserir os detalhes do evento: 
+                                    o que é necessário para participar, local, atrações, comidas, bebidas etc.
+                                </p>
+                            </div>
+                            {{-- descrição 1 --}}
+                            <div class="input-field col s12">
+                                <textarea id="descricao_1" name="descricao_1" class="materialize-textarea"></textarea>
+                                <label for="descricao_1"></label>
+                            </div>
+                            {{-- descrição 2 --}}
+                            <div class="input-field col s12">
+                                <textarea id="descricao_2" name="descricao_2" class="materialize-textarea"></textarea>
+                                <label for="descricao_2"></label>
+                            </div>
+                            {{-- descrição 3 --}}
+                            <div class="input-field col s12">
+                                <textarea id="descricao_3" name="descricao_3" class="materialize-textarea"></textarea>
+                                <label for="descricao_3"></label>
+                            </div>
                         </div>
-                        {{-- nome do evento --}}
-                        <div class="input-field col s12">
-                            <input id="nome" name="nome" type="text" class="validate">
-                            <label for="nome">Nome do evento</label>
-                        </div>
-                        {{-- data do evento --}}
-                        <div class="input-field col s12">
-                            <input name="data" type="text" class="datepicker" 
-                            placeholder="escolha a data do evento">
-                        </div>
-                        <div class="col s12">
-                            <p>
-                                Utilize os campos abaixo para inserir os detalhes do evento: 
-                                o que é necessário para participar, local, atrações, comidas, bebidas etc.
-                            </p>
-                        </div>
-                        {{-- descrição 1 --}}
-                        <div class="input-field col s12">
-                            <textarea id="descricao_1" name="descricao_1" class="materialize-textarea"></textarea>
-                            <label for="descricao_1"></label>
-                        </div>
-                        {{-- descrição 2 --}}
-                        <div class="input-field col s12">
-                            <textarea id="descricao_2" name="descricao_2" class="materialize-textarea"></textarea>
-                            <label for="descricao_2"></label>
-                        </div>
-                        {{-- descrição 3 --}}
-                        <div class="input-field col s12">
-                            <textarea id="descricao_3" name="descricao_3" class="materialize-textarea"></textarea>
-                            <label for="descricao_3"></label>
-                        </div>
-                    </div>
-                </form>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <a href="#!" class="modal-action modal-close 
+                        waves-effect waves-green btn-flat">criar
+                    </a>
+                </div>
             </div>
-            <div class="modal-footer">
-                <a href="#!" class="modal-action modal-close 
-                    waves-effect waves-green btn-flat">criar
-                </a>
-            </div>
-        </div>
+        @endif
 
         <div class="galeriaeventos center container col s12">
             

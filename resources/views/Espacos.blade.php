@@ -14,30 +14,18 @@
             <a class="carousel-item"><img src="/file/img/condominio_churrasqueira1.jpg"></a>
             <a class="carousel-item"><img src="/file/img/condominio_churrasqueira2.jpg"></a>
             
-            {{-- BOTÃO COMO ITEM FIXO
-            @if (Auth::user()->admin == 1) 
-                <div class="carousel-fixed-item">
-                    <div class="file-field input-field">
-                        <a class="btn waves-effect white grey-text darken-text-2 tooltipped"
-                            data-position="top" data-tooltip="adicionar foto">
-                            <i class="material-icons">add_photo_alternate</i>
-                            <input type="file" multiple name="uploads[]">
-                        </a>
-                    </div>
-                </div>
-            @endif
-            --}}
         </div>
 
-        {{-- BOTÃO PARA ADICIONAR FOTOS NA AREA --}}
-        <div class="file-field input-field row center">
-            <a class="btn waves-effect white grey-text darken-text-2 tooltipped"
-                data-position="top" data-tooltip="adicionar foto">
-                <i class="material-icons">add_photo_alternate</i>
-                <input type="file" multiple name="uploads[]">
-            </a>
-        </div>
-        
+        @if (Auth::user()->admin == 1)
+           {{-- BOTÃO PARA ADICIONAR FOTOS NA AREA --}}
+            <div class="file-field input-field row center">
+                <a class="btn waves-effect white grey-text darken-text-2 tooltipped"
+                    data-position="top" data-tooltip="adicionar foto">
+                    <i class="material-icons">add_photo_alternate</i>
+                    <input type="file" multiple name="uploads[]">
+                </a>
+            </div> 
+        @endif
 
         @foreach ($espaco as $item)
 
