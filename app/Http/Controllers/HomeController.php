@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Model\Mensagens;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
+use Carbon\Carbon;
 
 class HomeController extends Controller
 {
@@ -49,7 +50,7 @@ class HomeController extends Controller
         $mensagens = DB::table('mensagem')
                     ->join('usuario', 'usuario.id', '=', 'mensagem.usuario_id')
                     ->select('mensagem.id', 'mensagem.mensagem', 'mensagem.hora_envio', 'mensagem.hashtag',
-                            'mensagem.usuario_id', 'usuario.nome', 'usuario.foto')
+                            'mensagem.usuario_id', 'usuario.nome', 'usuario.foto', 'usuario.genero')
                             
                     ->where('mensagem.condominio_id', $condominioId)
                     ->orderBy('mensagem.id', 'desc')

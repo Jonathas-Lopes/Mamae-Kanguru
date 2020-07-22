@@ -242,6 +242,13 @@ main{
     width: 200px;
 }
 
+/* HOME */
+#hora {
+    text-align: right;
+    color: gray;
+    font-size: 12px;
+}
+
 
 @media only screen and (max-width: 992px) {
     main{
@@ -330,6 +337,8 @@ main{
         z-index: 10;
     }
 }
+
+
 
   @media only screen and (max-width: 600px) {
     nav{
