@@ -52,10 +52,8 @@ class HomeController extends Controller
                             'mensagem.usuario_id', 'usuario.nome', 'usuario.foto')
                             
                     ->where('mensagem.condominio_id', $condominioId)
-                    ->paginate(20)
-                    ->sortBy('mensagem.id');
-
-        dd($mensagens);
+                    ->orderBy('mensagem.id', 'desc')
+                    ->get();
 
         return $mensagens;
     }
