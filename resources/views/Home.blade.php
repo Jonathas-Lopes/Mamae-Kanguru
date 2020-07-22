@@ -13,10 +13,12 @@
                 <img class="circle" src="./img/foto_morador.jpg" alt="Foto perfil">
             @endif
 
+            @if(Auth::user()->admin == 0)
             <!-- Modal Trigger -->
             <a class="btn-floating btn-large waves-effect modal-trigger" data-target="modal1" href="#modal1">
                 <i class="material-icons">edit</i>
             </a>
+            @endif
         </div>
 
         <!-- Modal Structure -->
@@ -97,17 +99,20 @@
                 <a class="linksperfil waves-effect waves btn-flat">Mensagens privadas</a>
                 <a class="linksperfil waves-effect waves btn-flat">Configurações</a>
             </div>
-            <div class="blocohashtags center-align">
-                <a class="hashtags waves-effect waves btn-flat">#procuro</a>
-                <a class="hashtags waves-effect waves btn-flat">#ofereço</a>
-                <a class="hashtags waves-effect waves btn-flat">#aviso</a>
-            </div>
+            @if (Auth::user()->admin == 0)
+                <div class="blocohashtags center-align">
+                    <a class="hashtags waves-effect waves btn-flat">#procuro</a>
+                    <a class="hashtags waves-effect waves btn-flat">#ofereço</a>
+                    <a class="hashtags waves-effect waves btn-flat">#aviso</a>
+                </div>   
+            @endif
         </div>
     </section>
 
-    {{-- Mensagens instantâneas --}}
     <section class="assuntos">
 
+        {{-- Mensagens instantâneas --}}
+        @if (Auth::user()->admin == 0)
         <article class="card">
             {{-- textarea --}}
             <div class="textarea">
