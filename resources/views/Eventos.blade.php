@@ -52,14 +52,17 @@
                     
                 </div>
             @endforeach
-        </div>
 
-        @if (Auth::user()->admin == 1)
+            @if (Auth::user()->admin == 1)
             <!-- Modal Trigger -->
             <a class="modal-trigger waves-effect waves-light btn row" href="#modal1">
                 <i class="material-icons">add</i>
             </a>
-        @endif
+            @endif
+
+        </div>
+
+        
 
         @if (Auth::user()->admin == 1)
             <!-- Modal Structure -->
