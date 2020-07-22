@@ -57,8 +57,6 @@ class AreaController extends Controller
                 $area->foto = "/file/$upload";
             }
 
-
-
             $area->nome = $request->nome;
             $area->data = now();
             $area->descricao_1 = $request->descricao_1;
@@ -69,6 +67,4 @@ class AreaController extends Controller
             return redirect('/espacos');
         }
     }
-
-    
 }

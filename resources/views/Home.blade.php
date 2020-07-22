@@ -45,15 +45,28 @@
                         {{-- gênero --}}
                         <p class="genero">
                             <label class="radious-buttons">
-                                <input class="with-gap" name="genero" type="radio" value="feminino"/>
+                                @if(Auth::user()->genero == 'feminino')
+                                    <input class="with-gap" name="genero" type="radio" checked value="feminino"/>
+                                @else
+                                    <input class="with-gap" name="genero" type="radio" value="feminino"/>
+                                @endif
+                                
                                 <span>feminino</span>
                             </label>
                             <label class="radious-buttons">
-                                <input class="with-gap" name="genero" type="radio" value="masculino"/>
+                                @if(Auth::user()->genero == 'masculino')
+                                    <input class="with-gap" name="genero" type="radio" checked value="masculino"/>
+                                @else
+                                    <input class="with-gap" name="genero" type="radio" value="masculino"/>
+                                @endif
                                 <span>masculino</span>
                             </label>
                             <label class="radious-buttons">
-                                <input class="with-gap" name="genero" type="radio" value="outro"/>
+                                @if(Auth::user()->genero == 'outro')
+                                    <input class="with-gap" name="genero" type="radio" checked value="outro"/>
+                                @else
+                                    <input class="with-gap" name="genero" type="radio" value="outro"/>
+                                @endif
                                 <span>outros</span>
                             </label>
                         </p>
@@ -66,7 +79,7 @@
                         {{-- telefone --}}
                         <div class="row">
                             <div class="input-field col s12">
-                            <input name="telefone" value="{{ Auth::user()->telefone }}" placeholder="(99) 99999-9999" id="email" type="text" class="validate">
+                            <input name="telefone" value="{{ Auth::user()->telefone }}" placeholder="Interfone: #1604 (exemplo)" id="telefone" type="text" class="validate">
                             </div>
                         </div>
                         {{-- senha --}}

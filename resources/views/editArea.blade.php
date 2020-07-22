@@ -8,7 +8,7 @@
 
     <main id="editArea">
 
-        <form action="/espacos/editarea/{{ $area->nome }}" id="editArea" method="POST" enctype="multipart/form-data">
+        <form action="/espacos/editarea/{{ $area->id }}" id="editArea" method="POST" enctype="multipart/form-data">
             @csrf
             <div class="col s12 center">
                 <h3>Editar {{ $area->nome }}</h3>
@@ -37,8 +37,13 @@
             </div>
 
             <button class="btn waves-effect waves-light" type="submit" name="action">Editar
-                <i class="material-icons right">create</i>
+                <i class="material-icons right">edit</i>
             </button>
+
+            <button id="deletebtn" class="btn waves-effect waves-light" type="submit" name="action">Deletar área
+                <i class="material-icons right">delete</i>
+            </button>
+
 
         </form>
     </main>
