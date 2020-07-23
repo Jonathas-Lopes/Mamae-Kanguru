@@ -66,8 +66,11 @@ function criarMensagem(mensagem){
 
     // criar interfone
     let interfone = document.createElement('p');
-    interfone.setAttribute('class', 'interfone');
-    interfone.innerText = "Interfone: " + mensagem.telefone;
+    if(mensagem.telefone != null){
+        interfone.setAttribute('class', 'interfone');
+        interfone.innerText = "Interfone: " + mensagem.telefone;
+    }
+    
 
     // criar hashtag
     let hashtag = document.createElement('h5');
@@ -75,25 +78,36 @@ function criarMensagem(mensagem){
         hashtag.innerText = '#' + mensagem.hashtag;
     }
     
-    // criar botão de enviar mensagem
-    let botaoEnviarMensagem = document.createElement('a');
-    botaoEnviarMensagem.className = "botaoresponder btn-floating btn waves-effect waves-light";
+    // criar botão de excluir mensagem
+    let cardMensagem = document.getElementById('mensagem-card');
+    let nomeSideBar = document.getElementById('nome-usuario');
+    console.log(nomeSideBar.innerText);
+    let botaoExcluirMensagem = document.createElement('a');
 
-    let icone = document.createElement('i');
-    icone.setAttribute('class', 'material-icons');
-    icone.innerText = 'reply';
+    if(cardMensagem == null || nomeSideBar.innerText == mensagem.nome){ 
+        botaoExcluirMensagem.className = "botaoresponder btn-floating btn waves-effect waves-light";
 
-    botaoEnviarMensagem.append(icone);
+        let icone = document.createElement('i');
+        icone.setAttribute('class', 'material-icons');
+        icone.innerText = 'delete';
+
+        botaoExcluirMensagem.append(icone);
+    }
+    
 
     // adicionar elementos no card
     card.append(hora);
     card.append(h6);
     card.append(textoMensagem);
-    card.append(interfone);
+    if(mensagem.telefone != null){
+        card.append(interfone);
+    }
     if(mensagem.hashtag != null){
         card.append(hashtag);
     }
-    card.append(botaoEnviarMensagem);
+    if(botaoExcluirMensagem != null){
+        card.append(botaoExcluirMensagem);
+    }
 
     // adicionar card no histórico
     historico.append(card);
