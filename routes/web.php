@@ -1,5 +1,6 @@
 <?php
 
+use App\Mail\EmailsAdmin;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -74,3 +75,7 @@ Route::post('/aviso/editaviso', ['uses'=>'AvisoController@writecards']); // rota
 
 // Route::get('/espacos/addarea', function () {return view('addArea');});
 // Route::post('/espacos/addarea', ['uses'=>'AreaController@createarea']);
+
+Route::get('/mail/email-cadastro', function(){
+    return new EmailsAdmin();
+});
