@@ -13,17 +13,20 @@
                 @foreach ($avisos as $item)
                     <div class="col l4 m12 s12">
                         <div class="card">
+
                             <div class="card-image">
                                 <img src="{{$item->foto}}">
                                 <h5 class="card-title"name="{{$item->id}}titulo" @if (Auth::user()->admin == 1)
                                     contenteditable="true" @endif>{{$item->titulo}}
                                 </h5>
                             </div>
+
                             <div class="card-content">
                                 <p name="{{$item->id}}descricao" @if (Auth::user()->admin == 1) 
                                     contenteditable="true" @endif>{{$item->descricao}}
                                 </p>
                             </div>
+
                             @if (Auth::user()->admin == 1)
                                 <div class="card-action">
                                     <a name="{{$item->id}}" class="delete btn waves-effect waves-light ">
@@ -31,6 +34,7 @@
                                     </a>
                                 </div>
                             @endif
+
                         </div>
                     </div>
                 @endforeach
@@ -42,6 +46,7 @@
                     <i class="material-icons">add</i>
                 </a>
             @endif
+            
         </div>
 
         @if (Auth::user()->admin == 1)
@@ -87,6 +92,7 @@
             </div>
         @endif
     </main>
-    <script src="{{asset('/js/jQuery341.js')}}"></script>
+
     <script src="{{asset('/js/Avisos')}}"></script>
+
 @endsection

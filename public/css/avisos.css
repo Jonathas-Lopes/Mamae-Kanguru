@@ -2,6 +2,11 @@
     background-color: #F7B733;
     margin-bottom: 5vh;
 }
+#avisos h5{
+    font-size: 1.6rem;
+    font-weight: 600;
+    text-shadow: 1px 1px 3px grey;
+}
 #avisos .delete{
     background-color: #F7B733;
     float: right;
