@@ -38,7 +38,12 @@ function criarMensagem(mensagem){
     // criar hora da mensagem
     let hora = document.createElement('p');
     hora.setAttribute('id', 'hora');
-    let horaMensagem = mensagem.hora_envio;
+    let horaDataEnvio = mensagem.hora_envio;
+    horaDataEnvio = horaDataEnvio.split(' ');
+    let dataEnvio = horaDataEnvio[0].split('-');
+    let horaEnvio = horaDataEnvio[1].split(':');
+    let horaMensagem = horaEnvio[0] + ':' + horaEnvio[1] + ' ' + dataEnvio[2] + '/' + dataEnvio[1] + '/' + dataEnvio[0];
+
     hora.append(horaMensagem);
 
     // criar informações usuario
