@@ -49,28 +49,25 @@
 
             <section id="slide-out" class="sidenav sidenave-index perfil-mobile show-on-medium-and-up">
                 <div class="foto-perfil">
-                    <img class="circle" src="{{ asset('/img/foto_perfil.jpg') }}" alt="Foto perfil">
+                    <img class="circle" src="{{ Auth::user()->foto }}" alt="Foto perfil">
                     <a class="btn-floating btn-large waves-effect waves-light">
                         <i class="material-icons">edit</i>
                     </a>
                 </div>
                 <div class="sobre">
                     <article>
-                        <h6 class="nomeusuario center-align">Anna Souza</h6>
-                        <p class="descricaousuario center-align">Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                            Obcaecati illum suscipit harum laborum dolorem sapiente non dolor.</p>
+                        <h6 class="nomeusuario center-align">{{ Auth::user()->nome }}</h6>
                     </article>
                     <div>
                         <a class="linksperfil waves-effect waves btn-flat">Mensagens privadas</a>
-                        <a class="linksperfil waves-effect waves btn-flat">Configurações</a>
                     </div>
                     <div>
                         <ul class="abas center-align">
-                            <li class=""><a href="/reservas">Reservas</a></li>
-                            <li class=""><a href="/solidariedade">Solidariedade</a></li>
-                            <li class=""><a href="/painel">Painel</a></li>
-                            <li class=""><a href="/eventos">Eventos</a></li>
-                            <li class=""><a href="/avisos">Avisos</a></li>
+                            <li class=""><a href="/reservas">reservar</a></li>
+                            <li class=""><a href="/solidariedade">doar</a></li>
+                            <li class=""><a href="/painel">vender</a></li>
+                            <li class=""><a href="/eventos">eventos</a></li>
+                            <li class=""><a href="/avisos">avisos</a></li>
                         </ul>
 
                     </div>
