@@ -24,7 +24,7 @@ class CreateAreasReservaveisTable extends Migration
             $table->engine = 'InnoDB';
             $table->id();
             $table->string('nome', 45);
-            $table->string('foto', 55)->nullable()->default(null);
+            $table->string('foto', 200)->nullable()->default(null);
             $table->text('descricao_1')->nullable()->default(null);
             $table->text('descricao_2')->nullable()->default(null);
             $table->text('descricao_3')->nullable()->default(null);
