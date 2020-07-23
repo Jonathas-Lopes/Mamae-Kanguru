@@ -242,11 +242,15 @@ main{
 }
 
 /* HOME */
-#hora {
-    text-align: right;
+#hora, .interfone {
     color: gray;
     font-size: 12px;
 }
+
+#hora {
+    text-align: right;
+}
+
 
 
 @media only screen and (max-width: 992px) {

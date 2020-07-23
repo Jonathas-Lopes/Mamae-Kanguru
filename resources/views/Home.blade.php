@@ -106,11 +106,10 @@
         {{-- Links side bar --}}
         <div class="sobre">
             <article>
-                <h6 class="nomeusuario center-align">{{ Auth::user()->nome }}</h6>
+                <h6 id="nome-usuario" class="nomeusuario center-align">{{ Auth::user()->nome }}</h6>
             </article>
-            <div>
+            <div class="center">
                 <a class="linksperfil waves-effect waves btn-flat">Mensagens privadas</a>
-                <a class="linksperfil waves-effect waves btn-flat">Configurações</a>
             </div>
             @if (Auth::user()->admin == 0)
                 <div class="blocohashtags center-align">
@@ -125,7 +124,7 @@
     <section class="assuntos">
         {{-- Mensagens instantâneas --}}
         @if (Auth::user()->admin == 0)
-            <article class="card">
+            <article id="mensagem-card" class="card">
                 {{-- textarea --}}
                 <div class="textarea">
                     <form method="POST" action="/home/mensagem" class="input-field">

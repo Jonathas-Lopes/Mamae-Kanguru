@@ -11,8 +11,7 @@ class Usuarios extends Authenticatable
     use Notifiable;
     protected $table = 'usuario';
 
-    protected $fillable = ['nome','email','senha','foto','genero','admin', 'condominio_id'
-    ];
+    protected $fillable = ['nome','email','senha','foto','genero', 'telefone', 'admin', 'condominio_id'];
     /**
      * The attributes that should be hidden for arrays.
      *

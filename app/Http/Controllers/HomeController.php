@@ -50,7 +50,7 @@ class HomeController extends Controller
         $mensagens = DB::table('mensagem')
                     ->join('usuario', 'usuario.id', '=', 'mensagem.usuario_id')
                     ->select('mensagem.id', 'mensagem.mensagem', 'mensagem.hora_envio', 'mensagem.hashtag',
-                            'mensagem.usuario_id', 'usuario.nome', 'usuario.foto', 'usuario.genero')
+                            'mensagem.usuario_id', 'usuario.nome', 'usuario.foto', 'usuario.genero', 'usuario.telefone')
                             
                     ->where('mensagem.condominio_id', $condominioId)
                     ->orderBy('mensagem.id', 'desc')
