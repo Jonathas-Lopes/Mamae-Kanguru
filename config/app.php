@@ -165,6 +165,7 @@ return [
         /*
          * Package Service Providers...
          */
+        Sichikawa\LaravelSendgridDriver\SendgridTransportServiceProvider::class,
 
         /*
          * Application Service Providers...

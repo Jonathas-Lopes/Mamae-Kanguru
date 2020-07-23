@@ -26,6 +26,14 @@ $app = new Illuminate\Foundation\Application(
 |
 */
 
+//* ===== DEPENDÊNCIAS DO SENDGRID - ENVIO DE EMAIL ===== */
+
+$app->configure('mail');
+$app->configure('services');
+$app->register(Sichikawa\LaravelSendgridDriver\MailServiceProvider::class);
+
+unset($app->availableBindings['mailer']);
+
 $app->singleton(
     Illuminate\Contracts\Http\Kernel::class,
     App\Http\Kernel::class
@@ -51,5 +59,4 @@ $app->singleton(
 | from the actual running of the application and sending responses.
 |
 */
-
 return $app;
