@@ -88,8 +88,8 @@
                 <li>Não incentive seus convidados a trazerem os seus bichinhos de estimação para o evento. Tendo em vista que eles podem se assustar com a quantidade de pessoas, ter atitudes agressivas pelo excesso de barulho ou danificar os móveis do salão.</li>
             </ol>
         </div>
-
-        <script src="/js/Reservas.js"></script>
+        <script src="{{asset('/js/jQuery341.js')}}"></script>
+        <script src="{{asset('/js/Reservas.js')}}"></script>
 
     </main>
 

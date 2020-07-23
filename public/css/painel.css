@@ -20,9 +20,7 @@
 #painel div img{
     width: 100%;
 }
-#painel .card-image h6{
-    font-weight: 600;
-}
+
 #painel div p{
     font-size: 0.9rem;
     margin-top: 10px;
@@ -74,28 +72,34 @@
     border: none;
 }
 
+
+/*testando para ver se nao e quebra*/
 @media only screen and (max-width: 600px) {
-    #painel #modal1{
+  /*  #painel #modal1{
         padding: 0;
         display: flex !important;
         flex-direction: column !important;
-    }
-    #painel .modal-content{
+    }*/
+
+
+    #painel .modalPainel .modal-content{
         margin: 0;
         padding: 15px;
     }
-    #painel .modal-content p{
+    #painel .modalPainel .modal-content p{
         font-size: 0.9rem;
         margin: 0;
     }
-    #painel .modal-footer{
+    #painel .modalPainel .modal-footer{
         width: 85%;
         align-self: center;
         margin: 0;
         padding: 0;
     }
-    #painel .modal-close{
+    #painel .modalPainel .modal-close{
         align-self: center;
         margin-top: 15px;
     }
+
 }
+

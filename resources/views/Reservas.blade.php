@@ -87,7 +87,7 @@
         @endif
        
     </section>
-
-    <script src="./js/Reservas.js"></script>
+    <script src="{{asset('/js/jQuery341.js')}}"></script>
+    <script src="{{asset('/js/jReservas.js')}}"></script>
     
 @endsection

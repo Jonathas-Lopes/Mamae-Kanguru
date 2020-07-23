@@ -138,7 +138,7 @@
         </div>
 
         </main>
-
-        <script src="./js/Eventos.js"></script>
+        <script src="{{asset('/js/jQuery341.js')}}"></script>
+        <script src="{{asset('/js/Eventos.js')}}"></script>
         
 @endsection

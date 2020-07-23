@@ -163,8 +163,8 @@
         </div>
             
     </section>
-    
-    <script src="js/mensagens.js"></script>
+    <script src="{{asset('/js/jQuery341.js')}}"></script>
+    <script src="{{asset('/js/mensagens.js')}}"></script>
 
 @endsection
 

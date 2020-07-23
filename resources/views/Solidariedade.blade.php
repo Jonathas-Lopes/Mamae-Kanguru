@@ -126,7 +126,7 @@
         @endif
 
     </main>
-    
-    <script src="../js/Solidariedade.js"></script>
+    <script src="{{asset('/js/jQuery341.js')}}"></script>
+    <script src="{{asset('/js/Solidariedade.js')}}"></script>
     
 @endsection

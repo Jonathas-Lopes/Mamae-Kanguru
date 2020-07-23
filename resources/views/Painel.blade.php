@@ -22,13 +22,13 @@
                                 <p name="{{$item->id}}descricao" @if (Auth::user()->nome == $item->nome) contenteditable="true" @endif>{{$item->descricao}}</p>
                             </div>
                             <div class="card-action">
-                                <p>{{ $item->nome }}</p>
+                                 <p>{{ $item->nome }}</p>
                                 
                                 @if (Auth::user()->admin == 0)
                                     @if (Auth::user()->nome == $item->nome)
-                                    <a name={{$item->id}} class="edit btn-floating btn waves-effect waves-light"><i
+                                     <a name={{$item->id}} class="edit btn-floating btn waves-effect waves-light"><i
                                         class="tiny material-icons">edit</i>
-                                    </a>
+                                    </a> 
                                     <a name={{$item->id}} class="delete btn-floating btn waves-effect waves-light"><i
                                         class="tiny material-icons">delete</i>
                                     </a>
@@ -50,17 +50,19 @@
                     </div>
                 @endforeach
             </div>
+          @if (Auth::user()->admin == 0)
+             <!-- Modal para inserção de cards -->
+             <a class="botaoanuncio modal-trigger btn-floating btn-large waves-effect" href="#modal1"><i
+                class="material-icons">add</i>
+             </a>
+          @endif
         </div>
     
-        @if (Auth::user()->admin == 0)
-            <!-- Modal para inserção de cards -->
-            <a class="botaoanuncio modal-trigger btn-floating btn-large waves-effect" href="#modal1"><i
-                class="material-icons">add</i>
-            </a>
-        @endif
+        
     
         <!-- Modal Structure -->
-        <div id="modal1" class="modal modal-fixed-footer">
+        @if (Auth::user()->admin == 0)
+         <div id="modal1" class="modal modal-fixed-footer modalPainel">
             <div class="modal-content">
     
                 <form class="col s12" action="" method="post" enctype="multipart/form-data">
@@ -104,6 +106,7 @@
                 </form>
             </div>
         </div>
+        @endif
     </section>
 
     <script src="./js/Painel.js"></script>

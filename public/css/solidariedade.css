@@ -2,13 +2,13 @@
     height: 70vh;
 }
 #solidariedade .card-title{
-    font-size: 1.3vw;
+    font-size: 1.3rem;
     font-weight: 600;
     text-shadow: 1px 1px 3px grey;
 }
 #solidariedade .card-content{
     width: 100%;
-    font-size: 0.9vw;
+    font-size: 0.9rem;
     margin-top: 1vh;
     padding: 1vh 0.5vw;
 }
@@ -31,28 +31,6 @@
 }
 #solidariedade .modal-footer{
     width: 97%;
-    border: none;
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-    overflow: hidden;
-=======
-=======
->>>>>>> Stashed changes
+   border: none;
 }
 
-@media only screen and (max-width: 600px) {
-
-    #solidariedade .card-title{
-        font-size: 15pt;
-        text-align: center;
-    }
-
-    .card-content p{
-        text-align: center;
-        font-size: 13pt;
-    }
-<<<<<<< Updated upstream
->>>>>>> Stashed changes
-=======
->>>>>>> Stashed changes
-}

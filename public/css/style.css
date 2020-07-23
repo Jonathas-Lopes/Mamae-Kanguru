@@ -34,8 +34,7 @@ nav div ul li{
     align-items: center;
 }
 .navbar ul li i{
-    font-size: 2.5vw;
-    margin: 0 1.5vw;
+        margin: 0 1.5vw;
 }
 .navbar ul li a:hover{
     background-color: transparent !important;
@@ -91,11 +90,11 @@ main{
 }
 .sobre .nomeusuario{
     font-weight: 600;
-    font-size: 1.5vw;
+    font-size: 1.5rem;
     margin: 5px;
 }
 .perfil .sobre .descricaousuario{
-    font-size: 0.95vw;
+    font-size: 0.9rem;
     margin-bottom: 20px;
     padding: 10px;
 }
@@ -104,14 +103,14 @@ main{
     margin: 0;
     font-weight: 600;
     text-align: center;
-    font-size: 0.95vw;
+    font-size: 0.9rem;
 }
 .sobre .blocohashtags{
     margin-top: 30px;
 }
 .sobre .hashtags a{
     background-color: #F7B733;
-    font-size: 0.95vw;
+    font-size: 0.9rem;
 }
 
 /* PERFIL-mobile  === inicio ===*/
@@ -141,11 +140,11 @@ main{
 }
 .perfil-mobile .sobre .nomeusuario{
     font-weight: 600;
-    font-size: 1.5vw;
+    font-size: 0.9rem;
     margin: 5px;
 }
 .perfil-mobile .sobre .descricaousuario{
-    font-size: 0.95vw;
+    font-size:0.9rem;
     margin-bottom: 30px;
     padding: 10px;
 }
@@ -154,14 +153,14 @@ main{
     margin: 0;
     font-weight: 600;
     text-align: center;
-    font-size: 0.95vw;
+    font-size: 0.9rem;
 }
 .perfil-mobile .sobre .blocohashtags{
     margin-top: 30px;
 }
 .perfil-mobile .sobre .hashtags a{
     background-color: #F7B733;
-    font-size: 0.95vw;
+    font-size: 0.9rem;
 }
 
 /* EDITAR USUÁRIO  === Início ===*/
@@ -170,7 +169,7 @@ main{
     bottom: 10vh;
 }
 #modal1 H5{
-    font-size: 1.5vw;
+    font-size: 1.5rem;
 }
 #modal1 .btn{
     background-color: #F7B733;
