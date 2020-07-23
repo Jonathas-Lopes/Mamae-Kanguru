@@ -64,6 +64,11 @@ function criarMensagem(mensagem){
     let textoMensagem = document.createElement('p');
     textoMensagem.innerText = mensagem.mensagem;
 
+    // criar interfone
+    let interfone = document.createElement('p');
+    interfone.setAttribute('class', 'interfone');
+    interfone.innerText = "Interfone: " + mensagem.telefone;
+
     // criar hashtag
     let hashtag = document.createElement('h5');
     if(mensagem.hashtag != null){
@@ -84,6 +89,7 @@ function criarMensagem(mensagem){
     card.append(hora);
     card.append(h6);
     card.append(textoMensagem);
+    card.append(interfone);
     if(mensagem.hashtag != null){
         card.append(hashtag);
     }

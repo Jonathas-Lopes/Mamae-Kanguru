@@ -50,6 +50,10 @@ class UsuarioController extends Controller
             $usuario->senha = Hash::make($request->senha);
         }
 
+        if($request->telefone){
+            $usuario->telefone = $request->telefone;
+        }
+
         $usuario->nome = $request->nome;
         $usuario->email = $request->email;
         $usuario->genero = $request->genero;
