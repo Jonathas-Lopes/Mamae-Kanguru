@@ -1,17 +1,15 @@
 <?php
 
 use App\Mail\EmailsAdmin;
+use Illuminate\Support\Facades\Mail;
 use Illuminate\Support\Facades\Route;
-
 /*
 |--------------------------------------------------------------------------
 | Web Routes
 |--------------------------------------------------------------------------
-|
 | Here is where you can register web routes for your application. These
 | routes are loaded by the RouteServiceProvider within a group which
 | contains the "web" middleware group. Now create something great!
-|
 */
 
 Route::get('/', function () {return view('Login');});
@@ -62,20 +60,24 @@ Route::get('/eventos/addevento', function () {return view('addEvento');});
 Route::post('/eventos/addevento', ['uses'=>'EventoController@createevent']);
 
 Route::get('/eventos/editevento', function () {return view('editEvento');});
-Route::post('/eventos/editevento', ['uses'=>'EventoController@createevent']); // rota para salvar as alterações
-//precisa de uma rota para pegar o evento que se quer editar
+Route::post('/eventos/editevento', ['uses'=>'EventoController@createevent']); 
 
 Route::get('/aviso/editaviso', function () {return view('editAviso');});
-Route::post('/aviso/editaviso', ['uses'=>'AvisoController@writecards']); // rota para salvar as alterações
-//precisa de uma rota para pegar o aviso que se quer editar
+Route::post('/aviso/editaviso', ['uses'=>'AvisoController@writecards']); 
 
-// Route::get('/espacos/editarea/{id}', ['uses'=>'AreaController@viewEditar']);
-// Route::post('/espacos/editarea/{id}', ['uses'=>'AreaController@editarea']); // rota para salvar as alterações
-// //precisa de uma rota para pegar o evento que se quer editar
-
-// Route::get('/espacos/addarea', function () {return view('addArea');});
-// Route::post('/espacos/addarea', ['uses'=>'AreaController@createarea']);
+/* ===== DISPARO DE EMAILS PELO LARAVEL ===== */
 
 Route::get('/mail/email-cadastro', function(){
-    return new EmailsAdmin();
+
+    // usuario criado para parametrizar o processo do envio do email
+    // stdClass é uma classe vazia, mas seria o nosso modelo de usuario (eu acho)
+    $user = new stdClass();
+    $user->name = "Manuela Amorim";
+    $user->email = "manungamorim@gmail.com";
+
+    // usado somente para testar a view
+    // return new EmailsAdmin($user);
+
+    // para efetuar o disparo: 
+    Mail::send(new EmailsAdmin($user));
 });

@@ -7,7 +7,7 @@
     <title>Cadastro Uniu</title>
 </head>
 <body>
-    <h1>Bem-vindo à plataforma UNIU!</h1>
+    <h1>Bem-vindo à plataforma UNIU, {{ $user->name }}!</h1>
     <h2>Clique no link abaixo para efetuar o seu cadastro.</h2>
 </body>
 </html>
