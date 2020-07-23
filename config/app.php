@@ -230,4 +230,12 @@ return [
 
     ],
 
+    /* ===== DEPENDÊNCIAS DO SENDGRID - ENVIO DE EMAIL ===== 
+
+    $app->configure('mail');
+    $app->configure('services');
+    $app->register(Sichikawa\LaravelSendgridDriver\MailServiceProvider::class);
+
+    unset($app->availableBindings['mailer']); */
+
 ];

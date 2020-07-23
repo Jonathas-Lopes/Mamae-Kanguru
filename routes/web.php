@@ -22,6 +22,7 @@ Route::post('/cadastro', ['uses'=>'UsuarioController@store']);
 Route::get('/home', ['uses'=>'UsuarioController@getPerfil']);
 Route::post('/home/mensagem', ['uses'=>'HomeController@enviarMensagem']);
 Route::get('/home/mensagens', ['uses'=>'HomeController@exibirMensagens']);
+Route::get('/home/mensagens/{hashtag}', ['uses'=>'HomeController@filtrarMensagens']);
 
 Route::get('/reservas', ['uses'=>'ReservasController@getcards']);
 
