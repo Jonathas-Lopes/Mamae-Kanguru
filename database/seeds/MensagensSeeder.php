@@ -16,7 +16,7 @@ class MensagensSeeder extends Seeder
             'mensagem' => 'Olá! Aqui eu vou falar algo muito interessante sobre esse projeto.',
             'hora_envio' => now(),
             'usuario_id' => '2',
-            'hashtag' => '#aviso',
+            'hashtag' => 'aviso',
             'condominio_id' => 1
         ]);
 
@@ -24,7 +24,7 @@ class MensagensSeeder extends Seeder
             'mensagem' => 'Olá! Aqui eu vou falar algo muito interessante sobre esse projeto.',
             'hora_envio' => now(),
             'usuario_id' => '4',
-            'hashtag' => '#ofereço',
+            'hashtag' => 'ofereço',
             'condominio_id' => 1
         ]);
 
@@ -32,7 +32,7 @@ class MensagensSeeder extends Seeder
             'mensagem' => 'Olá! Aqui eu vou falar algo muito interessante sobre esse projeto.',
             'hora_envio' => now(),
             'usuario_id' => '3',
-            'hashtag' => '#aviso',
+            'hashtag' => 'aviso',
             'condominio_id' => 1
         ]);
 
@@ -40,7 +40,7 @@ class MensagensSeeder extends Seeder
             'mensagem' => 'Olá! Aqui eu vou falar algo muito interessante sobre esse projeto.',
             'hora_envio' => now(),
             'usuario_id' => '5',
-            'hashtag' => '#procuro',
+            'hashtag' => 'procuro',
             'condominio_id' => 1
         ]);
     }
