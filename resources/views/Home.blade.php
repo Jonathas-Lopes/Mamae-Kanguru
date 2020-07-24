@@ -113,9 +113,9 @@
             </div>
             @if (Auth::user()->admin == 0)
                 <div class="blocohashtags center-align">
-                    <a class="hashtags waves-effect waves btn-flat">#procuro</a>
-                    <a class="hashtags waves-effect waves btn-flat">#ofereço</a>
-                    <a class="hashtags waves-effect waves btn-flat">#aviso</a>
+                    <a id="procuro" class="hashtags waves-effect waves btn-flat">#procuro</a>
+                    <a id="ofereço" class="hashtags waves-effect waves btn-flat">#ofereço</a>
+                    <a id="aviso" class="hashtags waves-effect waves btn-flat">#aviso</a>
                 </div>   
             @endif
         </div>

@@ -50,9 +50,23 @@ class HomeController extends Controller
         $mensagens = DB::table('mensagem')
                     ->join('usuario', 'usuario.id', '=', 'mensagem.usuario_id')
                     ->select('mensagem.id', 'mensagem.mensagem', 'mensagem.hora_envio', 'mensagem.hashtag',
-                            'mensagem.usuario_id', 'usuario.nome', 'usuario.foto', 'usuario.genero', 'usuario.telefone')
-                            
+                            'mensagem.usuario_id', 'usuario.nome', 'usuario.foto', 'usuario.genero', 'usuario.telefone')    
                     ->where('mensagem.condominio_id', $condominioId)
+                    ->orderBy('mensagem.id', 'desc')
+                    ->get();
+
+        return $mensagens;
+    }
+
+    public function filtrarMensagens(Request $request, $hashtag)
+    {
+        $condominioId = Auth::user()->condominio_id;
+        $mensagens = DB::table('mensagem')
+                    ->join('usuario', 'usuario.id', '=', 'mensagem.usuario_id')
+                    ->select('mensagem.id', 'mensagem.mensagem', 'mensagem.hora_envio', 'mensagem.hashtag',
+                            'mensagem.usuario_id', 'usuario.nome', 'usuario.foto', 'usuario.genero', 'usuario.telefone')
+                    ->where('mensagem.condominio_id', $condominioId)
+                    ->where('mensagem.hashtag', $hashtag)
                     ->orderBy('mensagem.id', 'desc')
                     ->get();
 

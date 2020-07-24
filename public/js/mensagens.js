@@ -17,8 +17,6 @@ function carregarMensagens(){
     )
 }
 
-carregarMensagens();
-
 function exibirMensagens(mensagens){
     let historico = document.getElementById("mensagens");
     historico.innerText = '';
@@ -117,3 +115,40 @@ function criarMensagem(mensagem){
     // adicionar card no histórico
     historico.append(card);
 }
+
+function filtrarMensagens(hashtag){
+
+    let headers = new Headers();
+
+    fetch('/home/mensagens/' + hashtag, {
+        method: 'GET',
+        headers: headers
+    }).then(
+        function(response){
+            return response.json();
+        }
+    ).then(
+        function(mensagens){
+            console.log(mensagens);
+            exibirMensagens(mensagens);
+        }
+    )
+}
+
+let botaoProcuro = document.getElementById('procuro');
+let botaoOfereco = document.getElementById('ofereço');
+let botaoAviso = document.getElementById('aviso');
+
+botaoProcuro.onclick = function(evt){
+    filtrarMensagens(botaoProcuro.id);
+}
+
+botaoOfereco.onclick = function(evt){
+        filtrarMensagens(botaoOfereco.id);
+    }
+
+botaoAviso.onclick = function(evt){
+        filtrarMensagens(botaoAviso.id);
+    }
+
+carregarMensagens();
