@@ -87,7 +87,7 @@
                             <div class="col s12">
                                 <p>
                                     Utilize os campos abaixo para inserir os detalhes do evento: 
-                                    o que é necessário para participar, local, atrações, comidas, bebidas etc.
+                                    o que é necessário para participar, local, atrações, comidas, bebidas...
                                 </p>
                             </div>
                             {{-- descrição 1 --}}
@@ -104,6 +104,17 @@
                             <div class="input-field col s12">
                                 <textarea id="descricao_3" name="descricao_3" class="materialize-textarea"></textarea>
                                 <label for="descricao_3"></label>
+                            </div>
+                            {{-- fotos --}}
+                            <div class="file-field input-field col s12">
+                                <div class="btn">
+                                    <span><i class="material-icons">add_photo_alternate</i></span>
+                                    <input type="file">
+                                </div>
+                                <div class="file-path-wrapper">
+                                    <input class="file-path validate" type="text" 
+                                    placeholder="adicione uma imagem do evento">
+                                </div>
                             </div>
                         </div>
                     </form>

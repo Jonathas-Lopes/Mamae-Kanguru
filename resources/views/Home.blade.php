@@ -8,9 +8,9 @@
             @if(Auth::user()->foto != null)
                 <img class="circle" src="{{$perfil->foto}}" alt="Foto perfil">
             @elseif(Auth::user()->genero == 'feminino')
-                <img class="circle" src="./img/foto_moradora.jpg" alt="Foto perfil">
+                <img class="circle" src="/img/foto_moradora.jpg" alt="Foto perfil">
             @else
-                <img class="circle" src="./img/foto_morador.jpg" alt="Foto perfil">
+                <img class="circle" src="/img/foto_morador.jpg" alt="Foto perfil">
             @endif
 
             @if(Auth::user()->admin == 0)
