@@ -79,32 +79,32 @@
             <div id="modal1" class="modal modal-fixed-footer center">
                 <div class="modal-content">
 
-                    <form action="" method="post" enctype="multipart/form-data">
+                    <form class="row" method="post" enctype="multipart/form-data">
                         @csrf
-
-                        <p class="center">Divulgue uma nova ação voluntária</p>
-
+                        <div class="col s12">
+                            <p class="center">Divulgue uma nova ação voluntária</p>
+                        </div>
                         <!-- Título -->
-                        <div class="input-field">
+                        <div class="input-field col s12">
                             <input name="titulo" id="titulo" type="text" class="validate">
                             <label for="titulo" class="active">Título</label>
                         </div>
                         <!-- Descrição -->
-                        <div class="input-field">
+                        <div class="input-field col s12">
                             <textarea name="descricao" class="materialize-textarea"></textarea>
                             <label id="descricao" class="active" for="descricao">
                                 Sobre a ação
                             </label>
                         </div>
                         <!-- Link -->
-                        <div class="input-field">
+                        <div class="input-field col s12">
                             <input name="link" id="link" type="text" class="validate">
                             <label for="link" class="active">
                                 Link para maiores informações
                             </label>
                         </div>
                         <!-- Botão para upload da imagem -->
-                        <div class="file-field input-field">
+                        <div class="file-field input-field col s12">
                             <div class="btn">
                                 <span><i class="material-icons">attach_file</i></span>
                                 <input type="file" multiple name="foto">
@@ -114,7 +114,7 @@
                             </div>
                         </div>
                         <!-- Botão para criar o anúncio -->
-                        <div class="modal-footer">
+                        <div class="modal-footer col s12">
                             <button href="#" class="modal-close waves-effect btn-flat" type="submit" 
                                 name="action">Divulgar ação
                             </button>

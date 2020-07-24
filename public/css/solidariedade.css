@@ -1,16 +1,15 @@
-#solidariedade .card{
-    height: 70vh;
+#solidariedade{
+    margin-top: 2vh;
 }
 #solidariedade .card-title{
-    font-size: 1.3rem;
+    font-size: 1.6rem;
     font-weight: 600;
     text-shadow: 1px 1px 3px grey;
 }
 #solidariedade .card-content{
-    width: 100%;
-    font-size: 0.9rem;
-    margin-top: 1vh;
-    padding: 1vh 0.5vw;
+    font-size: 1rem;
+    margin-top: 2vh;
+    padding: 1vh 1vw;
 }
 #solidariedade .btn-floating{
     background-color: #FC4A1A;
