@@ -1,4 +1,5 @@
 $(document).ready(function () {
+  
   var maxHeight = 0;
 
   $(".card").each(function () {
