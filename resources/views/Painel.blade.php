@@ -109,6 +109,7 @@
         @endif
     </section>
 
-    <script src="./js/Painel.js"></script>
+    <script src="{{asset('/js/jQuery341.js')}}"></script>
+    <script src="{{asset('/js/Painel.js')}}"></script>
         
 @endsection

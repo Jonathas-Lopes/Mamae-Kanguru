@@ -93,6 +93,7 @@
         @endif
     </main>
 
+    <script src="{{asset('/js/jQuery341.js')}}"></script>
     <script src="{{asset('/js/Avisos')}}"></script>
 
 @endsection
