@@ -29,7 +29,7 @@ class MensagensSeeder extends Seeder
         ]);
 
         DB::table('mensagem')->insert([
-            'mensagem' => 'Olá! Aqui eu vou falar algo muito interessante sobre esse projeto.',
+            'mensagem' => 'Vou sentir muitas saudades. Vamos fazer um HH virtual!',
             'hora_envio' => now(),
             'usuario_id' => '3',
             'hashtag' => 'aviso',
