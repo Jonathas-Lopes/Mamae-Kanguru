@@ -110,7 +110,8 @@
                                 <input type="file" multiple name="foto">
                             </div>
                             <div class="file-path-wrapper">
-                                <input class="file-path validate" type="text">
+                                <input class="file-path validate" type="text"
+                                placeholder="adicione uma imagem">
                             </div>
                         </div>
                         <!-- Botão para criar o anúncio -->
