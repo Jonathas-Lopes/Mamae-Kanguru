@@ -82,10 +82,11 @@
                                 placeholder="imagem (opcional)">
                             </div>
 
-                            <div class="modal-footer col s12">
-                                <button href="#" type="submit" 
-                                class="modal-close btn-flat">Criar aviso</button>
-                            </div>
+                            
+                        </div>
+                        <div class="modal-footer col s12">
+                            <button href="#" type="submit" 
+                            class="modal-close btn-flat">Criar aviso</button>
                         </div>
                     </form>
                 </div>
@@ -94,6 +95,5 @@
     </main>
 
     <script src="{{asset('/js/jQuery341.js')}}"></script>
-    <script src="{{asset('/js/Avisos')}}"></script>
-
+    <script src="{{asset('/js/Avisos.js')}}"></script>
 @endsection

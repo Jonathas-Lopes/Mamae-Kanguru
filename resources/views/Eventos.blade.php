@@ -6,10 +6,12 @@
     <main id="eventos">
 
         <link type="text/css" rel="stylesheet" href="/css/eventos.css" />
-
-        <div class="carousel carousel-slider center" data-indicators="true">
+        
+        <div class="s12 carousel carousel-slider center" data-indicators="true">
+            
+            
             @foreach ($evento as $item)
-                <div class="carousel-item white-text">
+                <div style="background-image:url({{$item->foto}});background-size:cover" class="carousel-item white-text">
                 
                     {{-- Título evento --}}
                     <h5 class="editavel white-text" name="{{$item->id}}nome" 
@@ -18,7 +20,7 @@
                     </h5>
 
                     {{-- Data do evento --}}
-                    <h6 class="editavel white-text"
+                    <h6 name="{{$item->id}}data"class="editavel white-text"
                         @if (Auth::user()->admin == 1) contenteditable="true" @endif>
                         {{$item->data}}
                     </h6>
@@ -52,23 +54,23 @@
                     
                 </div>
             @endforeach
-
-            @if (Auth::user()->admin == 1)
-            <!-- Modal Trigger -->
-            <a class="modal-trigger waves-effect waves-light btn row" href="#modal1">
-                <i class="material-icons">add</i>
-            </a>
-            @endif
+            
+            
 
         </div>
-
+        @if (Auth::user()->admin == 1)
+            <!-- Modal Trigger -->
+            <button class="modal-trigger waves-effect waves-light btn row" href="#modal1">
+                <i class="material-icons">add</i>
+            </button>
+            @endif
         
 
         @if (Auth::user()->admin == 1)
             <!-- Modal Structure -->
             <div id="modal1" class="modal">
                 <div class="modal-content">
-                    <form method="post" class="col s12">
+                    <form class="col s12" action="" method="post" enctype="multipart/form-data">
                         @csrf
                         <div class="row">
                             <div class="col s12">
@@ -81,7 +83,7 @@
                             </div>
                             {{-- data do evento --}}
                             <div class="input-field col s12">
-                                <input name="data" type="text" class="datepicker" 
+                                <input name="data" type="date" 
                                 placeholder="escolha a data do evento">
                             </div>
                             <div class="col s12">
@@ -117,13 +119,29 @@
                                 </div>
                             </div>
                         </div>
+                        <div class="file-field input-field col s12">
+                            <div class="btn">
+                                <span>
+                                    <i class="material-icons">add_photo_alternate</i>
+                                </span>
+                                <input type="file" multiple name="foto">
+                            </div>
+
+                            <div class="file-path-wrapper">
+                                <input type="text" class="file-path validate"
+                                placeholder="imagem (opcional)">
+                            </div>
+
+                            
+                        </div>
+                        <div class="modal-footer">
+                            <button href="#" type="submit" class="modal-action modal-close 
+                                waves-effect waves-green btn-flat">criar
+                            </button>
+                        </div>
                     </form>
                 </div>
-                <div class="modal-footer">
-                    <a href="#!" class="modal-action modal-close 
-                        waves-effect waves-green btn-flat">criar
-                    </a>
-                </div>
+                
             </div>
         @endif
 

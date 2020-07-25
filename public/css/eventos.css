@@ -4,6 +4,11 @@
     display: flex;
     flex-direction: column;
 }
+#eventos .carousel{
+    height: 80vh;
+    margin-top: 30px;
+    
+}
 #eventos .carousel-item{
     height: auto;
     padding-bottom: 5vh;
@@ -12,12 +17,7 @@
 #eventos .modal-trigger{
     background-color: #FC4A1A;
 }
-#eventos h4{
-    font-size: 2vw;  
-}
-#eventos h5{
-    font-size: 1.5vw;  
-}
+
 #eventos .carousel-item p{
     margin-top: 2vh;
     font-size: 1;
@@ -72,9 +72,7 @@
     #eventos .eventodestaque .card-content{
         height: fit-content;
     }
-    #eventos .eventodestaque h6{
-        font-size: 1rem;
-    }
+    
     #eventos .eventodestaque .card-content p{
         display: none;
     }

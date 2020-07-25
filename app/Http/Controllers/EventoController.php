@@ -1,7 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
-
+use Illuminate\Support\Facades\Auth;
 use App\Model\Evento;
 use Illuminate\Http\Request;
 
@@ -21,22 +21,23 @@ class EventoController extends Controller
     }
     
     public function createevent(Request $request)
-    { //verificar se está logado como admin
+    {//dd($request->data);
         if (($request->nome) and ($request->descricao_1)) {
             $upload = $request->foto->store('img');
             $evento = new Evento;
             $evento->nome = $request->nome;
+            $evento->data = $request->data;
             $evento->descricao_1 = $request->descricao_1;
             $evento->descricao_2 = $request->descricao_2;
             $evento->descricao_3 = $request->descricao_3;
             $evento->foto = "/file/$upload";
-            $evento->condominio_id = 1;
+            $evento->condominio_id = Auth::user()->condominio_id;
             $evento->save();
-            return redirect()->route('/eventos');
+            return redirect('/eventos');
         }
     }
     public function editevent(Request $request)
-    {   dd($request);
+    {
         $evento = Evento::find($request->id);
         $evento->nome = $request->nome;
         $evento->data = $request->data;

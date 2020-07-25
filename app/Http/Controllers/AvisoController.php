@@ -22,7 +22,7 @@ class AvisoController extends Controller
     }
     
     public function writecards(Request $request)
-    {
+    { dd($request->foto);
         if (($request->titulo) and ($request->descricao)) {
             $upload = $request->foto->store('img');
             $aviso = new Aviso;
@@ -37,7 +37,7 @@ class AvisoController extends Controller
 
     public function editcards(Request $request, $id)
     {
-        $aviso = Aviso::find($id);
+        $aviso = Aviso::find($request->id);
 
         $aviso->titulo = $request->titulo;
         $aviso->descricao = $request->descricao;
