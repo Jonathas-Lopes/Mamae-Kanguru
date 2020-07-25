@@ -1,11 +1,5 @@
 #reservas{
-<<<<<<< Updated upstream
     margin: 1vh 1vh;
-=======
-    height: 100%;
-    padding: 8vh 0vw;
-    width: 100%;
->>>>>>> Stashed changes
 } 
 #reservas .card{
     border-radius: 0  0 5rem 5rem;
