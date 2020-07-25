@@ -47,13 +47,23 @@
             <div class="col s12">
                 <input placeholder="clique aqui para verificar a disponibilidade" type="text" class="datepicker center">
             </div>
-                {{-- botão reservar --}}
+            {{-- botão reservar --}}
+            @if (Auth::user()->admin == 1)
+            <div class="col s12">
+                <a class="btn waves-effect tooltipped"
+                    data-position="top" data-tooltip="reservar">
+                    <i class="material-icons">event_available</i>
+                </a>
+            </div>   
+            @endif
+            @if (Auth::user()->admin == 0)
             <div class="col s12">
                 <a class="btn-floating waves-effect btn-large tooltipped"
                     data-position="top" data-tooltip="reservar">
                     <i class="material-icons">event_available</i>
                 </a>
-            </div>
+            </div>   
+            @endif
 
             {{-- descrição --}}
             <div class="card white col s12 center-align">

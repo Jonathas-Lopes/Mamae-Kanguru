@@ -16,7 +16,7 @@
 #areasReservas .datepicker::placeholder{
     color: grey;
 }
-#areasReservas .btn-floating {
+#areasReservas .btn-floating, .btn {
     margin-top: 2vh;
     margin-bottom: 4vh !important;
     background-color: #F7B733;
