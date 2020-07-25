@@ -7,7 +7,12 @@ $(document).ready(function () {
 
     $('.tooltipped').tooltip({delay: 50});
 
-    $('.reservar').addClass('active');
+    // estilização dos ícones da navbar
+    $('.reservar').css({
+        'color': 'white',
+        'font-size': '3rem',
+        'text-shadow': '1px 1px 3px grey'
+    });
 
 });
 

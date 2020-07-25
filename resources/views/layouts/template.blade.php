@@ -17,22 +17,35 @@
                     <a href="/home" class="logo"><img class="imagem-1" src="{{ asset('/img/2NomeBrancoCortado.png') }}" alt="Logo"></a>
                     <ul class="abas hide-on-med-and-down">
                         @auth
-                        <li class="tooltipped reservar" data-position="bottom" data-tooltip="reservar">
-                            <a href="/reservas"><i class="material-icons">date_range</i></a>
+                        <li >
+                            <a href="/reservas">
+                                <i class="reservar tooltipped material-icons" data-tooltip="reservar">date_range</i>
+                            </a>
                         </li>
-                        <li class="tooltipped doar" data-position="bottom" data-tooltip="doar">
-                            <a href="/solidariedade"><i class="material-icons">emoji_people</i></a></li>
-                        <li class="tooltipped vender" data-position="bottom" data-tooltip="vender">
-                            <a href="/painel"><i class="material-icons">point_of_sale</i></a>
+                        <li>
+                            <a href="/solidariedade">
+                                <i class="doar tooltipped material-icons" data-tooltip="doar">emoji_people</i>
+                            </a>
                         </li>
-                        <li class="tooltipped eventos" data-position="bottom" data-tooltip="eventos">
-                            <a href="/eventos"><i class="material-icons">cake</i></a>
+                        <li>
+                            <a href="/painel">
+                                <i class="vender tooltipped material-icons" data-tooltip="vender">point_of_sale</i>
+                            </a>
                         </li>
-                        <li class="tooltipped avisos" data-position="bottom" data-tooltip="avisos">
-                            <a href="/avisos"><i class="material-icons">announcement</i></a>
+                        <li>
+                            <a href="/eventos">
+                                <i class="eventos tooltipped material-icons" data-tooltip="eventos">cake</i>
+                            </a>
                         </li>
-                        <li class="tooltipped" data-position="bottom" data-tooltip="logout">
-                            <a href="/login/logout"><i class="material-icons">login</i></a>
+                        <li>
+                            <a href="/avisos">
+                                <i class="avisos tooltipped material-icons" data-tooltip="avisos">announcement</i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/login/logout">
+                                <i class="tooltipped material-icons" data-tooltip="logout">login</i>
+                            </a>
                         </li>
                         @endauth
                     </ul>

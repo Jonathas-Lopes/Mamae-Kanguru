@@ -46,6 +46,11 @@ $(document).ready(function () {
 
   });
 
-  $('.doar').addClass('active');
+  // estilização dos ícones da navbar
+  $('.doar').css({
+    'color': 'white',
+    'font-size': '3rem',
+    'text-shadow': '1px 1px 3px grey'
+  });
 
 });

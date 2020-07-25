@@ -39,7 +39,12 @@ $(document).ready(function () {
     })
 
   });
-  $('.vender').addClass('active');
-
+  
+  // estilização dos ícones da navbar
+  $('.vender').css({
+    'color': 'white',
+    'font-size': '3rem',
+    'text-shadow': '1px 1px 3px grey'
+  });
 
 });

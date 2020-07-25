@@ -45,8 +45,8 @@
 
                     @if (Auth::user()->admin == 1)
                         {{-- Botões do administrador --}}
-                        <a name="{{$item->id}}" class="edit btn-large waves-effect"><i class="material-icons">edit</i></a>
-                        <a name="{{$item->id}}" class="delete btn-large waves-effect"><i class="material-icons">remove</i></a>
+                        <a name="{{$item->id}}" class="edit btn waves-effect"><i class="material-icons">edit</i></a>
+                        <a name="{{$item->id}}" class="delete btn waves-effect"><i class="material-icons">remove</i></a>
                     @else
                         {{-- Botão do usuário --}}
                         <a class="confirmarbtn waves-effect waves-light btn">confirmar presença</a>

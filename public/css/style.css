@@ -38,10 +38,8 @@ nav div ul li{
 }
 .navbar ul li a:hover{
     background-color: transparent !important;
-    color: #fc4813
-}
-.navbar ul li i:hover{
-    color: #fc4813 !important;
+    color: #fc4813;
+    text-shadow: grey;
 }
 .logo {   
     flex-grow: 2;

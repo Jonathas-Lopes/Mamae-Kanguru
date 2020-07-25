@@ -11,7 +11,10 @@ $(document).ready(function () {
 
   $('.modal').modal();
 
-  $('.tooltipped').tooltip();
+  $('.tooltipped').tooltip({
+    'position': 'bottom',
+    
+  });
   
 
 });
