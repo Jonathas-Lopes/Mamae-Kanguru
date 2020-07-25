@@ -40,6 +40,9 @@ $(document).ready(function () {
           location.reload();
         })
     
-    })
+    });
+    $('.avisos').addClass('active');
+
+
 
 });

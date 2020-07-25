@@ -104,6 +104,6 @@
        
     </section>
     <script src="{{asset('/js/jQuery341.js')}}"></script>
-    <script src="{{asset('/js/jReservas.js')}}"></script>
+    <script src="{{asset('/js/Reservas.js')}}"></script>
     
 @endsection

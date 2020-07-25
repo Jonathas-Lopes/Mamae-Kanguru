@@ -108,18 +108,9 @@
                                 <label for="descricao_3"></label>
                             </div>
                             {{-- fotos --}}
-                            <div class="file-field input-field col s12">
-                                <div class="btn">
-                                    <span><i class="material-icons">add_photo_alternate</i></span>
-                                    <input type="file">
-                                </div>
-                                <div class="file-path-wrapper">
-                                    <input class="file-path validate" type="text" 
-                                    placeholder="adicione uma imagem do evento">
-                                </div>
-                            </div>
+                            
                         </div>
-                        <div class="file-field input-field col s12">
+                            <div class="file-field input-field col s12">
                             <div class="btn">
                                 <span>
                                     <i class="material-icons">add_photo_alternate</i>

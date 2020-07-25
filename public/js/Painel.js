@@ -38,7 +38,8 @@ $(document).ready(function () {
       location.reload();
     })
 
-  })
+  });
+  $('.vender').addClass('active');
 
 
 });

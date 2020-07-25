@@ -7,6 +7,8 @@ $(document).ready(function () {
 
     $('.tooltipped').tooltip({delay: 50});
 
+    $('.reservar').addClass('active');
+
 });
 
 $('.carousel.carousel-slider').carousel({fullWidth: true});

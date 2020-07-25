@@ -44,6 +44,8 @@ $(document).ready(function () {
     })
 
 
-  })
+  });
+
+  $('.doar').addClass('active');
 
 });

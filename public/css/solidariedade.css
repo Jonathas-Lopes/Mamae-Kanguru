@@ -15,8 +15,9 @@
     background-color: #FC4A1A;
 }
 #solidariedade .edit{
+    margin-right: 50px;
     background-color: red;
-    right: 4.5vw;
+    
 }
 #solidariedade .delete{
     background-color: red;

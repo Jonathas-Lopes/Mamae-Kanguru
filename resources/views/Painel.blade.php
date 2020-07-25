@@ -38,14 +38,14 @@
                                     @endif
                                 @endif
 
-                                
-
-                            </div>
-                            @if (Auth::user()->admin == 1)
+                                @if (Auth::user()->admin == 1)
                                     <a name={{$item->id}} class="delete btn-floating btn waves-effect waves-light"><i
                                         class="tiny material-icons">delete</i>
                                     </a>
                                 @endif
+
+                            </div>
+                            
                         </div>
                     </div>
                 @endforeach
