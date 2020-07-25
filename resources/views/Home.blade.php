@@ -139,7 +139,7 @@
                                 <span>#procuro</span>
                             </label>
                             <label class="radious-buttons">
-                                <input name="hashtag" type="radio" value="ofereco"/>
+                                <input name="hashtag" type="radio" value="ofereço"/>
                                 <span>#ofereço</span>
                             </label>
                             <label class="radious-buttons">
