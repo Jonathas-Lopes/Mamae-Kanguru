@@ -11,7 +11,6 @@ function carregarMensagens(){
         }
     ).then(
         function(mensagens){
-            console.log(mensagens);
             exibirMensagens(mensagens);
         }
     )
@@ -84,7 +83,6 @@ function criarMensagem(mensagem){
     // criar botão de excluir mensagem
     let cardMensagem = document.getElementById('mensagem-card');
     let nomeSideBar = document.getElementById('nome-usuario');
-    console.log(nomeSideBar.innerText);
     let botaoExcluirMensagem = document.createElement('a');
 
     if(cardMensagem == null || nomeSideBar.innerText == mensagem.nome){ 
@@ -135,20 +133,25 @@ function filtrarMensagens(hashtag){
     )
 }
 
-let botaoProcuro = document.getElementById('procuro');
-let botaoOfereco = document.getElementById('ofereço');
-let botaoAviso = document.getElementById('aviso');
+if(document.getElementById('procuro') != null){
+   let botaoProcuro = document.getElementById('procuro');
+    let botaoOfereco = document.getElementById('ofereço');
+    let botaoAviso = document.getElementById('aviso');
 
-botaoProcuro.onclick = function(evt){
-    filtrarMensagens(botaoProcuro.id);
+    botaoProcuro.onclick = function(evt){
+        filtrarMensagens(botaoProcuro.id);
+    }
+
+    botaoOfereco.onclick = function(evt){
+            filtrarMensagens(botaoOfereco.id);
+        }
+
+    botaoAviso.onclick = function(evt){
+            filtrarMensagens(botaoAviso.id);
+        }
+
+    carregarMensagens(); 
+} else {
+    carregarMensagens();
 }
 
-botaoOfereco.onclick = function(evt){
-        filtrarMensagens(botaoOfereco.id);
-    }
-
-botaoAviso.onclick = function(evt){
-        filtrarMensagens(botaoAviso.id);
-    }
-
-carregarMensagens();
