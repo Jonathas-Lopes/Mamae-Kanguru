@@ -12,7 +12,7 @@
             <div class="row">
 
                 @foreach ($solidariedade as $item)
-                    <div class="col l4 s12">
+                    <div class="col l3 s12">
                         <div class="card">
                             <div class="card-image">
 

@@ -6,14 +6,23 @@
 
     <link type="text/css" rel="stylesheet" href="/css/espacos.css"/>
 
-    <main id="areasReservas">
+    <main id="areasReservas" class="row center">
 
-        <div class="carousel carousel-slider" data-indicators="true">
-            
-            <a class="carousel-item"><img src="/file/img/condominio_churrasqueira.jpg"></a>
-            <a class="carousel-item"><img src="/file/img/condominio_churrasqueira1.jpg"></a>
-            <a class="carousel-item"><img src="/file/img/condominio_churrasqueira2.jpg"></a>
-            
+        {{-- carousel de imagens --}}
+        <div class="col s12">
+            <div class="carousel">
+                
+                <a class="carousel-item">
+                    <img src="/file/img/condominio_churrasqueira.jpg">
+                </a>
+                <a class="carousel-item">
+                    <img src="/file/img/condominio_churrasqueira1.jpg">
+                </a>
+                <a class="carousel-item">
+                    <img src="/file/img/condominio_churrasqueira2.jpg">
+                </a>
+                
+            </div>
         </div>
 
         @if (Auth::user()->admin == 1)
@@ -30,21 +39,34 @@
         @foreach ($espaco as $item)
 
             {{-- nome da área --}}
-            <div class="row">
-                <h3 class="space-title center-align">{{$item->nome}}</h3>
+            <div class="col s12">
+                <h3 class="center-align">{{$item->nome}}</h3>
             </div>
 
             {{-- agenda / date picker --}}
-            <div class="row">
+            <div class="col s12">
                 <input placeholder="clique aqui para verificar a disponibilidade" type="text" class="datepicker center">
             </div>
-                {{-- botão reservar --}}
-            <div class="reservarbtn row">
-                <a class="waves-effect waves-teal btn-flat amber accent-4 black-text center">reservar</a>
-            </div>
+            {{-- botão reservar --}}
+            @if (Auth::user()->admin == 1)
+            <div class="col s12">
+                <a class="btn waves-effect tooltipped"
+                    data-position="top" data-tooltip="reservar">
+                    <i class="material-icons">event_available</i>
+                </a>
+            </div>   
+            @endif
+            @if (Auth::user()->admin == 0)
+            <div class="col s12">
+                <a class="btn-floating waves-effect btn-large tooltipped"
+                    data-position="top" data-tooltip="reservar">
+                    <i class="material-icons">event_available</i>
+                </a>
+            </div>   
+            @endif
 
             {{-- descrição --}}
-            <div class="card white row center-align">
+            <div class="card white col s12 center-align">
                 <h5 class="card-title">Sobre o espaço</h5>
                 
                 <p>{{$item->descricao_1}}</p>
@@ -57,7 +79,7 @@
 
         
         {{-- Tag PADRÃO  DE TODOS OS ESPAÇOS - Regras de Utilização --}}
-        <div class="regras card white row center-align">
+        <div class="card white col s12 center-align">
             <h5 class="card-title">Regras de Utilização</h5>
             <p class="card-content">As Regras de Utilização vêm para auxiliar no bom funcionamento e manutenção do espaço e no bom relacionamento com os demais condôminos.</p>
             <p class="card-content">Por favor, antes de reservar, fique ciente e certifique-se de que você poderá cumprir as Regras de Utilização durante todo o período da sua reserva.</p>
@@ -74,7 +96,7 @@
         </div>
 
         {{-- Tag PADRÃO  DE TODOS OS ESPAÇOS - Manual de Boas Práticas --}}
-        <div class="manual card white row center-align">
+        <div class="card white col s12 center-align">
             <h5 class="card-title">Manual de Boas Práticas</h5>
             <p class="card-content">Esse Manual foi elaborado para garantir que o seu evento seja bem sucedido e ocorra da melhor maneira possível. Essas regras não são obrigatória, mas somente uma sugestão.</p>
             <p class="card-content">Mas, lembramos que o morador da unidade que reservou o espaço será responsabilizado por eventuais ocorrências de qualquer natureza.</p>

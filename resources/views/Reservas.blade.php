@@ -18,10 +18,26 @@
                                 <img src='{{$item->foto}}' alt="Foto Espaço Gourmet">
                                 <span class="card-title">{{$item->nome}}</span>
                             </div>
-                            <div class="card-content">
-                                <p class="card-content">{{$item->descricao_1}}</p>
-                                <a class="waves-effect waves-light btn " href="/espacos/area/{{$item->nome}}">ver mais</a>
-                            </div>
+                            @if (Auth::user()->admin == 0)
+                                <div class="card-content">
+                                    <p class="card-content">{{$item->descricao_1}}</p>
+                                    <a class="btn-floating waves-effect waves-light tooltipped"
+                                        data-position="bottom" data-tooltip="ver mais" 
+                                        href="/espacos/area/{{$item->nome}}">
+                                        <i class="material-icons">more_horiz</i>
+                                    </a>
+                                </div>
+                            @endif
+                            @if (Auth::user()->admin == 1)
+                                <div class="card-content">
+                                    <p class="card-content">{{$item->descricao_1}}</p>
+                                    <a class="btn waves-effect waves-light tooltipped"
+                                        data-position="bottom" data-tooltip="ver mais" 
+                                        href="/espacos/area/{{$item->nome}}">
+                                        <i class="material-icons">more_horiz</i>
+                                    </a>
+                                </div>
+                            @endif
                         </div>
                 </div>
             @endforeach        
@@ -88,6 +104,6 @@
        
     </section>
     <script src="{{asset('/js/jQuery341.js')}}"></script>
-    <script src="{{asset('/js/jReservas.js')}}"></script>
+    <script src="{{asset('/js/Reservas.js')}}"></script>
     
 @endsection

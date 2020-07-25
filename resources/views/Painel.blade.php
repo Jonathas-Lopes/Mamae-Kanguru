@@ -12,7 +12,7 @@
             <div class="row">
 
                 @foreach ($paineis as $item)
-                    <div class="col s12 m12 l4">
+                    <div class="col s12 m12 l3">
                         <div class="card-panel hoverable">
                             <div  class="card-image">
                                 <img src='{{$item->foto}}'>
@@ -38,14 +38,14 @@
                                     @endif
                                 @endif
 
-                                
-
-                            </div>
-                            @if (Auth::user()->admin == 1)
+                                @if (Auth::user()->admin == 1)
                                     <a name={{$item->id}} class="delete btn-floating btn waves-effect waves-light"><i
                                         class="tiny material-icons">delete</i>
                                     </a>
                                 @endif
+
+                            </div>
+                            
                         </div>
                     </div>
                 @endforeach

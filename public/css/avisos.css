@@ -9,7 +9,7 @@
 }
 #avisos .delete{
     background-color: #F7B733;
-    float: right;
+    
 }
 #avisos .file-field .btn{
     background-color: #F7B733;
@@ -18,9 +18,18 @@
     border: none;
     width: 90%;
 }
+/*Paula não apagar===inicio===*/
 #avisos .card-action{
+    width: 100%;
     border: none;
+    position: absolute;
+    bottom: 4px;
 }
+#avisos .card-action a{
+    position: relative;
+    bottom: 0px;
+}
+/*Paula não apagar===fim===*/
 
 /* inputs */
 #avisos .modal-content .input-field input[type=text]:focus + label {
