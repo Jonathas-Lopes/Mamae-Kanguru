@@ -1,17 +1,13 @@
 <?php
 ?>
-
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cadastro</title>
-    <!-- <script type="text/javascript" src="js/index.js"></script>-->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link type="text/css" rel="stylesheet" href="{{ asset('css/materialize.css') }}" />
-    {{-- <link type="text/css" rel="stylesheet" href="{{ asset('css/cadastro.css') }}" /> --}}
     <link type="text/css" rel="stylesheet" href="{{ asset('css/login.css') }}" />
 
 </head>
@@ -21,10 +17,10 @@
     <main class="mainform">
         <div class="container-fluid" id="cadastro">
             <div class="row">
-                <div class="col s12 m12 l8 imagem-login">
-                    
-                </div>
-
+                
+                {{-- imagem das páginas --}}
+                <div class="col s12 m12 l8 imagem-login"></div>
+                {{-- form de cadastro --}}
                 <div id="cadastro-conteiner" class="col s10 m10 l4 offset-s1 offset-m1 form">
                     <img src="../img/LogoVerde.png" alt="Logo Uniu">
                     <form class="center-align" action="/cadastro" method="POST">
@@ -62,6 +58,7 @@
                         </div>
                     </form>
                 </div>
+
             </div>
         </div>
 

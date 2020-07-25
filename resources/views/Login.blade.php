@@ -1,11 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login</title>
-    <!-- <script type="text/javascript" src="js/index.js"></script>-->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link type="text/css" rel="stylesheet" href="{{ asset('css/materialize.css') }}" />
     <link type="text/css" rel="stylesheet" href="{{ asset('css/login.css') }}" />
@@ -34,7 +32,6 @@
                         </div>
                         <div id="links">
                             <a href="#"><p>Esqueci minha senha</p></a>
-                            <!-- <a href="#"><p>Conheça a Uniu</p></a> -->
                         </div>
                         <div id="button">
                             <button class="botaoform btn waves-effect waves-light" type="submit" name="action" style="background-color: #f7b930;">Unir
