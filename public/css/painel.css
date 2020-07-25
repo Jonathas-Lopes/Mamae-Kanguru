@@ -1,6 +1,4 @@
 #painel{
-    height: 100vh;
-   width: 100vw;
     margin-top: 20px;
 }
 .card-panel{
@@ -11,27 +9,13 @@
     bottom: 10px;
     width:85%
 }
-#painel div{
-    text-align: center;
-}
-.card-panel{
-    height: fit-content;
-}
 #painel div img{
     width: 100%;
 }
-
-#painel div p{
-    font-size: 0.9rem;
-    margin-top: 10px;
-    padding: 0;
-}
-#painel div p a{
-    font-size: 0.95rem;
-    color: gray;
-    font-style: italic;
-}
 #painel .botaoresponder{
+    background-color: #F7B733;
+}
+#painel .botaoanuncio{
     background-color: #F7B733;
 }
 #painel .edit{
@@ -46,26 +30,26 @@
 #painel .file-path::placeholder{
     color: grey;
 }
-#painel .formpainel .input-field input[type=text]:focus + label {
-    color: #DFDCE3;
+#painel .input-field input[type=text]:focus + label {
+    color: grey;
 }
-#painel .formpainel .input-field textarea:focus + label {
-    color: #DFDCE3;
+#painel .input-field textarea:focus + label {
+    color: grey;
 }
-#painel .formpainel .input-field input[type=text]:focus {
+#painel .input-field input[type=text]:focus {
+    border-bottom: 1px solid  grey;
+    box-shadow:0 1px 0 0 rgb(209, 207, 207);
+}#painel .input-field textarea:focus {
+    border-bottom: 1px solid grey;
+    box-shadow:0 1px 0 0 rgb(209, 207, 207);
+}
+#painel .input-field input[type=text].valid {
     border-bottom: 1px solid #F7B733;
-    box-shadow: 0 1px 0 0 rgb(209, 207, 207);
-}#painel .formpainel .input-field textarea:focus {
+    box-shadow:0 1px 0 0 rgb(209, 207, 207);
+}
+#painel .input-field textarea.valid {
     border-bottom: 1px solid #F7B733;
-    box-shadow: 0 1px 0 0 rgb(209, 207, 207);
-}
-#painel .formpainel .input-field input[type=text].valid {
-    border-bottom: 1px solid #4ABDAC;
-    box-shadow: 0 1px 0 0 rgb(209, 207, 207);
-}
-#painel .formpainel .input-field input[type=text].invalid {
-    border-bottom: 1px solid #FC4A1A;
-    box-shadow: 0 1px 0 0 rgb(209, 207, 207);
+    box-shadow:0 1px 0 0 rgb(209, 207, 207);
 }
 #painel .modal-footer{
     width: 95%;

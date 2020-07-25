@@ -8,9 +8,9 @@
 
     <section id="painel">
             
-        <div class="container-fluid">
-
+        <div class="container-fluid center">
             <div class="row">
+
                 @foreach ($paineis as $item)
                     <div class="col s12 m12 l4">
                         <div class="card-panel hoverable">
@@ -22,11 +22,10 @@
                                 <p name="{{$item->id}}descricao" @if (Auth::user()->nome == $item->nome) contenteditable="true" @endif>{{$item->descricao}}</p>
                             </div>
                             <div class="card-action">
-                                 <p>{{ $item->nome }}</p>
-                                
+                                <p>{{ $item->nome }}</p>
                                 @if (Auth::user()->admin == 0)
                                     @if (Auth::user()->nome == $item->nome)
-                                     <a name={{$item->id}} class="edit btn-floating btn waves-effect waves-light"><i
+                                    <a name={{$item->id}} class="edit btn-floating btn waves-effect waves-light"><i
                                         class="tiny material-icons">edit</i>
                                     </a> 
                                     <a name={{$item->id}} class="delete btn-floating btn waves-effect waves-light"><i
@@ -49,64 +48,70 @@
                         </div>
                     </div>
                 @endforeach
+
             </div>
-          @if (Auth::user()->admin == 0)
-             <!-- Modal para inserção de cards -->
-             <a class="botaoanuncio modal-trigger btn-floating btn-large waves-effect" href="#modal1"><i
-                class="material-icons">add</i>
-             </a>
-          @endif
+            @if (Auth::user()->admin == 0)
+                <div class="row">
+                    <!-- Modal para inserção de cards -->
+                    <a class="botaoanuncio modal-trigger btn-floating btn-large waves-effect" 
+                        href="#modal1"><i class="material-icons">add</i>
+                    </a>
+                </div>
+            @endif
+
         </div>
     
         
     
         <!-- Modal Structure -->
         @if (Auth::user()->admin == 0)
-         <div id="modal1" class="modal modal-fixed-footer modalPainel">
-            <div class="modal-content">
+            <div id="modal1" class="modal modal-fixed-footer">
+                <div class="modal-content">
     
-                <form class="col s12" action="" method="post" enctype="multipart/form-data">
-                    @csrf
-                    <div class="col">
-    
-                        <div>
-                            <h6>Coloque um título para o seu produto ou serviço, descreva-o com detalhes e capriche na foto.
-                            </h6>
-                        </div>
-    
-                        <!-- Título -->
-                        <div class="input-field">
-                            <input id="tituloanuncio" name="titulo" type="text" class="validate">
-                            <label class="active"  for="tituloanuncio">Título do anúncio</label>
-                        </div>
-    
-                        <!-- Descrição -->
-                        <div class="input-field">
-                            <textarea id="descricaoanuncio" name="descricao"  class="materialize-textarea"></textarea>
-                            <label class="active" for="descricaoanuncio">Descrição do anúncio</label>
-                        </div>
-    
-                        <!-- Upload da imagem -->
-                        <div class="file-field input-field center-align">
-                            <div class="btn">
-                              <span><i class="material-icons">
-                                add_photo_alternate</i></span>
-                              <input type="file" multiple name="foto">
+                    <form class="row" method="post" enctype="multipart/form-data">
+                        @csrf
+        
+                            <div class="col s12">
+                                <p>Coloque um título para o seu produto ou serviço, 
+                                    descreva-o com detalhes e capriche na foto.
+                                </p>
                             </div>
-                            <div class="file-path-wrapper">
-                              <input class="file-path validate" type="text" placeholder="adicione uma imagem para o seu anúncio">
+        
+                            <!-- Título -->
+                            <div class="input-field col s12">
+                                <input id="tituloanuncio" name="titulo" type="text" class="validate">
+                                <label class="active"  for="tituloanuncio">Título do anúncio</label>
                             </div>
-                        </div>
-    
-                        <!-- Botão criar -->
-                        <div class="modal-footer">
-                            <button href="#" type="submit" class="modal-close btn-flat">Criar anúncio</button>
-                        </div>
-                    </div>
-                </form>
+        
+                            <!-- Descrição -->
+                            <div class="input-field col s12">
+                                <textarea id="descricaoanuncio" name="descricao"  class="materialize-textarea"></textarea>
+                                <label class="active" for="descricaoanuncio">Descrição do anúncio</label>
+                            </div>
+        
+                            <!-- Upload da imagem -->
+                            <div class="file-field input-field center-align col s12">
+                                <div class="btn">
+                                    <span>
+                                        <i class="material-icons">add_photo_alternate</i>
+                                    </span>
+                                    <input type="file" multiple name="foto">
+                                </div>
+                                <div class="file-path-wrapper">
+                                    <input class="file-path validate" type="text" placeholder="adicione uma imagem para o seu anúncio">
+                                </div>
+                            </div>
+        
+                            <!-- Botão criar -->
+                            <div class="modal-footer">
+                                <button href="#" type="submit" class="modal-close btn-flat">Criar anúncio</button>
+                            </div>
+
+                    </form>
             </div>
         </div>
         @endif
+
     </section>
 
     <script src="{{asset('/js/jQuery341.js')}}"></script>
