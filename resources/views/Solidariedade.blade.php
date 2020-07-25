@@ -39,7 +39,7 @@
                                     @elseif (!$item->link == null)
                                         <a name={{$item->link}} class="btn-floating halfway-fab waves-effect 
                                             tooltipped" data-position="bottom" data-delay="50" href="{{$item->link}}"
-                                            data-tooltip="saiba mais"><i class="material-icons">link</i>
+                                            target="_blank" data-tooltip="saiba mais"><i class="material-icons">link</i>
                                         </a>
                                     @endif
 

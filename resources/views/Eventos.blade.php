@@ -49,15 +49,25 @@
                         <a name="{{$item->id}}" class="delete btn-large waves-effect"><i class="material-icons">remove</i></a>
                     @else
                         {{-- Botão do usuário --}}
-                        <a class="confirmarbtn waves-effect waves-light btn">confirmar presença</a>
+                        <a class="confirmarbtn waves-effect waves-light btn modal-trigger" data-target="modal2" href="#modal2">confirmar presença</a>
                     @endif
-                    
                 </div>
-            @endforeach
-            
-            
 
+                {{-- @if(Auth::user()->admin == 0)
+                    <!-- Modal Structure -->
+                    <div id="modal2" class="moda2">
+                        <div class="modal-content">
+                            <h5 class="center-align">Confirmar presença em {{$item->nome}}?</h5>
+                            <div class="modal-footer">
+                                <a class="confirmarbtn waves-effect waves-light btn" href="/eventos">Confirmar</a>
+                                <a href="/eventos">Cancelar</a>
+                            </div>
+                        </div>
+                    </div>
+                @endif --}}
+            @endforeach 
         </div>
+
         @if (Auth::user()->admin == 1)
             <!-- Modal Trigger -->
             <button class="modal-trigger waves-effect waves-light btn row" href="#modal1">
