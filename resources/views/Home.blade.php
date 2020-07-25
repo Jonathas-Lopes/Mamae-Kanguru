@@ -96,7 +96,9 @@
                         </div>
 
                         <div class="modal-footer">
-                            <button type="submit">Editar</button>
+                            <button type="submit" class="enviar btn-floating btn waves-effect waves-light">
+                                <i class="material-icons">send</i>
+                            </button>
                         </div>
                     </form>
                 </div>
@@ -139,7 +141,7 @@
                                 <span>#procuro</span>
                             </label>
                             <label class="radious-buttons">
-                                <input name="hashtag" type="radio" value="ofereco"/>
+                                <input name="hashtag" type="radio" value="ofereço"/>
                                 <span>#ofereço</span>
                             </label>
                             <label class="radious-buttons">

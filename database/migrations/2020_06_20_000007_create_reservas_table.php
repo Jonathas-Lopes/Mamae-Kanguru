@@ -25,6 +25,7 @@ class CreateReservasTable extends Migration
             $table->id();
             $table->dateTime('data');
             $table->string('descricao')->nullable()->default(null);
+            $table->timestamps();
             
             $table->foreignId('usuario_id')
                 ->references('id')->on('usuario')

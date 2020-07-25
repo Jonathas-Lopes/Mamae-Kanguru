@@ -44,26 +44,34 @@
             </div>
 
             {{-- agenda / date picker --}}
-            <div class="col s12">
-                <input placeholder="clique aqui para verificar a disponibilidade" type="text" class="datepicker center">
-            </div>
-            {{-- botão reservar --}}
-            @if (Auth::user()->admin == 1)
-            <div class="col s12">
-                <a class="btn waves-effect tooltipped"
-                    data-position="top" data-tooltip="reservar">
-                    <i class="material-icons">event_available</i>
-                </a>
-            </div>   
-            @endif
-            @if (Auth::user()->admin == 0)
-            <div class="col s12">
-                <a class="btn-floating waves-effect btn-large tooltipped"
-                    data-position="top" data-tooltip="reservar">
-                    <i class="material-icons">event_available</i>
-                </a>
-            </div>   
-            @endif
+            <form method="POST" enctype="multipart/form-data" action="/espacos/agenda">
+                    @csrf
+                <div class="col s12">
+                    <input name="data" placeholder="clique aqui para verificar a disponibilidade" type="date" class="">
+                </div>
+                <div class="col s12">
+                    <input name="descricao" placeholder="coloque uma descrição breve" type="text" class="">
+                </div>
+                <input name="usuario_id" value="{{ Auth::user()->id }}" type="hidden">
+                <input name="area_id" value="{{$item->id}}" type="hidden">
+                {{-- botão reservar --}}
+                @if (Auth::user()->admin == 1)
+                <div class="col s12">
+                    <button type="submit" class="btn waves-effect tooltipped"
+                        data-position="top" data-tooltip="reservar">
+                        <i class="material-icons">event_available</i>
+                    </button>
+                </div>   
+                @endif
+                @if (Auth::user()->admin == 0)
+                <div class="col s12">
+                    <button type="submit" class="btn-floating waves-effect btn-large tooltipped"
+                        data-position="top" data-tooltip="reservar">
+                        <i class="material-icons">event_available</i>
+                    </button>
+                </div>   
+                @endif
+            </form>
 
             {{-- descrição --}}
             <div class="card white col s12 center-align">

@@ -73,4 +73,11 @@ class HomeController extends Controller
         return $mensagens;
     }
 
+    public function excluirMensagem(Request $request, $id)
+    {
+        $mensagem = Mensagens::find($id);
+        $mensagem->delete();
+
+        return redirect('/home');
+    }
 }
