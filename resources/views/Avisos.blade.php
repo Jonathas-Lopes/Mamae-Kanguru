@@ -11,7 +11,7 @@
 
             <div class="row">
                 @foreach ($avisos as $item)
-                    <div class="col l4 m12 s12">
+                    <div class="col l3 m12 s12">
                         <div class="card">
 
                             <div class="card-image">
