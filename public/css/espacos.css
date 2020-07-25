@@ -4,8 +4,8 @@
     padding: 3vh 5vw;
 }
 #areasReservas .carousel .carousel-item{
-    height: 40vh;
-    width: 32vw;
+    height:50vh;
+    width: 40%;
 }
 #areasReservas h3{
     font-size: 2rem;
