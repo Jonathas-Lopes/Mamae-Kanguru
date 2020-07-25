@@ -1,8 +1,10 @@
+var promise;
+
 function carregarMensagens(){
 
     let headers = new Headers();
 
-    fetch('/home/mensagens', {
+    promise = fetch('/home/mensagens', {
         method: 'GET',
         headers: headers
     }).then(
@@ -10,7 +12,7 @@ function carregarMensagens(){
             return response.json();
         }
     ).then(
-        function(mensagens){
+        function(mensagens){  
             exibirMensagens(mensagens);
         }
     )
@@ -87,9 +89,11 @@ function criarMensagem(mensagem){
 
     if(cardMensagem == null || nomeSideBar.innerText == mensagem.nome){ 
         botaoExcluirMensagem.className = "botaoresponder btn-floating btn waves-effect waves-light";
+        botaoExcluirMensagem.setAttribute('href', 'home/mensagem/' + mensagem.id);
 
         let icone = document.createElement('i');
-        icone.setAttribute('class', 'material-icons');
+        icone.className = 'material-icons botao-excluir';
+        icone.setAttribute('value', mensagem.id);
         icone.innerText = 'delete';
 
         botaoExcluirMensagem.append(icone);
@@ -154,4 +158,33 @@ if(document.getElementById('procuro') != null){
 } else {
     carregarMensagens();
 }
+
+function excluirMensagem(id){
+
+    let headers = new Headers();
+
+    fetch('/home/mensagem/' + id, {
+        method: 'DELETE',
+        headers: headers
+    }).then(
+        function(response){
+            return response.json();
+        }
+    ).then(
+        function(mensagens){
+            exibirMensagens(mensagens);
+        }
+    )
+}
+
+// document.onload = function(evt){
+//     if(document.querySelectorAll('.botao-excluir')){
+//         let botoesExcluir = document.querySelectorAll('.botao-excluir');
+//         console.log(botoesExcluir);
+//         let listaBotoes = Array.from(botoesExcluir);
+
+//         botoesExcluir.forEach(element => console.log(element) );
+//         console.log(listaBotoes);
+//     }
+// }
 
