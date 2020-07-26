@@ -25,12 +25,13 @@ Route::get('/home/mensagens', ['uses'=>'HomeController@exibirMensagens']);
 Route::get('/home/mensagens/{hashtag}', ['uses'=>'HomeController@filtrarMensagens']);
 Route::get('/home/mensagem/{id}', ['uses'=>'HomeController@excluirMensagem']);
 
-Route::get('/reservas', ['uses'=>'ReservasController@getcards']);
+Route::get('/reservas/{id}', ['uses'=>'ReservasController@getcards']);
+Route::get('/reservas/agenda', ['uses'=>'ReservasController@schedule']);
+Route::post('/reservas/agenda', ['uses'=>'ReservasController@writeschedule']);
 
 Route::post('/espacos', ['uses'=>'AreaController@writearea']);
 Route::get('/espacos/area/{area}', ['uses'=>'AreaController@getarea']);
-Route::get('/espacos/agenda/{area}', ['uses'=>'AreaController@schedule']);
-Route::post('/espacos/agenda', ['uses'=>'AreaController@writeschedule']);
+
 Route::get('/espacos', ['uses'=>'AreaController@getarea']);
 
 Route::get('/solidariedade', ['uses'=>'SolidariedadeController@getcards']);
