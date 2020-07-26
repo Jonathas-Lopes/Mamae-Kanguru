@@ -25,16 +25,46 @@
             </div>
         </div>
 
+
         @if (Auth::user()->admin == 1)
            {{-- BOTÃO PARA ADICIONAR FOTOS NA AREA --}}
-            <div class="file-field input-field row center">
-                <a class="btn waves-effect white grey-text darken-text-2 tooltipped"
+           <div class="row">
+                <a class="btn waves-effect white grey-text darken-text-2 
+                    tooltipped modal-trigger" href="#modal1"
                     data-position="top" data-tooltip="adicionar foto">
                     <i class="material-icons">add_photo_alternate</i>
-                    <input type="file" multiple name="uploads[]">
                 </a>
-            </div> 
+           </div>
         @endif
+
+        {{-- MODAL PARA UPLOAD DE FOTOS --}}
+        <div id="modal1" class="modal">
+            <div class="modal-content center row container-fluid">
+
+                <div class="col s12">
+                    <p>Adicione mais fotos a essa área disponível para reserva.</p>
+                </div>
+              
+                <form class="col s12" method="post">
+                    <div class="file-field input-field">
+                        <div class="btn">
+                            <span><i class="material-icons">add_photo_alternate</i></span>
+                            <input type="file" multiple name="uploads[]">
+                        </div>
+                        <div class="file-path-wrapper">
+                            <input class="file-path validate" type="text">
+                        </div>
+                    </div>
+
+                    <div class="modal-footer col s12">
+                        <button href="#!" class="modal-action modal-close waves-effect waves-green btn-flat" type="submit">
+                            enviar
+                        </button>
+                    </div>
+                </form>
+
+            </div>
+        </div>
 
         @foreach ($espaco as $item)
 

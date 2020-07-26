@@ -66,12 +66,12 @@
         
                         <div class="file-field input-field col s12">
                             <div class="btn">
-                            <span><i class="material-icons">add_photo_alternate</i></span>
-                            <input type="file" multiple name="uploads[]">
+                                <span><i class="material-icons">add_photo_alternate</i></span>
+                                <input type="file" multiple name="uploads[]">
                             </div>
                             <div class="file-path-wrapper">
-                            <input class="file-path validate" type="text" 
-                            placeholder="adicione aqui fotos do espaço">
+                                <input class="file-path validate" type="text" 
+                                placeholder="adicione aqui fotos do espaço">
                             </div>
                         </div>
         
