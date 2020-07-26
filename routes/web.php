@@ -31,8 +31,8 @@ Route::post('/reservas/agenda', ['uses'=>'ReservasController@writeschedule']);
 
 Route::post('/espacos', ['uses'=>'AreaController@writearea']);
 Route::get('/espacos/area/{area}', ['uses'=>'AreaController@getarea']);
-
-Route::get('/espacos', ['uses'=>'AreaController@getarea']);
+Route::post('/espacos/fotos', ['uses'=>'AreaController@addfotos']);
+Route::post('/espacos', ['uses'=>'AreaController@editarea']);
 
 Route::get('/solidariedade', ['uses'=>'SolidariedadeController@getcards']);
 Route::post('/solidariedade', ['uses'=>'SolidariedadeController@writecards']);

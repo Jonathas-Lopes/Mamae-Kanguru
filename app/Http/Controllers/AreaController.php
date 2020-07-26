@@ -17,15 +17,40 @@ class AreaController extends Controller
         $this->middleware('auth');
     }
 
-    
+
 
     public function getarea(Request $request, $area)
     {
         $Area = Areas_Reservaveis::where('nome', $area)->get();
         $espaco = $Area;
-        //$espaco->foto = explode(",", $Area->foto);
+        
+        
 
         return view('Espacos', compact('espaco'));
+    }
+
+    public function addfotos(Request $request)
+    {   //verificar se está logado como admin.
+        
+        if ($request->foto) {
+            $area = Areas_Reservaveis::find($request->id);
+            
+            $upload = explode(",", $area->foto);
+           
+            
+
+            foreach ($request->foto as $img) {
+                               
+                array_push($upload, $img->store('img'));
+               
+            }
+            
+            $stringToStore = implode(",", $upload);
+            $area->foto = $stringToStore;
+            $area->save();
+
+            return redirect("/espacos/area/$area->nome");
+        }
     }
 
     public function createarea(Request $request)
@@ -70,7 +95,7 @@ class AreaController extends Controller
             $area->descricao_1 = $request->descricao_1;
             $area->descricao_2 = $request->descricao_2;
             $area->descricao_3 = $request->descricao_3;
-
+            $area->save();
 
             return redirect('/espacos');
         }

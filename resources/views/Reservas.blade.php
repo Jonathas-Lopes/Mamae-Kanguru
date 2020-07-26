@@ -14,7 +14,7 @@
                 <div class="col l4 m12 s12" >
                     <div id="{{$item->nome}}" class="espaco card hoverable ">
                         <div class="card-image">
-                            <img src='{{$item->foto}}' alt="Foto Espaço Gourmet">
+                            <img src='/file/{{explode(',', $item->foto)[0]}}' alt="Foto Espaço Gourmet">
                             <span class="card-title">{{$item->nome}}</span>
                         </div>
                         @if (Auth::user()->admin == 0)
@@ -57,17 +57,22 @@
         @if (Auth::user()->admin == 0)
             {{-- modal --}}
             <div id="modal2" class="modal">
-                <div class="modal-content row center center-align">
+                <div class="modal-content container-fluid row center center-align">
                     <H6 class="col s12">Minhas reservas</H6>
                     {{-- AQUI VAI A LISTA DE RESERVAS DO USUARIO LOGADO --}}
+                    @foreach ($agenda as $item)
                     <div class="ativo card center black-text col s6">
-                        <span>Churrasqueira</span>
-                        <p>25/09/2020</p>
+                        
+                        <span>{{$item->espaco}}</span>
+                        <p>{{$item->data}}</p>
                         <a class="btn-floating btn-small waves-effect waves-light tooltipped"
                             data-position="bottom" data-tooltip="cancelar reserva">
                             <i class="material-icons">event_busy</i>
                         </a>
+                        
+                        
                     </div>
+                    @endforeach
                 </div>
                 <div class="modal-footer">
                     <a href="#!" class="modal-action modal-close waves-effect btn-flat">

@@ -10,18 +10,17 @@
 
         {{-- carousel de imagens --}}
         <div class="col s12">
+             
+                 
             <div class="carousel">
-                
-                <a class="carousel-item">
-                    <img src="/file/img/condominio_churrasqueira.jpg">
-                </a>
-                <a class="carousel-item">
-                    <img src="/file/img/condominio_churrasqueira1.jpg">
-                </a>
-                <a class="carousel-item">
-                    <img src="/file/img/condominio_churrasqueira2.jpg">
-                </a>
-                
+                @foreach ($espaco as $item)
+                    @foreach (explode(',', $item->foto) as $foto)
+                        
+                        <a class="carousel-item">
+                            <img src="/file/{{$foto}}">
+                        </a>
+                    @endforeach
+                @endforeach
             </div>
         </div>
 
@@ -45,12 +44,15 @@
                     <p>Adicione mais fotos a essa área disponível para reserva.</p>
                 </div>
               
-                <form class="col s12" method="post">
+                <form class="col s12" action="/espacos/fotos" method="post" enctype="multipart/form-data">
+                    @csrf
+                    <input name="id" value="{{$espaco[0]->id}}" type="hidden" multiple>
                     <div class="file-field input-field">
                         <div class="btn">
                             <span><i class="material-icons">add_photo_alternate</i></span>
-                            <input type="file" multiple name="uploads[]">
+                            <input name="foto[]" type="file" multiple>
                         </div>
+                        
                         <div class="file-path-wrapper">
                             <input class="file-path validate" type="text">
                         </div>
@@ -75,7 +77,7 @@
             </div>
 
             {{-- agenda / date picker --}}
-            <form method="POST" enctype="multipart/form-data" action="/espacos/agenda" class="center">
+            <form method="POST" enctype="multipart/form-data" action="/reservas/agenda" class="center">
                     @csrf
                 <div class="col s12">
                     <input name="data" placeholder="clique aqui para verificar a disponibilidade" type="date" class="">
