@@ -208,11 +208,21 @@ main{
     background-color: #FC4A1A;
     float: right;
     position: relative;
-    bottom: 30px;
+    bottom: 45px;
 }
 .assuntos .enviar{
     background-color: #4ABDAC;
     float: right;
+}
+.assuntos #mensagem-card .hashtags {
+    margin-top: 5vh;
+}
+.assuntos #mensagem-card textarea:focus + label {
+    color: grey;
+}
+.assuntos #mensagem-card textarea:focus {
+    border-bottom: 1px solid grey;
+    box-shadow:0 1px 0 0 rgb(209, 207, 207);
 }
 
 /* FOOTER  === Início ===*/

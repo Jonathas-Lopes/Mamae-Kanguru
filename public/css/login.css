@@ -39,9 +39,6 @@
     color: grey;
 }
 
-/* inuts */
-
-
 @media (max-width: 992px){
     .imagem-login{
         height: 300px;
