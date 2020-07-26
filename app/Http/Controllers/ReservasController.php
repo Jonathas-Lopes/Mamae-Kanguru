@@ -22,10 +22,10 @@ class ReservasController extends Controller
         return view('Reservas', compact('reservas', 'agenda'));
     }
 
-    public function schedule(Request $request)
+    public function schedule(Request $request, $id)
     {
         $reservas = Areas_Reservaveis::all();
-        $agenda = Reserva::reservasPost();
+        $agenda = Reserva::reservasPost($id);
         return view('Reservas', compact('reservas', 'agenda'));
     }
 
