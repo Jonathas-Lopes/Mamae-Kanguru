@@ -57,7 +57,8 @@
                     </div>
 
                     <div class="modal-footer col s12">
-                        <button href="#!" class="modal-action modal-close waves-effect waves-green btn-flat" type="submit">
+                        <button href="#!" class="modal-action modal-close waves-effect waves-green btn-flat" 
+                            type="submit">
                             enviar
                         </button>
                     </div>
@@ -74,32 +75,29 @@
             </div>
 
             {{-- agenda / date picker --}}
-            <form method="POST" enctype="multipart/form-data" action="/espacos/agenda">
+            <form method="POST" enctype="multipart/form-data" action="/espacos/agenda" class="center">
                     @csrf
                 <div class="col s12">
                     <input name="data" placeholder="clique aqui para verificar a disponibilidade" type="date" class="">
-                </div>
-                <div class="col s12">
-                    <input name="descricao" placeholder="coloque uma descrição breve" type="text" class="">
                 </div>
                 <input name="usuario_id" value="{{ Auth::user()->id }}" type="hidden">
                 <input name="area_id" value="{{$item->id}}" type="hidden">
                 {{-- botão reservar --}}
                 @if (Auth::user()->admin == 1)
-                <div class="col s12">
-                    <button type="submit" class="btn waves-effect tooltipped"
-                        data-position="top" data-tooltip="reservar">
-                        <i class="material-icons">event_available</i>
-                    </button>
-                </div>   
+                    <div class="col s12">
+                        <button type="submit" class="btn waves-effect tooltipped"
+                            data-position="top" data-tooltip="reservar">
+                            <i class="material-icons">event_available</i>
+                        </button>
+                    </div>   
                 @endif
                 @if (Auth::user()->admin == 0)
-                <div class="col s12">
-                    <button type="submit" class="btn-floating waves-effect btn-large tooltipped"
-                        data-position="top" data-tooltip="reservar">
-                        <i class="material-icons">event_available</i>
-                    </button>
-                </div>   
+                    <div class="col s12">
+                        <button type="submit" class="btn-floating waves-effect btn-large tooltipped"
+                            data-position="top" data-tooltip="reservar">
+                            <i class="material-icons">event_available</i>
+                        </button>
+                    </div>   
                 @endif
             </form>
 

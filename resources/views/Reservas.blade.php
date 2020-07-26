@@ -42,14 +42,16 @@
             @endforeach
         </div>
 
+        @if (Auth::user()->admin == 0)
         <div class="row center center-align">
             {{-- MODAL DAS RESERVAS DO USUÁRIO --}}
             {{-- botão --}}
             <a class="waves-effect waves-light btn-floating modal-trigger tooltipped row"
-                href="#modal2" data-position="bottom" data-tooltip="minhas reservas">
+                href="#modal2" data-position="top" data-tooltip="minhas reservas">
                 <i class="material-icons">date_range</i>
             </a> 
         </div>
+        @endif
 
         {{-- MODAL DAS RESERVAS DO USUÁRIO --}}
         @if (Auth::user()->admin == 0)

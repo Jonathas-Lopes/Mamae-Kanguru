@@ -1,23 +1,40 @@
 #eventos{
-    height: 100vh;
+    height: 80vh;
     width: 100%;
     display: flex;
     flex-direction: column;
 }
 #eventos .carousel{
-    height: 80vh;
-    margin-top: 30px;
-    
+    height: 90vh;
 }
 #eventos .carousel-item{
     height: auto;
     padding-bottom: 5vh;
     background-color: gray;
 }
+#eventos .conteudo{
+    margin: 1.5vh 3vw;
+    padding: 1vh 1vw;
+    background-color: rgba(190, 190, 190, 0.4);
+}
+#eventos h5{
+    text-shadow: 1px 1px 3px grey;
+    font-weight: 600;
+    font-size: 2rem;
+}
+#eventos h6{
+    text-shadow: 1px 1px 3px grey;
+    font-weight: 500;
+    font-size: 1.5rem;
+}
+#eventos p{
+    text-shadow: 2px 2px 4px grey;
+    font-size: 1.5rem;
+    color: white;
+}
 #eventos .modal-trigger{
     background-color: #FC4A1A;
 }
-
 #eventos .carousel-item p{
     margin-top: 2vh;
     font-size: 1;

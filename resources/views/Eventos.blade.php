@@ -9,62 +9,53 @@
         
         <div class="s12 carousel carousel-slider center" data-indicators="true">
             
-            
             @foreach ($evento as $item)
                 <div style="background-image:url({{$item->foto}});background-size:cover" class="carousel-item white-text">
-                
-                    {{-- Título evento --}}
-                    <h5 class="editavel white-text" name="{{$item->id}}nome" 
-                        @if (Auth::user()->admin == 1) contenteditable="true" @endif>
-                        {{$item->nome}}
-                    </h5>
 
-                    {{-- Data do evento --}}
-                    <h6 name="{{$item->id}}data"class="editavel white-text"
-                        @if (Auth::user()->admin == 1) contenteditable="true" @endif>
-                        {{$item->data}}
-                    </h6>
+                    <div class="conteudo center">
 
-                    {{-- Descrição --}}
-                    <p name="{{$item->id}}descricao_1" id="descricao_1"
-                        @if (Auth::user()->admin == 1) contenteditable="true" @endif>
-                        {{$item->descricao_1}}
-                    </p>
+                        {{-- Título evento --}}
+                        <h5 class="editavel white-text" name="{{$item->id}}nome" 
+                            @if (Auth::user()->admin == 1) contenteditable="true" @endif>
+                            {{$item->nome}}
+                        </h5>
 
-                    {{-- Descrição --}}
-                    <p name="{{$item->id}}descricao_2" id="descricao_2"
-                        @if (Auth::user()->admin == 1) contenteditable="true" @endif>
-                        {{$item->descricao_2}}
-                    </p>
+                        {{-- Data do evento --}}
+                        <h6 name="{{$item->id}}data"class="editavel white-text"
+                            @if (Auth::user()->admin == 1) contenteditable="true" @endif>
+                            {{$item->data}}
+                        </h6>
 
-                    {{-- Descrição --}}
-                    <p name="{{$item->id}}descricao_3" id="descricao_3"
-                        @if (Auth::user()->admin == 1) contenteditable="true" @endif>
-                        {{$item->descricao_3}}
-                    </p>
+                        {{-- Descrição --}}
+                        <p name="{{$item->id}}descricao_1" id="descricao_1"
+                            @if (Auth::user()->admin == 1) contenteditable="true" @endif>
+                            {{$item->descricao_1}}
+                        </p>
 
-                    @if (Auth::user()->admin == 1)
-                        {{-- Botões do administrador --}}
-                        <a name="{{$item->id}}" class="edit btn waves-effect"><i class="material-icons">edit</i></a>
-                        <a name="{{$item->id}}" class="delete btn waves-effect"><i class="material-icons">remove</i></a>
-                    @else
-                        {{-- Botão do usuário --}}
-                        <a class="confirmarbtn waves-effect waves-light btn modal-trigger" data-target="modal2" href="#modal2">confirmar presença</a>
-                    @endif
-                </div>
+                        {{-- Descrição --}}
+                        <p name="{{$item->id}}descricao_2" id="descricao_2"
+                            @if (Auth::user()->admin == 1) contenteditable="true" @endif>
+                            {{$item->descricao_2}}
+                        </p>
 
-                {{-- @if(Auth::user()->admin == 0)
-                    <!-- Modal Structure -->
-                    <div id="modal2" class="moda2">
-                        <div class="modal-content">
-                            <h5 class="center-align">Confirmar presença em {{$item->nome}}?</h5>
-                            <div class="modal-footer">
-                                <a class="confirmarbtn waves-effect waves-light btn" href="/eventos">Confirmar</a>
-                                <a href="/eventos">Cancelar</a>
-                            </div>
-                        </div>
+                        {{-- Descrição --}}
+                        <p name="{{$item->id}}descricao_3" id="descricao_3"
+                            @if (Auth::user()->admin == 1) contenteditable="true" @endif>
+                            {{$item->descricao_3}}
+                        </p>
+
+                        @if (Auth::user()->admin == 1)
+                            {{-- Botões do administrador --}}
+                            <a name="{{$item->id}}" class="edit btn waves-effect"><i class="material-icons">edit</i></a>
+                            <a name="{{$item->id}}" class="delete btn waves-effect"><i class="material-icons">remove</i></a>
+                        @else
+                            {{-- Botão do usuário --}}
+                            <a class="confirmarbtn waves-effect waves-light btn modal-trigger" data-target="modal2" href="#modal2">confirmar presença</a>
+                        @endif
+
                     </div>
-                @endif --}}
+
+                </div>
             @endforeach 
         </div>
 
