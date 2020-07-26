@@ -23,8 +23,7 @@ class CreateReservasTable extends Migration
         Schema::create($this->tableName, function (Blueprint $table) {
             $table->engine = 'InnoDB';
             $table->id();
-            $table->dateTime('data');
-            $table->string('descricao')->nullable()->default(null);
+            $table->date('data');
             $table->timestamps();
             
             $table->foreignId('usuario_id')

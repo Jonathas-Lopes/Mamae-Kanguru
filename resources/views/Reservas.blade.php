@@ -4,56 +4,87 @@
 
 @section('conteudo')
 
-    <section id="reservas" >
-            <link type="text/css" rel="stylesheet" href="/css/reservas.css" />
+    <section id="reservas">
+
+        <link type="text/css" rel="stylesheet" href="/css/reservas.css" />
         
         <div class="row center center-align">
 
             @foreach ($reservas as $item)
-                    
-        
                 <div class="col l4 m12 s12" >
-                        <div id="{{$item->nome}}" class="espaco card hoverable ">
-                            <div class="card-image">
-                                <img src='{{$item->foto}}' alt="Foto Espaço Gourmet">
-                                <span class="card-title">{{$item->nome}}</span>
-                            </div>
-                            @if (Auth::user()->admin == 0)
-                                <div class="card-content">
-                                    <p class="card-content">{{$item->descricao_1}}</p>
-                                    <a class="btn-floating waves-effect waves-light tooltipped"
-                                        data-position="bottom" data-tooltip="ver mais" 
-                                        href="/espacos/area/{{$item->nome}}">
-                                        <i class="material-icons">more_horiz</i>
-                                    </a>
-                                </div>
-                            @endif
-                            @if (Auth::user()->admin == 1)
-                                <div class="card-content">
-                                    <p class="card-content">{{$item->descricao_1}}</p>
-                                    <a class="btn waves-effect waves-light tooltipped"
-                                        data-position="bottom" data-tooltip="ver mais" 
-                                        href="/espacos/area/{{$item->nome}}">
-                                        <i class="material-icons">more_horiz</i>
-                                    </a>
-                                </div>
-                            @endif
+                    <div id="{{$item->nome}}" class="espaco card hoverable ">
+                        <div class="card-image">
+                            <img src='{{$item->foto}}' alt="Foto Espaço Gourmet">
+                            <span class="card-title">{{$item->nome}}</span>
                         </div>
+                        @if (Auth::user()->admin == 0)
+                            <div class="card-content">
+                                <p class="card-content">{{$item->descricao_1}}</p>
+                                <a class="btn-floating waves-effect waves-light tooltipped"
+                                    data-position="bottom" data-tooltip="ver mais" 
+                                    href="/espacos/area/{{$item->nome}}">
+                                    <i class="material-icons">more_horiz</i>
+                                </a>
+                            </div>
+                        @endif
+                        @if (Auth::user()->admin == 1)
+                            <div class="card-content">
+                                <p class="card-content">{{$item->descricao_1}}</p>
+                                <a class="btn waves-effect waves-light tooltipped"
+                                    data-position="bottom" data-tooltip="ver mais" 
+                                    href="/espacos/area/{{$item->nome}}">
+                                    <i class="material-icons">more_horiz</i>
+                                </a>
+                            </div>
+                        @endif
+                    </div>
                 </div>
-            @endforeach        
-          
+            @endforeach
         </div>
 
-        {{-- MODAL PARA ADICIONAR ÁREA --}}
+        <div class="row center center-align">
+            {{-- MODAL DAS RESERVAS DO USUÁRIO --}}
+            {{-- botão --}}
+            <a class="waves-effect waves-light btn-floating modal-trigger tooltipped row"
+                href="#modal2" data-position="bottom" data-tooltip="minhas reservas">
+                <i class="material-icons">date_range</i>
+            </a> 
+        </div>
+
+        {{-- MODAL DAS RESERVAS DO USUÁRIO --}}
+        @if (Auth::user()->admin == 0)
+            {{-- modal --}}
+            <div id="modal2" class="modal">
+                <div class="modal-content row center center-align">
+                    <H6 class="col s12">Minhas reservas</H6>
+                    {{-- AQUI VAI A LISTA DE RESERVAS DO USUARIO LOGADO --}}
+                    <div class="ativo card center black-text col s6">
+                        <span>Churrasqueira</span>
+                        <p>25/09/2020</p>
+                        <a class="btn-floating btn-small waves-effect waves-light tooltipped"
+                            data-position="bottom" data-tooltip="cancelar reserva">
+                            <i class="material-icons">event_busy</i>
+                        </a>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <a href="#!" class="modal-action modal-close waves-effect btn-flat">
+                        <i class="material-icons white-text">close</i>
+                    </a>
+                </div>
+            </div>
+        @endif
+
+        {{-- MODAL PARA ADICIONAR ÁREA ADMIN--}}
         @if (Auth::user()->admin == 1)
+            {{-- botão --}}
             <div class="row center center-align">
                 <a class="btn-small waves-effect waves-light modal-trigger tooltipped" 
                     data-position="top" data-tooltip="criar área reservável" href="#modal1">
                     <i class="material-icons">add</i>
                 </a>
             </div>
-        
-
+            {{-- modal --}}
             <div id="modal1" class="modal">
                 <div class="modal-content">
                     <form action="" method="post">

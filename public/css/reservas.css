@@ -32,3 +32,27 @@
 #reservas .btn-small{
     background-color: #F7B733;
 }
+#reservas .btn-floating {
+    background-color: #FC4A1A;
+}
+#modal2 {
+    background-color: #F7B733;
+    color: white;
+}
+#modal2 .modal-footer{
+    background-color: #F7B733;
+    color: white;
+}
+#modal2 .ativo{
+    border-radius: 0;
+    padding: 1vh 1vw;
+}
+#modal2 h6{
+    font-weight: 600;
+    font-size: 1.3rem;
+    padding-bottom: 1.5vh;
+}
+#modal2 .ativo span{
+    font-weight: 600;
+    font-size: 1.1rem;
+}
