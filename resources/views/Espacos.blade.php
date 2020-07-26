@@ -77,7 +77,7 @@
             </div>
 
             {{-- agenda / date picker --}}
-            <form method="POST" enctype="multipart/form-data" action="/espacos/agenda" class="center">
+            <form method="POST" enctype="multipart/form-data" action="/reservas/agenda" class="center">
                     @csrf
                 <div class="col s12">
                     <input name="data" placeholder="clique aqui para verificar a disponibilidade" type="date" class="">
