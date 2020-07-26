@@ -8,11 +8,9 @@ $(document).ready(function(){
     indicators: true,
     duration: 100,
   })
-  // autoplay()
-  // function autoplay() {
-  //     $('.carousel').carousel('next');
-  //     setTimeout(autoplay, 9000);
-  // }
+  $('.modal').modal();
+  $('#textarea1').val('New Text');
+  $('#textarea1').trigger('autoresize');
 
   $.ajaxSetup({
     headers: {
@@ -41,7 +39,6 @@ $(document).ready(function(){
       descricao_2: descricao_2, 
       descricao_3: descricao_3
     }, function (data) {
-      //console.log(data);
       location.reload();
     });
     console.log($.post())
@@ -60,27 +57,14 @@ $(document).ready(function(){
 
   })
 
-
-
-
-  // $('.datepicker').pickadate(
-  //   {
-  //   selectMonths: false, // Creates a dropdown to control month
-  //   selectYears: 15, // Creates a dropdown of 15 years to control year,
-  //   today: 'Today',
-  //   clear: 'Clear',
-  //   close: 'Ok',
-  //   closeOnSelect: false, // Close upon selecting a date,
-  //   container: undefined, // ex. 'body' will append picker to body
-  //   format: 'mm/dd/yyyy'
-  // });
-
   // estilização dos ícones da navbar
   $('.eventos').css({
     'color': 'white',
     'font-size': '3rem',
     'text-shadow': '1px 1px 3px grey'
   });
+
+
 
 });
 
