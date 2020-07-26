@@ -17,23 +17,7 @@ class AreaController extends Controller
         $this->middleware('auth');
     }
 
-    public function getreservas(Request $request)
-    {
-        $reserva = Reserva::all();
-    }
-
-    public function writeschedule(Request $request){
-        //dd($request->usuario_id);
-        $area = new Reserva();
-        $area->data = $request->data;
-        $area->descricao = $request->descricao;
-        $area->usuario_id = $request->usuario_id;
-        $area->area_reservavel_id = $request->area_id;
-        $area->save();
-        return redirect('/reservas');
     
-
-    }
 
     public function getarea(Request $request, $area)
     {

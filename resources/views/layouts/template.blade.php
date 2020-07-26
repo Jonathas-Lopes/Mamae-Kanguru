@@ -18,7 +18,7 @@
                     <ul class="abas hide-on-med-and-down">
                         @auth
                         <li >
-                            <a href="/reservas">
+                            <a href="/reservas/{{ Auth::user()->id }}">
                                 <i class="reservar tooltipped material-icons" data-tooltip="reservar">date_range</i>
                             </a>
                         </li>
