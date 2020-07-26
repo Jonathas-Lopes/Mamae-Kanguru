@@ -1,11 +1,21 @@
 #eventos{
-    height: 80vh;
+    height: 90vh;
     width: 100%;
     display: flex;
     flex-direction: column;
 }
+
+/* CAROUSEL */
+#eventos .carousel .indicators {
+    position: fixed;
+    margin-bottom: 1vh;
+}
+#eventos .carousel #imagem {
+    size: cover;
+    padding: 0;
+}
 #eventos .carousel{
-    height: 90vh;
+    height: 100vh;
 }
 #eventos .carousel-item{
     height: auto;
@@ -13,9 +23,9 @@
     background-color: gray;
 }
 #eventos .conteudo{
-    margin: 1.5vh 3vw;
+    margin: 1.5vh 1.5vw;
     padding: 1vh 1vw;
-    background-color: rgba(190, 190, 190, 0.4);
+    background-color: rgba(190, 190, 190, 0.6);
 }
 #eventos h5{
     text-shadow: 1px 1px 3px grey;
@@ -29,11 +39,8 @@
 }
 #eventos p{
     text-shadow: 2px 2px 4px grey;
-    font-size: 1.5rem;
+    font-size: 1.3rem;
     color: white;
-}
-#eventos .modal-trigger{
-    background-color: #FC4A1A;
 }
 #eventos .carousel-item p{
     margin-top: 2vh;
@@ -41,12 +48,6 @@
 }
 #eventos .carousel-item a{
     margin: 3vh;
-}
-#eventos .galeriaeventos .header{
-    margin-bottom: 3vh;
-}
-#eventos .galeriaeventos .btnaddgaleria{
-    margin-bottom: 3vh;
 }
 #eventos .carousel-item .confirmarbtn{
     background-color: #F7B733;
@@ -56,6 +57,99 @@
 }
 #eventos .delete{
     background-color: #FC4A1A;
+}
+
+
+/* MODAL CONFIRMAR PRESENÇA */
+#eventos #modal2 {
+    background-color: #F7B733;
+}
+#eventos #modal2 h5{
+    text-shadow: none;
+    font-weight: 600;
+    font-size: 1.4rem;
+}
+#eventos #modal2 p{
+    color: white;
+    font-size: 1.2rem;
+    margin-bottom: 0.5vh;
+    text-shadow: none;
+}
+#eventos #modal2 .modal-footer{
+    background-color: #F7B733;
+}
+/* inputs */
+#eventos #modal2 input::placeholder{
+    color: white;
+}
+#eventos #modal2 textarea::placeholder{
+    color: white;
+}
+#eventos #modal2 .input-field label {
+    color: white;
+    font-size: 1.3rem;
+    margin-bottom: 0.5vh;
+}
+#eventos #modal2 .inline label {
+    color: white;
+    font-size: 1rem;
+}
+#eventos #modal2 .input-field input[type=text]:focus + label {
+    color: white;
+    text-shadow: 0 1px 0 0 lightgrey;
+  }
+#eventos #modal2 .input-field input[type=text]:focus {
+    border-bottom: 1px solid white;
+    box-shadow: 0 1px 0 0 lightgrey;
+}
+#eventos #modal2 .input-field input[type=number]:focus + label {
+    color: white;
+    text-shadow: 0 1px 0 0 lightgrey;
+  }
+#eventos #modal2 .input-field input[type=number]:focus {
+    border-bottom: 1px solid white;
+    box-shadow: 0 1px 0 0 lightgrey;
+}
+#eventos #modal2 .input-field textarea:focus + label {
+    color: white;
+    text-shadow: 0 1px 0 0 lightgrey;
+  }
+#eventos #modal2 .input-field textarea:focus {
+    border-bottom: 1px solid white;
+    box-shadow: 0 1px 0 0 lightgrey;
+}
+
+
+/* MODAL ADD EVENTOS */
+#eventos .modal-trigger{
+    background-color: #FC4A1A;
+}
+#eventos #modal1 h5{
+    text-shadow: none;
+    font-weight: normal;
+    font-size: 1.3rem;
+    text-align: center;
+}
+#eventos #modal1 p{
+    text-shadow: none;
+    font-weight: normal;
+    font-size: 1.1rem;
+    text-align: left;
+    color: grey;
+}
+#eventos #modal1 textarea::placeholder{
+    color: grey;
+}
+#eventos #modal1 .file-path::placeholder{
+    color: grey;
+}
+
+/* GALERIA FOTOS */
+#eventos .galeriaeventos .header{
+    margin-bottom: 3vh;
+}
+#eventos .galeriaeventos .btnaddgaleria{
+    margin-bottom: 3vh;
 }
 #eventos .galeriaeventos .btnaddgaleria{
     background-color: #FC4A1A;
@@ -71,6 +165,7 @@
     color: black !important;
     background-color: #F7B733;
 }
+
 
 @media only screen and (max-width: 600px) {
 
