@@ -56,7 +56,7 @@
                     <form class="row" action="" method="post" enctype="multipart/form-data">
                         @csrf
                         <div class="col s12">
-                            <h5>Adicionar um aviso na página</h5>
+                            <h6>Adicionar um aviso na página</h6>
                         </div>
 
                         <div class="input-field col s12">
