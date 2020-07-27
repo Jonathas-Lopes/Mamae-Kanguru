@@ -94,11 +94,7 @@
             {{-- modal --}}
             <div id="modal1" class="modal">
                 <div class="modal-content">
-<<<<<<< Updated upstream
-                    <form class="container-fluid row" method="post">
-=======
                     <form action="/espacos/create" method="post" enctype="multipart/form-data">
->>>>>>> Stashed changes
                         @csrf
 
                         <div class="input-field col s12">
