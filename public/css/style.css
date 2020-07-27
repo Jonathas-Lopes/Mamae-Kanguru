@@ -206,7 +206,7 @@ main{
 }
 .assuntos .botaoresponder{
     background-color: #FC4A1A;
-    float: right;
+    /* float: right; */
     position: relative;
     bottom: 45px;
 }

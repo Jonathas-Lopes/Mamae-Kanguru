@@ -33,6 +33,7 @@ Route::post('/espacos', ['uses'=>'AreaController@writearea']);
 Route::get('/espacos/area/{area}', ['uses'=>'AreaController@getarea']);
 Route::post('/espacos/fotos', ['uses'=>'AreaController@addfotos']);
 Route::post('/espacos', ['uses'=>'AreaController@editarea']);
+Route::post('/espacos/create', ['uses'=>'AreaController@createarea']);
 
 Route::get('/solidariedade', ['uses'=>'SolidariedadeController@getcards']);
 Route::post('/solidariedade', ['uses'=>'SolidariedadeController@writecards']);

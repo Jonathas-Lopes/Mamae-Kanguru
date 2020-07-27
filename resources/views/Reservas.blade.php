@@ -94,18 +94,22 @@
             {{-- modal --}}
             <div id="modal1" class="modal">
                 <div class="modal-content">
+<<<<<<< Updated upstream
                     <form class="container-fluid row" method="post">
+=======
+                    <form action="/espacos/create" method="post" enctype="multipart/form-data">
+>>>>>>> Stashed changes
                         @csrf
 
                         <div class="input-field col s12">
-                            <input placeholder="Salão de festas" id="area" type="text" class="validate">
+                            <input name="nome" placeholder="Salão de festas" id="area" type="text" class="validate">
                             <label for="area">Nome da área (obrigatório)</label>
                         </div>
         
                         <div class="file-field input-field col s12">
                             <div class="btn">
                                 <span><i class="material-icons">add_photo_alternate</i></span>
-                                <input type="file" multiple name="uploads[]">
+                                <input type="file" multiple name="foto[]">
                             </div>
                             <div class="file-path-wrapper">
                                 <input class="file-path validate" type="text" 
@@ -114,24 +118,24 @@
                         </div>
         
                         <div class="input-field col s12">
-                            <textarea id="descricao_1" class="materialize-textarea"></textarea>
+                            <textarea name="descricao_1" id="descricao_1" class="materialize-textarea"></textarea>
                             <label for="descricao_1">Descrição (obrigatório)</label>
                         </div>
         
                         <div class="input-field col s12">
-                            <textarea id="descricao_2" class="materialize-textarea"></textarea>
+                            <textarea name="descricao_2" id="descricao_2" class="materialize-textarea"></textarea>
                             <label for="descricao_2">Descrição</label>
                         </div>
         
                         <div class="input-field col s12">
-                            <textarea id="descricao_3" class="materialize-textarea"></textarea>
+                            <textarea name="descricao_3" id="descricao_3" class="materialize-textarea"></textarea>
                             <label for="descricao_3">Descrição</label>
                         </div>
         
                         <div class="modal-footer col s12">
-                            <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat">
+                            <button type="submit" class="modal-action modal-close waves-effect waves-green btn-flat">
                                 Criar
-                            </a>
+                            </button>
                         </div>
 
                     </form>

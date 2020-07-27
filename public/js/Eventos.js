@@ -63,6 +63,31 @@ $(document).ready(function(){
     'font-size': '3rem',
     'text-shadow': '1px 1px 3px grey'
   });
+  function autura_carrossel() {
+    var maxHeight = 0;
+
+  $(".carousel-item").each(function(){
+      if ($(this).height() > maxHeight) { maxHeight = $(this).height(); }
+  });
+  
+  $("carousel-item").height(maxHeight+60);
+    
+  }
+
+  function autura_conteudo() {
+    var maxHeight = 0;
+
+  $(".conteudo").each(function(){
+      if ($(this).height() > maxHeight) { maxHeight = $(this).height(); }
+  });
+  
+  $(".conteudo").height(maxHeight+60);
+    
+  }
+  autura_carrossel();
+  autura_conteudo();
+
+
 
 
 

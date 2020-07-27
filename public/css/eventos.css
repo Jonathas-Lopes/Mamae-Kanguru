@@ -19,7 +19,7 @@
 }
 #eventos .carousel-item{
     height: auto;
-    padding-bottom: 5vh;
+    padding-bottom: 50px;
     background-color: gray;
 }
 #eventos .conteudo{
@@ -43,11 +43,17 @@
     color: white;
 }
 #eventos .carousel-item p{
-    margin-top: 2vh;
+    margin-top: 20px;
     font-size: 1;
 }
 #eventos .carousel-item a{
-    margin: 3vh;
+    margin: 30px;
+}
+#eventos .galeriaeventos .header{
+    margin-bottom: 30px;
+}
+#eventos .galeriaeventos .btnaddgaleria{
+    margin-bottom: 30px;
 }
 #eventos .carousel-item .confirmarbtn{
     background-color: #F7B733;

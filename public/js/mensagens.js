@@ -33,6 +33,7 @@ function criarMensagem(mensagem){
     // criar card
     let card = document.createElement('article');
     card.setAttribute('class', 'card');
+    
 
     // criar hora da mensagem
     let hora = document.createElement('p');
@@ -86,9 +87,10 @@ function criarMensagem(mensagem){
     let cardMensagem = document.getElementById('mensagem-card');
     let nomeSideBar = document.getElementById('nome-usuario');
     let botaoExcluirMensagem = document.createElement('a');
+    
 
     if(cardMensagem == null || nomeSideBar.innerText == mensagem.nome){ 
-        botaoExcluirMensagem.className = "botaoresponder btn-floating btn waves-effect waves-light";
+        botaoExcluirMensagem.className = "right botaoresponder btn-floating btn waves-effect waves-light";
         botaoExcluirMensagem.setAttribute('href', 'home/mensagem/' + mensagem.id);
 
         let icone = document.createElement('i');

@@ -54,6 +54,7 @@
                             </div>
 
                             <div class="card-content">
+                               
                                 <p name="{{$item->id}}descricao" @if (Auth::user()->nome == $item->nome)
                                     contenteditable="true" @endif> {{$item->descricao}}
                                 </p>
