@@ -27,7 +27,7 @@ class UsuarioSeeder extends Seeder
             'email' => 'renata@gmail.com',
             'senha' => Hash::make('1234'),
             'genero'=>'feminino',
-            'foto' => null,
+            'foto' => '/file/img/usuario-renata-rocha.jpeg',
             'admin'=>'0',
             'condominio_id'=> '1'
         ]);

@@ -13,10 +13,10 @@ class MensagensSeeder extends Seeder
     public function run()
     {
         DB::table('mensagem')->insert([
-            'mensagem' => 'Olá! Aqui eu vou falar algo muito interessante sobre esse projeto.',
+            'mensagem' => 'Quero montar um grupo para fazer yoga ao ar livre quando acabar a quarentena. Quem tiver interesse me chama!',
             'hora_envio' => now(),
             'usuario_id' => '2',
-            'hashtag' => 'aviso',
+            'hashtag' => 'ofereço',
             'condominio_id' => 1
         ]);
 
@@ -41,14 +41,6 @@ class MensagensSeeder extends Seeder
             'hora_envio' => now(),
             'usuario_id' => '5',
             'hashtag' => 'procuro',
-            'condominio_id' => 1
-        ]);
-
-        DB::table('mensagem')->insert([
-            'mensagem' => 'Olá! Aqui eu vou falar algo muito interessante sobre esse projeto.',
-            'hora_envio' => now(),
-            'usuario_id' => '2',
-            'hashtag' => 'aviso',
             'condominio_id' => 1
         ]);
 
