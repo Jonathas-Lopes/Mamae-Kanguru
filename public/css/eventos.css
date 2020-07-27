@@ -15,7 +15,7 @@
     padding: 0;
 }
 #eventos .carousel{
-    height: 100vh;
+    height: 150vh;
 }
 #eventos .carousel-item{
     height: auto;
@@ -26,6 +26,7 @@
     margin: 1.5vh 1.5vw;
     padding: 1vh 1vw;
     background-color: rgba(190, 190, 190, 0.6);
+    height: 300px;
 }
 #eventos h5{
     text-shadow: 1px 1px 3px grey;

@@ -17,39 +17,42 @@
                         {{-- Título evento --}}
                         <h5 class="editavel white-text" name="{{$item->id}}nome" 
                             @if (Auth::user()->admin == 1) contenteditable="true" @endif>
-                            {{$item->nome}}</h5>
+                            {{$item->nome}}
+                        </h5>
                         {{-- Data do evento --}}
                         <h6 name="{{$item->id}}data"class="editavel white-text"
                             @if (Auth::user()->admin == 1) contenteditable="true" @endif>
-                            {{$item->data}}</h6>
+                            {{$item->data}}
+                        </h6>
                         {{-- Descrição --}}
                         <p name="{{$item->id}}descricao_1" id="descricao_1"
                             @if (Auth::user()->admin == 1) contenteditable="true" @endif>
-                            {{$item->descricao_1}}</p>
+                            {{$item->descricao_1}}
+                        </p>
                         {{-- Descrição --}}
                         <p name="{{$item->id}}descricao_2" id="descricao_2"
                             @if (Auth::user()->admin == 1) contenteditable="true" @endif>
-                            {{$item->descricao_2}}</p>
-
+                            {{$item->descricao_2}}
+                        </p>
                         {{-- Descrição --}}
                         <p name="{{$item->id}}descricao_3" id="descricao_3"
                             @if (Auth::user()->admin == 1) contenteditable="true" @endif>
-                            {{$item->descricao_3}}</p>
-                        {{-- Botões de usuario e admin --}}
-                        <div class="row">
-                            @if (Auth::user()->admin == 1)
-                                {{-- Botões do administrador --}}
-                                <a name="{{$item->id}}" class="edit btn waves-effect"><i class="material-icons">edit</i></a>
-                                <a name="{{$item->id}}" class="delete btn waves-effect"><i class="material-icons">remove</i></a>
-                            @else
-                                {{-- Botão do usuário --}}
-                                <a class="btn-floating waves-effect waves-light modal-trigger tooltipped" data-position="top"  
-                                    data-target="modal2" href="#modal2" data-tooltip="confirmar presença">
-                                    <i class="material-icons">how_to_reg</i>
-                                </a>
-                            @endif
-                        </div>
-
+                            {{$item->descricao_3}}
+                        </p>
+                    </div>
+                    {{-- Botões de usuario e admin --}}
+                    <div class="botoes row">
+                        @if (Auth::user()->admin == 1)
+                            {{-- Botões do administrador --}}
+                            <a name="{{$item->id}}" class="edit btn waves-effect"><i class="material-icons">edit</i></a>
+                            <a name="{{$item->id}}" class="delete btn waves-effect"><i class="material-icons">remove</i></a>
+                        @else
+                            {{-- Botão do usuário --}}
+                            <a class="btn-floating waves-effect waves-light modal-trigger tooltipped" data-position="top"  
+                                data-target="modal2" href="#modal2" data-tooltip="confirmar presença">
+                                <i class="material-icons">how_to_reg</i>
+                            </a>
+                        @endif
                     </div>
                 </div>
             @endforeach 

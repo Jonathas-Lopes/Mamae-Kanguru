@@ -39,6 +39,7 @@
                                 @endif
 
                                 @if (Auth::user()->admin == 1)
+                                        @csrf
                                     <a name={{$item->id}} class="delete btn-floating btn waves-effect waves-light"><i
                                         class="tiny material-icons">delete</i>
                                     </a>

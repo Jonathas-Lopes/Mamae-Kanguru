@@ -26,7 +26,7 @@ class EventoSeeder extends Seeder
             'nome' => 'Dias das Crianças',
             'data' => '2020/10/11',
             'descricao_1' => 'Vamos comemorar o Dia das Crianças com muitas brincadeiras! Dia 11/10, a partir das 10 horas, realizaremos algumas brincadeiras e gincanas na quadra para que adultos e crianças brinquem juntos nesse dia tão especial.',
-            'descricao_2' => 'Teremos barracas de algodão-doce, cachorro-quente, pipoca doce e salgada, milho quente e espetos.Teremos futebol de sabão (somente para as crianças grandes), castelo inflável, pula-pula e muito mais.',
+            'descricao_2' => 'Teremos barracas de algodão-doce, cachorro-quente, pipoca doce e salgada, milho quente, espetos, futebol de sabão, pula-pula e muito mais.',
             'descricao_3' => 'A confirmação deve ser feita até o dia 1º de outubro. Adultos pagam R$ 65 e crianças até 12 anos pagam R$ 35. Crianças até dois anos não pagam. Pagamento feito para Camila Pinheiro (85A).',
             'foto' => '/file/img/eventos-dia-das-criancas.jpg',
             'condominio_id'=> '1'

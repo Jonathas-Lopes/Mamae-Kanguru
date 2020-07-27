@@ -1,9 +1,13 @@
+#avisos .card-content {
+    padding: 1vh 1vw;
+}
 #avisos .modal-trigger{
     background-color: #F7B733;
     margin-bottom: 5vh;
 }
 #avisos h5{
-    font-size: 1.6rem;
+    font-size: 1.4rem;
+    text-align: left;
     font-weight: 600;
     text-shadow: 1px 1px 3px grey;
 }
