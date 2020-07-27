@@ -412,9 +412,9 @@ main{
     #slide-out .sobre .abas ul li a{
         line-height: 6px;
     }
-    .perfil-mobile .sobre .blocohashtags{
+    /* .perfil-mobile .sobre .blocohashtags{
         visibility: hidden;
-    }
+    } */
     .perfil-mobile .input-field input[type=search]{
        padding-left: 0!important;
        width: 100%!important;

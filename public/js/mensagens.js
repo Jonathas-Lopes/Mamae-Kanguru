@@ -177,14 +177,3 @@ function excluirMensagem(id){
     )
 }
 
-// document.onload = function(evt){
-//     if(document.querySelectorAll('.botao-excluir')){
-//         let botoesExcluir = document.querySelectorAll('.botao-excluir');
-//         console.log(botoesExcluir);
-//         let listaBotoes = Array.from(botoesExcluir);
-
-//         botoesExcluir.forEach(element => console.log(element) );
-//         console.log(listaBotoes);
-//     }
-// }
-
