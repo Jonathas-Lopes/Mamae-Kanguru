@@ -81,7 +81,7 @@
                     </div>
                     <div>
                         <ul class="abas center-align">
-                            <li class=""><a href="/reservas">reservar</a></li>
+                            <li class=""><a href="/reservas/{{ Auth::user()->id }}">reservar</a></li>
                             <li class=""><a href="/solidariedade">doar</a></li>
                             <li class=""><a href="/painel">vender</a></li>
                             <li class=""><a href="/eventos">eventos</a></li>
