@@ -31,7 +31,8 @@
 }
 #solidariedade .modal-footer{
     width: 97%;
-   border: none;
+    border: none;
+    position: unset !important;
 }
 
 /* === CORES INPUTS === */

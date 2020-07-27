@@ -44,6 +44,7 @@
                                     @endif
 
                                 @else
+                                    @csrf
                                     {{-- botão de deletar do admin --}}
                                     <a name={{$item->id}} class="delete halfway-fab btn-floating btn 
                                         waves-effect waves-light">
@@ -63,7 +64,8 @@
                 @endforeach
             </div>
 
-            <!-- Modal para inserção de CARDS -->
+            {{-- MODAL PARA INSERÇÃO DE CARD --}}
+            {{-- botão --}}
             @if (Auth::user()->admin == 0)
                 <div class="row center">
                     <a id="botaoanuncio" class="modal-trigger btn-floating btn-large waves-effect" 
@@ -74,12 +76,12 @@
 
         </div>
 
-        {{-- MODAL - formulário --}}
+        {{-- formulário --}}
         @if (Auth::user()->admin == 0)
             <div id="modal1" class="modal modal-fixed-footer center">
-                <div class="modal-content">
+                <div class="modal-content container-fluid center row">
 
-                    <form class="row" method="post" enctype="multipart/form-data">
+                    <form method="post" enctype="multipart/form-data">
                         @csrf
                         <div class="col s12">
                             <p class="center">Divulgue uma nova ação voluntária</p>
