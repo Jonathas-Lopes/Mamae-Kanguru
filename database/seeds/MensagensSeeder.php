@@ -29,9 +29,25 @@ class MensagensSeeder extends Seeder
         ]);
 
         DB::table('mensagem')->insert([
-            'mensagem' => 'Vou sentir muitas saudades. Vamos fazer um HH virtual!',
+            'mensagem' => 'Vamos fazer um HH virtual, pessoal?',
             'hora_envio' => now(),
             'usuario_id' => '3',
+            'hashtag' => 'procuro',
+            'condominio_id' => 1
+        ]);
+
+        DB::table('mensagem')->insert([
+            'mensagem' => 'Alguém do Piauí até Jundiaí?',
+            'hora_envio' => now(),
+            'usuario_id' => '5',
+            'hashtag' => 'procuro',
+            'condominio_id' => 1
+        ]);
+
+        DB::table('mensagem')->insert([
+            'mensagem' => 'Olá! Aqui eu vou falar algo muito interessante sobre esse projeto.',
+            'hora_envio' => now(),
+            'usuario_id' => '2',
             'hashtag' => 'aviso',
             'condominio_id' => 1
         ]);
@@ -39,8 +55,24 @@ class MensagensSeeder extends Seeder
         DB::table('mensagem')->insert([
             'mensagem' => 'Olá! Aqui eu vou falar algo muito interessante sobre esse projeto.',
             'hora_envio' => now(),
+            'usuario_id' => '4',
+            'hashtag' => 'ofereço',
+            'condominio_id' => 1
+        ]);
+
+        DB::table('mensagem')->insert([
+            'mensagem' => 'Vou sentir saudades!',
+            'hora_envio' => now(),
+            'usuario_id' => '3',
+            'hashtag' => 'aviso',
+            'condominio_id' => 1
+        ]);
+
+        DB::table('mensagem')->insert([
+            'mensagem' => 'Ofereço aulas de J.Query aos sábados. Quem quiser me chama!',
+            'hora_envio' => now(),
             'usuario_id' => '5',
-            'hashtag' => 'procuro',
+            'hashtag' => 'ofereço',
             'condominio_id' => 1
         ]);
     }
