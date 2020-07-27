@@ -82,7 +82,7 @@
             </div>
         @endif
 
-        {{-- MODAL PARA ADICIONAR ÁREA ADMIN--}}
+        {{-- MODAL PARA ADICIONAR ÁREA (ADMIN)--}}
         @if (Auth::user()->admin == 1)
             {{-- botão --}}
             <div class="row center center-align">
@@ -94,7 +94,7 @@
             {{-- modal --}}
             <div id="modal1" class="modal">
                 <div class="modal-content">
-                    <form action="" method="post">
+                    <form class="container-fluid row" method="post">
                         @csrf
 
                         <div class="input-field col s12">

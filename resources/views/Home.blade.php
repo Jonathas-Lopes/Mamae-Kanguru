@@ -135,7 +135,7 @@
                             <textarea name="mensagem" value="" id="textarea1" class="materialize-textarea"></textarea>
                             <label for="textarea1">Escreva aqui a sua mensagem</label>
                         </div>
-                        <div class="col s12">
+                        <div class="hashtags col s6">
                             <label class="radious-buttons">
                                 <input name="hashtag" type="radio" value="procuro"/>
                                 <span>#procuro</span>

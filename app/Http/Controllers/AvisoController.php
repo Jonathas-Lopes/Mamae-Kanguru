@@ -22,7 +22,7 @@ class AvisoController extends Controller
     }
     
     public function writecards(Request $request)
-    { dd($request->foto);
+    {
         if (($request->titulo) and ($request->descricao)) {
             $upload = $request->foto->store('img');
             $aviso = new Aviso;

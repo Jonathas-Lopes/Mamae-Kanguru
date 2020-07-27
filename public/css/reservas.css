@@ -56,3 +56,55 @@
     font-weight: 600;
     font-size: 1.1rem;
 }
+
+/* MODAL ADD ÁREA */
+#reservas #modal1{
+    background-color: lightgrey;
+}
+#reservas #modal1 .btn{
+    background-color: white;
+}
+#reservas #modal1 .btn i{
+    color: grey;
+}
+#reservas #modal1 .modal-footer{
+    background-color: lightgrey;
+}
+#reservas #modal1 input::placeholder{
+    color: grey;
+}
+#reservas #modal1 textarea::placeholder{
+    color: grey;
+}
+#reservas #modal1 .input-field label {
+    color: grey;
+    margin-bottom: 0.5vh;
+}
+#reservas #modal1 .inline label {
+    color: grey;
+    font-size: 1rem;
+}
+#reservas #modal1 .input-field input[type=text]:focus + label {
+    color: grey;
+    text-shadow: 0 1px 0 0 lightgrey;
+  }
+#reservas #modal1 .input-field input[type=text]:focus {
+    border-bottom: 1px solid grey;
+    box-shadow: 0 1px 0 0 lightgrey;
+}
+#reservas #modal1 .input-field input[type=number]:focus + label {
+    color: grey;
+    text-shadow: 0 1px 0 0 lightgrey;
+  }
+#reservas #modal1 .input-field input[type=number]:focus {
+    border-bottom: 1px solid grey;
+    box-shadow: 0 1px 0 0 lightgrey;
+}
+#reservas #modal1 .input-field textarea:focus + label {
+    color: grey;
+    text-shadow: 0 1px 0 0 lightgrey;
+  }
+#reservas #modal1 .input-field textarea:focus {
+    border-bottom: 1px solid grey;
+    box-shadow: 0 1px 0 0 lightgrey;
+}
