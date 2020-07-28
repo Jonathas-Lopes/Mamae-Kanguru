@@ -12,6 +12,7 @@ class MensagensSeeder extends Seeder
      */
     public function run()
     {
+
         DB::table('mensagem')->insert([
             'mensagem' => 'Quero montar um grupo para fazer yoga ao ar livre quando acabar a quarentena. Quem tiver interesse me chama!',
             'hora_envio' => now(),
@@ -21,10 +22,10 @@ class MensagensSeeder extends Seeder
         ]);
 
         DB::table('mensagem')->insert([
-            'mensagem' => 'Olá! Aqui eu vou falar algo muito interessante sobre esse projeto.',
+            'mensagem' => 'Alguém sabe o que aconteceu na avenida? Está tudo parado.',
             'hora_envio' => now(),
             'usuario_id' => '4',
-            'hashtag' => 'ofereço',
+            'hashtag' => 'aviso',
             'condominio_id' => 1
         ]);
 
@@ -45,7 +46,7 @@ class MensagensSeeder extends Seeder
         ]);
 
         DB::table('mensagem')->insert([
-            'mensagem' => 'Olá! Aqui eu vou falar algo muito interessante sobre esse projeto.',
+            'mensagem' => 'Ae, pessoal! Esse mês estou dando desconto na pizza de calabreza. É só ligar e falar que é desse condomínio e leva um refri de 2 litros também! 11 5656-3636',
             'hora_envio' => now(),
             'usuario_id' => '4',
             'hashtag' => 'ofereço',
@@ -67,5 +68,14 @@ class MensagensSeeder extends Seeder
             'hashtag' => 'ofereço',
             'condominio_id' => 1
         ]);
+
+        DB::table('mensagem')->insert([
+            'mensagem' => 'Pessoal meu cachorro vai ficar sozinho em casa por algumas horas mas logo minha irmã chega para ficar com ele, peço perdão pelos latidos que podem acontecer.',
+            'hora_envio' => now(),
+            'usuario_id' => '2',
+            'hashtag' => 'aviso',
+            'condominio_id' => 1
+        ]);
+
     }
 }
