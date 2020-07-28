@@ -1,82 +1,93 @@
-<h1 align="center"> UNIU </h1>
+<p align="center"><img src="public/img/NomeVerde.png" width="400"></p>
 
-<p align="justify"> Nossa plataforma nasceu com o propósito de promover a integração e solidariedade entre os moradores de conjuntos residenciais, como prédios, condomínios, ruas fechadas etc. </p>
-<p align="justify"> Normalmente, os moradores desses locais  se organizam e grupos de Whatsapp ou Facebook, onde todos podem postar absolutamente tudo o que quiserem. Então, as informações importantes se perdem e a interação entre as pessoas não acontece de forma saudável e harmônica. </p>
-<p align="justify"> A UNIU veio para se serum ambiente seguro, onde os vizinhos possam interagir uns com os outros e ficar por dentro de tudo o que acontece no lugar onde moram. </p>
-<p align="justify"> Todos os serviços que a plataforma engloba só dependem da organização dos próprios moradores, que podem eleger o síndico ou outro morador para ser o administrador da plataforma. </p>
+> Aplicação disponível no Heroku: [UNIU](http://uniu-evapericorashid.herokuapp.com/)
 
-<h2 align="center"> FUNCIONALIDADES </h2>
 
-<h3>Home</h3>
-<ul>
-    <li>Usuário, depois de cadastrado, pode incluir sua foto, editar suas informações pessoais e incluir o número do seu interfone;</li>
-    <li>Envio de mensagens instantâneas para todos com o uso de hashtags para categorizar os assuntos;</li>
-    <li>Acesso ao feed de mensagens dos moradores;</li>
-    <li>Filtro das mensagens pela sidenav, através das hashtags;</li>
-    <li>Próprio usuário pode excluir a sua mensagem.</li>
-</ul>
+## Proposta
 
-<h3>Área de reservas</h3>
-<ul>
-    <li>Acesso a lista de áreas de lazer disponíveis para locação, com fotos, informações e regras de utilização;</li>
-    <li>Usuário pode reservar uma área;</li>
-    <li>A reserva aparece na página inicial dos espaços;</li>
-    <li>Usuário pode cancelar as reservas que fez.</li>
-</ul>
+A plataforma foi desenvolvida como parte da formação em Desenvolvimento Web Full Stack pela [Digital House](https://www.digitalhouse.com/br/) através de um Projeto Integrador que explorou as tecnologias abordadas durante o curso. A aplicação foi construída utilizando o framework PHP Laravel através da arquitetura MVC, banco de dados relacional MySQL, JavaScript, JQuery, Materialize, CSS3 e HTML5. O desenvolvimento se pautou na metodologia ágil SCRUM, tendo sido dividido em 7 sprints ao longo de 5 meses de curso.
 
-<h3>Doar</h3>
-<ul>
-    <li>Nessa aba o usuário tem acesso às ações solidárias da sua cidade e seu bairro inseridas pelos seus vizinhos;</li>
-    <li>Para inserir um novo card, o usuário preenche um formulário com título, descrição, link da ação (se tiver) e imagem;</li>
-    <li>O próprio usuário pode editar e excluir o seu card.</li>
-</ul>
+Integrantes do grupo:
 
-<h3>Vender</h3>
-<ul>
-    <li>Aqui os moradores podem divulgar qualquer coisa que queiram vender, alugar ou trocar;</li>
-    <li>Para inserir um anúncio é só preencher um formulário com título, descrição (com preço se quiser) e foto;</li>
-    <li>O usuário pode excluir ou editar o seu card também.</li>
-</ul>
+- [Paula N Guedes](https://github.com/paulanguedes)
+- [Renata Rocha](https://github.com/RenataRochaAlves)
+- [Jonathas Lopes](https://github.com/Jonathas-Lopes)
+- [Gilvan Santos](https://github.com/gilvanflorencio)
 
-<h3>Eventos</h3>
-<ul>
-    <li>Parte importante da integração entre os moradores, são os eventos organizados pelos próprios moradores;</li>
-    <li>Aqui o usuário encontra uma lista dos próximos eventos e suas informações;</li>
-    <li>Ele pode também confirmar a sua presença nesses eventos atravé de um rápido formulário dizendo o nome do responsável, quantos adultos e quantas crianças participarão e adicionar qualquer observação necessária;</li>
-</ul>
 
-<h3>Avisos</h3>
-<ul>
-    <li>O administrador postará informações importantes referentes à adminsitração, segurança, reuniões, manutenção, normas e regulamentos;</li>
-    <li>Aqui o usuário terá acesso à essas importantes informações.</li>
-</ul>
+## Sobre o UNIU
 
-<h3>Administrador</h3>
-<ul>
-    <li>O objetivo é que o administrador só possa fazer a moderação do que é inserido pelos usuários e insira informações administrativas do condomínio, ou seja, ele deve interagir com um perfil de morador;</li>
-    <li>Na home, ele não pode inserir mensagens, somente excluir mensagens repetidas ou que ele julgue inapropriadas;</li>
-    <li>Na parte de reservas, ele pode inserir uma nova área disponível para reserva ou incluir novas fotos nas existentes;</li>
-    <li>Nas abas de Doar e Vender, ele pode excluir cards;</li>
-    <li>Ele pode inserir novos eventos ou excluir e editar os existentes;</li>
-    <li>Somente ele pode inserir novos avisos ou excluí-los.</li>
-</ul>
+A nossa plataforma nasceu com a missão de ser uma rede social para ambientes residenciais fechados. Hoje, os moradores acabam se organizando através de grupos de Whatsapp ou Facebook, que não são ideais para essa finalidade, porque todo  mundo pode postar tudo o que quiser. Então, as informações importantes se perdem e a interação entre os moradores não acontece de uma forma saudável.
 
-<h2 align="center"> STATUS </h2>
+Então, a UNIU é um ambiente virtual seguro que promove a integração e solidariedade desses moradores.
+O sistema é fácil de usar e não precisa ter uma administração de condomínios por trás, porque os serviços que ele engloba são baseados na organização dos próprios moradores. Então, o síndico ou alguém eleito pelos moradores pode fazer a administração da plataforma.
 
-<p>Ainda faltam algumas fucionalidades para serem implementadas e assim se tornar uma ferramenta completa:</p>
-<ol>
-    <li>Um sistema de chat para que os moradores possam estabelecer conversas privadas, responder em particular às mensagens do feed e aos anúncios dos vizinhos;</li>
-    <li>A edição e exclusão das áreas de lazer para reservas pelo administrador e implementação da inclusão de novas áreas;</li>
-    <li>Galeria de fotos na aba de eventos para que o administrador possa inserir uma galeria de fotos dos eventos realizados;</li>
-    <li>Um sistema de e-mail para que:
-        <dt>o usuário receba um e-mail para se cadastrar na plataforma,</dt>
-        <dt>envio de e-mail quando um aviso ou evento for inserido pelo administrador e,</dt>
-        <dt>o administrador receba um e-mail toda vez que um usuário confirmar presença em um evento.</dt>
-    </li>
-    <li>Implementação e integração de um calendário entre as áreas de reservas e eventos;</li>
-    <li>Uma aba para registro de ocorrências, onde o morador preenche um formulário, pode anexar arquivos e envia diretamente para o síndico, que tomará as devidas providências.</li>
-</ol>
+## Funcionamento da plataforma
 
-<h2 align="center"> DEPLOY </h2>
-<p>Fizemos o deploy da nossa aplicação com Heroku:</p>
-> http://uniu-evapericorashid.herokuapp.com/
+### Cadastro
+
+Os moradores receberão um  link enviado pelo administrador para que se cadastrem diretamente na plataforma personalizada para o seu condomínio. E, depois de efetuado o cadastro, eles são direcionados para a home.
+
+### Home
+
+Na home o usuário pode inserir uma foto e o interfone para contato, além de alterar as suas informações de cadastro. Ele também tem acesso ao feed de mensagens, onde o usuário pode enviar mensagens instantâneas que aparecerão para todos, dividas em hashtags #procuro, #ofereco e #aviso. Ele pode apagar a sua mensagem caso mude de ideia ou tenha escrito errado e pode filtrar as mensagens por hashtag.
+
+## Reservar
+
+Nessa aba o usuário pode reservar áreas de lazer que o condomínio disponibiliza. Clicando no card de uma área, ele tem acesso à todas as informações sobre esse espaço, às fotos e pode efetuar a reserva daquele espaço. Depois de reservado,  ele é redirecionado para a página inicial de reservas e pode acessar a reserva que ele acabou de fazer e, se quiser, cancelar ela.
+
+## Doar
+
+A próxima aba é a que chamamos de Doar; é o coração desse projeto. Aqui, qualquer morador pode compartilhar e divulgar ações solidárias que acontecem na sua cidade e no seu bairro. Os botões levam ao site das organizações, quando existir um site, e assim todos podem saber como contribuir para determinada ação.
+No botão de mais, o usuário pode inserir uma ação e deletar o seu card ou editar o que escreveu.
+
+## Vender
+
+Na aba “Vender”, os moradores têm um espaço para anunciar tudo o que eles quiserem vender, alugar ou trocar. Os cards têm o mesmo comportamento: o usuário que inserir um  anúncio pode editar ou deletar o próprio card.
+
+## Eventos
+
+A aba de eventos também é uma aba importante na visão do nosso grupo, porque são ocasiões nas quais os  membros daquela comunidade pode interagir de verdade, se divertir juntos e criar laços. O usuário tem acesso aos próximos eventos e clicando no botão, ele pode preencher rapidamente o formulário e confirmar a sua presença no evento. A galeria ainda não está implementada, porém, a ideia é o usuário selecionar um determinado evento. Então, as fotos desse evento são mostradas em miniaturas abaixo do botão. Ele poderá escolher a foto que deseja ver ampliada e fazer o download dessa. Somente o administrador pode inserir novos eventos e galerias de fotos.
+
+## Avisos
+
+Na aba de avisos é onde os moradores podem acessar informações importantes do condomínio onde ela mora. São informações sobre segurança, manutenção, normas e regulamentos e reuniões. Somente o administrador pode inserir e deletar avisos.
+
+
+## Lado do administrador
+
+### Home
+
+O administrador pode excluir qualquer mensagem do feed que ele julgar imprópria, mas não pode postar nada. Toda a interação que ele fizer, ele deve fazer como usuário e membro da comunidade.
+
+### Reservar
+
+Aqui, ele pode inserir uma nova área de lazer para reservar. Na página de cada espaço, ele pode adicionar mais fotos a alguma área.
+
+### Doar e Vender
+
+Nas abas Doar e Vender, ele pode excluir qualquer card que seja inapropriado, repetido ou desatualizado.
+
+### Eventos
+
+Na página de eventos, ele pode editar as informações, excluir ou adicionar um próximo evento. Bem como adicionar uma galeria de fotos dos eventos passados.
+
+### Avisos
+
+Nos avisos, ele pode excluir ou adicionar um card. E o objetivo é que todo mundo receba um email quando um aviso for publicado.
+
+## Próximos passos
+
+A evolução da ferramenta consiste na implementação:
+- do chat para os moradores estabelecerem conversas privadas;
+- do sistema de envio de e-mail para o cadastro e informando toda vez que houver um novo aviso inserido;
+- da funcionalidade de adicionar uma nova área de lazer e editar as existentes;
+- da integração da agenda de eventos com as reservas realizadas pelos moradores;
+- da galeria de fotos dos eventos;
+- e de uma aba para registro de ocorrências, onde o morador preencherá um formulário, poderá anexar arquivos e enviará para o síndico, que tomará as providências devidas.
+
+
+<p align="center"><img src="public/img/LogoVerde.png" width="150"></p>
+<h5 align="center">Obrigado por se interessar por nosso projeto!</h5>
+
+
