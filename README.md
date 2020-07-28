@@ -1,79 +1,96 @@
-<p align="center"><img src="https://res.cloudinary.com/dtfbvvkyp/image/upload/v1566331377/laravel-logolockup-cmyk-red.svg" width="400"></p>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <h1 align="center"> UNIU </h1>
 
-<p align="center">
-<a href="https://travis-ci.org/laravel/framework"><img src="https://travis-ci.org/laravel/framework.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/d/total.svg" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/v/stable.svg" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/license.svg" alt="License"></a>
-</p>
+    <p align="justify"> Nossa plataforma nasceu com o propósito de promover a integração e solidariedade entre os moradores de conjuntos residenciais, como prédios, condomínios, ruas fechadas etc. </p>
+    <p align="justify"> Normalmente, os moradores desses locais  se organizam e grupos de Whatsapp ou Facebook, onde todos podem postar absolutamente tudo o que quiserem. Então, as informações importantes se perdem e a interação entre as pessoas não acontece de forma saudável e harmônica. </p>
+    <p align="justify"> A UNIU veio para se serum ambiente seguro, onde os vizinhos possam interagir uns com os outros e ficar por dentro de tudo o que acontece no lugar onde moram. </p>
+    <p align="justify"> Todos os serviços que a plataforma engloba só dependem da organização dos próprios moradores, que podem eleger o síndico ou outro morador para ser o administrador da plataforma. </p>
+    
+    <h2 align="center"> FUNCIONALIDADES </h2>
+    
+    <h3>Home</h3>
+    <ul>
+        <li>Usuário, depois de cadastrado, pode incluir sua foto, editar suas informações pessoais e incluir o número do seu interfone;</li>
+        <li>Envio de mensagens instantâneas para todos com o uso de hashtags para categorizar os assuntos;</li>
+        <li>Acesso ao feed de mensagens dos moradores;</li>
+        <li>Filtro das mensagens pela sidenav, através das hashtags;</li>
+        <li>Próprio usuário pode excluir a sua mensagem.</li>
+    </ul>
 
-## About Laravel
+    <h3>Área de reservas</h3>
+    <ul>
+        <li>Acesso a lista de áreas de lazer disponíveis para locação, com fotos, informações e regras de utilização;</li>
+        <li>Usuário pode reservar uma área;</li>
+        <li>A reserva aparece na página inicial dos espaços;</li>
+        <li>Usuário pode cancelar as reservas que fez.</li>
+    </ul>
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+    <h3>Doar</h3>
+    <ul>
+        <li>Nessa aba o usuário tem acesso às ações solidárias da sua cidade e seu bairro inseridas pelos seus vizinhos;</li>
+        <li>Para inserir um novo card, o usuário preenche um formulário com título, descrição, link da ação (se tiver) e imagem;</li>
+        <li>O próprio usuário pode editar e excluir o seu card.</li>
+    </ul>
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+    <h3>Vender</h3>
+    <ul>
+        <li>Aqui os moradores podem divulgar qualquer coisa que queiram vender, alugar ou trocar;</li>
+        <li>Para inserir um anúncio é só preencher um formulário com título, descrição (com preço se quiser) e foto;</li>
+        <li>O usuário pode excluir ou editar o seu card também.</li>
+    </ul>
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+    <h3>Eventos</h3>
+    <ul>
+        <li>Parte importante da integração entre os moradores, são os eventos organizados pelos próprios moradores;</li>
+        <li>Aqui o usuário encontra uma lista dos próximos eventos e suas informações;</li>
+        <li>Ele pode também confirmar a sua presença nesses eventos atravé de um rápido formulário dizendo o nome do responsável, quantos adultos e quantas crianças participarão e adicionar qualquer observação necessária;</li>
+    </ul>
 
-## Learning Laravel
+    <h3>Avisos</h3>
+    <ul>
+        <li>O administrador postará informações importantes referentes à adminsitração, segurança, reuniões, manutenção, normas e regulamentos;</li>
+        <li>Aqui o usuário terá acesso à essas importantes informações.</li>
+    </ul>
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+    <h3>Administrador</h3>
+    <ul>
+        <li>O objetivo é que o administrador só possa fazer a moderação do que é inserido pelos usuários e insira informações administrativas do condomínio, ou seja, ele deve interagir com um perfil de morador;</li>
+        <li>Na home, ele não pode inserir mensagens, somente excluir mensagens repetidas ou que ele julgue inapropriadas;</li>
+        <li>Na parte de reservas, ele pode inserir uma nova área disponível para reserva ou incluir novas fotos nas existentes;</li>
+        <li>Nas abas de Doar e Vender, ele pode excluir cards;</li>
+        <li>Ele pode inserir novos eventos ou excluir e editar os existentes;</li>
+        <li>Somente ele pode inserir novos avisos ou excluí-los.</li>
+    </ul>
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains over 1500 video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+    <h2 align="center"> STATUS </h2>
 
-## Laravel Sponsors
+    <p>Ainda faltam algumas fucionalidades para serem implementadas e assim se tornar uma ferramenta completa:</p>
+    <ol>
+        <li>Um sistema de chat para que os moradores possam estabelecer conversas privadas, responder em particular às mensagens do feed e aos anúncios dos vizinhos;</li>
+        <li>A edição e exclusão das áreas de lazer para reservas pelo administrador e implementação da inclusão de novas áreas;</li>
+        <li>Galeria de fotos na aba de eventos para que o administrador possa inserir uma galeria de fotos dos eventos realizados;</li>
+        <li>Um sistema de e-mail para que:
+            <dt>o usuário receba um e-mail para se cadastrar na plataforma,</dt>
+            <dt>envio de e-mail quando um aviso ou evento for inserido pelo administrador e,</dt>
+            <dt>o administrador receba um e-mail toda vez que um usuário confirmar presença em um evento.</dt>
+        </li>
+        <li>Implementação e integração de um calendário entre as áreas de reservas e eventos;</li>
+        <li>Uma aba para registro de ocorrências, onde o morador preenche um formulário, pode anexar arquivos e envia diretamente para o síndico, que tomará as devidas providências.</li>
+    </ol>
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the Laravel [Patreon page](https://patreon.com/taylorotwell).
+    <h2 align="center"> DEPLOY </h2>
+    <p>Fizemos o deploy da nossa aplicação com Heroku:</p>
+    > http://uniu-evapericorashid.herokuapp.com/
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Cubet Techno Labs](https://cubettech.com)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[Many](https://www.many.co.uk)**
-- **[Webdock, Fast VPS Hosting](https://www.webdock.io/en)**
-- **[DevSquad](https://devsquad.com)**
-- [UserInsights](https://userinsights.com)
-- [Fragrantica](https://www.fragrantica.com)
-- [SOFTonSOFA](https://softonsofa.com/)
-- [User10](https://user10.com)
-- [Soumettre.fr](https://soumettre.fr/)
-- [CodeBrisk](https://codebrisk.com)
-- [1Forge](https://1forge.com)
-- [TECPRESSO](https://tecpresso.co.jp/)
-- [Runtime Converter](http://runtimeconverter.com/)
-- [WebL'Agence](https://weblagence.com/)
-- [Invoice Ninja](https://www.invoiceninja.com)
-- [iMi digital](https://www.imi-digital.de/)
-- [Earthlink](https://www.earthlink.ro/)
-- [Steadfast Collective](https://steadfastcollective.com/)
-- [We Are The Robots Inc.](https://watr.mx/)
-- [Understand.io](https://www.understand.io/)
-- [Abdel Elrafa](https://abdelelrafa.com)
-- [Hyper Host](https://hyper.host)
-- [Appoly](https://www.appoly.co.uk)
-- [OP.GG](https://op.gg)
-- [云软科技](http://www.yunruan.ltd/)
+    
 
-## Contributing
-
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
-
-## Code of Conduct
-
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
-
-## Security Vulnerabilities
-
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
-
-## License
-
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+</body>
+</html>
