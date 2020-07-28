@@ -47,7 +47,7 @@ class UsuarioSeeder extends Seeder
             'email' => 'gilvan@gmail.com',
             'senha' => Hash::make('1234'),
             'genero'=>'masculino',
-            'foto' => null,
+            'foto' => '/file/img/usuario-gilvan-santos.jpeg',
             'admin'=>'0',
             'condominio_id'=> '1'
         ]);
@@ -57,7 +57,7 @@ class UsuarioSeeder extends Seeder
             'email' => 'jonathaslopes20@gmail.com',
             'senha' => Hash::make('1234'),
             'genero'=>'masculino',
-            'foto' => null,
+            'foto' => 'usuario-jonathas-lopez.jpeg',
             'admin'=>'0',
             'condominio_id'=> '1'
         ]);
